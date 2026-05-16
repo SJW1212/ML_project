@@ -311,6 +311,38 @@ def save_feature_importance(model, feature_cols: list[str], save_img_path: str, 
 # =========================
 # 11. 최신 데이터 1건 예측
 # =========================
+def apply_uncertainty_rule(
+    pred_label: str,
+    proba_result: dict[str, float],
+    min_confidence: float = 40.0,
+    min_margin: float = 8.0
+) -> str:
+    """
+    모델 예측 확률을 기준으로 '불확실' 여부를 사후 판단한다.
+
+    조건:
+    1. 최고 확률이 min_confidence보다 낮으면 불확실
+    2. 1등 확률과 2등 확률 차이가 min_margin보다 작으면 불확실
+    """
+    sorted_probs = sorted(
+        proba_result.items(),
+        key=lambda x: x[1],
+        reverse=True
+    )
+
+    if len(sorted_probs) < 2:
+        return pred_label
+
+    top_label, top_prob = sorted_probs[0]
+    second_label, second_prob = sorted_probs[1]
+
+    if top_prob < min_confidence:
+        return "불확실"
+
+    if top_prob - second_prob < min_margin:
+        return "불확실"
+
+    return pred_label
 
 def predict_latest_sample(
     model,
@@ -350,36 +382,6 @@ def predict_latest_sample(
         print(f"- {label}: {prob:.2f}%")
 
     return pred_label, proba_result
-
-def apply_uncertainty_rule(
-    pred_label: str,
-    proba_result: dict[str, float],
-    min_confidence: float = 40.0,
-    min_margin: float = 8.0
-) -> str:
-    """
-    모델 예측 확률을 기준으로 불확실 여부를 사후 판단한다.
-
-    조건:
-    - 최고 확률이 min_confidence보다 낮으면 불확실
-    - 1등 확률과 2등 확률 차이가 min_margin보다 작으면 불확실
-    """
-    sorted_probs = sorted(
-        proba_result.items(),
-        key=lambda x: x[1],
-        reverse=True
-    )
-
-    top_label, top_prob = sorted_probs[0]
-    second_label, second_prob = sorted_probs[1]
-
-    if top_prob < min_confidence:
-        return "불확실"
-
-    if top_prob - second_prob < min_margin:
-        return "불확실"
-
-    return pred_label
 
 
 # =========================
