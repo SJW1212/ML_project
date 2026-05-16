@@ -353,26 +353,30 @@ def predict_latest_sample(
 ):
     """
     가장 최근 데이터 1건에 대해 시장 국면 확률을 출력한다.
+    이후 확률 기준으로 '불확실' 여부를 사후 판단한다.
     """
     latest_row = df.iloc[-1:].copy()
     latest_features = latest_row[feature_cols]
 
     latest_features_imputed = imputer.transform(latest_features)
 
+    # 1차 모델 예측
     pred_encoded = model.predict(latest_features_imputed)[0]
     pred_label = label_encoder.inverse_transform([pred_encoded])[0]
 
+    # 국면별 확률 계산
     proba = model.predict_proba(latest_features_imputed)[0]
     proba_result = {
         label_encoder.classes_[i]: round(float(proba[i]) * 100, 2)
         for i in range(len(label_encoder.classes_))
     }
-      
+
+    # 확률 기반 최종 판단
     final_label = apply_uncertainty_rule(
-    pred_label=pred_label,
-    proba_result=proba_result,
-    min_confidence=40.0,
-    min_margin=8.0
+        pred_label=pred_label,
+        proba_result=proba_result,
+        min_confidence=40.0,
+        min_margin=8.0
     )
 
     print("\n==============================")
@@ -382,13 +386,14 @@ def predict_latest_sample(
     if "Date" in latest_row.columns:
         print(f"기준일: {latest_row['Date'].iloc[0]}")
 
-    print(f"예측 국면: {pred_label}")
+    print(f"모델 예측 국면: {pred_label}")
+    print(f"최종 판단 국면: {final_label}")
 
     print("\n국면별 확률:")
     for label, prob in sorted(proba_result.items(), key=lambda x: x[1], reverse=True):
         print(f"- {label}: {prob:.2f}%")
 
-    return pred_label, proba_result
+    return final_label, proba_result
 
 
 # =========================
