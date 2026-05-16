@@ -1,0 +1,47 @@
+{
+    "model_type": "RandomForestClassifier",
+    "feature_cols": [
+        "daily_return",
+        "return_5d",
+        "return_20d",
+        "log_return",
+        "ma_5",
+        "ma_20",
+        "ma_60",
+        "ma_gap_5_20",
+        "ma_gap_20_60",
+        "volatility_5d",
+        "volatility_20d",
+        "volatility_60d",
+        "volume_change",
+        "volume_ma_20",
+        "volume_ratio",
+        "drawdown"
+    ],
+    "labels": [
+        "고변동",
+        "불확실",
+        "상승",
+        "하락",
+        "횡보"
+    ],
+    "metrics": {
+        "accuracy": 0.417239,
+        "macro_f1": 0.221848,
+        "weighted_f1": 0.286207,
+        "latest_pred_label": "상승",
+        "latest_proba": {
+            "고변동": 27.67,
+            "불확실": 21.48,
+            "상승": 29.42,
+            "하락": 7.97,
+            "횡보": 13.46
+        },
+        "latest_allocation": {
+            "주식": 50,
+            "채권": 30,
+            "현금": 20
+        }
+    },
+    "note": "Time-series split used. No shuffle. Future columns excluded to avoid leakage."
+}
