@@ -367,6 +367,13 @@ def predict_latest_sample(
         label_encoder.classes_[i]: round(float(proba[i]) * 100, 2)
         for i in range(len(label_encoder.classes_))
     }
+      
+    final_label = apply_uncertainty_rule(
+    pred_label=pred_label,
+    proba_result=proba_result,
+    min_confidence=40.0,
+    min_margin=8.0
+    )
 
     print("\n==============================")
     print("최신 데이터 기준 예측 결과")
