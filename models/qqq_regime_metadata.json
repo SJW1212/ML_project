@@ -19,23 +19,19 @@
         "drawdown"
     ],
     "labels": [
-        "고변동",
-        "불확실",
         "상승",
         "하락",
         "횡보"
     ],
     "metrics": {
-        "accuracy": 0.417239,
-        "macro_f1": 0.221848,
-        "weighted_f1": 0.286207,
-        "latest_pred_label": "상승",
+        "accuracy": 0.405797,
+        "macro_f1": 0.225117,
+        "weighted_f1": 0.25838,
+        "latest_pred_label": "불확실",
         "latest_proba": {
-            "고변동": 27.67,
-            "불확실": 21.48,
-            "상승": 29.42,
-            "하락": 7.97,
-            "횡보": 13.46
+            "상승": 38.05,
+            "하락": 29.62,
+            "횡보": 32.33
         },
         "latest_allocation": {
             "주식": 50,
