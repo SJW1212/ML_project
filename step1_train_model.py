@@ -122,17 +122,16 @@ def make_labels(df: pd.DataFrame) -> pd.DataFrame:
     """
     미래 20거래일 수익률과 미래 변동성을 기준으로 시장 국면 라벨을 만든다.
 
-    라벨:
-    - 상승
-    - 하락
-    - 횡보
-    - 고변동
-    - 불확실
+    수정 버전:
+    - 학습 라벨에서 '불확실' 제거
+    - 불확실은 모델 예측 후 확률이 낮을 때 사후 처리
     """
     df = df.copy()
 
+    valid_df = df.dropna(subset=["future_return_20d", "future_volatility_20d"]).copy()
+
     # 고변동 기준: 미래 20일 변동성 상위 20%
-    high_vol_threshold = df["future_volatility_20d"].quantile(0.80)
+    high_vol_threshold = valid_df["future_volatility_20d"].quantile(0.80)
 
     def classify_market(row):
         future_return = row["future_return_20d"]
@@ -141,21 +140,19 @@ def make_labels(df: pd.DataFrame) -> pd.DataFrame:
         if pd.isna(future_return) or pd.isna(future_vol):
             return np.nan
 
-        # 고변동을 가장 먼저 판단
-        # 이유: 수익률 방향보다 위험도 자체가 중요한 구간이기 때문
+        # 위험 구간 우선 분류
         if future_vol >= high_vol_threshold:
             return "고변동"
 
+        # 방향성 분류
         if future_return >= 0.03:
             return "상승"
 
         if future_return <= -0.03:
             return "하락"
 
-        if -0.015 <= future_return <= 0.015:
-            return "횡보"
-
-        return "불확실"
+        # 나머지는 횡보로 통합
+        return "횡보"
 
     df["label"] = df.apply(classify_market, axis=1)
 
