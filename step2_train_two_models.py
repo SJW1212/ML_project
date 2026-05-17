@@ -32,26 +32,32 @@ from sklearn.impute import SimpleImputer
 # 1. 기본 설정
 # =========================
 
-DATA_PATH = "data/qqq_features_labeled.csv"
+TARGET_TICKER = "VTI"
+TARGET_TICKER_LOWER = TARGET_TICKER.lower()
+
+DATA_PATH = f"data/{TARGET_TICKER_LOWER}_features_labeled.csv"
 
 MODEL_DIR = "models"
 RESULT_DIR = "results"
 
-MODEL_PATH = os.path.join(MODEL_DIR, "qqq_two_stage_model.pkl")
-META_PATH = os.path.join(MODEL_DIR, "qqq_two_stage_metadata.json")
+MODEL_PATH = os.path.join(MODEL_DIR, f"{TARGET_TICKER_LOWER}_two_stage_model.pkl")
+META_PATH = os.path.join(MODEL_DIR, f"{TARGET_TICKER_LOWER}_two_stage_metadata.json")
 
-DIRECTION_CM_PATH = os.path.join(RESULT_DIR, "direction_confusion_matrix.png")
-RISK_CM_PATH = os.path.join(RESULT_DIR, "risk_confusion_matrix.png")
+DIRECTION_CM_PATH = os.path.join(RESULT_DIR, f"{TARGET_TICKER_LOWER}_direction_confusion_matrix.png")
+RISK_CM_PATH = os.path.join(RESULT_DIR, f"{TARGET_TICKER_LOWER}_risk_confusion_matrix.png")
 
-DIRECTION_FEATURE_IMPORTANCE_PATH = os.path.join(RESULT_DIR, "direction_feature_importance.png")
-RISK_FEATURE_IMPORTANCE_PATH = os.path.join(RESULT_DIR, "risk_feature_importance.png")
+DIRECTION_FEATURE_IMPORTANCE_PATH = os.path.join(RESULT_DIR, f"{TARGET_TICKER_LOWER}_direction_feature_importance.png")
+RISK_FEATURE_IMPORTANCE_PATH = os.path.join(RESULT_DIR, f"{TARGET_TICKER_LOWER}_risk_feature_importance.png")
 
-DIRECTION_FEATURE_IMPORTANCE_CSV_PATH = os.path.join(RESULT_DIR, "direction_feature_importance.csv")
-RISK_FEATURE_IMPORTANCE_CSV_PATH = os.path.join(RESULT_DIR, "risk_feature_importance.csv")
+DIRECTION_FEATURE_IMPORTANCE_CSV_PATH = os.path.join(RESULT_DIR, f"{TARGET_TICKER_LOWER}_direction_feature_importance.csv")
+RISK_FEATURE_IMPORTANCE_CSV_PATH = os.path.join(RESULT_DIR, f"{TARGET_TICKER_LOWER}_risk_feature_importance.csv")
 
-EVALUATION_SUMMARY_PATH = os.path.join(RESULT_DIR, "step2_two_stage_evaluation_summary.json")
+EVALUATION_SUMMARY_PATH = os.path.join(
+    RESULT_DIR,
+    f"{TARGET_TICKER_LOWER}_step2_two_stage_evaluation_summary.json"
+)
 
-TEST_SIZE = 0.2
+TEST_SIZE = 0.5
 RANDOM_STATE = 42
 
 
@@ -114,36 +120,41 @@ def get_base_feature_columns(df: pd.DataFrame) -> list[str]:
         "Close",
         "Volume",
 
-        # 미래 정보: 모델 입력 금지
-        "future_return_20d",
-        "future_volatility_20d",
-
         # 라벨
         "label",
         "direction_label",
         "risk_label"
     }
 
-    feature_cols = [
-        col for col in df.columns
-        if col not in exclude_cols and pd.api.types.is_numeric_dtype(df[col])
-    ]
+    feature_cols = []
+
+    for col in df.columns:
+        # 미래 정보는 전부 제외
+        if col.startswith("future_"):
+            continue
+
+        if col in exclude_cols:
+            continue
+
+        if pd.api.types.is_numeric_dtype(df[col]):
+            feature_cols.append(col)
 
     if not feature_cols:
         raise ValueError("사용 가능한 피처 컬럼이 없습니다.")
 
     return feature_cols
 
-
 def get_direction_feature_columns(df: pd.DataFrame) -> list[str]:
     """
-    방향성 모델용 피처를 선택한다.
+    러프 버전 방향성 모델용 피처.
 
-    방향성 모델은 상승/하락/횡보를 구분해야 하므로,
-    변동성 자체보다 수익률, 추세, 가격 위치, 모멘텀 피처를 우선 사용한다.
+    의도:
+    - ADX, MACD, CCI, RSI, Bollinger, ATR 제거
+    - 가격과 거래량에서 직접 파생된 단순 피처만 사용
+    - 모델이 복잡한 후행 지표에 끌려가지 않도록 제한
     """
     preferred_cols = [
-        # 수익률 / 모멘텀
+        # 수익률
         "daily_return",
         "log_return",
         "return_3d",
@@ -154,12 +165,14 @@ def get_direction_feature_columns(df: pd.DataFrame) -> list[str]:
         "return_5d_zscore",
         "return_20d_zscore",
 
-        # 이동평균 / 추세
+        # 가격-이동평균 괴리율
         "price_ma_5_gap",
         "price_ma_20_gap",
         "price_ma_60_gap",
         "ma_gap_5_20",
         "ma_gap_20_60",
+
+        # 추세 기울기
         "trend_slope_20",
         "trend_slope_60",
         "positive_return_ratio_20",
@@ -171,22 +184,18 @@ def get_direction_feature_columns(df: pd.DataFrame) -> list[str]:
         "close_to_20d_high",
         "close_to_60d_high",
 
-        # RSI / MACD / Bollinger 위치
-        "rsi_14_scaled",
-        "macd_pct",
-        "macd_signal_pct",
-        "macd_hist_pct",
-        "bollinger_position_20",
+        # 변동성
+        "volatility_5d",
+        "volatility_20d",
+        "volatility_60d",
+        "volatility_ratio_5_20",
+        "volatility_ratio_20_60",
+        "downside_volatility_20d",
 
-        # 거래량 보조
+        # 거래량
         "volume_change",
         "volume_ratio_20",
         "volume_zscore_20",
-
-        # 변동성은 보조로 일부만 사용
-        "volatility_ratio_5_20",
-        "volatility_ratio_20_60",
-        "downside_volatility_20d"
     ]
 
     feature_cols = [
@@ -195,17 +204,112 @@ def get_direction_feature_columns(df: pd.DataFrame) -> list[str]:
     ]
 
     if not feature_cols:
-        feature_cols = get_base_feature_columns(df)
+        raise ValueError("러프 방향성 모델에 사용할 피처가 없습니다.")
 
     return feature_cols
 
+# def get_direction_feature_columns(df: pd.DataFrame) -> list[str]:
+#     """
+#     방향성 모델용 피처를 선택한다.
+
+#     방향성 모델은 상승/하락/횡보를 구분해야 하므로,
+#     변동성 자체보다 수익률, 추세, 가격 위치, 모멘텀 피처를 우선 사용한다.
+#     """
+#     preferred_cols = [
+#         # 수익률 / 모멘텀
+#         "daily_return",
+#         "log_return",
+#         "return_3d",
+#         "return_5d",
+#         "return_10d",
+#         "return_20d",
+#         "return_60d",
+#         "return_5d_zscore",
+#         "return_20d_zscore",
+
+#         # 이동평균 / 추세
+#         "price_ma_5_gap",
+#         "price_ma_20_gap",
+#         "price_ma_60_gap",
+#         "ma_gap_5_20",
+#         "ma_gap_20_60",
+#         "trend_slope_20",
+#         "trend_slope_60",
+#         "positive_return_ratio_20",
+
+#         # 가격 위치
+#         "drawdown",
+#         "price_position_20",
+#         "price_position_60",
+#         "close_to_20d_high",
+#         "close_to_60d_high",
+
+#         # RSI / MACD / Bollinger 위치
+#         "rsi_14_scaled",
+#         "macd_pct",
+#         "macd_signal_pct",
+#         "macd_hist_pct",
+#         "bollinger_position_20",
+        
+#                 # ADX / DI
+#         "adx_14",
+#         "plus_di_14",
+#         "minus_di_14",
+#         "di_gap_14",
+#         "di_ratio_14",
+#         "adx_trend_strength",
+#         "adx_bullish_trend",
+#         "adx_bearish_trend",
+
+#         # CCI
+#         "cci_20_scaled",
+#         "cci_20_diff",
+#         "cci_bullish",
+#         "cci_bearish",
+#         "cci_neutral",
+
+#         # MACD 추가 피처
+#         "macd_hist_diff",
+#         "macd_hist_slope_5",
+#         "macd_cross_signal",
+#         "macd_bullish_cross",
+#         "macd_bearish_cross",
+
+#         # 기술적 보조 점수
+#         "technical_bullish_score",
+#         "technical_bearish_score",
+#         "technical_sideways_score",
+#         "technical_trend_margin",
+#         "technical_trend_balance",
+
+#         # 거래량 보조
+#         "volume_change",
+#         "volume_ratio_20",
+#         "volume_zscore_20",
+
+#         # 변동성은 보조로 일부만 사용
+#         "volatility_ratio_5_20",
+#         "volatility_ratio_20_60",
+#         "downside_volatility_20d"
+#     ]
+
+#     feature_cols = [
+#         col for col in preferred_cols
+#         if col in df.columns and pd.api.types.is_numeric_dtype(df[col])
+#     ]
+
+#     if not feature_cols:
+#         feature_cols = get_base_feature_columns(df)
+
+#     return feature_cols
 
 def get_risk_feature_columns(df: pd.DataFrame) -> list[str]:
     """
-    위험도 모델용 피처를 선택한다.
+    러프 버전 위험도 모델용 피처.
 
-    위험도 모델은 정상/고변동을 구분하므로,
-    변동성, ATR, Bollinger 폭, 거래량 급증, 낙폭 관련 피처를 우선 사용한다.
+    의도:
+    - 고변동 판단도 가격/거래량 기반으로만 수행
+    - ATR, ADX, Bollinger 같은 기술적 지표 제거
     """
     preferred_cols = [
         # 변동성
@@ -215,33 +319,34 @@ def get_risk_feature_columns(df: pd.DataFrame) -> list[str]:
         "volatility_ratio_5_20",
         "volatility_ratio_20_60",
         "downside_volatility_20d",
-        "atr_14_pct",
-        "bollinger_width_20",
-
-        # 낙폭 / 위치
-        "drawdown",
-        "close_to_20d_high",
-        "close_to_60d_high",
-        "price_position_20",
-        "price_position_60",
 
         # 수익률 급변
         "daily_return",
         "log_return",
         "return_3d",
         "return_5d",
+        "return_10d",
         "return_20d",
+        "return_60d",
         "return_5d_zscore",
         "return_20d_zscore",
+
+        # 낙폭 / 가격 위치
+        "drawdown",
+        "price_position_20",
+        "price_position_60",
+        "close_to_20d_high",
+        "close_to_60d_high",
 
         # 거래량
         "volume_change",
         "volume_ratio_20",
         "volume_zscore_20",
 
-        # 추세 보조
+        # 추세 기울기
         "trend_slope_20",
-        "trend_slope_60"
+        "trend_slope_60",
+        "positive_return_ratio_20",
     ]
 
     feature_cols = [
@@ -250,9 +355,86 @@ def get_risk_feature_columns(df: pd.DataFrame) -> list[str]:
     ]
 
     if not feature_cols:
-        feature_cols = get_base_feature_columns(df)
+        raise ValueError("러프 위험도 모델에 사용할 피처가 없습니다.")
 
     return feature_cols
+
+# def get_risk_feature_columns(df: pd.DataFrame) -> list[str]:
+#     """
+#     위험도 모델용 피처를 선택한다.
+
+#     위험도 모델은 정상/고변동을 구분하므로,
+#     변동성, ATR, Bollinger 폭, 거래량 급증, 낙폭 관련 피처를 우선 사용한다.
+#     """
+#     preferred_cols = [
+#         # 변동성
+#         "volatility_5d",
+#         "volatility_20d",
+#         "volatility_60d",
+#         "volatility_ratio_5_20",
+#         "volatility_ratio_20_60",
+#         "downside_volatility_20d",
+#         "atr_14_pct",
+#         "bollinger_width_20",
+
+#         # 낙폭 / 위치
+#         "drawdown",
+#         "close_to_20d_high",
+#         "close_to_60d_high",
+#         "price_position_20",
+#         "price_position_60",
+
+#         # 수익률 급변
+#         "daily_return",
+#         "log_return",
+#         "return_3d",
+#         "return_5d",
+#         "return_20d",
+#         "return_5d_zscore",
+#         "return_20d_zscore",
+
+#         # 거래량
+#         "volume_change",
+#         "volume_ratio_20",
+#         "volume_zscore_20",
+
+#         # 추세 보조
+#         "trend_slope_20",
+#         "trend_slope_60"
+        
+#         # ADX / 추세 강도
+#         "adx_14",
+#         "di_gap_14",
+#         "di_ratio_14",
+#         "adx_trend_strength",
+
+#         # CCI 급변 / 과열
+#         "cci_20_scaled",
+#         "cci_20_diff",
+#         "cci_bullish",
+#         "cci_bearish",
+
+#         # MACD 변동성 보조
+#         "macd_hist_diff",
+#         "macd_hist_slope_5",
+
+#         # 기술적 보조 점수
+#         "technical_bullish_score",
+#         "technical_bearish_score",
+#         "technical_sideways_score",
+#         "technical_trend_margin",
+#         "technical_trend_balance",
+#     ]
+
+#     feature_cols = [
+#         col for col in preferred_cols
+#         if col in df.columns and pd.api.types.is_numeric_dtype(df[col])
+#     ]
+
+#     if not feature_cols:
+#         feature_cols = get_base_feature_columns(df)
+
+#     return feature_cols
 
 
 # =========================
@@ -530,18 +712,24 @@ def save_feature_importance(
 # 9. 불확실 판단 / 자산배분
 # =========================
 
-def apply_uncertainty_rule(
+def apply_direction_decision_rule(
     pred_label: str,
     proba_result: dict[str, float],
-    min_confidence: float = 40.0,
-    min_margin: float = 8.0
+    min_confidence: float = 35.0,
+    min_margin: float = 5.0,
+    down_accept_threshold: float = 45.0
 ) -> str:
     """
-    방향성 모델 예측 확률을 기준으로 불확실 여부를 사후 판단한다.
+    방향성 모델 예측 확률을 기준으로 최종 방향성을 판단한다.
 
-    조건:
-    - 최고 확률이 min_confidence 미만이면 불확실
-    - 1등과 2등 확률 차이가 min_margin 미만이면 불확실
+    수정 목적:
+    - 기존 모델이 하락을 과도하게 판단하는 문제를 완화
+    - 상승/횡보 판단이 불확실로 너무 많이 밀리는 문제 완화
+
+    규칙:
+    1. 최고 확률이 min_confidence 미만이면 불확실
+    2. 1등과 2등 차이가 min_margin 미만이면 불확실
+    3. 하락은 확률이 down_accept_threshold 이상일 때만 인정
     """
     sorted_probs = sorted(
         proba_result.items(),
@@ -561,7 +749,11 @@ def apply_uncertainty_rule(
     if top_prob - second_prob < min_margin:
         return "불확실"
 
-    return pred_label
+    # 하락 과대 판단 방지
+    if top_label == "하락" and top_prob < down_accept_threshold:
+        return "불확실"
+
+    return top_label
 
 
 def make_probability_dict(
@@ -701,11 +893,12 @@ def predict_latest_sample(
         X_processed=X_direction_processed
     )
 
-    final_direction = apply_uncertainty_rule(
+    final_direction = apply_direction_decision_rule(
         pred_label=direction_pred_label,
         proba_result=direction_proba,
-        min_confidence=40.0,
-        min_margin=8.0
+        min_confidence=35.0,
+        min_margin=5.0,
+        down_accept_threshold=45.0
     )
 
     # 위험도 예측

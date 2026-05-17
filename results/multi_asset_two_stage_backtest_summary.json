@@ -1,0 +1,93 @@
+{
+    "backtest_start": "2013-03-28 00:00:00",
+    "backtest_end": "2026-01-30 00:00:00",
+    "months": 155,
+    "initial_capital": 100000000,
+    "assets": {
+        "stock": "QQQ",
+        "bond": "IEF",
+        "cash": "BIL"
+    },
+    "average_weights": {
+        "avg_stock_weight": 0.646897,
+        "avg_bond_weight": 0.231972,
+        "avg_cash_weight": 0.121131,
+        "min_stock_weight": 0.293811,
+        "max_stock_weight": 0.7939
+    },
+    "strategy": {
+        "final_capital": 488551430.37,
+        "total_return": 3.885514,
+        "cagr": 0.130668,
+        "mdd": -0.25015,
+        "sharpe": 1.138735
+    },
+    "qqq_buy_hold": {
+        "final_capital": 973862159.36,
+        "total_return": 8.738622,
+        "cagr": 0.192693,
+        "mdd": -0.32577,
+        "sharpe": 1.113301
+    },
+    "benchmark_60_40": {
+        "final_capital": 443299904.54,
+        "total_return": 3.432999,
+        "cagr": 0.122191,
+        "mdd": -0.258036,
+        "sharpe": 1.098654
+    },
+    "static_50_30_20": {
+        "final_capital": 362301985.89,
+        "total_return": 2.62302,
+        "cagr": 0.104798,
+        "mdd": -0.21268,
+        "sharpe": 1.136553
+    },
+    "direction_min_confidence": 30.0,
+    "direction_min_margin": 3.0,
+    "down_accept_threshold": 50.0,
+    "high_vol_proba_threshold": 45.0,
+    "allocation_count": [
+        {
+            "final_direction": "횡보",
+            "final_risk": "정상",
+            "count": 76
+        },
+        {
+            "final_direction": "상승",
+            "final_risk": "정상",
+            "count": 37
+        },
+        {
+            "final_direction": "불확실",
+            "final_risk": "정상",
+            "count": 25
+        },
+        {
+            "final_direction": "하락",
+            "final_risk": "고변동",
+            "count": 5
+        },
+        {
+            "final_direction": "불확실",
+            "final_risk": "고변동",
+            "count": 5
+        },
+        {
+            "final_direction": "하락",
+            "final_risk": "정상",
+            "count": 4
+        },
+        {
+            "final_direction": "상승",
+            "final_risk": "고변동",
+            "count": 2
+        },
+        {
+            "final_direction": "횡보",
+            "final_risk": "고변동",
+            "count": 1
+        }
+    ],
+    "note": "QQQ/IEF/BIL 실제 월별 수익률을 반영한 2단계 자산배분 백테스트입니다. 전략은 방향성 모델과 위험도 모델의 예측 결과를 기반으로 주식/채권/현금 비중을 조절합니다."
+}

@@ -1,0 +1,93 @@
+{
+    "backtest_start": "2013-12-31 00:00:00",
+    "backtest_end": "2026-01-30 00:00:00",
+    "months": 146,
+    "initial_capital": 100000000,
+    "assets": {
+        "stock": "VTI",
+        "bond": "IEF",
+        "cash": "BIL"
+    },
+    "average_weights": {
+        "avg_stock_weight": 0.687682,
+        "avg_bond_weight": 0.205161,
+        "avg_cash_weight": 0.107157,
+        "min_stock_weight": 0.260878,
+        "max_stock_weight": 0.829423
+    },
+    "strategy": {
+        "final_capital": 270563295.84,
+        "total_return": 1.705633,
+        "cagr": 0.085248,
+        "mdd": -0.20703,
+        "sharpe": 0.88315
+    },
+    "stock_buy_hold": {
+        "final_capital": 431754379.31,
+        "total_return": 3.317544,
+        "cagr": 0.127746,
+        "mdd": -0.248191,
+        "sharpe": 0.888138
+    },
+    "benchmark_60_40": {
+        "final_capital": 275710668.28,
+        "total_return": 1.757107,
+        "cagr": 0.08693,
+        "mdd": -0.21066,
+        "sharpe": 0.929044
+    },
+    "static_50_30_20": {
+        "final_capital": 242449740.62,
+        "total_return": 1.424497,
+        "cagr": 0.075506,
+        "mdd": -0.171831,
+        "sharpe": 0.970766
+    },
+    "direction_min_confidence": 30.0,
+    "direction_min_margin": 3.0,
+    "down_accept_threshold": 50.0,
+    "high_vol_proba_threshold": 45.0,
+    "allocation_count": [
+        {
+            "final_direction": "횡보",
+            "final_risk": "정상",
+            "count": 95
+        },
+        {
+            "final_direction": "불확실",
+            "final_risk": "정상",
+            "count": 16
+        },
+        {
+            "final_direction": "상승",
+            "final_risk": "정상",
+            "count": 10
+        },
+        {
+            "final_direction": "횡보",
+            "final_risk": "고변동",
+            "count": 6
+        },
+        {
+            "final_direction": "상승",
+            "final_risk": "고변동",
+            "count": 6
+        },
+        {
+            "final_direction": "하락",
+            "final_risk": "고변동",
+            "count": 6
+        },
+        {
+            "final_direction": "불확실",
+            "final_risk": "고변동",
+            "count": 5
+        },
+        {
+            "final_direction": "하락",
+            "final_risk": "정상",
+            "count": 2
+        }
+    ],
+    "note": "VTI/IEF/BIL 실제 월별 수익률을 반영한 2단계 자산배분 백테스트입니다. 전략은 방향성 모델과 위험도 모델의 예측 결과를 기반으로 주식/채권/현금 비중을 조절합니다."
+}

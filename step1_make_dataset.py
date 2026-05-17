@@ -12,18 +12,31 @@ import yfinance as yf
 # 1. 기본 설정
 # =========================
 
-TICKER = "QQQ"
-START_DATE = "2000-01-01"
-END_DATE = None  # None이면 가능한 최신 데이터까지 수집
+TICKER = "VTI"
+TICKER_LOWER = TICKER.lower()
+
+START_DATE = "2001-01-01"
+END_DATE = None
 
 OUTPUT_DIR = "data"
-OUTPUT_FILE = os.path.join(OUTPUT_DIR, "qqq_features_labeled.csv")
+OUTPUT_FILE = os.path.join(OUTPUT_DIR, f"{TICKER_LOWER}_features_labeled.csv")
 
+# =========================
 # 라벨 기준
-PREDICT_HORIZON = 20              # 미래 20거래일 기준
-UP_THRESHOLD = 0.02               # 미래 20일 수익률 +2% 이상 → 상승
-DOWN_THRESHOLD = -0.02            # 미래 20일 수익률 -2% 이하 → 하락
-HIGH_VOL_QUANTILE = 0.80          # 미래 변동성 상위 20% → 고변동
+# =========================
+
+# 방향성 라벨은 60거래일, 약 3개월 기준
+DIRECTION_HORIZON = 60
+
+# 위험도 라벨은 20거래일, 약 1개월 기준
+RISK_HORIZON = 20
+
+# 60일 미래 수익률 기준
+UP_THRESHOLD = 0.05        # +5% 이상이면 상승
+DOWN_THRESHOLD = -0.05     # -5% 이하이면 하락
+
+# 미래 변동성 상위 20%를 고변동으로 판단
+HIGH_VOL_QUANTILE = 0.80
 
 
 # =========================
@@ -173,6 +186,101 @@ def calculate_atr(
 
     return atr
 
+def calculate_adx(
+    high: pd.Series,
+    low: pd.Series,
+    close: pd.Series,
+    window: int = 14
+) -> tuple[pd.Series, pd.Series, pd.Series]:
+    """
+    ADX, +DI, -DI 계산.
+
+    ADX:
+    - 추세 강도 지표
+    - 방향 자체가 아니라 추세가 강한지 약한지를 나타낸다.
+
+    +DI:
+    - 상승 방향성 강도
+
+    -DI:
+    - 하락 방향성 강도
+    """
+    high = high.copy()
+    low = low.copy()
+    close = close.copy()
+
+    prev_high = high.shift(1)
+    prev_low = low.shift(1)
+    prev_close = close.shift(1)
+
+    up_move = high - prev_high
+    down_move = prev_low - low
+
+    plus_dm = np.where(
+        (up_move > down_move) & (up_move > 0),
+        up_move,
+        0.0
+    )
+
+    minus_dm = np.where(
+        (down_move > up_move) & (down_move > 0),
+        down_move,
+        0.0
+    )
+
+    tr1 = high - low
+    tr2 = (high - prev_close).abs()
+    tr3 = (low - prev_close).abs()
+
+    true_range = pd.concat([tr1, tr2, tr3], axis=1).max(axis=1)
+
+    # Wilder smoothing에 가까운 ewm 방식 사용
+    atr = true_range.ewm(alpha=1 / window, adjust=False).mean()
+    plus_dm_smooth = pd.Series(plus_dm, index=high.index).ewm(alpha=1 / window, adjust=False).mean()
+    minus_dm_smooth = pd.Series(minus_dm, index=high.index).ewm(alpha=1 / window, adjust=False).mean()
+
+    plus_di = 100 * safe_divide(plus_dm_smooth, atr)
+    minus_di = 100 * safe_divide(minus_dm_smooth, atr)
+
+    dx = 100 * safe_divide(
+        (plus_di - minus_di).abs(),
+        plus_di + minus_di
+    )
+
+    adx = dx.ewm(alpha=1 / window, adjust=False).mean()
+
+    return adx, plus_di, minus_di
+
+
+def calculate_cci(
+    high: pd.Series,
+    low: pd.Series,
+    close: pd.Series,
+    window: int = 20
+) -> pd.Series:
+    """
+    CCI 계산.
+
+    CCI:
+    - 현재 가격이 일정 기간 평균 가격에서 얼마나 벗어나 있는지 측정
+    - +100 이상: 강한 상승 모멘텀 또는 과열 가능성
+    - -100 이하: 강한 하락 모멘텀 또는 과매도 가능성
+    """
+    typical_price = (high + low + close) / 3
+    tp_ma = typical_price.rolling(window=window).mean()
+
+    mean_deviation = typical_price.rolling(window=window).apply(
+        lambda x: np.mean(np.abs(x - np.mean(x))),
+        raw=True
+    )
+
+    cci = safe_divide(
+        typical_price - tp_ma,
+        0.015 * mean_deviation
+    )
+
+    return cci
+
 
 # =========================
 # 4. 피처 생성
@@ -279,6 +387,27 @@ def make_features(df: pd.DataFrame) -> pd.DataFrame:
     df["macd_pct"] = safe_divide(macd, df["Close"])
     df["macd_signal_pct"] = safe_divide(macd_signal, df["Close"])
     df["macd_hist_pct"] = safe_divide(macd_hist, df["Close"])
+    
+        # MACD Histogram 변화율 / 기울기
+    df["macd_hist_diff"] = macd_hist.diff()
+    df["macd_hist_slope_5"] = macd_hist.rolling(window=5).apply(
+        lambda x: np.polyfit(np.arange(len(x)), x, 1)[0] if not np.isnan(x).any() else np.nan,
+        raw=True
+    )
+
+    # MACD와 Signal의 교차 상태
+    # 1  : MACD > Signal, 상승 모멘텀 우위
+    # -1 : MACD < Signal, 하락 모멘텀 우위
+    df["macd_cross_signal"] = np.where(macd > macd_signal, 1, -1)
+
+    # MACD 교차 변화 감지
+    # 1  : 하락 상태에서 상승 상태로 전환
+    # -1 : 상승 상태에서 하락 상태로 전환
+    # 0  : 변화 없음
+    df["macd_cross_event"] = df["macd_cross_signal"].diff().fillna(0)
+
+    df["macd_bullish_cross"] = np.where(df["macd_cross_event"] == 2, 1, 0)
+    df["macd_bearish_cross"] = np.where(df["macd_cross_event"] == -2, 1, 0)
 
     # -------------------------
     # Bollinger Band
@@ -300,6 +429,139 @@ def make_features(df: pd.DataFrame) -> pd.DataFrame:
         low=df["Low"],
         close=df["Close"],
         window=14
+    )
+    
+        # -------------------------
+    # ADX / DI
+    # -------------------------
+    adx_14, plus_di_14, minus_di_14 = calculate_adx(
+        high=df["High"],
+        low=df["Low"],
+        close=df["Close"],
+        window=14
+    )
+
+    df["adx_14"] = adx_14
+    df["plus_di_14"] = plus_di_14
+    df["minus_di_14"] = minus_di_14
+
+    # +DI와 -DI의 차이
+    # 양수면 상승 방향성 우위, 음수면 하락 방향성 우위
+    df["di_gap_14"] = df["plus_di_14"] - df["minus_di_14"]
+
+    # 방향성 비율
+    df["di_ratio_14"] = safe_divide(
+        df["plus_di_14"],
+        df["minus_di_14"]
+    )
+
+    # ADX 기준 추세 강도 플래그
+    df["adx_trend_strength"] = np.where(df["adx_14"] >= 25, 1, 0)
+
+    # 상승 추세 조건성 피처
+    df["adx_bullish_trend"] = np.where(
+        (df["adx_14"] >= 25) & (df["plus_di_14"] > df["minus_di_14"]),
+        1,
+        0
+    )
+
+    # 하락 추세 조건성 피처
+    df["adx_bearish_trend"] = np.where(
+        (df["adx_14"] >= 25) & (df["minus_di_14"] > df["plus_di_14"]),
+        1,
+        0
+    )
+
+    # -------------------------
+    # CCI
+    # -------------------------
+    cci_20 = calculate_cci(
+        high=df["High"],
+        low=df["Low"],
+        close=df["Close"],
+        window=20
+    )
+
+    df["cci_20"] = cci_20
+
+    # CCI는 값이 커질 수 있으므로 범위를 제한한 뒤 스케일링
+    df["cci_20_scaled"] = df["cci_20"].clip(-300, 300) / 300
+
+    # CCI 모멘텀 변화
+    df["cci_20_diff"] = df["cci_20"].diff()
+
+    # CCI 구간 플래그
+    df["cci_bullish"] = np.where(df["cci_20"] >= 100, 1, 0)
+    df["cci_bearish"] = np.where(df["cci_20"] <= -100, 1, 0)
+    df["cci_neutral"] = np.where(
+        (df["cci_20"] > -100) & (df["cci_20"] < 100),
+        1,
+        0
+    )
+    
+        # -------------------------
+    # 기술적 지표 기반 보조 추세 점수
+    # -------------------------
+
+    # 상승 점수
+    bullish_score = (
+        (df["adx_bullish_trend"] == 1).astype(int)
+        + (df["macd_hist_pct"] > 0).astype(int)
+        + (df["macd_cross_signal"] == 1).astype(int)
+        + (df["cci_20"] > 0).astype(int)
+        + (df["rsi_14"] > 50).astype(int)
+        + (df["price_ma_20_gap"] > 0).astype(int)
+        + (df["ma_gap_20_60"] > 0).astype(int)
+    )
+
+    # 하락 점수
+    bearish_score = (
+        (df["adx_bearish_trend"] == 1).astype(int)
+        + (df["macd_hist_pct"] < 0).astype(int)
+        + (df["macd_cross_signal"] == -1).astype(int)
+        + (df["cci_20"] < 0).astype(int)
+        + (df["rsi_14"] < 50).astype(int)
+        + (df["price_ma_20_gap"] < 0).astype(int)
+        + (df["ma_gap_20_60"] < 0).astype(int)
+    )
+
+    # 횡보 점수
+    sideways_score = (
+        (df["adx_14"] < 20).astype(int)
+        + (df["cci_neutral"] == 1).astype(int)
+        + (df["bollinger_width_20"] < df["bollinger_width_20"].rolling(window=60).median()).astype(int)
+        + (df["ma_gap_20_60"].abs() < 0.02).astype(int)
+        + (df["return_20d"].abs() < 0.03).astype(int)
+    )
+
+    df["technical_bullish_score"] = bullish_score
+    df["technical_bearish_score"] = bearish_score
+    df["technical_sideways_score"] = sideways_score
+
+    # 보조 추세 판단
+    technical_scores = pd.concat(
+        [
+            df["technical_bullish_score"],
+            df["technical_bearish_score"],
+            df["technical_sideways_score"]
+        ],
+        axis=1
+    )
+
+    technical_scores.columns = ["상승", "하락", "횡보"]
+
+    df["technical_trend_label"] = technical_scores.idxmax(axis=1)
+
+    # 점수 차이: 클수록 기술적 판단 확신이 강함
+    sorted_scores = np.sort(technical_scores.values, axis=1)
+
+    df["technical_trend_margin"] = (
+        sorted_scores[:, -1] - sorted_scores[:, -2]
+    )
+
+    # 기술적 상승/하락 균형값
+    df["technical_trend_balance"] = (
+        df["technical_bullish_score"] - df["technical_bearish_score"]
     )
 
     df["atr_14_pct"] = safe_divide(atr_14, df["Close"])
@@ -324,15 +586,30 @@ def make_features(df: pd.DataFrame) -> pd.DataFrame:
     # 미래 라벨 생성용 컬럼
     # 주의: 모델 입력 피처로 사용하면 안 됨
     # -------------------------
-    df["future_return_20d"] = (
-        df["Close"].shift(-PREDICT_HORIZON) / df["Close"] - 1
+
+    # 방향성 판단용: 미래 60거래일 수익률
+    df["future_return_60d"] = (
+        df["Close"].shift(-DIRECTION_HORIZON) / df["Close"] - 1
     )
 
-    # 현재 시점 t에서 미래 t+1 ~ t+20 일간수익률의 표준편차
+    # 참고용: 기존 20일 미래 수익률도 저장
+    df["future_return_20d"] = (
+        df["Close"].shift(-RISK_HORIZON) / df["Close"] - 1
+    )
+
+    # 위험도 판단용: 미래 20거래일 변동성
     df["future_volatility_20d"] = (
         df["daily_return"]
-        .shift(-PREDICT_HORIZON)
-        .rolling(window=PREDICT_HORIZON)
+        .shift(-RISK_HORIZON)
+        .rolling(window=RISK_HORIZON)
+        .std()
+    )
+
+    # 참고용: 미래 60거래일 변동성
+    df["future_volatility_60d"] = (
+        df["daily_return"]
+        .shift(-DIRECTION_HORIZON)
+        .rolling(window=DIRECTION_HORIZON)
         .std()
     )
 
@@ -342,28 +619,27 @@ def make_features(df: pd.DataFrame) -> pd.DataFrame:
 # =========================
 # 5. 라벨 생성
 # =========================
-
 def make_labels(df: pd.DataFrame) -> pd.DataFrame:
     """
     방향성 라벨과 위험도 라벨을 분리해서 생성한다.
 
     direction_label:
-    - 상승
-    - 하락
-    - 횡보
+    - 상승: 미래 60거래일 수익률이 +5% 이상
+    - 하락: 미래 60거래일 수익률이 -5% 이하
+    - 횡보: 그 외 구간
 
     risk_label:
-    - 정상
-    - 고변동
-
-    label:
-    - 기존 step2 코드 호환을 위해 direction_label과 동일하게 둔다.
+    - 고변동: 미래 20거래일 변동성이 전체 상위 20%
+    - 정상: 그 외 구간
     """
     df = df.copy()
 
-    valid_df = df.dropna(
-        subset=["future_return_20d", "future_volatility_20d"]
-    ).copy()
+    required_cols = [
+        "future_return_60d",
+        "future_volatility_20d"
+    ]
+
+    valid_df = df.dropna(subset=required_cols).copy()
 
     if valid_df.empty:
         raise ValueError("라벨 생성에 사용할 유효 데이터가 없습니다.")
@@ -373,11 +649,11 @@ def make_labels(df: pd.DataFrame) -> pd.DataFrame:
     )
 
     # -------------------------
-    # 방향성 라벨
+    # 방향성 라벨: 60거래일 기준
     # -------------------------
     conditions_direction = [
-        df["future_return_20d"] >= UP_THRESHOLD,
-        df["future_return_20d"] <= DOWN_THRESHOLD
+        df["future_return_60d"] >= UP_THRESHOLD,
+        df["future_return_60d"] <= DOWN_THRESHOLD
     ]
 
     choices_direction = ["상승", "하락"]
@@ -388,11 +664,10 @@ def make_labels(df: pd.DataFrame) -> pd.DataFrame:
         default="횡보"
     )
 
-    # 미래 수익률이 없는 마지막 구간은 NaN 처리
-    df.loc[df["future_return_20d"].isna(), "direction_label"] = np.nan
+    df.loc[df["future_return_60d"].isna(), "direction_label"] = np.nan
 
     # -------------------------
-    # 위험도 라벨
+    # 위험도 라벨: 20거래일 변동성 기준
     # -------------------------
     df["risk_label"] = np.where(
         df["future_volatility_20d"] >= high_vol_threshold,

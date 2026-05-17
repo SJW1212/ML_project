@@ -36,8 +36,8 @@ EQUITY_CURVE_PATH = os.path.join(RESULT_DIR, "two_stage_equity_curve.png")
 DRAWDOWN_PATH = os.path.join(RESULT_DIR, "two_stage_drawdown_curve.png")
 ALLOCATION_COUNT_PATH = os.path.join(RESULT_DIR, "two_stage_allocation_count.csv")
 
-# step2와 동일하게 뒤 20% 테스트 구간만 백테스트
-TEST_SIZE = 0.2
+# step2와 동일하게 뒤 50% 테스트 구간만 백테스트
+TEST_SIZE = 0.5
 
 # 초기 투자금
 INITIAL_CAPITAL = 100_000_000
@@ -53,7 +53,7 @@ DIRECTION_MIN_MARGIN = 8.0
 
 # 고변동 판단 기준
 # risk_model.predict()만 사용하면 고변동을 많이 놓칠 수 있으므로 확률 기준 사용
-HIGH_VOL_PROBA_THRESHOLD = 35.0
+HIGH_VOL_PROBA_THRESHOLD = 45.0
 
 
 # =========================
@@ -145,11 +145,11 @@ def load_metadata(meta_path: str) -> dict:
 
 def restrict_to_test_period(df: pd.DataFrame, test_size: float) -> pd.DataFrame:
     """
-    step2와 동일하게 뒤 20% 구간만 백테스트에 사용한다.
+    step2와 동일하게 뒤 50% 구간만 백테스트에 사용한다.
 
     이유:
-    - 앞 80%는 모델 학습 구간
-    - 뒤 20%는 테스트 구간
+    - 앞 50%는 모델 학습 구간
+    - 뒤 50%는 테스트 구간
     - 학습 구간을 백테스트에 포함하면 성과가 과대평가될 수 있음
     """
     split_index = int(len(df) * (1 - test_size))
@@ -348,84 +348,96 @@ def recommend_allocation(
     """
     방향성 판단 + 위험도 판단을 결합해 주식/채권/현금 비중을 결정한다.
 
-    출력 비중 단위:
-    - 0~1
+    수정 방향:
+    - 정상 변동성 구간에서는 주식 비중을 높인다.
+    - 하락 + 고변동 구간만 강하게 방어한다.
+    - 불확실 + 정상 구간을 지나치게 방어하지 않는다.
     """
     up = direction_proba.get("상승", 0.0)
     down = direction_proba.get("하락", 0.0)
     sideways = direction_proba.get("횡보", 0.0)
     high_vol = risk_proba.get("고변동", 0.0)
 
-    # 1. 고변동이면 우선 방어
-    if final_risk == "고변동" and high_vol >= 60:
+    # 1. 하락 + 고변동: 가장 방어적
+    if final_direction == "하락" and final_risk == "고변동":
         allocation = {
-            "stock": 0.25,
-            "bond": 0.35,
-            "cash": 0.40
-        }
-        reason = "고변동 확률 60% 이상: 강한 방어 배분"
-
-    elif final_risk == "고변동":
-        allocation = {
-            "stock": 0.35,
-            "bond": 0.35,
-            "cash": 0.30
-        }
-        reason = "고변동 확률 기준 초과: 방어 배분"
-
-    # 2. 하락 판단이면 방어
-    elif final_direction == "하락" or down >= 45:
-        allocation = {
-            "stock": 0.25,
+            "stock": 0.20,
             "bond": 0.45,
-            "cash": 0.30
+            "cash": 0.35
         }
-        reason = "하락 가능성 우세: 주식 비중 축소"
+        reason = "하락 및 고변동 동시 발생: 강한 방어 배분"
 
-    # 3. 방향성이 불확실하면 중립 방어
-    elif final_direction == "불확실":
+    # 2. 하락 + 정상: 하락 신호는 반영하되, 정상 변동성이므로 과도한 방어는 피함
+    elif final_direction == "하락" and final_risk == "정상":
         allocation = {
-            "stock": 0.40,
-            "bond": 0.30,
-            "cash": 0.30
+            "stock": 0.45,
+            "bond": 0.35,
+            "cash": 0.20
         }
-        reason = "방향성 확신 부족: 중립 방어 배분"
+        reason = "하락 가능성 우세이나 변동성 정상: 부분 방어 배분"
 
-    # 4. 상승 확률이 높고 고변동이 낮으면 공격
-    elif final_direction == "상승" and up >= 55 and high_vol < 35:
+    # 3. 상승 + 정상: 가장 공격적
+    elif final_direction == "상승" and final_risk == "정상":
         allocation = {
-            "stock": 0.70,
-            "bond": 0.20,
-            "cash": 0.10
+            "stock": 0.85,
+            "bond": 0.10,
+            "cash": 0.05
         }
-        reason = "상승 우세 및 고변동 위험 낮음: 주식 비중 확대"
+        reason = "상승 우세 및 정상 변동성: 주식 비중 확대"
 
-    # 5. 상승이지만 확신이 강하지 않으면 중간 배분
-    elif final_direction == "상승":
+    # 4. 상승 + 고변동: 상승 신호를 살리되 위험 반영
+    elif final_direction == "상승" and final_risk == "고변동":
         allocation = {
             "stock": 0.60,
             "bond": 0.25,
             "cash": 0.15
         }
-        reason = "상승 우세: 중간 수준 주식 비중"
+        reason = "상승 우세이나 고변동 위험 존재: 중립적 주식 비중"
 
-    # 6. 횡보면 균형
-    elif final_direction == "횡보" or sideways >= 40:
+    # 5. 불확실 + 정상: 기존보다 주식 비중을 높임
+    elif final_direction == "불확실" and final_risk == "정상":
         allocation = {
-            "stock": 0.50,
-            "bond": 0.30,
-            "cash": 0.20
+            "stock": 0.65,
+            "bond": 0.25,
+            "cash": 0.10
         }
-        reason = "횡보 가능성 우세: 균형 배분"
+        reason = "방향성은 불확실하지만 변동성 정상: 중립 성장 배분"
 
-    # 7. 그 외 기본
+    # 6. 불확실 + 고변동: 방어
+    elif final_direction == "불확실" and final_risk == "고변동":
+        allocation = {
+            "stock": 0.35,
+            "bond": 0.35,
+            "cash": 0.30
+        }
+        reason = "방향성 불확실 및 고변동: 방어 배분"
+
+    # 7. 횡보 + 정상: 중립
+    elif final_direction == "횡보" and final_risk == "정상":
+        allocation = {
+            "stock": 0.60,
+            "bond": 0.25,
+            "cash": 0.15
+        }
+        reason = "횡보 및 정상 변동성: 균형 성장 배분"
+
+    # 8. 횡보 + 고변동: 방어적 중립
+    elif final_direction == "횡보" and final_risk == "고변동":
+        allocation = {
+            "stock": 0.40,
+            "bond": 0.35,
+            "cash": 0.25
+        }
+        reason = "횡보 및 고변동: 방어적 균형 배분"
+
+    # 9. 예외 기본값
     else:
         allocation = {
-            "stock": 0.50,
+            "stock": 0.55,
             "bond": 0.30,
-            "cash": 0.20
+            "cash": 0.15
         }
-        reason = "명확한 우세 조건 없음: 기본 배분"
+        reason = "명확한 우세 조건 없음: 기본 중립 배분"
 
     return allocation, reason
 

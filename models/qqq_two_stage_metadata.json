@@ -34,17 +34,15 @@
         "price_position_60",
         "close_to_20d_high",
         "close_to_60d_high",
-        "rsi_14_scaled",
-        "macd_pct",
-        "macd_signal_pct",
-        "macd_hist_pct",
-        "bollinger_position_20",
-        "volume_change",
-        "volume_ratio_20",
-        "volume_zscore_20",
+        "volatility_5d",
+        "volatility_20d",
+        "volatility_60d",
         "volatility_ratio_5_20",
         "volatility_ratio_20_60",
-        "downside_volatility_20d"
+        "downside_volatility_20d",
+        "volume_change",
+        "volume_ratio_20",
+        "volume_zscore_20"
     ],
     "risk_feature_cols": [
         "volatility_5d",
@@ -53,117 +51,118 @@
         "volatility_ratio_5_20",
         "volatility_ratio_20_60",
         "downside_volatility_20d",
-        "atr_14_pct",
-        "bollinger_width_20",
-        "drawdown",
-        "close_to_20d_high",
-        "close_to_60d_high",
-        "price_position_20",
-        "price_position_60",
         "daily_return",
         "log_return",
         "return_3d",
         "return_5d",
+        "return_10d",
         "return_20d",
+        "return_60d",
         "return_5d_zscore",
         "return_20d_zscore",
+        "drawdown",
+        "price_position_20",
+        "price_position_60",
+        "close_to_20d_high",
+        "close_to_60d_high",
         "volume_change",
         "volume_ratio_20",
         "volume_zscore_20",
         "trend_slope_20",
-        "trend_slope_60"
+        "trend_slope_60",
+        "positive_return_ratio_20"
     ],
     "metrics": {
         "direction_metrics": {
-            "accuracy": 0.454476,
-            "macro_f1": 0.398566,
-            "weighted_f1": 0.438201,
+            "accuracy": 0.430992,
+            "macro_f1": 0.366782,
+            "weighted_f1": 0.433456,
             "classification_report": {
                 "상승": {
-                    "precision": 0.5210191082802548,
-                    "recall": 0.6533546325878594,
-                    "f1-score": 0.5797306874557052,
-                    "support": 626.0
+                    "precision": 0.6002252252252253,
+                    "recall": 0.32108433734939756,
+                    "f1-score": 0.41836734693877553,
+                    "support": 1660.0
                 },
                 "하락": {
-                    "precision": 0.39094650205761317,
-                    "recall": 0.27696793002915454,
-                    "f1-score": 0.3242320819112628,
-                    "support": 343.0
+                    "precision": 0.10736196319018405,
+                    "recall": 0.1876675603217158,
+                    "f1-score": 0.13658536585365855,
+                    "support": 373.0
                 },
                 "횡보": {
-                    "precision": 0.3225806451612903,
-                    "recall": 0.26627218934911245,
-                    "f1-score": 0.2917341977309562,
-                    "support": 338.0
+                    "precision": 0.46658851113716293,
+                    "recall": 0.6562242374278648,
+                    "f1-score": 0.5453922576224735,
+                    "support": 1213.0
                 },
-                "accuracy": 0.4544758990053558,
+                "accuracy": 0.43099199014171286,
                 "macro avg": {
-                    "precision": 0.4115154184997194,
-                    "recall": 0.39886491732204216,
-                    "f1-score": 0.3985656556993081,
-                    "support": 1307.0
+                    "precision": 0.3913918998508574,
+                    "recall": 0.3883253783663261,
+                    "f1-score": 0.36678165680496916,
+                    "support": 3246.0
                 },
                 "weighted avg": {
-                    "precision": 0.435566082673081,
-                    "recall": 0.4544758990053558,
-                    "f1-score": 0.438201356752791,
-                    "support": 1307.0
+                    "precision": 0.49365118612236336,
+                    "recall": 0.43099199014171286,
+                    "f1-score": 0.43345562103445545,
+                    "support": 3246.0
                 }
             }
         },
         "risk_metrics": {
-            "accuracy": 0.866106,
-            "macro_f1": 0.673359,
-            "weighted_f1": 0.852475,
+            "accuracy": 0.87215,
+            "macro_f1": 0.628376,
+            "weighted_f1": 0.865196,
             "classification_report": {
                 "고변동": {
-                    "precision": 0.5517241379310345,
-                    "recall": 0.3422459893048128,
-                    "f1-score": 0.42244224422442245,
-                    "support": 187.0
+                    "precision": 0.3726937269372694,
+                    "recall": 0.29190751445086704,
+                    "f1-score": 0.3273905996758509,
+                    "support": 346.0
                 },
                 "정상": {
-                    "precision": 0.8967254408060453,
-                    "recall": 0.9535714285714286,
-                    "f1-score": 0.9242752055387278,
-                    "support": 1120.0
+                    "precision": 0.9176470588235294,
+                    "recall": 0.9413793103448276,
+                    "f1-score": 0.9293617021276596,
+                    "support": 2900.0
                 },
-                "accuracy": 0.8661055853098699,
+                "accuracy": 0.8721503388786198,
                 "macro avg": {
-                    "precision": 0.7242247893685398,
-                    "recall": 0.6479087089381207,
-                    "f1-score": 0.6733587248815751,
-                    "support": 1307.0
+                    "precision": 0.6451703928803993,
+                    "recall": 0.6166434123978473,
+                    "f1-score": 0.6283761509017552,
+                    "support": 3246.0
                 },
                 "weighted avg": {
-                    "precision": 0.8473641220320385,
-                    "recall": 0.8661055853098699,
-                    "f1-score": 0.8524750802397415,
-                    "support": 1307.0
+                    "precision": 0.8595589957204345,
+                    "recall": 0.8721503388786198,
+                    "f1-score": 0.8651959592292229,
+                    "support": 3246.0
                 }
             }
         },
         "latest_result": {
-            "date": "2026-04-17 00:00:00",
-            "direction_pred_label": "상승",
-            "final_direction": "불확실",
+            "date": "2026-02-19 00:00:00",
+            "direction_pred_label": "횡보",
+            "final_direction": "횡보",
             "direction_proba": {
-                "상승": 37.83,
-                "하락": 29.07,
-                "횡보": 33.1
+                "상승": 20.95,
+                "하락": 15.21,
+                "횡보": 63.84
             },
             "risk_pred_label": "정상",
             "risk_proba": {
-                "고변동": 31.33,
-                "정상": 68.67
+                "고변동": 10.06,
+                "정상": 89.94
             },
             "allocation": {
-                "주식": 40,
+                "주식": 50,
                 "채권": 30,
-                "현금": 30
+                "현금": 20
             },
-            "allocation_reason": "방향성 확신이 낮아 중립 방어 배분"
+            "allocation_reason": "횡보 가능성이 높아 균형 배분"
         }
     },
     "note": "Two-stage model. Direction model predicts 상승/하락/횡보. Risk model predicts 정상/고변동. Time-series split used. Future columns excluded to avoid leakage."

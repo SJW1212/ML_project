@@ -1,56 +1,56 @@
 {
-    "backtest_start": "2021-02-26 00:00:00",
+    "backtest_start": "2013-04-30 00:00:00",
     "backtest_end": "2026-03-31 00:00:00",
-    "months": 62,
+    "months": 156,
     "initial_capital": 100000000,
-    "strategy_final_capital": 142071397.53,
-    "benchmark_final_capital": 213110556.8,
-    "strategy_total_return": 0.420714,
-    "benchmark_total_return": 1.131106,
-    "strategy_cagr": 0.070329,
-    "benchmark_cagr": 0.157713,
-    "strategy_mdd": -0.223632,
+    "strategy_final_capital": 374384722.72,
+    "benchmark_final_capital": 1022472029.8,
+    "strategy_total_return": 2.743847,
+    "benchmark_total_return": 9.22472,
+    "strategy_cagr": 0.106882,
+    "benchmark_cagr": 0.195819,
+    "strategy_mdd": -0.196707,
     "benchmark_mdd": -0.32577,
-    "strategy_sharpe": 0.67389,
-    "benchmark_sharpe": 0.839382,
+    "strategy_sharpe": 1.021753,
+    "benchmark_sharpe": 1.113106,
     "direction_min_confidence": 40.0,
     "direction_min_margin": 8.0,
-    "high_vol_proba_threshold": 35.0,
+    "high_vol_proba_threshold": 45.0,
     "allocation_count": [
-        {
-            "final_direction": "상승",
-            "final_risk": "정상",
-            "count": 25
-        },
         {
             "final_direction": "불확실",
             "final_risk": "정상",
-            "count": 19
+            "count": 64
+        },
+        {
+            "final_direction": "하락",
+            "final_risk": "정상",
+            "count": 50
+        },
+        {
+            "final_direction": "상승",
+            "final_risk": "정상",
+            "count": 24
+        },
+        {
+            "final_direction": "하락",
+            "final_risk": "고변동",
+            "count": 9
         },
         {
             "final_direction": "횡보",
             "final_risk": "정상",
-            "count": 6
-        },
-        {
-            "final_direction": "하락",
-            "final_risk": "고변동",
-            "count": 4
-        },
-        {
-            "final_direction": "불확실",
-            "final_risk": "고변동",
-            "count": 3
+            "count": 7
         },
         {
             "final_direction": "상승",
             "final_risk": "고변동",
-            "count": 3
+            "count": 1
         },
         {
-            "final_direction": "하락",
-            "final_risk": "정상",
-            "count": 2
+            "final_direction": "불확실",
+            "final_risk": "고변동",
+            "count": 1
         }
     ],
     "note": "2단계 모델 기반 간이 백테스트입니다. 방향성 모델은 상승/하락/횡보를 예측하고, 위험도 모델은 정상/고변동을 예측합니다. 현재 채권/현금 수익률은 0으로 가정했습니다. 실제 검증에서는 IEF/BIL 또는 SHV 데이터를 붙여야 합니다."
