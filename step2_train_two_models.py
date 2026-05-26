@@ -32,7 +32,7 @@ from sklearn.impute import SimpleImputer
 # 1. 기본 설정
 # =========================
 
-TARGET_TICKER = "VTI"
+TARGET_TICKER = "TQQQ"
 TARGET_TICKER_LOWER = TARGET_TICKER.lower()
 
 DATA_PATH = f"data/{TARGET_TICKER_LOWER}_features_labeled.csv"
