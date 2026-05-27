@@ -22,11 +22,11 @@ import matplotlib.pyplot as plt
 # 1. 기본 설정
 # =========================
 
-DATA_PATH = "data/qqq_features_labeled.csv"
+DATA_PATH = "TQQQ_features_labeled.csv"
 
 # step2_train_two_models.py에서 저장한 모델
-MODEL_PATH = "models/qqq_two_stage_model.pkl"
-META_PATH = "models/qqq_two_stage_metadata.json"
+MODEL_PATH = "models/TQQQ_two_stage_model.pkl"
+META_PATH = "models/TQQQ_two_stage_metadata.json"
 
 RESULT_DIR = "results"
 
@@ -42,7 +42,7 @@ TEST_SIZE = 0.5
 # 초기 투자금
 INITIAL_CAPITAL = 100_000_000
 
-# 현재는 QQQ만 실제 수익률로 사용
+# 현재는 TQQQ만 실제 수익률로 사용
 # 이후 IEF/BIL 데이터를 붙이면 실제 채권/현금성 ETF 수익률로 교체
 DEFAULT_BOND_MONTHLY_RETURN = 0.0
 DEFAULT_CASH_MONTHLY_RETURN = 0.0
@@ -121,7 +121,7 @@ def load_model_package(model_path: str) -> dict:
     if missing_keys:
         raise ValueError(
             f"2단계 모델 패키지 필수 항목 누락: {missing_keys}\n"
-            "기존 단일 모델 파일이 아니라 qqq_two_stage_model.pkl을 사용해야 합니다."
+            "기존 단일 모델 파일이 아니라 TQQQ_two_stage_model.pkl을 사용해야 합니다."
         )
 
     return package
@@ -176,7 +176,7 @@ def get_month_end_rows(df: pd.DataFrame) -> pd.DataFrame:
 
 def add_next_month_return(month_end_df: pd.DataFrame) -> pd.DataFrame:
     """
-    월말 Close 기준 다음 월말까지의 QQQ 수익률을 계산한다.
+    월말 Close 기준 다음 월말까지의 TQQQ 수익률을 계산한다.
 
     예:
     2024-01 월말 Close → 2024-02 월말 Close 수익률
@@ -184,10 +184,10 @@ def add_next_month_return(month_end_df: pd.DataFrame) -> pd.DataFrame:
     df = month_end_df.copy()
 
     df["next_close"] = df["Close"].shift(-1)
-    df["qqq_next_month_return"] = df["next_close"] / df["Close"] - 1
+    df["TQQQ_next_month_return"] = df["next_close"] / df["Close"] - 1
 
     # 마지막 월은 다음 월 수익률이 없으므로 제거
-    df = df.dropna(subset=["qqq_next_month_return"]).reset_index(drop=True)
+    df = df.dropna(subset=["TQQQ_next_month_return"]).reset_index(drop=True)
 
     return df
 
@@ -479,7 +479,7 @@ def run_backtest(
 
         date = current_row["Date"].iloc[0]
         close = float(current_row["Close"].iloc[0])
-        qqq_return = float(current_row["qqq_next_month_return"].iloc[0])
+        TQQQ_return = float(current_row["TQQQ_next_month_return"].iloc[0])
 
         prediction = predict_one_row(
             row=current_row,
@@ -501,12 +501,12 @@ def run_backtest(
         cash_return = DEFAULT_CASH_MONTHLY_RETURN
 
         strategy_return = (
-            stock_weight * qqq_return
+            stock_weight * TQQQ_return
             + bond_weight * bond_return
             + cash_weight * cash_return
         )
 
-        benchmark_return = qqq_return
+        benchmark_return = TQQQ_return
 
         strategy_capital *= (1 + strategy_return)
         benchmark_capital *= (1 + benchmark_return)
@@ -535,7 +535,7 @@ def run_backtest(
             "cash_weight": cash_weight,
             "allocation_reason": allocation_reason,
 
-            "qqq_next_month_return": qqq_return,
+            "TQQQ_next_month_return": TQQQ_return,
             "bond_monthly_return": bond_return,
             "cash_monthly_return": cash_return,
 
@@ -616,7 +616,7 @@ def summarize_performance(
     initial_capital: float
 ) -> dict:
     """
-    전략과 QQQ 단순 보유 성과를 요약한다.
+    전략과 TQQQ 단순 보유 성과를 요약한다.
     """
     months = len(result_df)
 
@@ -686,12 +686,12 @@ def summarize_performance(
 
 def save_equity_curve(result_df: pd.DataFrame, save_path: str):
     """
-    전략 vs QQQ 단순 보유 자산 곡선 저장.
+    전략 vs TQQQ 단순 보유 자산 곡선 저장.
     """
     fig, ax = plt.subplots(figsize=(11, 6))
 
     ax.plot(result_df["Date"], result_df["strategy_capital"], label="Two-Stage Strategy")
-    ax.plot(result_df["Date"], result_df["benchmark_capital"], label="QQQ Buy & Hold")
+    ax.plot(result_df["Date"], result_df["benchmark_capital"], label="TQQQ Buy & Hold")
 
     ax.set_title("Two-Stage Equity Curve")
     ax.set_xlabel("Date")
@@ -709,7 +709,7 @@ def save_equity_curve(result_df: pd.DataFrame, save_path: str):
 
 def save_drawdown_curve(result_df: pd.DataFrame, save_path: str):
     """
-    전략 vs QQQ 단순 보유 Drawdown 그래프 저장.
+    전략 vs TQQQ 단순 보유 Drawdown 그래프 저장.
     """
     strategy_running_max = result_df["strategy_capital"].cummax()
     benchmark_running_max = result_df["benchmark_capital"].cummax()
@@ -720,7 +720,7 @@ def save_drawdown_curve(result_df: pd.DataFrame, save_path: str):
     fig, ax = plt.subplots(figsize=(11, 6))
 
     ax.plot(result_df["Date"], strategy_drawdown, label="Two-Stage Strategy Drawdown")
-    ax.plot(result_df["Date"], benchmark_drawdown, label="QQQ Drawdown")
+    ax.plot(result_df["Date"], benchmark_drawdown, label="TQQQ Drawdown")
 
     ax.set_title("Two-Stage Drawdown Curve")
     ax.set_xlabel("Date")
@@ -787,7 +787,7 @@ def print_summary(summary: dict):
     print(f"MDD: {summary['strategy_mdd'] * 100:.2f}%")
     print(f"Sharpe: {summary['strategy_sharpe']:.4f}")
 
-    print("\n[QQQ 단순 보유]")
+    print("\n[TQQQ 단순 보유]")
     print(f"최종 자산: {summary['benchmark_final_capital']:,.0f}원")
     print(f"총수익률: {summary['benchmark_total_return'] * 100:.2f}%")
     print(f"CAGR: {summary['benchmark_cagr'] * 100:.2f}%")
@@ -830,7 +830,7 @@ def print_recent_results(result_df: pd.DataFrame, n: int = 10):
         "stock_weight",
         "bond_weight",
         "cash_weight",
-        "qqq_next_month_return",
+        "TQQQ_next_month_return",
         "strategy_return",
         "benchmark_return",
         "strategy_capital",

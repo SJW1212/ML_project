@@ -12,7 +12,7 @@ import yfinance as yf
 # 1. 기본 설정
 # =========================
 
-TICKER = "VTI"
+TICKER = "TQQQ"
 TICKER_LOWER = TICKER.lower()
 
 START_DATE = "2001-01-01"
@@ -431,7 +431,7 @@ def make_features(df: pd.DataFrame) -> pd.DataFrame:
         window=14
     )
     
-        # -------------------------
+    # -------------------------
     # ADX / DI
     # -------------------------
     adx_14, plus_di_14, minus_di_14 = calculate_adx(
@@ -499,7 +499,7 @@ def make_features(df: pd.DataFrame) -> pd.DataFrame:
         0
     )
     
-        # -------------------------
+    # -------------------------
     # 기술적 지표 기반 보조 추세 점수
     # -------------------------
 
@@ -741,7 +741,7 @@ def print_dataset_summary(df: pd.DataFrame) -> None:
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    print("[1] QQQ 데이터 수집 중...")
+    print("[1] 데이터 수집 중...")
     raw_df = download_price_data(TICKER, START_DATE, END_DATE)
     print(f"수집 완료: {len(raw_df):,}개 행")
 

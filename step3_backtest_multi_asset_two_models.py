@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 # 1. 기본 설정
 # =========================
 
-TARGET_TICKER = "VTI"
+TARGET_TICKER = "TQQQ"
 TARGET_TICKER_LOWER = TARGET_TICKER.lower()
 
 DATA_PATH = f"data/{TARGET_TICKER_LOWER}_features_labeled.csv"
@@ -78,7 +78,7 @@ HIGH_VOL_PROBA_THRESHOLD = 45.0
 
 def load_dataset(path: str) -> pd.DataFrame:
     """
-    step1_make_dataset.py에서 생성한 QQQ 피처/라벨 데이터셋을 불러온다.
+    step1_make_dataset.py에서 생성한 TQQQ 피처/라벨 데이터셋을 불러온다.
     """
     if not os.path.exists(path):
         raise FileNotFoundError(
@@ -137,7 +137,7 @@ def load_model_package(model_path: str) -> dict:
     if missing_keys:
         raise ValueError(
             f"2단계 모델 패키지 필수 항목 누락: {missing_keys}\n"
-            "qqq_two_stage_model.pkl을 사용해야 합니다."
+            "TQQQ_two_stage_model.pkl을 사용해야 합니다."
         )
 
     return package
@@ -238,7 +238,7 @@ def restrict_to_backtest_period(df: pd.DataFrame) -> pd.DataFrame:
 
 def get_month_end_rows(df: pd.DataFrame) -> pd.DataFrame:
     """
-    QQQ 피처 데이터에서 각 월의 마지막 거래일 행을 추출한다.
+    TQQQ 피처 데이터에서 각 월의 마지막 거래일 행을 추출한다.
     """
     temp = df.copy()
     temp["year_month"] = temp["Date"].dt.to_period("M")
@@ -710,7 +710,7 @@ def run_backtest(
     월말마다:
     1. 방향성/위험도 예측
     2. 자산배분 결정
-    3. QQQ/IEF/BIL 실제 다음 달 수익률 적용
+    3. TQQQ/IEF/BIL 실제 다음 달 수익률 적용
     4. 벤치마크와 비교
     """
     test_df = restrict_to_backtest_period(df)
