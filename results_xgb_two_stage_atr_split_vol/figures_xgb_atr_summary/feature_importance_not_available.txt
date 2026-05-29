@@ -1,0 +1,7 @@
+현재 summary JSON에는 실제 XGBoost feature importance 값이 없습니다.
+따라서 피처 중요도 순위 그래프는 이 JSON만으로 생성할 수 없습니다.
+
+가능한 대안:
+1. 학습 코드에서 각 walk-forward 모델의 booster.feature_importances_를 저장
+2. stage1/stage2 feature importance를 평균내어 summary JSON에 추가
+3. 그 후 이 스크립트를 다시 실행

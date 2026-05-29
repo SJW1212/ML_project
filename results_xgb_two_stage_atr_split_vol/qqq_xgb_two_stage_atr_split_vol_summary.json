@@ -1,0 +1,402 @@
+{
+  "target_ticker": "QQQ",
+  "bond_ticker": "IEF",
+  "cash_ticker": "BIL",
+  "model_type": "xgb_two_stage_atr_aware_split_vol_risk_first",
+  "config": {
+    "target_ticker": "QQQ",
+    "bond_ticker": "IEF",
+    "cash_ticker": "BIL",
+    "start_date": "1999-03-10",
+    "backtest_start_date": "2013-01-02",
+    "end_date": null,
+    "initial_capital": 100000000,
+    "transaction_cost_rate": 0.001,
+    "risk_horizon_days": 20,
+    "horizon_gap_days": 20,
+    "min_train_rows": 756,
+    "retrain_every_n_days": 5,
+    "random_state": 42,
+    "n_jobs": 1,
+    "stage1_n_estimators": 250,
+    "stage1_learning_rate": 0.025,
+    "stage1_max_depth": 3,
+    "stage1_min_child_weight": 10.0,
+    "stage1_subsample": 0.85,
+    "stage1_colsample_bytree": 0.8,
+    "stage1_reg_lambda": 8.0,
+    "stage1_reg_alpha": 0.1,
+    "stage2_n_estimators": 180,
+    "stage2_learning_rate": 0.03,
+    "stage2_max_depth": 2,
+    "stage2_min_child_weight": 6.0,
+    "stage2_subsample": 0.9,
+    "stage2_colsample_bytree": 0.85,
+    "stage2_reg_lambda": 10.0,
+    "stage2_reg_alpha": 0.2,
+    "use_prob_ewma": true,
+    "prob_ewma_span": 3,
+    "base_stock_weight": 0.95,
+    "down_high_vol_penalty": 0.78,
+    "up_high_vol_penalty": 0.12,
+    "min_stock_weight": 0.2,
+    "max_stock_weight": 0.95,
+    "base_cash_ratio_in_defensive": 0.15,
+    "down_high_vol_cash_sensitivity": 0.55,
+    "up_high_vol_cash_sensitivity": 0.05,
+    "min_cash_ratio_in_defensive": 0.1,
+    "max_cash_ratio_in_defensive": 0.8,
+    "weight_smoothing": 0.35,
+    "use_rolling_allocation_optimization": true,
+    "allocation_rolling_window": 756,
+    "allocation_min_window": 252,
+    "allocation_optimize_every_n_days": 20,
+    "opt_cagr_weight": 1.35,
+    "opt_mdd_weight": 0.9,
+    "opt_turnover_weight": 0.1,
+    "opt_target_avg_stock_weight": 0.65,
+    "opt_low_stock_penalty_weight": 0.75,
+    "result_dir": "results_xgb_two_stage_atr_split_vol"
+  },
+  "period": {
+    "start": "2013-01-02 00:00:00",
+    "end": "2026-04-28 00:00:00",
+    "rows": 3350
+  },
+  "feature_count": 68,
+  "feature_set": "price_volume_volatility_atr_range_downside_features",
+  "feature_cols": [
+    "daily_return",
+    "log_return",
+    "return_3d",
+    "return_5d",
+    "return_10d",
+    "return_20d",
+    "return_60d",
+    "return_120d",
+    "price_ma_5_gap",
+    "price_ma_10_gap",
+    "price_ma_20_gap",
+    "price_ma_60_gap",
+    "price_ma_120_gap",
+    "ma_gap_5_20",
+    "ma_gap_20_60",
+    "ma_gap_60_120",
+    "trend_slope_20",
+    "trend_slope_60",
+    "positive_return_ratio_20",
+    "positive_return_ratio_60",
+    "drawdown_20",
+    "drawdown_60",
+    "drawdown_120",
+    "price_position_20",
+    "price_position_60",
+    "close_to_20d_high",
+    "close_to_60d_high",
+    "large_down_day_ratio_20",
+    "large_up_day_ratio_20",
+    "volume_change",
+    "volume_ratio_20",
+    "volume_zscore_20",
+    "price_ma_200_gap",
+    "ma_gap_50_200",
+    "ma200_slope_60",
+    "true_range_pct",
+    "atr_pct_14",
+    "atr_pct_20",
+    "atr_pct_60",
+    "atr_rank_252",
+    "atr_ratio_14_60",
+    "atr_ratio_20_60",
+    "atr_accel_5",
+    "realized_vol_20",
+    "realized_vol_60",
+    "realized_vol_ratio_20_60",
+    "ewma_vol_20",
+    "ewma_vol_60",
+    "parkinson_vol_20",
+    "parkinson_vol_60",
+    "parkinson_vol_ratio_20_60",
+    "garman_klass_vol_20",
+    "rogers_satchell_vol_20",
+    "yang_zhang_vol_20",
+    "yang_zhang_vol_60",
+    "yang_zhang_vol_ratio_20_60",
+    "downside_vol_20",
+    "downside_vol_60",
+    "semi_vol_20",
+    "ulcer_index_20",
+    "ulcer_index_60",
+    "ulcer_rank_252",
+    "bb_width_20",
+    "bb_width_rank_252",
+    "keltner_width_20",
+    "squeeze_on",
+    "squeeze_release",
+    "vol_of_vol_20"
+  ],
+  "label_design": {
+    "stage1": "정상 / 고변동",
+    "stage2": "고변동 구간 내부에서 상승고변동 / 하락고변동",
+    "high_vol_rule": "future_volatility_20d >= train q80 OR future_min_return_20d <= trend/ATR-adjusted down threshold OR future_max_return_20d >= trend/ATR-adjusted up threshold",
+    "atr_aware": true,
+    "down_priority": true,
+    "severe_down_rule": "future_min_return_20d <= train q20 is treated as down-high-vol unless current up-pressure is strong"
+  },
+  "average_probabilities": {
+    "avg_prob_normal": 0.6593536435796525,
+    "avg_prob_high_vol": 0.34064635642034746,
+    "avg_prob_up_high_vol": 0.1713477094955795,
+    "avg_prob_down_high_vol": 0.16929864692476798,
+    "stage2_model_used_ratio": 1.0
+  },
+  "average_weights": {
+    "avg_stock_weight": 0.8062402600504063,
+    "avg_bond_weight": 0.13777297704102204,
+    "avg_cash_weight": 0.05598676290857159,
+    "min_stock_weight": 0.2963131199748986,
+    "max_stock_weight": 0.9385005397416277
+  },
+  "turnover": {
+    "avg_daily_trade_ratio": 0.015126808556764583,
+    "annual_turnover_estimate": 3.8119557563046746,
+    "total_transaction_cost_rate_sum": 0.050674808665161344
+  },
+  "performance": {
+    "strategy_after_cost": {
+      "final_capital": 636492367.9126822,
+      "total_return": 5.3649236791268216,
+      "cagr": 0.14938213813087953,
+      "mdd": -0.30021242237460266,
+      "sharpe": 1.0189949055454706,
+      "sortino": 1.3469183700301017,
+      "calmar": 0.49758813092844534
+    },
+    "strategy_gross": {
+      "final_capital": 669564966.8599007,
+      "total_return": 5.695649668599007,
+      "cagr": 0.15377024115639015,
+      "mdd": -0.29630252621918074,
+      "sharpe": 1.0448887913596951,
+      "sortino": 1.3816144188552664,
+      "calmar": 0.5189636521783932
+    },
+    "stock_buy_hold": {
+      "final_capital": 1099663550.7760897,
+      "total_return": 9.996635507760896,
+      "cagr": 0.19764361959695864,
+      "mdd": -0.3511872475502925,
+      "sharpe": 0.972316843566352,
+      "sortino": 1.2364899177716138,
+      "calmar": 0.5627870060078268
+    },
+    "benchmark_60_40": {
+      "final_capital": 488193990.40533745,
+      "total_return": 3.8819399040533744,
+      "cagr": 0.1266748362416279,
+      "mdd": -0.2784131435172761,
+      "sharpe": 1.0222821457122373,
+      "sortino": 1.3311653335759728,
+      "calmar": 0.45498870721872897
+    },
+    "static_50_30_20": {
+      "final_capital": 394101716.8573261,
+      "total_return": 2.941017168573261,
+      "cagr": 0.10867427274718944,
+      "mdd": -0.2300359485429858,
+      "sharpe": 1.049845725786083,
+      "sortino": 1.3638297245158766,
+      "calmar": 0.47242299925518794
+    }
+  },
+  "stage1_risk_classification": {
+    "rows": 3350,
+    "accuracy": 0.784179104477612,
+    "macro_f1": 0.7445832897014248,
+    "high_vol_precision": 0.707027027027027,
+    "high_vol_recall": 0.5913200723327305,
+    "high_vol_f1": 0.6440177252584933,
+    "normal_precision": 0.8136082474226805,
+    "normal_recall": 0.8792335115864528,
+    "normal_f1": 0.8451488541443564,
+    "brier": 0.1514320403548489,
+    "report": {
+      "정상": {
+        "precision": 0.8136082474226805,
+        "recall": 0.8792335115864528,
+        "f1-score": 0.8451488541443564,
+        "support": 2244.0
+      },
+      "고변동": {
+        "precision": 0.707027027027027,
+        "recall": 0.5913200723327305,
+        "f1-score": 0.6440177252584933,
+        "support": 1106.0
+      },
+      "accuracy": 0.784179104477612,
+      "macro avg": {
+        "precision": 0.7603176372248537,
+        "recall": 0.7352767919595917,
+        "f1-score": 0.7445832897014248,
+        "support": 3350.0
+      },
+      "weighted avg": {
+        "precision": 0.7784205370472796,
+        "recall": 0.784179104477612,
+        "f1-score": 0.778745562040546,
+        "support": 3350.0
+      }
+    },
+    "roc_auc": 0.82266796246692,
+    "pr_auc": 0.731613976307466
+  },
+  "split_vol_classification": {
+    "rows": 3350,
+    "accuracy": 0.68,
+    "macro_f1": 0.4804765491307144,
+    "report": {
+      "정상": {
+        "precision": 0.8136082474226805,
+        "recall": 0.8792335115864528,
+        "f1-score": 0.8451488541443564,
+        "support": 2244.0
+      },
+      "상승고변동": {
+        "precision": 0.33457943925233646,
+        "recall": 0.3054607508532423,
+        "f1-score": 0.3193577163247101,
+        "support": 586.0
+      },
+      "하락고변동": {
+        "precision": 0.3230769230769231,
+        "recall": 0.2423076923076923,
+        "f1-score": 0.27692307692307694,
+        "support": 520.0
+      },
+      "accuracy": 0.68,
+      "macro avg": {
+        "precision": 0.49042153658397997,
+        "recall": 0.47566731824912917,
+        "f1-score": 0.4804765491307144,
+        "support": 3350.0
+      },
+      "weighted avg": {
+        "precision": 0.6536717786920491,
+        "recall": 0.68,
+        "f1-score": 0.6649724329749898,
+        "support": 3350.0
+      }
+    },
+    "label_support": {
+      "정상": 2244,
+      "상승고변동": 586,
+      "하락고변동": 520
+    },
+    "per_class": {
+      "정상": {
+        "precision": 0.8136082474226805,
+        "recall": 0.8792335115864528,
+        "f1": 0.8451488541443564,
+        "support": 2244
+      },
+      "상승고변동": {
+        "precision": 0.33457943925233646,
+        "recall": 0.3054607508532423,
+        "f1": 0.3193577163247101,
+        "support": 586
+      },
+      "하락고변동": {
+        "precision": 0.3230769230769231,
+        "recall": 0.2423076923076923,
+        "f1": 0.27692307692307694,
+        "support": 520
+      }
+    },
+    "down_high_vol_roc_auc": 0.7161388964392499,
+    "down_high_vol_pr_auc": 0.27836360722458353,
+    "up_high_vol_roc_auc": 0.7565728058953981,
+    "up_high_vol_pr_auc": 0.34388333808296534
+  },
+  "down_high_vol_threshold_diagnostics": [
+    {
+      "threshold": 0.1,
+      "down_high_vol_precision": 0.21891327063740856,
+      "down_high_vol_recall": 0.8057692307692308,
+      "down_high_vol_f1": 0.3442892358258012,
+      "pred_down_high_vol_ratio": 0.5713432835820895
+    },
+    {
+      "threshold": 0.15,
+      "down_high_vol_precision": 0.27333831217326365,
+      "down_high_vol_recall": 0.7038461538461539,
+      "down_high_vol_f1": 0.3937600860677784,
+      "pred_down_high_vol_ratio": 0.3997014925373134
+    },
+    {
+      "threshold": 0.2,
+      "down_high_vol_precision": 0.30640083945435465,
+      "down_high_vol_recall": 0.5615384615384615,
+      "down_high_vol_f1": 0.39646978954514595,
+      "pred_down_high_vol_ratio": 0.2844776119402985
+    },
+    {
+      "threshold": 0.25,
+      "down_high_vol_precision": 0.3179271708683473,
+      "down_high_vol_recall": 0.43653846153846154,
+      "down_high_vol_f1": 0.3679092382495948,
+      "pred_down_high_vol_ratio": 0.21313432835820895
+    },
+    {
+      "threshold": 0.3,
+      "down_high_vol_precision": 0.30654205607476637,
+      "down_high_vol_recall": 0.3153846153846154,
+      "down_high_vol_f1": 0.3109004739336493,
+      "pred_down_high_vol_ratio": 0.15970149253731344
+    },
+    {
+      "threshold": 0.35,
+      "down_high_vol_precision": 0.31297709923664124,
+      "down_high_vol_recall": 0.23653846153846153,
+      "down_high_vol_f1": 0.26944140197152244,
+      "pred_down_high_vol_ratio": 0.1173134328358209
+    },
+    {
+      "threshold": 0.4,
+      "down_high_vol_precision": 0.3116883116883117,
+      "down_high_vol_recall": 0.18461538461538463,
+      "down_high_vol_f1": 0.2318840579710145,
+      "pred_down_high_vol_ratio": 0.09194029850746269
+    },
+    {
+      "threshold": 0.5,
+      "down_high_vol_precision": 0.3352272727272727,
+      "down_high_vol_recall": 0.11346153846153846,
+      "down_high_vol_f1": 0.16954022988505746,
+      "pred_down_high_vol_ratio": 0.05253731343283582
+    }
+  ],
+  "allocation_config_usage_top10": {
+    "xgb_split_cfg_0024": 1480,
+    "xgb_split_cfg_0025": 530,
+    "xgb_split_cfg_0000": 420,
+    "xgb_split_cfg_0002": 360,
+    "xgb_split_cfg_0001": 300,
+    "default_xgb_atr_split_vol": 260
+  },
+  "latest_prediction": {
+    "date": "2026-04-28 00:00:00",
+    "pred_risk": "정상",
+    "pred_split_vol": "정상",
+    "prob_normal": 80.81,
+    "prob_high_vol": 19.19,
+    "prob_up_high_vol": 9.49,
+    "prob_down_high_vol": 9.7,
+    "prob_up_given_high_vol": 49.77,
+    "prob_down_given_high_vol": 50.23,
+    "target_allocation": {
+      "stock": 87.63,
+      "bond": 9.73,
+      "cash": 2.65
+    }
+  }
+}

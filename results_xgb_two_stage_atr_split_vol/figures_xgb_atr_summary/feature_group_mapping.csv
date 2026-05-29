@@ -1,0 +1,69 @@
+﻿feature,group
+daily_return,Return/Momentum
+log_return,Return/Momentum
+return_3d,Return/Momentum
+return_5d,Return/Momentum
+return_10d,Return/Momentum
+return_20d,Return/Momentum
+return_60d,Return/Momentum
+return_120d,Return/Momentum
+price_ma_5_gap,Trend/MA
+price_ma_10_gap,Trend/MA
+price_ma_20_gap,Trend/MA
+price_ma_60_gap,Trend/MA
+price_ma_120_gap,Trend/MA
+ma_gap_5_20,Trend/MA
+ma_gap_20_60,Trend/MA
+ma_gap_60_120,Trend/MA
+trend_slope_20,Trend/MA
+trend_slope_60,Trend/MA
+positive_return_ratio_20,Return/Momentum
+positive_return_ratio_60,Return/Momentum
+drawdown_20,Downside Risk
+drawdown_60,Downside Risk
+drawdown_120,Downside Risk
+price_position_20,Price Position
+price_position_60,Price Position
+close_to_20d_high,Price Position
+close_to_60d_high,Price Position
+large_down_day_ratio_20,Return/Momentum
+large_up_day_ratio_20,Return/Momentum
+volume_change,Volatility
+volume_ratio_20,Volatility
+volume_zscore_20,Volatility
+price_ma_200_gap,Trend/MA
+ma_gap_50_200,Trend/MA
+ma200_slope_60,Trend/MA
+true_range_pct,ATR/Range
+atr_pct_14,ATR/Range
+atr_pct_20,ATR/Range
+atr_pct_60,ATR/Range
+atr_rank_252,ATR/Range
+atr_ratio_14_60,ATR/Range
+atr_ratio_20_60,ATR/Range
+atr_accel_5,ATR/Range
+realized_vol_20,Volatility
+realized_vol_60,Volatility
+realized_vol_ratio_20_60,Volatility
+ewma_vol_20,Volatility
+ewma_vol_60,Volatility
+parkinson_vol_20,Range-based Volatility
+parkinson_vol_60,Range-based Volatility
+parkinson_vol_ratio_20_60,Range-based Volatility
+garman_klass_vol_20,Range-based Volatility
+rogers_satchell_vol_20,Range-based Volatility
+yang_zhang_vol_20,Range-based Volatility
+yang_zhang_vol_60,Range-based Volatility
+yang_zhang_vol_ratio_20_60,Range-based Volatility
+downside_vol_20,Volatility
+downside_vol_60,Volatility
+semi_vol_20,Volatility
+ulcer_index_20,Downside Risk
+ulcer_index_60,Downside Risk
+ulcer_rank_252,Downside Risk
+bb_width_20,Volatility
+bb_width_rank_252,Volatility
+keltner_width_20,ATR/Range
+squeeze_on,Volatility
+squeeze_release,Volatility
+vol_of_vol_20,Volatility
