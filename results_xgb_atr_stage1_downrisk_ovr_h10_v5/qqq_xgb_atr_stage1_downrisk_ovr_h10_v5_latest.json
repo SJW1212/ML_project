@@ -1,0 +1,16 @@
+{
+  "date": "2026-05-13 00:00:00",
+  "pred_risk": "정상",
+  "pred_split_vol": "정상",
+  "prob_normal": 90.13,
+  "prob_high_vol": 9.87,
+  "prob_down_risk": 21.44,
+  "prob_up_proxy": 0.0,
+  "prob_up_high_vol": 0.0,
+  "prob_down_high_vol": 9.87,
+  "target_allocation": {
+    "stock": 83.94,
+    "bond": 11.12,
+    "cash": 4.94
+  }
+}

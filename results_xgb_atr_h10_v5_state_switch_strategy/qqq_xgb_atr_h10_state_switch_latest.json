@@ -1,0 +1,17 @@
+{
+  "date": "2026-05-14 00:00:00",
+  "pred_risk": "정상",
+  "pred_split_vol": "정상",
+  "prob_normal": 89.54,
+  "prob_high_vol": 10.46,
+  "prob_down_risk": 21.72,
+  "prob_up_proxy": 0.0,
+  "prob_up_high_vol": 0.0,
+  "prob_down_high_vol": 10.46,
+  "regime_state": "RECOVERY",
+  "target_allocation": {
+    "stock": 60.0,
+    "bond": 25.0,
+    "cash": 15.0
+  }
+}
