@@ -1,0 +1,11 @@
+﻿metric,value
+asset_count,4.0
+economic_pass_rate,0.5
+calmar_positive_rate,1.0
+mdd_positive_rate,0.75
+cagr_gate_rate,1.0
+avg_cagr_diff_vs_buy_hold,0.003055236707853015
+avg_mdd_diff_vs_buy_hold,0.03619916164709677
+avg_calmar_diff_vs_buy_hold,0.0609362374918065
+avg_signal_rate,0.18574481074481075
+avg_turnover_total,19.6

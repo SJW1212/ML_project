@@ -1,0 +1,59 @@
+{
+  "experiment": "mixed_activity_return_extension_v6_4",
+  "input_predictions": "signal_policy_repair_v6_2_output\\repaired_signal_predictions.csv",
+  "close_return_meta": {
+    "close_return_available": true,
+    "assets": [
+      {
+        "asset_name": "QQQ",
+        "ohlcv_input": "QQQ_ohlcv.csv",
+        "rows": 3373,
+        "start": "2013-01-02",
+        "end": "2026-06-01"
+      },
+      {
+        "asset_name": "SPY",
+        "ohlcv_input": "SPY_ohlcv.csv",
+        "rows": 3373,
+        "start": "2013-01-02",
+        "end": "2026-06-01"
+      },
+      {
+        "asset_name": "SOXX",
+        "ohlcv_input": "SOXX_ohlcv.csv",
+        "rows": 3373,
+        "start": "2013-01-02",
+        "end": "2026-06-01"
+      },
+      {
+        "asset_name": "XLK",
+        "ohlcv_input": "XLK_ohlcv.csv",
+        "rows": 3373,
+        "start": "2013-01-02",
+        "end": "2026-06-01"
+      }
+    ],
+    "future_close_return_h5_non_null": 7308,
+    "future_close_return_h10_non_null": 7308,
+    "future_close_return_h20_non_null": 7308
+  },
+  "thresholds": {
+    "high_conf_threshold": 0.95,
+    "strong_threshold": 0.9,
+    "balanced_up_edge": 0.8,
+    "balanced_down_block": 0.8,
+    "defensive_conflict": 0.9,
+    "sensitivity_thresholds": [
+      0.85,
+      0.88,
+      0.9,
+      0.92,
+      0.95
+    ]
+  },
+  "interpretation": {
+    "score_percentile": "calibration-window percentile rank, not literal probability",
+    "portfolio_allocation": false,
+    "costs_turnover_mdd": false
+  }
+}

@@ -1,0 +1,6 @@
+﻿strategy,threshold_quantile,worst_drawdown,drawdown_start_date,drawdown_end_date,drawdown_days
+buy_hold,,-0.3561721518084636,2021-11-19,2022-12-28,277
+highvol_only,0.8,-0.30537004939050205,2021-11-19,2022-12-28,277
+constant_normal,,-0.3048932541282495,2021-11-19,2022-11-03,240
+highvol_only,0.75,-0.2992490539382482,2021-11-19,2022-12-28,277
+sixty_forty,,-0.28475260034019034,2021-12-27,2022-11-03,216

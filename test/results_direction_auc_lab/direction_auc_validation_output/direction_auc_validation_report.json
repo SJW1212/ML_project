@@ -1,0 +1,130 @@
+{
+  "input_files": {
+    "trials": "direction_auc_trials.csv",
+    "top20": "direction_auc_trials_top20.csv",
+    "predictions": "direction_auc_best_predictions.csv",
+    "summary": "direction_auc_summary.json"
+  },
+  "summary_meta": {
+    "created_at": "2026-06-02 10:14:38",
+    "ticker": "QQQ",
+    "period": {
+      "start": "2013-01-02 00:00:00",
+      "end": "2026-06-01 00:00:00",
+      "rows": 3373
+    },
+    "trial_count": 1080,
+    "base_script": "xgb_multi_branch_pruned_features_v8_6_5.py"
+  },
+  "best_prediction_report": {
+    "overall": {
+      "sample_count": 2497,
+      "positive_rate": 0.7272727272727273,
+      "roc_auc": 0.5639938998751513,
+      "inverse_roc_auc": 0.4360061001248488,
+      "best_roc_after_inversion": 0.5639938998751513,
+      "pr_auc": 0.8035013087050734,
+      "inverse_pr_auc": 0.7151657430685661,
+      "pr_gain": 0.07622858143234612,
+      "pr_ratio": 1.1048142994694758,
+      "brier": 0.2857407754492374,
+      "brier_baseline": 0.1983471074380165,
+      "brier_skill": -0.4406097428899056,
+      "ece": 0.22536988331346028,
+      "prob_mean": 0.5439432041933573,
+      "prob_std": 0.27947051550482976
+    },
+    "yearly_stability": {
+      "year_count": 10,
+      "auc_mean": 0.4143982757571705,
+      "auc_median": 0.5007894736842106,
+      "auc_std": 0.2436332159106127,
+      "auc_min": 0.11991869918699188,
+      "auc_max": 0.7570719602977667,
+      "year_auc_above_0_5_rate": 0.5555555555555556,
+      "year_auc_above_0_55_rate": 0.2222222222222222,
+      "brier_skill_positive_rate": 0.1111111111111111,
+      "ece_mean": 0.35126645028168035,
+      "unstable_years_auc_below_0_5": [
+        2020,
+        2021,
+        2023,
+        2025
+      ]
+    },
+    "evaluated_rows": 2497,
+    "raw_rows": 3373,
+    "first_eval_date": "2016-01-04 00:00:00",
+    "last_eval_date": "2025-12-05 00:00:00"
+  },
+  "final_decision": {
+    "overall_judgment": "candidate_only_not_stable",
+    "structure_impact": {
+      "multi_head_structure": "keep",
+      "direction_head_role": "auxiliary_signal",
+      "riskoff_highvol_priority": "test_next",
+      "allocation_direct_use": "forbidden_before_calibration_and_backtest"
+    },
+    "best_trial_id": "t0991",
+    "best_trial_candidate_decision": "weak_candidate",
+    "best_trial_key_metrics": {
+      "horizon": 120,
+      "task": "up_vs_rest",
+      "label_mode": "vol_adj",
+      "feature_set": "trend_volume",
+      "model_type": "logistic",
+      "roc_auc": 0.5639938998751513,
+      "pr_auc": 0.8035013087050734,
+      "base_rate": 0.7272727272727273,
+      "pr_gain": 0.07622858143234612,
+      "pr_ratio": 1.1048142994694758,
+      "brier": 0.2857407754492374,
+      "brier_baseline": 0.1983471074380165,
+      "brier_skill": -0.4406097428899056,
+      "probability_polarity": "normal_better"
+    },
+    "trial_counts": {
+      "total_trials": 1080,
+      "holdout_candidate_count": 0,
+      "weak_candidate_count": 51,
+      "diagnostic_inverse_signal_count": 745,
+      "reject_or_diagnostic_only_count": 284,
+      "polarity_counts": {
+        "inverse_better": 745,
+        "normal_better": 200,
+        "ambiguous": 135
+      }
+    },
+    "best_prediction_stability": {
+      "year_count": 10,
+      "auc_mean": 0.4143982757571705,
+      "auc_median": 0.5007894736842106,
+      "auc_std": 0.2436332159106127,
+      "auc_min": 0.11991869918699188,
+      "auc_max": 0.7570719602977667,
+      "year_auc_above_0_5_rate": 0.5555555555555556,
+      "year_auc_above_0_55_rate": 0.2222222222222222,
+      "brier_skill_positive_rate": 0.1111111111111111,
+      "ece_mean": 0.35126645028168035,
+      "unstable_years_auc_below_0_5": [
+        2020,
+        2021,
+        2023,
+        2025
+      ]
+    },
+    "required_next_steps": [
+      "Run holdout validation for top candidates.",
+      "Run calibration comparison: raw vs calibrated probability.",
+      "Run portfolio-level after-cost benchmark against 1/N, 60/40, buy-and-hold, constant_NORMAL.",
+      "Run RiskOff and HighVol search before changing final model structure.",
+      "Run multi-head ablation: Direction only, Direction+HighVol, Direction+RiskOff, Full multi-head."
+    ],
+    "do_not_do": [
+      "Do not promote best trial to stable model.",
+      "Do not switch to Direction-centered allocation based on this result.",
+      "Do not use best_f1 as core evidence when threshold is near zero.",
+      "Do not use raw probability directly in AllocationService before calibration diagnostics."
+    ]
+  }
+}

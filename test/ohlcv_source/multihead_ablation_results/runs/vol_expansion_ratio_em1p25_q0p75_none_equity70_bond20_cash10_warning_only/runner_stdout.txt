@@ -1,0 +1,21 @@
+[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_none_equity70_bond20_cash10_warning_only
+{
+  "ticker": "QQQ",
+  "oos_start": "2019-08-29",
+  "oos_end": "2026-03-06",
+  "rows": 1638,
+  "highvol_label_mode": "vol_expansion_ratio",
+  "allocation_mode": "equity70_bond20_cash10",
+  "riskoff_mode": "warning_only",
+  "direction_macro_f1": 0.3505176001641474,
+  "highvol_pr_auc": 0.39540889819469827,
+  "highvol_brier_skill": 0.04302939371592729,
+  "riskoff_pr_auc": 0.1901009240522973,
+  "riskoff_brier_skill": -0.9501135776762721,
+  "best_strategy": "buy_hold",
+  "best_cagr": 0.19546823132601632,
+  "best_mdd": -0.35617215180846795,
+  "best_calmar": 0.5488026796410788,
+  "best_calmar_diff_vs_buy_hold": 0.0
+}

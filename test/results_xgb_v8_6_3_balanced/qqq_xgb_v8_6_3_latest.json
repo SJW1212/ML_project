@@ -1,0 +1,42 @@
+{
+  "date": "2026-04-30 00:00:00",
+  "pred_risk": "정상",
+  "pred_direction": "상승",
+  "pred_overall_risk": "정상",
+  "prob_normal": 70.41,
+  "prob_high_vol": 29.59,
+  "prob_up": 52.8,
+  "prob_down": 42.72,
+  "prob_down_risk": 34.35,
+  "allocation_risk_score": 32.84,
+  "direction_score": 10.08,
+  "prob_overall_risk": 28.3,
+  "prob_down_price_trend": 41.37,
+  "prob_down_price_volume": 40.69,
+  "prob_down_volatility": 48.48,
+  "prob_tail_price_trend": 30.84,
+  "prob_tail_price_volume": 31.69,
+  "prob_tail_volatility": 45.36,
+  "prob_down_high_vol": 29.59,
+  "signal_regime": "NORMAL",
+  "allocation_regime": "WATCH",
+  "executed_regime": "WATCH",
+  "hold_reason": "not_rebalance_day",
+  "held_by_no_trade_band": false,
+  "held_by_schedule": true,
+  "signal_allocation": {
+    "stock": 92.0,
+    "bond": 6.0,
+    "cash": 2.0
+  },
+  "target_allocation": {
+    "stock": 92.0,
+    "bond": 6.0,
+    "cash": 2.0
+  },
+  "executed_allocation": {
+    "stock": 86.0,
+    "bond": 10.0,
+    "cash": 4.0
+  }
+}

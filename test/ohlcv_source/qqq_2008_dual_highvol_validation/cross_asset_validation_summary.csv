@@ -1,0 +1,2 @@
+﻿asset_name,equity_file,returncode,elapsed_sec,run_output_dir,stable_economic_gate,candidate_score,calmar_diff_vs_buy_hold
+QQQ_2008,QQQ_ohlcv_2008.csv,1,5.945034503936768,qqq_2008_dual_highvol_validation\runs\QQQ_2008,False,,

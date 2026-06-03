@@ -1,0 +1,100 @@
+{
+  "candidate_config": {
+    "hybrid_mode": "h20_with_expansion_confirm",
+    "persistence_mode": "3of5",
+    "defensive_equity_weight": 0.6,
+    "defense_asset": "cash",
+    "riskoff_mode": "warning_only"
+  },
+  "period": {
+    "start": "2019-08-29",
+    "end": "2026-03-06",
+    "rows": 1638
+  },
+  "covid_dependency": {
+    "full_calmar_diff": 0.10062028487778629,
+    "exclude_covid_calmar_diff": 0.09219902731828133,
+    "calmar_diff_drop": 0.008421257559504958,
+    "full_cagr_diff": 0.0012417014579775287,
+    "exclude_covid_cagr_diff": -0.0013279808532353776,
+    "cagr_diff_drop": 0.0025696823112129064,
+    "covid_dependency_flag": false
+  },
+  "drawdown_timing": {
+    "avg_signal_coverage_in_drawdown_events_threshold_le_10pct": 0.13218253098782182,
+    "avg_false_alarm_like_rate_threshold_le_10pct": 0.20903660620530795
+  },
+  "fold_diagnostics": [
+    {
+      "head": "highvol_expansion",
+      "fold_count": 26,
+      "valid_pr_folds": 26,
+      "mean_positive_rate": 0.22771672771672768,
+      "median_positive_rate": 0.14285714285714285,
+      "mean_pr_auc": 0.37864054183695156,
+      "median_pr_auc": 0.22398118338244383,
+      "mean_pr_lift_vs_fold_baseline": 0.1509238141202239,
+      "median_pr_lift_vs_fold_baseline": 0.07545372531996652,
+      "positive_pr_lift_rate": 0.6153846153846154,
+      "mean_pr_ratio_vs_fold_baseline": 2.5780550831802573,
+      "median_pr_ratio_vs_fold_baseline": 1.6170161290322582,
+      "brier_valid_folds": 19,
+      "positive_brier_skill_folds": 5,
+      "positive_brier_skill_rate": 0.2631578947368421,
+      "binom_p_value_positive_brier_skill_rate_lt_0_5": 0.0317840576171875,
+      "diagnostic_note": "Binomial test is a conservative diagnostic, not a full statistical proof of model invalidity."
+    },
+    {
+      "head": "highvol_h20",
+      "fold_count": 26,
+      "valid_pr_folds": 26,
+      "mean_positive_rate": 0.26434676434676435,
+      "median_positive_rate": 0.0952380952380952,
+      "mean_pr_auc": 0.33598564925007957,
+      "median_pr_auc": 0.0840117710854534,
+      "mean_pr_lift_vs_fold_baseline": 0.07163888490331526,
+      "median_pr_lift_vs_fold_baseline": 0.0,
+      "positive_pr_lift_rate": 0.38461538461538464,
+      "mean_pr_ratio_vs_fold_baseline": 1.6037184355995204,
+      "median_pr_ratio_vs_fold_baseline": 1.1118189452799585,
+      "brier_valid_folds": 13,
+      "positive_brier_skill_folds": 2,
+      "positive_brier_skill_rate": 0.15384615384615385,
+      "binom_p_value_positive_brier_skill_rate_lt_0_5": 0.01123046875,
+      "diagnostic_note": "Binomial test is a conservative diagnostic, not a full statistical proof of model invalidity."
+    },
+    {
+      "head": "riskoff",
+      "fold_count": 26,
+      "valid_pr_folds": 26,
+      "mean_positive_rate": 0.0531135531135531,
+      "median_positive_rate": 0.0,
+      "mean_pr_auc": 0.14590890604192516,
+      "median_pr_auc": 0.0,
+      "mean_pr_lift_vs_fold_baseline": 0.09279535292837204,
+      "median_pr_lift_vs_fold_baseline": 0.0,
+      "positive_pr_lift_rate": 0.23076923076923078,
+      "mean_pr_ratio_vs_fold_baseline": 4.755256113140701,
+      "median_pr_ratio_vs_fold_baseline": 2.0131761857359387,
+      "brier_valid_folds": 6,
+      "positive_brier_skill_folds": 2,
+      "positive_brier_skill_rate": 0.3333333333333333,
+      "binom_p_value_positive_brier_skill_rate_lt_0_5": 0.34375,
+      "diagnostic_note": "Binomial test is a conservative diagnostic, not a full statistical proof of model invalidity."
+    }
+  ],
+  "interpretation": {
+    "if_exclude_covid_fails": "QQQ result may be regime-specific and should not be promoted.",
+    "if_drawdown_coverage_low": "Signal does not reliably anticipate actual drawdown events.",
+    "if_pr_lift_negative": "Head ranking quality is below prevalence baseline.",
+    "if_brier_skill_rate_low": "Do not use probabilities as calibrated confidence or allocation size."
+  },
+  "outputs": {
+    "period_exclusion": "regime_timing_validation_QQQ\\period_exclusion_metrics.csv",
+    "drawdown_event_map": "regime_timing_validation_QQQ\\drawdown_event_map.csv",
+    "drawdown_event_summary": "regime_timing_validation_QQQ\\drawdown_event_summary.csv",
+    "fold_pr_brier_diagnostics": "regime_timing_validation_QQQ\\fold_pr_brier_diagnostics.csv",
+    "signal_timing_summary": "regime_timing_validation_QQQ\\signal_timing_summary.csv",
+    "economic_gate_recheck": "regime_timing_validation_QQQ\\economic_gate_recheck.csv"
+  }
+}

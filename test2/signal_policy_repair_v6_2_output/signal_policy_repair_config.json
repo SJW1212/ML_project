@@ -1,0 +1,28 @@
+{
+  "experiment": "signal_policy_repair_v6_2",
+  "input_file": "touch_signal_policy_all\\oos_signal_predictions.csv",
+  "policy_thresholds": {
+    "return_strong_threshold": 0.9,
+    "return_standard_threshold": 0.8,
+    "balanced_up_edge_threshold": 0.8,
+    "balanced_down_block_threshold": 0.8,
+    "defensive_conflict_threshold": 0.9
+  },
+  "repaired_policy": {
+    "STRONG_RETURN_SEEKING": "return_score >= 0.90 and balanced_up_score >= 0.80 and defensive_down_score < 0.90",
+    "VOLATILITY_EXPANSION_WARNING": "return_score >= 0.90 and defensive_down_score >= 0.90",
+    "STANDARD_UP_WATCH": "0.80 <= return_score < 0.90 and balanced_up_score >= 0.80 and balanced_down_score < 0.80 and defensive_down_score < 0.90",
+    "MIXED_ACTIVITY_WATCH": "return_score < 0.90 and balanced_up_score >= 0.80 and balanced_down_score >= 0.80",
+    "NEUTRAL_NO_EDGE": "all remaining cases"
+  },
+  "removed_or_downgraded": [
+    "DEFENSIVE_RISK",
+    "DEFENSIVE_WATCH_ONLY",
+    "WEAK_RETURN_WATCH"
+  ],
+  "interpretation": {
+    "score_percentile": "calibration-window percentile rank, not literal probability",
+    "portfolio_allocation": false,
+    "risk_off_trigger": false
+  }
+}

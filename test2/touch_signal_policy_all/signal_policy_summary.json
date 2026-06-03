@@ -1,0 +1,117 @@
+{
+  "experiment": "touch_signal_policy_builder",
+  "asset_count": 4,
+  "asset_periods": [
+    {
+      "asset_name": "QQQ",
+      "input": "QQQ_ohlcv.csv",
+      "start": "2013-01-02",
+      "end": "2026-06-01",
+      "rows": 3373
+    },
+    {
+      "asset_name": "SPY",
+      "input": "SPY_ohlcv.csv",
+      "start": "2013-01-02",
+      "end": "2026-06-01",
+      "rows": 3373
+    },
+    {
+      "asset_name": "SOXX",
+      "input": "SOXX_ohlcv.csv",
+      "start": "2013-01-02",
+      "end": "2026-06-01",
+      "rows": 3373
+    },
+    {
+      "asset_name": "XLK",
+      "input": "XLK_ohlcv.csv",
+      "start": "2013-01-02",
+      "end": "2026-06-01",
+      "rows": 3373
+    }
+  ],
+  "prediction_rows": 7308,
+  "head_metric_rows": 464,
+  "policy_signal_counts": {
+    "NEUTRAL_NO_EDGE": 2891,
+    "DEFENSIVE_RISK": 1460,
+    "RISK_WATCH": 853,
+    "STRONG_RETURN_SEEKING": 646,
+    "STANDARD_RETURN_SEEKING": 605,
+    "WEAK_RETURN_WATCH": 584,
+    "CONFLICT_UP_AND_DEFENSIVE_RISK": 154,
+    "CONFLICT_BALANCED_BOTH_HIGH": 115
+  },
+  "key_policy_summary": [
+    {
+      "final_policy_signal": "CONFLICT_UP_AND_DEFENSIVE_RISK",
+      "rows": 154,
+      "row_rate": 0.0210727969348659,
+      "up_touch_rate": 0.44155844155844154,
+      "down_touch_rate": 0.45454545454545453,
+      "up_lift_vs_global": 1.4215458550260311,
+      "down_lift_vs_global": 1.6930775646371976,
+      "future_max_high_return_mean": 0.03157427116920451,
+      "future_max_high_return_median": 0.022747985338668952,
+      "future_min_low_return_mean": -0.030466123388375132,
+      "future_min_low_return_median": -0.02443329347690465,
+      "return_score_mean": 0.8798701298701299,
+      "balanced_up_score_mean": 0.741574541161318,
+      "balanced_down_score_mean": 0.8786089943114735,
+      "defensive_down_score_mean": 0.9655736825158313
+    },
+    {
+      "final_policy_signal": "DEFENSIVE_RISK",
+      "rows": 1460,
+      "row_rate": 0.19978106185002736,
+      "up_touch_rate": 0.35342465753424657,
+      "down_touch_rate": 0.26095890410958905,
+      "up_lift_vs_global": 1.1378094261058473,
+      "down_lift_vs_global": 0.9720120648485611,
+      "future_max_high_return_mean": 0.03252922724634628,
+      "future_max_high_return_median": 0.026046343233031788,
+      "future_min_low_return_mean": -0.028768101871581738,
+      "future_min_low_return_median": -0.01975575691208703,
+      "return_score_mean": 0.37459809804143546,
+      "balanced_up_score_mean": 0.26698743348805615,
+      "balanced_down_score_mean": 0.9250226423638626,
+      "defensive_down_score_mean": 0.8878636929695459
+    },
+    {
+      "final_policy_signal": "STANDARD_RETURN_SEEKING",
+      "rows": 605,
+      "row_rate": 0.08278598795840175,
+      "up_touch_rate": 0.35537190082644626,
+      "down_touch_rate": 0.3603305785123967,
+      "up_lift_vs_global": 1.144078348563731,
+      "down_lift_vs_global": 1.3421487603305784,
+      "future_max_high_return_mean": 0.03768465515725757,
+      "future_max_high_return_median": 0.03048406540354165,
+      "future_min_low_return_mean": -0.03799864235560998,
+      "future_min_low_return_median": -0.030914018207134686,
+      "return_score_mean": 0.8509528037702344,
+      "balanced_up_score_mean": 0.7901714363772966,
+      "balanced_down_score_mean": 0.37822553104296164,
+      "defensive_down_score_mean": 0.36422375520797756
+    },
+    {
+      "final_policy_signal": "STRONG_RETURN_SEEKING",
+      "rows": 646,
+      "row_rate": 0.08839627805145046,
+      "up_touch_rate": 0.47832817337461303,
+      "down_touch_rate": 0.34210526315789475,
+      "up_lift_vs_global": 1.5399217141064634,
+      "down_lift_vs_global": 1.2742636407532593,
+      "future_max_high_return_mean": 0.052016391312078324,
+      "future_max_high_return_median": 0.04469784440219704,
+      "future_min_low_return_mean": -0.04654277795657979,
+      "future_min_low_return_median": -0.031817594247206815,
+      "return_score_mean": 0.955249085280045,
+      "balanced_up_score_mean": 0.8944553898114269,
+      "balanced_down_score_mean": 0.2365606529693217,
+      "defensive_down_score_mean": 0.2487078781055702
+    }
+  ],
+  "decision_note": "This step integrates head outputs into a signal taxonomy. It does not evaluate portfolio return, MDD, turnover, or transaction costs."
+}

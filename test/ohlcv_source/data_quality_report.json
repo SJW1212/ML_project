@@ -1,0 +1,114 @@
+{
+  "created_at": "2026-06-02 13:03:17",
+  "source": "yfinance",
+  "start": "2013-01-01",
+  "end": null,
+  "tickers": [
+    "QQQ",
+    "SPY",
+    "IEF",
+    "BIL",
+    "SOXX",
+    "XLK"
+  ],
+  "auto_adjust": false,
+  "reports": [
+    {
+      "ticker": "QQQ",
+      "rows": 3373,
+      "start_date": "2013-01-02",
+      "end_date": "2026-06-01",
+      "missing_close": 0,
+      "missing_volume": 0,
+      "duplicate_dates": 0,
+      "non_positive_close": 0,
+      "max_date_gap_days": 4,
+      "median_date_gap_days": 1.0,
+      "status": "ok",
+      "warning": []
+    },
+    {
+      "ticker": "SPY",
+      "rows": 3373,
+      "start_date": "2013-01-02",
+      "end_date": "2026-06-01",
+      "missing_close": 0,
+      "missing_volume": 0,
+      "duplicate_dates": 0,
+      "non_positive_close": 0,
+      "max_date_gap_days": 4,
+      "median_date_gap_days": 1.0,
+      "status": "ok",
+      "warning": []
+    },
+    {
+      "ticker": "IEF",
+      "rows": 3373,
+      "start_date": "2013-01-02",
+      "end_date": "2026-06-01",
+      "missing_close": 0,
+      "missing_volume": 0,
+      "duplicate_dates": 0,
+      "non_positive_close": 0,
+      "max_date_gap_days": 4,
+      "median_date_gap_days": 1.0,
+      "status": "ok",
+      "warning": []
+    },
+    {
+      "ticker": "BIL",
+      "rows": 3373,
+      "start_date": "2013-01-02",
+      "end_date": "2026-06-01",
+      "missing_close": 0,
+      "missing_volume": 0,
+      "duplicate_dates": 0,
+      "non_positive_close": 0,
+      "max_date_gap_days": 4,
+      "median_date_gap_days": 1.0,
+      "status": "ok",
+      "warning": []
+    },
+    {
+      "ticker": "SOXX",
+      "rows": 3373,
+      "start_date": "2013-01-02",
+      "end_date": "2026-06-01",
+      "missing_close": 0,
+      "missing_volume": 0,
+      "duplicate_dates": 0,
+      "non_positive_close": 0,
+      "max_date_gap_days": 4,
+      "median_date_gap_days": 1.0,
+      "status": "ok",
+      "warning": []
+    },
+    {
+      "ticker": "XLK",
+      "rows": 3373,
+      "start_date": "2013-01-02",
+      "end_date": "2026-06-01",
+      "missing_close": 0,
+      "missing_volume": 0,
+      "duplicate_dates": 0,
+      "non_positive_close": 0,
+      "max_date_gap_days": 4,
+      "median_date_gap_days": 1.0,
+      "status": "ok",
+      "warning": []
+    }
+  ],
+  "output_files": {
+    "QQQ_ohlcv": "ohlcv_source\\QQQ_ohlcv.csv",
+    "SPY_ohlcv": "ohlcv_source\\SPY_ohlcv.csv",
+    "IEF_ohlcv": "ohlcv_source\\IEF_ohlcv.csv",
+    "BIL_ohlcv": "ohlcv_source\\BIL_ohlcv.csv",
+    "SOXX_ohlcv": "ohlcv_source\\SOXX_ohlcv.csv",
+    "XLK_ohlcv": "ohlcv_source\\XLK_ohlcv.csv",
+    "all_tickers": "ohlcv_source\\ohlcv_all_tickers.csv",
+    "close_panel": "ohlcv_source\\close_panel.csv"
+  },
+  "usage_example": {
+    "riskoff_highvol": "python riskoff_highvol_walkforward_experiment.py --input <TICKER>_ohlcv.csv --ticker <TICKER> --output-dir riskoff_highvol_results"
+  }
+}

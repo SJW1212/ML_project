@@ -1,0 +1,71 @@
+{
+  "experiment": "downside_confirm_label_repair_v7_2",
+  "config": {
+    "horizon": 10,
+    "vol_window": 60,
+    "k_down_touch": 1.0,
+    "min_train_days": 756,
+    "test_days": 126,
+    "step_days": 126,
+    "embargo_days": 10,
+    "calibration_days": 252,
+    "model_kind": "extratrees",
+    "n_estimators": 250,
+    "min_samples_leaf": 20,
+    "random_state": 42,
+    "candidate_thresholds": [
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "confirm_thresholds": [
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "primary_candidate_threshold": 0.9,
+    "primary_confirm_threshold": 0.9
+  },
+  "confirm_variants": {
+    "close_mdd_075": {
+      "kind": "close_mdd",
+      "k": 0.75,
+      "require_close_negative": false
+    },
+    "close_mdd_100": {
+      "kind": "close_mdd",
+      "k": 1.0,
+      "require_close_negative": false
+    },
+    "close_mdd_125": {
+      "kind": "close_mdd",
+      "k": 1.25,
+      "require_close_negative": false
+    },
+    "close_mdd_075_and_close_neg": {
+      "kind": "close_mdd",
+      "k": 0.75,
+      "require_close_negative": true
+    },
+    "close_mdd_100_and_close_neg": {
+      "kind": "close_mdd",
+      "k": 1.0,
+      "require_close_negative": true
+    },
+    "close_loss_075": {
+      "kind": "close_loss",
+      "k": 0.75,
+      "require_close_negative": true
+    },
+    "close_loss_100": {
+      "kind": "close_loss",
+      "k": 1.0,
+      "require_close_negative": true
+    }
+  },
+  "feature_count": 185,
+  "feature_note": "future_* and y_* columns are excluded from feature_cols",
+  "score_note": "score_percentile is a calibration-window rank, not literal probability"
+}

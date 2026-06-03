@@ -1,0 +1,21 @@
+[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p75_none_equity70_bond20_cash10_warning_only
+{
+  "ticker": "QQQ",
+  "oos_start": "2019-08-29",
+  "oos_end": "2026-03-06",
+  "rows": 1638,
+  "highvol_label_mode": "h20_current",
+  "allocation_mode": "equity70_bond20_cash10",
+  "riskoff_mode": "warning_only",
+  "direction_macro_f1": 0.3505176001641474,
+  "highvol_pr_auc": 0.43172682197014733,
+  "highvol_brier_skill": -0.06243974720743761,
+  "riskoff_pr_auc": 0.1901009240522973,
+  "riskoff_brier_skill": -0.9501135776762719,
+  "best_strategy": "multihead_allocation",
+  "best_cagr": 0.18058995416622414,
+  "best_mdd": -0.3268085207025374,
+  "best_calmar": 0.5525864312778979,
+  "best_calmar_diff_vs_buy_hold": 0.0037837516368190993
+}

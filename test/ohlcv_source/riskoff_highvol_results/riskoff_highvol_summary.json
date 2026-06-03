@@ -1,0 +1,109 @@
+{
+  "ticker": "QQQ",
+  "input_rows": 3373,
+  "trial_count": 240,
+  "ok_trial_count": 240,
+  "error_trial_count": 0,
+  "best_trial_id": "rh_0047",
+  "best_trial": {
+    "ticker": "QQQ",
+    "horizon": 10,
+    "task": "high_vol",
+    "feature_set": "down_core",
+    "model_type": "extratrees",
+    "calibration_method": "sigmoid",
+    "vol_window": 60,
+    "k_direction": 0.8,
+    "k_mdd": 1.5,
+    "high_vol_quantile": 0.75,
+    "fold_count": 123,
+    "skipped_folds": 0,
+    "avg_train_rows": 1581.0,
+    "feature_count": 14,
+    "feature_cols": "return_5d|return_20d|return_60d|downside_volatility_20d|downside_volatility_60d|downside_volatility_120d|mdd_20d|mdd_60d|mdd_120d|mdd_252d|volatility_20d|volatility_60d|ma_gap_20d|ma_gap_60d",
+    "eval_rows": 2460,
+    "positive_count": 647,
+    "negative_count": 1813,
+    "positive_rate": 0.2630081300813008,
+    "raw_roc_auc": 0.7954793262808277,
+    "raw_pr_auc": 0.6373347778657802,
+    "raw_brier": 0.1891317563559514,
+    "raw_brier_skill": 0.02426342398862813,
+    "raw_ece": 0.20757985643714105,
+    "roc_auc": 0.7666594771916035,
+    "inverse_roc_auc": 0.2333405228083965,
+    "best_roc_after_inversion": 0.7666594771916035,
+    "probability_polarity": "normal_better",
+    "pr_auc": 0.5949210961987722,
+    "pr_gain": 0.3319129661174714,
+    "pr_ratio": 2.2619874755007414,
+    "brier": 0.15503018065255178,
+    "brier_baseline": 0.19383485359243838,
+    "brier_skill": 0.20019450692535512,
+    "ece": 0.033212645464829604,
+    "f1_at_0_5": 0.42424242424242425,
+    "score": 0.8147873719649492,
+    "mdd_event_signal_quantile": NaN,
+    "mdd_event_signal_threshold": NaN,
+    "mdd_event_count": NaN,
+    "mdd_event_signal_count": NaN,
+    "mdd_event_recall_at_q": NaN,
+    "mdd_event_precision_at_q": NaN,
+    "trial_id": "rh_0047",
+    "status": "ok",
+    "candidate_decision": "holdout_candidate"
+  },
+  "candidate_counts": {
+    "reject_or_diagnostic_only": 85,
+    "diagnostic_inverse_signal": 74,
+    "weak_candidate": 71,
+    "holdout_candidate": 10
+  },
+  "config": {
+    "horizons": [
+      10,
+      20,
+      40,
+      60,
+      120
+    ],
+    "tasks": [
+      "risk_off",
+      "high_vol"
+    ],
+    "feature_sets": [
+      "compact_mixed",
+      "vol_risk_core",
+      "trend_volume",
+      "down_core"
+    ],
+    "models": [
+      "logistic",
+      "hgb",
+      "extratrees"
+    ],
+    "calibration_methods": [
+      "none",
+      "sigmoid"
+    ],
+    "vol_window": 60,
+    "k_direction": 0.8,
+    "k_mdd": 1.5,
+    "high_vol_quantile": 0.75,
+    "test_window": 20,
+    "step": 20,
+    "min_train_rows": 756,
+    "max_train_rows": null
+  },
+  "interpretation": {
+    "holdout_candidate": "후속 holdout 검증 대상으로 올릴 수 있는 후보",
+    "weak_candidate": "보조 후보. Stable 채택 불가",
+    "diagnostic_inverse_signal": "신호 방향 반전/라벨 매핑/폴드 안정성 점검 대상",
+    "reject_or_diagnostic_only": "구조 채택 후보로 부적합"
+  },
+  "do_not_do": [
+    "Do not promote any candidate to stable without holdout and after-cost benchmark.",
+    "Do not use raw probability directly for AllocationService.",
+    "Do not interpret PR-AUC without positive_rate."
+  ]
+}

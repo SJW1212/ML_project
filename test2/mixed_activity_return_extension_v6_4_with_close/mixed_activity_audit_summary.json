@@ -1,0 +1,30 @@
+{
+  "experiment": "mixed_activity_return_extension_v6_4",
+  "prediction_rows": 7308,
+  "asset_count": 4,
+  "date_start": "2019-01-18",
+  "date_end": "2026-04-27",
+  "global_up_touch_rate": 0.3106185002736727,
+  "global_down_touch_rate": 0.2684729064039409,
+  "v6_4_signal_counts": {
+    "NEUTRAL_NO_EDGE": 6501,
+    "HIGH_CONFIDENCE_RETURN_SEEKING": 407,
+    "STRONG_RETURN_SEEKING": 252,
+    "MIXED_ACTIVITY_WATCH": 97,
+    "VOLATILITY_EXPANSION_WARNING": 51
+  },
+  "decision": {
+    "signals": {
+      "HIGH_CONFIDENCE_RETURN_SEEKING": "PASS_AS_UPSIDE_OPPORTUNITY",
+      "STRONG_RETURN_SEEKING": "PASS_AS_UPSIDE_OPPORTUNITY",
+      "MIXED_ACTIVITY_WATCH": "PROMISING_BUT_SMALL_SAMPLE",
+      "VOLATILITY_EXPANSION_WARNING": "PASS_AS_VOLATILITY_WARNING",
+      "NEUTRAL_NO_EDGE": "PASS_AS_LOW_EDGE_BUCKET"
+    },
+    "close_return_available": true,
+    "notes": [
+      "future_close_return columns were attached from supplied OHLCV files."
+    ]
+  },
+  "decision_note": "This step audits mixed activity and return-side robustness. It is still not a portfolio backtest."
+}

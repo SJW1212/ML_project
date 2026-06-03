@@ -1,0 +1,45 @@
+{
+  "experiment": "cross_asset_dual_highvol_validation",
+  "candidate_config": {
+    "hybrid_mode": "h20_with_expansion_confirm",
+    "persistence_mode": "3of5",
+    "defensive_equity_weight": 0.6,
+    "defense_asset": "cash",
+    "riskoff_mode": "warning_only",
+    "h20_threshold_quantile": 0.75,
+    "expansion_threshold_quantile": 0.75,
+    "expansion_confirm_quantile": 0.5,
+    "expansion_mult": 1.25
+  },
+  "decision": {
+    "decision": "no_successful_runs",
+    "reason": "No asset run produced a valid summary. In --dry-run mode this is expected.",
+    "asset_count": 0,
+    "economic_pass_rate": NaN,
+    "calmar_positive_rate": NaN,
+    "mdd_positive_rate": NaN,
+    "cagr_gate_rate": NaN,
+    "cagr_positive_rate": NaN,
+    "avg_calmar_diff_vs_buy_hold": NaN,
+    "avg_mdd_diff_vs_buy_hold": NaN,
+    "avg_cagr_diff_vs_buy_hold": NaN
+  },
+  "summary_rows": [
+    {
+      "asset_name": "QQQ_2008",
+      "equity_file": "QQQ_ohlcv_2008.csv",
+      "returncode": 1,
+      "elapsed_sec": 5.945034503936768,
+      "run_output_dir": "qqq_2008_dual_highvol_validation\\runs\\QQQ_2008",
+      "stable_economic_gate": false,
+      "candidate_score": NaN,
+      "calmar_diff_vs_buy_hold": NaN
+    }
+  ],
+  "output_files": {
+    "summary": "qqq_2008_dual_highvol_validation\\cross_asset_validation_summary.csv",
+    "manifest": "qqq_2008_dual_highvol_validation\\cross_asset_validation_manifest.csv",
+    "topline": "qqq_2008_dual_highvol_validation\\cross_asset_validation_topline.csv",
+    "decision": "qqq_2008_dual_highvol_validation\\cross_asset_validation_decision.json"
+  }
+}

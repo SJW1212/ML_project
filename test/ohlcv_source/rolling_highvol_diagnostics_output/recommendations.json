@@ -1,0 +1,18 @@
+{
+  "decisions": [
+    "HighVol only는 후보로 유지합니다.",
+    "Stable 채택은 아직 보류합니다."
+  ],
+  "warnings": [
+    "Brier skill 양수 fold 비율이 낮습니다. 확률값을 직접 allocation 강도로 사용하지 마세요.",
+    "normal polarity fold 비율이 낮습니다. 일부 fold에서 신호 방향이 불안정합니다.",
+    "median PR-AUC가 낮습니다. 평균 성능은 일부 fold에 의해 왜곡되었을 가능성이 큽니다."
+  ],
+  "recommendations": [
+    "확률값은 calibrated probability 자체보다 rolling quantile signal로만 사용하세요.",
+    "fold별 성공/실패 regime을 분리하고, volatility expansion label을 추가 실험하세요.",
+    "H20 단일 head 대신 H10/H20 ensemble 또는 persistence 조건을 테스트하세요.",
+    "q=0.75와 q=0.80 중 fold 안정성이 더 좋은 쪽을 별도 검증하세요.",
+    "다음 개선 실험은 label 개선과 signal persistence 조건을 우선하세요."
+  ]
+}

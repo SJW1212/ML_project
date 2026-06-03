@@ -1,0 +1,21 @@
+[OK] Dual-HighVol hybrid sweep completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\cross_asset_dual_highvol_validation\runs\XLK
+{
+  "ticker": "XLK",
+  "oos_start": "2019-08-29",
+  "oos_end": "2026-03-06",
+  "rows": 1638,
+  "best_hybrid_mode": "h20_with_expansion_confirm",
+  "best_persistence_mode": "3of5",
+  "best_defensive_equity_weight": 0.6,
+  "best_defense_asset": "cash",
+  "best_riskoff_mode": "warning_only",
+  "best_cagr": 0.21068860831787894,
+  "best_mdd": -0.33382046017157885,
+  "best_calmar": 0.6311434841638768,
+  "best_cagr_diff_vs_buy_hold": 0.0007212819788391389,
+  "best_mdd_diff_vs_buy_hold": 0.00634369728150852,
+  "best_calmar_diff_vs_buy_hold": 0.013890543962507218,
+  "stable_economic_gate": false,
+  "candidate_score": 0.027617915826116356
+}

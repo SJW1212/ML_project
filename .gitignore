@@ -1,0 +1,6 @@
+
+# Large experiment outputs
+test/ohlcv_source/**/*_daily_returns.csv
+test/ohlcv_source/**/results_*/
+test/ohlcv_source/**/dual_highvol_hybrid_results_*/
+test/ohlcv_source/**/rolling_highvol_improvement_results_*/

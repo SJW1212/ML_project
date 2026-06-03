@@ -1,0 +1,77 @@
+{
+  "experiment": "return_seeking_percentile_threshold_validator",
+  "asset_periods": [
+    {
+      "asset_name": "QQQ",
+      "input": "QQQ_ohlcv.csv",
+      "start": "2013-01-02",
+      "end": "2026-06-01",
+      "rows": 3373
+    },
+    {
+      "asset_name": "SPY",
+      "input": "SPY_ohlcv.csv",
+      "start": "2013-01-02",
+      "end": "2026-06-01",
+      "rows": 3373
+    },
+    {
+      "asset_name": "SOXX",
+      "input": "SOXX_ohlcv.csv",
+      "start": "2013-01-02",
+      "end": "2026-06-01",
+      "rows": 3373
+    },
+    {
+      "asset_name": "XLK",
+      "input": "XLK_ohlcv.csv",
+      "start": "2013-01-02",
+      "end": "2026-06-01",
+      "rows": 3373
+    }
+  ],
+  "model": {
+    "objective": "return_seeking",
+    "model": "extratrees",
+    "label": "y_up_touch_fixed_h10_k1.0",
+    "score": "score_percentile",
+    "score_interpretation": "calibration-window percentile rank of raw model score"
+  },
+  "thresholds_tested": [
+    0.9,
+    0.8,
+    0.7,
+    0.6
+  ],
+  "best_threshold": {
+    "threshold": 0.9,
+    "asset_count": 4.0,
+    "fold_count": 29.0,
+    "total_signal_count": 876.0,
+    "mean_signal_rate": 0.11986863711001641,
+    "median_signal_rate": 0.06349206349206349,
+    "mean_signal_actual_rate": 0.6071276488687946,
+    "median_signal_actual_rate": 0.5,
+    "mean_base_rate": 0.3106185002736726,
+    "median_base_rate": 0.2936507936507936,
+    "mean_lift": 2.228353388259555,
+    "median_lift": 2.0,
+    "min_asset_lift": 1.3417721518987342,
+    "mean_asset_lift": 1.5956991321289338,
+    "fold_positive_lift_rate": 0.5948275862068966,
+    "asset_positive_lift_rate": 1.0,
+    "annual_positive_lift_rate": 0.875,
+    "mean_recall": 0.2227147387556357,
+    "median_recall": 0.125,
+    "mean_spread_vs_no_signal": 0.35305946592946064,
+    "median_spread_vs_no_signal": 0.3465473145780051,
+    "mean_future_max_high_return": 0.05781742426115663,
+    "median_future_max_high_return": 0.049463323243527424,
+    "threshold_score": 1.217061326931471
+  },
+  "usage_note": {
+    "literal_probability": false,
+    "recommended_use": "Use score_percentile threshold as ranking filter only.",
+    "do_not_use_as": "Direct buy/sell or allocation rule without separate portfolio validation."
+  }
+}

@@ -1,0 +1,3 @@
+﻿threshold_quantile,drawdown_threshold,drawdown_event_days,signal_days_in_drawdown,signal_coverage_in_drawdown,signal_days_outside_drawdown,false_alarm_like_signal_rate,avg_drawdown_signal_days,avg_drawdown_non_signal_days
+0.75,-0.1,476,193,0.4054621848739496,343,0.28,-0.08962482604422474,-0.07401266784572302
+0.8,-0.1,476,192,0.40336134453781514,291,0.23755102040816325,-0.09562010368720697,-0.07231457694503352

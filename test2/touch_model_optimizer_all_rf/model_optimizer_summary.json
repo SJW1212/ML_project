@@ -1,0 +1,91 @@
+{
+  "experiment": "multi_objective_touch_model_optimizer",
+  "asset_count": 4,
+  "asset_periods": [
+    {
+      "asset_name": "QQQ",
+      "input": "QQQ_ohlcv.csv",
+      "start": "2013-01-02",
+      "end": "2026-06-01",
+      "rows": 3373
+    },
+    {
+      "asset_name": "SPY",
+      "input": "SPY_ohlcv.csv",
+      "start": "2013-01-02",
+      "end": "2026-06-01",
+      "rows": 3373
+    },
+    {
+      "asset_name": "SOXX",
+      "input": "SOXX_ohlcv.csv",
+      "start": "2013-01-02",
+      "end": "2026-06-01",
+      "rows": 3373
+    },
+    {
+      "asset_name": "XLK",
+      "input": "XLK_ohlcv.csv",
+      "start": "2013-01-02",
+      "end": "2026-06-01",
+      "rows": 3373
+    }
+  ],
+  "fold_metric_rows": 1856,
+  "head_summary_rows": 64,
+  "objective_summary_rows": 96,
+  "objective_aggregate_rows": 24,
+  "best_by_objective": [
+    {
+      "objective": "balanced",
+      "label_scheme": "target_h10_rate0p30",
+      "method": "target",
+      "horizon": 10,
+      "model": "hgb",
+      "asset_count": 4,
+      "mean_objective_score": 0.9742470401178004,
+      "median_objective_score": 0.9694545435349095,
+      "min_objective_score": 0.908611911013178,
+      "mean_median_pr_ratio": 1.4728433683460633,
+      "min_median_pr_ratio": 1.2874475400637317,
+      "mean_positive_pr_lift_rate": 0.7672413793103449,
+      "mean_median_brier_skill": -0.10230554455348052,
+      "mean_median_ece": 0.18590587995047783,
+      "cross_asset_objective_score": 1.0095308927036932
+    },
+    {
+      "objective": "defensive",
+      "label_scheme": "fixed_h10_k1p00",
+      "method": "fixed",
+      "horizon": 10,
+      "model": "hgb",
+      "asset_count": 4,
+      "mean_objective_score": 0.9563246326232603,
+      "median_objective_score": 0.949459811429395,
+      "min_objective_score": 0.8560549889604556,
+      "mean_median_pr_ratio": 1.2786062832212797,
+      "min_median_pr_ratio": 1.1706417894111396,
+      "mean_positive_pr_lift_rate": 0.7068965517241379,
+      "mean_median_brier_skill": -0.12487407897622593,
+      "mean_median_ece": 0.18690580789518607,
+      "cross_asset_objective_score": 0.9512242506104172
+    },
+    {
+      "objective": "return_seeking",
+      "label_scheme": "fixed_h10_k1p00",
+      "method": "fixed",
+      "horizon": 10,
+      "model": "extratrees",
+      "asset_count": 4,
+      "mean_objective_score": 1.5367580991631504,
+      "median_objective_score": 1.5190149999220615,
+      "min_objective_score": 1.31046500158866,
+      "mean_median_pr_ratio": 1.7392969372161753,
+      "min_median_pr_ratio": 1.4745802818329905,
+      "mean_positive_pr_lift_rate": 0.9224137931034483,
+      "mean_median_brier_skill": -0.056954035300668004,
+      "mean_median_ece": 0.19109356384768186,
+      "cross_asset_objective_score": 1.440259670250967
+    }
+  ]
+}

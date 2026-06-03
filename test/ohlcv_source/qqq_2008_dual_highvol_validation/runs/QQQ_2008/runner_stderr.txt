@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\dual_highvol_hybrid_sweep.py", line 1505, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\dual_highvol_hybrid_sweep.py", line 1427, in main
+    equity_df = load_ohlcv(args.equity_input)
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\dual_highvol_hybrid_sweep.py", line 189, in load_ohlcv
+    raise FileNotFoundError(
+    ...<4 lines>...
+    )
+FileNotFoundError: 
+[입력 파일을 찾을 수 없습니다]
+- 입력 경로: QQQ_ohlcv_2008.csv
+- 현재 실행 위치: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source
+- 절대 경로 기준: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\QQQ_ohlcv_2008.csv
+

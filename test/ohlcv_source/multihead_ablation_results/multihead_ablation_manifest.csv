@@ -1,0 +1,1981 @@
+﻿run_index,run_id,cmd,highvol_label_mode,highvol_expansion_mult,highvol_threshold_quantile,highvol_persistence,allocation_mode,riskoff_mode,returncode,elapsed_sec,summary_path,stdout_tail,stderr_tail
+1,h20_current_emNA_q0p75_none_equity60_cash40_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p75_none_equity60_cash40_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity60_cash40 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.75,none,equity60_cash40,warning_only,0,17.27349829673767,multihead_ablation_results\runs\h20_current_emNA_q0p75_none_equity60_cash40_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p75_none_equity60_cash40_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity60_cash40"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""multihead_allocation"",
+  ""best_cagr"": 0.1740922102251803,
+  ""best_mdd"": -0.3041814151445389,
+  ""best_calmar"": 0.5723302001946974,
+  ""best_calmar_diff_vs_buy_hold"": 0.02352752055361862
+}
+",
+2,h20_current_emNA_q0p75_none_equity70_cash30_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p75_none_equity70_cash30_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity70_cash30 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.75,none,equity70_cash30,warning_only,0,17.263527393341064,multihead_ablation_results\runs\h20_current_emNA_q0p75_none_equity70_cash30_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p75_none_equity70_cash30_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity70_cash30"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""multihead_allocation"",
+  ""best_cagr"": 0.18002920281104373,
+  ""best_mdd"": -0.3169367035853321,
+  ""best_calmar"": 0.5680288864447428,
+  ""best_calmar_diff_vs_buy_hold"": 0.019226206803664048
+}
+",
+3,h20_current_emNA_q0p75_none_equity80_cash20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p75_none_equity80_cash20_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity80_cash20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.75,none,equity80_cash20,warning_only,0,17.077147722244263,multihead_ablation_results\runs\h20_current_emNA_q0p75_none_equity80_cash20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p75_none_equity80_cash20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity80_cash20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762717,
+  ""best_strategy"": ""multihead_allocation"",
+  ""best_cagr"": 0.18557509868756705,
+  ""best_mdd"": -0.3298656304684561,
+  ""best_calmar"": 0.5625778545767985,
+  ""best_calmar_diff_vs_buy_hold"": 0.01377517493571978
+}
+",
+4,h20_current_emNA_q0p75_none_equity80_bond20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p75_none_equity80_bond20_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity80_bond20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.75,none,equity80_bond20,warning_only,0,17.195298671722412,multihead_ablation_results\runs\h20_current_emNA_q0p75_none_equity80_bond20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p75_none_equity80_bond20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity80_bond20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743806,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+5,h20_current_emNA_q0p75_none_equity70_bond20_cash10_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p75_none_equity70_bond20_cash10_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity70_bond20_cash10 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.75,none,equity70_bond20_cash10,warning_only,0,17.077826023101807,multihead_ablation_results\runs\h20_current_emNA_q0p75_none_equity70_bond20_cash10_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p75_none_equity70_bond20_cash10_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity70_bond20_cash10"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""multihead_allocation"",
+  ""best_cagr"": 0.18058995416622414,
+  ""best_mdd"": -0.3268085207025374,
+  ""best_calmar"": 0.5525864312778979,
+  ""best_calmar_diff_vs_buy_hold"": 0.0037837516368190993
+}
+",
+6,h20_current_emNA_q0p75_2of3_equity60_cash40_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p75_2of3_equity60_cash40_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity60_cash40 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.75,2of3,equity60_cash40,warning_only,0,17.242158889770508,multihead_ablation_results\runs\h20_current_emNA_q0p75_2of3_equity60_cash40_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p75_2of3_equity60_cash40_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity60_cash40"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""multihead_allocation"",
+  ""best_cagr"": 0.173517505480842,
+  ""best_mdd"": -0.2979400274867594,
+  ""best_calmar"": 0.5823907144821392,
+  ""best_calmar_diff_vs_buy_hold"": 0.03358803484106043
+}
+",
+7,h20_current_emNA_q0p75_2of3_equity70_cash30_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p75_2of3_equity70_cash30_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity70_cash30 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.75,2of3,equity70_cash30,warning_only,0,17.17070746421814,multihead_ablation_results\runs\h20_current_emNA_q0p75_2of3_equity70_cash30_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p75_2of3_equity70_cash30_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity70_cash30"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""multihead_allocation"",
+  ""best_cagr"": 0.17958781180545502,
+  ""best_mdd"": -0.3123530220877925,
+  ""best_calmar"": 0.5749514142846315,
+  ""best_calmar_diff_vs_buy_hold"": 0.026148734643552718
+}
+",
+8,h20_current_emNA_q0p75_2of3_equity80_cash20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p75_2of3_equity80_cash20_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity80_cash20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.75,2of3,equity80_cash20,warning_only,0,17.2496235370636,multihead_ablation_results\runs\h20_current_emNA_q0p75_2of3_equity80_cash20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p75_2of3_equity80_cash20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity80_cash20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""multihead_allocation"",
+  ""best_cagr"": 0.1852739484529926,
+  ""best_mdd"": -0.3268752478262281,
+  ""best_calmar"": 0.5668032366632026,
+  ""best_calmar_diff_vs_buy_hold"": 0.018000557022123886
+}
+",
+9,h20_current_emNA_q0p75_2of3_equity80_bond20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p75_2of3_equity80_bond20_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity80_bond20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.75,2of3,equity80_bond20,warning_only,0,17.26821494102478,multihead_ablation_results\runs\h20_current_emNA_q0p75_2of3_equity80_bond20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p75_2of3_equity80_bond20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity80_bond20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""multihead_allocation"",
+  ""best_cagr"": 0.18507731116187864,
+  ""best_mdd"": -0.33395549997849394,
+  ""best_calmar"": 0.5541975238431385,
+  ""best_calmar_diff_vs_buy_hold"": 0.005394844202059712
+}
+",
+10,h20_current_emNA_q0p75_2of3_equity70_bond20_cash10_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p75_2of3_equity70_bond20_cash10_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity70_bond20_cash10 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.75,2of3,equity70_bond20_cash10,warning_only,0,17.06705403327942,multihead_ablation_results\runs\h20_current_emNA_q0p75_2of3_equity70_bond20_cash10_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p75_2of3_equity70_bond20_cash10_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity70_bond20_cash10"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""multihead_allocation"",
+  ""best_cagr"": 0.17935116542910978,
+  ""best_mdd"": -0.31959890323074247,
+  ""best_calmar"": 0.5611757850734008,
+  ""best_calmar_diff_vs_buy_hold"": 0.012373105432322062
+}
+",
+11,h20_current_emNA_q0p75_3of5_equity60_cash40_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p75_3of5_equity60_cash40_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity60_cash40 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.75,3of5,equity60_cash40,warning_only,0,17.087578773498535,multihead_ablation_results\runs\h20_current_emNA_q0p75_3of5_equity60_cash40_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p75_3of5_equity60_cash40_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity60_cash40"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""multihead_allocation"",
+  ""best_cagr"": 0.17492904816422516,
+  ""best_mdd"": -0.29580119906077373,
+  ""best_calmar"": 0.5913736953050186,
+  ""best_calmar_diff_vs_buy_hold"": 0.04257101566393984
+}
+",
+12,h20_current_emNA_q0p75_3of5_equity70_cash30_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p75_3of5_equity70_cash30_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity70_cash30 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.75,3of5,equity70_cash30,warning_only,0,17.160535097122192,multihead_ablation_results\runs\h20_current_emNA_q0p75_3of5_equity70_cash30_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p75_3of5_equity70_cash30_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity70_cash30"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762717,
+  ""best_strategy"": ""multihead_allocation"",
+  ""best_cagr"": 0.18063825816140522,
+  ""best_mdd"": -0.310769276713295,
+  ""best_calmar"": 0.5812616358728917,
+  ""best_calmar_diff_vs_buy_hold"": 0.03245895623181294
+}
+",
+13,h20_current_emNA_q0p75_3of5_equity80_cash20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p75_3of5_equity80_cash20_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity80_cash20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.75,3of5,equity80_cash20,warning_only,0,17.158210277557373,multihead_ablation_results\runs\h20_current_emNA_q0p75_3of5_equity80_cash20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p75_3of5_equity80_cash20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity80_cash20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""multihead_allocation"",
+  ""best_cagr"": 0.18596847435750452,
+  ""best_mdd"": -0.3258334846103771,
+  ""best_calmar"": 0.5707469708949054,
+  ""best_calmar_diff_vs_buy_hold"": 0.021944291253826687
+}
+",
+14,h20_current_emNA_q0p75_3of5_equity80_bond20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p75_3of5_equity80_bond20_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity80_bond20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.75,3of5,equity80_bond20,warning_only,0,17.10070824623108,multihead_ablation_results\runs\h20_current_emNA_q0p75_3of5_equity80_bond20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p75_3of5_equity80_bond20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity80_bond20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""multihead_allocation"",
+  ""best_cagr"": 0.18466952655992142,
+  ""best_mdd"": -0.3357060478205586,
+  ""best_calmar"": 0.5500929392211333,
+  ""best_calmar_diff_vs_buy_hold"": 0.0012902595800545757
+}
+",
+15,h20_current_emNA_q0p75_3of5_equity70_bond20_cash10_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p75_3of5_equity70_bond20_cash10_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity70_bond20_cash10 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.75,3of5,equity70_bond20_cash10,warning_only,0,17.403780221939087,multihead_ablation_results\runs\h20_current_emNA_q0p75_3of5_equity70_bond20_cash10_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p75_3of5_equity70_bond20_cash10_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity70_bond20_cash10"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""multihead_allocation"",
+  ""best_cagr"": 0.17930614331796058,
+  ""best_mdd"": -0.32087599334773287,
+  ""best_calmar"": 0.5588019890401921,
+  ""best_calmar_diff_vs_buy_hold"": 0.00999930939911331
+}
+",
+16,h20_current_emNA_q0p8_none_equity60_cash40_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p8_none_equity60_cash40_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity60_cash40 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.8,none,equity60_cash40,warning_only,0,17.587594509124756,multihead_ablation_results\runs\h20_current_emNA_q0p8_none_equity60_cash40_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p8_none_equity60_cash40_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity60_cash40"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+17,h20_current_emNA_q0p8_none_equity70_cash30_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p8_none_equity70_cash30_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity70_cash30 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.8,none,equity70_cash30,warning_only,0,23.560518741607666,multihead_ablation_results\runs\h20_current_emNA_q0p8_none_equity70_cash30_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p8_none_equity70_cash30_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity70_cash30"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+18,h20_current_emNA_q0p8_none_equity80_cash20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p8_none_equity80_cash20_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity80_cash20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.8,none,equity80_cash20,warning_only,0,17.216230869293213,multihead_ablation_results\runs\h20_current_emNA_q0p8_none_equity80_cash20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p8_none_equity80_cash20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity80_cash20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+19,h20_current_emNA_q0p8_none_equity80_bond20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p8_none_equity80_bond20_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity80_bond20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.8,none,equity80_bond20,warning_only,0,17.311734199523926,multihead_ablation_results\runs\h20_current_emNA_q0p8_none_equity80_bond20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p8_none_equity80_bond20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity80_bond20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+20,h20_current_emNA_q0p8_none_equity70_bond20_cash10_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p8_none_equity70_bond20_cash10_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity70_bond20_cash10 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.8,none,equity70_bond20_cash10,warning_only,0,17.163488388061523,multihead_ablation_results\runs\h20_current_emNA_q0p8_none_equity70_bond20_cash10_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p8_none_equity70_bond20_cash10_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity70_bond20_cash10"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+21,h20_current_emNA_q0p8_2of3_equity60_cash40_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p8_2of3_equity60_cash40_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity60_cash40 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.8,2of3,equity60_cash40,warning_only,0,17.185758352279663,multihead_ablation_results\runs\h20_current_emNA_q0p8_2of3_equity60_cash40_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p8_2of3_equity60_cash40_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity60_cash40"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+22,h20_current_emNA_q0p8_2of3_equity70_cash30_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p8_2of3_equity70_cash30_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity70_cash30 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.8,2of3,equity70_cash30,warning_only,0,17.18263864517212,multihead_ablation_results\runs\h20_current_emNA_q0p8_2of3_equity70_cash30_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p8_2of3_equity70_cash30_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity70_cash30"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+23,h20_current_emNA_q0p8_2of3_equity80_cash20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p8_2of3_equity80_cash20_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity80_cash20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.8,2of3,equity80_cash20,warning_only,0,17.214500427246094,multihead_ablation_results\runs\h20_current_emNA_q0p8_2of3_equity80_cash20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p8_2of3_equity80_cash20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity80_cash20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+24,h20_current_emNA_q0p8_2of3_equity80_bond20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p8_2of3_equity80_bond20_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity80_bond20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.8,2of3,equity80_bond20,warning_only,0,17.12308168411255,multihead_ablation_results\runs\h20_current_emNA_q0p8_2of3_equity80_bond20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p8_2of3_equity80_bond20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity80_bond20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762717,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+25,h20_current_emNA_q0p8_2of3_equity70_bond20_cash10_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p8_2of3_equity70_bond20_cash10_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity70_bond20_cash10 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.8,2of3,equity70_bond20_cash10,warning_only,0,17.146063566207886,multihead_ablation_results\runs\h20_current_emNA_q0p8_2of3_equity70_bond20_cash10_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p8_2of3_equity70_bond20_cash10_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity70_bond20_cash10"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+26,h20_current_emNA_q0p8_3of5_equity60_cash40_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p8_3of5_equity60_cash40_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity60_cash40 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.8,3of5,equity60_cash40,warning_only,0,17.15896725654602,multihead_ablation_results\runs\h20_current_emNA_q0p8_3of5_equity60_cash40_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p8_3of5_equity60_cash40_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity60_cash40"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743806,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+27,h20_current_emNA_q0p8_3of5_equity70_cash30_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p8_3of5_equity70_cash30_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity70_cash30 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.8,3of5,equity70_cash30,warning_only,0,17.08926272392273,multihead_ablation_results\runs\h20_current_emNA_q0p8_3of5_equity70_cash30_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p8_3of5_equity70_cash30_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity70_cash30"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+28,h20_current_emNA_q0p8_3of5_equity80_cash20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p8_3of5_equity80_cash20_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity80_cash20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.8,3of5,equity80_cash20,warning_only,0,17.174127101898193,multihead_ablation_results\runs\h20_current_emNA_q0p8_3of5_equity80_cash20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p8_3of5_equity80_cash20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity80_cash20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762717,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+29,h20_current_emNA_q0p8_3of5_equity80_bond20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p8_3of5_equity80_bond20_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity80_bond20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.8,3of5,equity80_bond20,warning_only,0,17.174033164978027,multihead_ablation_results\runs\h20_current_emNA_q0p8_3of5_equity80_bond20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p8_3of5_equity80_bond20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity80_bond20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+30,h20_current_emNA_q0p8_3of5_equity70_bond20_cash10_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\h20_current_emNA_q0p8_3of5_equity70_bond20_cash10_warning_only --feature-set down_core --highvol-label-mode h20_current --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity70_bond20_cash10 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF,h20_current,,0.8,3of5,equity70_bond20_cash10,warning_only,0,17.241652727127075,multihead_ablation_results\runs\h20_current_emNA_q0p8_3of5_equity70_bond20_cash10_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\h20_current_emNA_q0p8_3of5_equity70_bond20_cash10_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""h20_current"",
+  ""allocation_mode"": ""equity70_bond20_cash10"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.43172682197014733,
+  ""highvol_brier_skill"": -0.06243974720743761,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+31,vol_expansion_ratio_em1p25_q0p75_none_equity60_cash40_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_none_equity60_cash40_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity60_cash40 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.75,none,equity60_cash40,warning_only,0,17.115737438201904,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_none_equity60_cash40_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_none_equity60_cash40_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity60_cash40"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762717,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+32,vol_expansion_ratio_em1p25_q0p75_none_equity70_cash30_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_none_equity70_cash30_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity70_cash30 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.75,none,equity70_cash30,warning_only,0,17.24060583114624,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_none_equity70_cash30_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_none_equity70_cash30_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_cash30"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+33,vol_expansion_ratio_em1p25_q0p75_none_equity80_cash20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_none_equity80_cash20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity80_cash20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.75,none,equity80_cash20,warning_only,0,17.218639373779297,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_none_equity80_cash20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_none_equity80_cash20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_cash20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+34,vol_expansion_ratio_em1p25_q0p75_none_equity80_bond20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_none_equity80_bond20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity80_bond20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.75,none,equity80_bond20,warning_only,0,17.099993467330933,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_none_equity80_bond20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_none_equity80_bond20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_bond20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+35,vol_expansion_ratio_em1p25_q0p75_none_equity70_bond20_cash10_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_none_equity70_bond20_cash10_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity70_bond20_cash10 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.75,none,equity70_bond20_cash10,warning_only,0,17.202183485031128,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_none_equity70_bond20_cash10_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_none_equity70_bond20_cash10_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_bond20_cash10"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+36,vol_expansion_ratio_em1p25_q0p75_2of3_equity60_cash40_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_2of3_equity60_cash40_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity60_cash40 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.75,2of3,equity60_cash40,warning_only,0,17.11000156402588,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_2of3_equity60_cash40_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_2of3_equity60_cash40_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity60_cash40"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.0430293937159274,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762717,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+37,vol_expansion_ratio_em1p25_q0p75_2of3_equity70_cash30_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_2of3_equity70_cash30_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity70_cash30 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.75,2of3,equity70_cash30,warning_only,0,17.209609508514404,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_2of3_equity70_cash30_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_2of3_equity70_cash30_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_cash30"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+38,vol_expansion_ratio_em1p25_q0p75_2of3_equity80_cash20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_2of3_equity80_cash20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity80_cash20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.75,2of3,equity80_cash20,warning_only,0,17.149086713790894,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_2of3_equity80_cash20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_2of3_equity80_cash20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_cash20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762717,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+39,vol_expansion_ratio_em1p25_q0p75_2of3_equity80_bond20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_2of3_equity80_bond20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity80_bond20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.75,2of3,equity80_bond20,warning_only,0,17.154221296310425,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_2of3_equity80_bond20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_2of3_equity80_bond20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_bond20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+40,vol_expansion_ratio_em1p25_q0p75_2of3_equity70_bond20_cash10_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_2of3_equity70_bond20_cash10_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity70_bond20_cash10 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.75,2of3,equity70_bond20_cash10,warning_only,0,17.28241801261902,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_2of3_equity70_bond20_cash10_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_2of3_equity70_bond20_cash10_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_bond20_cash10"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+41,vol_expansion_ratio_em1p25_q0p75_3of5_equity60_cash40_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_3of5_equity60_cash40_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity60_cash40 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.75,3of5,equity60_cash40,warning_only,0,17.10750961303711,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_3of5_equity60_cash40_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_3of5_equity60_cash40_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity60_cash40"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+42,vol_expansion_ratio_em1p25_q0p75_3of5_equity70_cash30_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_3of5_equity70_cash30_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity70_cash30 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.75,3of5,equity70_cash30,warning_only,0,17.21432065963745,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_3of5_equity70_cash30_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_3of5_equity70_cash30_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_cash30"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762717,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+43,vol_expansion_ratio_em1p25_q0p75_3of5_equity80_cash20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_3of5_equity80_cash20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity80_cash20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.75,3of5,equity80_cash20,warning_only,0,17.216397762298584,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_3of5_equity80_cash20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_3of5_equity80_cash20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_cash20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+44,vol_expansion_ratio_em1p25_q0p75_3of5_equity80_bond20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_3of5_equity80_bond20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity80_bond20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.75,3of5,equity80_bond20,warning_only,0,17.298529148101807,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_3of5_equity80_bond20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_3of5_equity80_bond20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_bond20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762717,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+45,vol_expansion_ratio_em1p25_q0p75_3of5_equity70_bond20_cash10_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_3of5_equity70_bond20_cash10_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity70_bond20_cash10 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.75,3of5,equity70_bond20_cash10,warning_only,0,17.199058532714844,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_3of5_equity70_bond20_cash10_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p75_3of5_equity70_bond20_cash10_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_bond20_cash10"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+46,vol_expansion_ratio_em1p25_q0p8_none_equity60_cash40_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_none_equity60_cash40_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity60_cash40 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.8,none,equity60_cash40,warning_only,0,17.199296712875366,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_none_equity60_cash40_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_none_equity60_cash40_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity60_cash40"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+47,vol_expansion_ratio_em1p25_q0p8_none_equity70_cash30_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_none_equity70_cash30_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity70_cash30 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.8,none,equity70_cash30,warning_only,0,17.139361143112183,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_none_equity70_cash30_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_none_equity70_cash30_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_cash30"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+48,vol_expansion_ratio_em1p25_q0p8_none_equity80_cash20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_none_equity80_cash20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity80_cash20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.8,none,equity80_cash20,warning_only,0,17.108259439468384,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_none_equity80_cash20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_none_equity80_cash20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_cash20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+49,vol_expansion_ratio_em1p25_q0p8_none_equity80_bond20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_none_equity80_bond20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity80_bond20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.8,none,equity80_bond20,warning_only,0,17.21478009223938,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_none_equity80_bond20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_none_equity80_bond20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_bond20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762717,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+50,vol_expansion_ratio_em1p25_q0p8_none_equity70_bond20_cash10_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_none_equity70_bond20_cash10_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity70_bond20_cash10 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.8,none,equity70_bond20_cash10,warning_only,0,17.22064995765686,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_none_equity70_bond20_cash10_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_none_equity70_bond20_cash10_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_bond20_cash10"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762717,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+51,vol_expansion_ratio_em1p25_q0p8_2of3_equity60_cash40_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_2of3_equity60_cash40_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity60_cash40 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.8,2of3,equity60_cash40,warning_only,0,17.20077419281006,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_2of3_equity60_cash40_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_2of3_equity60_cash40_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity60_cash40"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762717,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+52,vol_expansion_ratio_em1p25_q0p8_2of3_equity70_cash30_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_2of3_equity70_cash30_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity70_cash30 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.8,2of3,equity70_cash30,warning_only,0,17.179519176483154,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_2of3_equity70_cash30_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_2of3_equity70_cash30_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_cash30"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+53,vol_expansion_ratio_em1p25_q0p8_2of3_equity80_cash20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_2of3_equity80_cash20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity80_cash20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.8,2of3,equity80_cash20,warning_only,0,17.212915658950806,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_2of3_equity80_cash20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_2of3_equity80_cash20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_cash20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+54,vol_expansion_ratio_em1p25_q0p8_2of3_equity80_bond20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_2of3_equity80_bond20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity80_bond20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.8,2of3,equity80_bond20,warning_only,0,17.157063961029053,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_2of3_equity80_bond20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_2of3_equity80_bond20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_bond20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+55,vol_expansion_ratio_em1p25_q0p8_2of3_equity70_bond20_cash10_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_2of3_equity70_bond20_cash10_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity70_bond20_cash10 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.8,2of3,equity70_bond20_cash10,warning_only,0,17.133044958114624,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_2of3_equity70_bond20_cash10_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_2of3_equity70_bond20_cash10_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_bond20_cash10"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+56,vol_expansion_ratio_em1p25_q0p8_3of5_equity60_cash40_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_3of5_equity60_cash40_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity60_cash40 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.8,3of5,equity60_cash40,warning_only,0,17.221174001693726,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_3of5_equity60_cash40_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_3of5_equity60_cash40_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity60_cash40"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+57,vol_expansion_ratio_em1p25_q0p8_3of5_equity70_cash30_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_3of5_equity70_cash30_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity70_cash30 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.8,3of5,equity70_cash30,warning_only,0,17.173059701919556,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_3of5_equity70_cash30_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_3of5_equity70_cash30_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_cash30"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.0430293937159274,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+58,vol_expansion_ratio_em1p25_q0p8_3of5_equity80_cash20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_3of5_equity80_cash20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity80_cash20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.8,3of5,equity80_cash20,warning_only,0,17.254684686660767,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_3of5_equity80_cash20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_3of5_equity80_cash20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_cash20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+59,vol_expansion_ratio_em1p25_q0p8_3of5_equity80_bond20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_3of5_equity80_bond20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity80_bond20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.8,3of5,equity80_bond20,warning_only,0,17.128913640975952,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_3of5_equity80_bond20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_3of5_equity80_bond20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_bond20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762717,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+60,vol_expansion_ratio_em1p25_q0p8_3of5_equity70_bond20_cash10_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_3of5_equity70_bond20_cash10_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity70_bond20_cash10 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.25,vol_expansion_ratio,1.25,0.8,3of5,equity70_bond20_cash10,warning_only,0,17.13488245010376,multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_3of5_equity70_bond20_cash10_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p25_q0p8_3of5_equity70_bond20_cash10_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_bond20_cash10"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.39540889819469827,
+  ""highvol_brier_skill"": 0.04302939371592729,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+61,vol_expansion_ratio_em1p5_q0p75_none_equity60_cash40_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_none_equity60_cash40_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity60_cash40 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.75,none,equity60_cash40,warning_only,0,17.27463722229004,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_none_equity60_cash40_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_none_equity60_cash40_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity60_cash40"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289018,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""multihead_allocation"",
+  ""best_cagr"": 0.17337815412525326,
+  ""best_mdd"": -0.3139906916089823,
+  ""best_calmar"": 0.5521760955294939,
+  ""best_calmar_diff_vs_buy_hold"": 0.00337341588841511
+}
+",
+62,vol_expansion_ratio_em1p5_q0p75_none_equity70_cash30_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_none_equity70_cash30_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity70_cash30 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.75,none,equity70_cash30,warning_only,0,17.081924200057983,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_none_equity70_cash30_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_none_equity70_cash30_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_cash30"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289018,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""multihead_allocation"",
+  ""best_cagr"": 0.17907001975818293,
+  ""best_mdd"": -0.32468232138759423,
+  ""best_calmar"": 0.5515237755874473,
+  ""best_calmar_diff_vs_buy_hold"": 0.0027210959463684903
+}
+",
+63,vol_expansion_ratio_em1p5_q0p75_none_equity80_cash20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_none_equity80_cash20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity80_cash20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.75,none,equity80_cash20,warning_only,0,17.14643096923828,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_none_equity80_cash20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_none_equity80_cash20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_cash20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""multihead_allocation"",
+  ""best_cagr"": 0.1846502909217418,
+  ""best_mdd"": -0.33527680884161215,
+  ""best_calmar"": 0.5507398246831092,
+  ""best_calmar_diff_vs_buy_hold"": 0.0019371450420304637
+}
+",
+64,vol_expansion_ratio_em1p5_q0p75_none_equity80_bond20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_none_equity80_bond20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity80_bond20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.75,none,equity80_bond20,warning_only,0,17.106508016586304,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_none_equity80_bond20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_none_equity80_bond20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_bond20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+65,vol_expansion_ratio_em1p5_q0p75_none_equity70_bond20_cash10_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_none_equity70_bond20_cash10_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity70_bond20_cash10 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.75,none,equity70_bond20_cash10,warning_only,0,17.170328378677368,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_none_equity70_bond20_cash10_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_none_equity70_bond20_cash10_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_bond20_cash10"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+66,vol_expansion_ratio_em1p5_q0p75_2of3_equity60_cash40_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_2of3_equity60_cash40_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity60_cash40 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.75,2of3,equity60_cash40,warning_only,0,17.16950011253357,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_2of3_equity60_cash40_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_2of3_equity60_cash40_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity60_cash40"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+67,vol_expansion_ratio_em1p5_q0p75_2of3_equity70_cash30_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_2of3_equity70_cash30_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity70_cash30 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.75,2of3,equity70_cash30,warning_only,0,17.147897958755493,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_2of3_equity70_cash30_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_2of3_equity70_cash30_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_cash30"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289018,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+68,vol_expansion_ratio_em1p5_q0p75_2of3_equity80_cash20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_2of3_equity80_cash20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity80_cash20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.75,2of3,equity80_cash20,warning_only,0,17.212640285491943,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_2of3_equity80_cash20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_2of3_equity80_cash20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_cash20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+69,vol_expansion_ratio_em1p5_q0p75_2of3_equity80_bond20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_2of3_equity80_bond20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity80_bond20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.75,2of3,equity80_bond20,warning_only,0,17.15009355545044,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_2of3_equity80_bond20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_2of3_equity80_bond20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_bond20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762717,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+70,vol_expansion_ratio_em1p5_q0p75_2of3_equity70_bond20_cash10_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_2of3_equity70_bond20_cash10_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity70_bond20_cash10 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.75,2of3,equity70_bond20_cash10,warning_only,0,17.199465036392212,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_2of3_equity70_bond20_cash10_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_2of3_equity70_bond20_cash10_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_bond20_cash10"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+71,vol_expansion_ratio_em1p5_q0p75_3of5_equity60_cash40_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_3of5_equity60_cash40_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity60_cash40 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.75,3of5,equity60_cash40,warning_only,0,17.15869927406311,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_3of5_equity60_cash40_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_3of5_equity60_cash40_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity60_cash40"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+72,vol_expansion_ratio_em1p5_q0p75_3of5_equity70_cash30_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_3of5_equity70_cash30_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity70_cash30 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.75,3of5,equity70_cash30,warning_only,0,17.241114854812622,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_3of5_equity70_cash30_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_3of5_equity70_cash30_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_cash30"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+73,vol_expansion_ratio_em1p5_q0p75_3of5_equity80_cash20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_3of5_equity80_cash20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity80_cash20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.75,3of5,equity80_cash20,warning_only,0,17.181803703308105,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_3of5_equity80_cash20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_3of5_equity80_cash20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_cash20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+74,vol_expansion_ratio_em1p5_q0p75_3of5_equity80_bond20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_3of5_equity80_bond20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity80_bond20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.75,3of5,equity80_bond20,warning_only,0,17.171046257019043,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_3of5_equity80_bond20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_3of5_equity80_bond20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_bond20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+75,vol_expansion_ratio_em1p5_q0p75_3of5_equity70_bond20_cash10_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_3of5_equity70_bond20_cash10_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.75 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity70_bond20_cash10 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.75,3of5,equity70_bond20_cash10,warning_only,0,17.205314874649048,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_3of5_equity70_bond20_cash10_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p75_3of5_equity70_bond20_cash10_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_bond20_cash10"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+76,vol_expansion_ratio_em1p5_q0p8_none_equity60_cash40_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_none_equity60_cash40_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity60_cash40 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.8,none,equity60_cash40,warning_only,0,17.1479971408844,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_none_equity60_cash40_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_none_equity60_cash40_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity60_cash40"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""multihead_allocation"",
+  ""best_cagr"": 0.1811595293638888,
+  ""best_mdd"": -0.3161363853251066,
+  ""best_calmar"": 0.573042325316616,
+  ""best_calmar_diff_vs_buy_hold"": 0.02423964567553727
+}
+",
+77,vol_expansion_ratio_em1p5_q0p8_none_equity70_cash30_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_none_equity70_cash30_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity70_cash30 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.8,none,equity70_cash30,warning_only,0,17.22005009651184,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_none_equity70_cash30_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_none_equity70_cash30_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_cash30"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289018,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762717,
+  ""best_strategy"": ""multihead_allocation"",
+  ""best_cagr"": 0.184907748618099,
+  ""best_mdd"": -0.3262708060282026,
+  ""best_calmar"": 0.5667309032917758,
+  ""best_calmar_diff_vs_buy_hold"": 0.017928223650697017
+}
+",
+78,vol_expansion_ratio_em1p5_q0p8_none_equity80_cash20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_none_equity80_cash20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity80_cash20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.8,none,equity80_cash20,warning_only,0,17.320748329162598,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_none_equity80_cash20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_none_equity80_cash20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_cash20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289018,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""multihead_allocation"",
+  ""best_cagr"": 0.1885427574591496,
+  ""best_mdd"": -0.33632200970089676,
+  ""best_calmar"": 0.560601899432117,
+  ""best_calmar_diff_vs_buy_hold"": 0.011799219791038262
+}
+",
+79,vol_expansion_ratio_em1p5_q0p8_none_equity80_bond20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_none_equity80_bond20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity80_bond20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.8,none,equity80_bond20,warning_only,0,17.118869066238403,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_none_equity80_bond20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_none_equity80_bond20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_bond20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+80,vol_expansion_ratio_em1p5_q0p8_none_equity70_bond20_cash10_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_none_equity70_bond20_cash10_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence none --riskoff-persistence none --allocation-mode equity70_bond20_cash10 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.8,none,equity70_bond20_cash10,warning_only,0,17.074145793914795,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_none_equity70_bond20_cash10_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_none_equity70_bond20_cash10_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_bond20_cash10"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762717,
+  ""best_strategy"": ""multihead_allocation"",
+  ""best_cagr"": 0.18207166481927284,
+  ""best_mdd"": -0.32951486598764435,
+  ""best_calmar"": 0.5525446151679843,
+  ""best_calmar_diff_vs_buy_hold"": 0.0037419355269054932
+}
+",
+81,vol_expansion_ratio_em1p5_q0p8_2of3_equity60_cash40_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_2of3_equity60_cash40_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity60_cash40 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.8,2of3,equity60_cash40,warning_only,0,17.2222797870636,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_2of3_equity60_cash40_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_2of3_equity60_cash40_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity60_cash40"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289018,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+82,vol_expansion_ratio_em1p5_q0p8_2of3_equity70_cash30_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_2of3_equity70_cash30_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity70_cash30 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.8,2of3,equity70_cash30,warning_only,0,17.28902268409729,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_2of3_equity70_cash30_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_2of3_equity70_cash30_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_cash30"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+83,vol_expansion_ratio_em1p5_q0p8_2of3_equity80_cash20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_2of3_equity80_cash20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity80_cash20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.8,2of3,equity80_cash20,warning_only,0,17.098578691482544,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_2of3_equity80_cash20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_2of3_equity80_cash20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_cash20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+84,vol_expansion_ratio_em1p5_q0p8_2of3_equity80_bond20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_2of3_equity80_bond20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity80_bond20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.8,2of3,equity80_bond20,warning_only,0,17.211392402648926,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_2of3_equity80_bond20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_2of3_equity80_bond20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_bond20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+85,vol_expansion_ratio_em1p5_q0p8_2of3_equity70_bond20_cash10_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_2of3_equity70_bond20_cash10_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 2of3 --riskoff-persistence none --allocation-mode equity70_bond20_cash10 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.8,2of3,equity70_bond20_cash10,warning_only,0,17.126879692077637,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_2of3_equity70_bond20_cash10_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_2of3_equity70_bond20_cash10_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_bond20_cash10"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+86,vol_expansion_ratio_em1p5_q0p8_3of5_equity60_cash40_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_3of5_equity60_cash40_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity60_cash40 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.8,3of5,equity60_cash40,warning_only,0,17.233977794647217,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_3of5_equity60_cash40_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_3of5_equity60_cash40_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity60_cash40"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289018,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762721,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+87,vol_expansion_ratio_em1p5_q0p8_3of5_equity70_cash30_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_3of5_equity70_cash30_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity70_cash30 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.8,3of5,equity70_cash30,warning_only,0,17.18897247314453,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_3of5_equity70_cash30_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_3of5_equity70_cash30_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_cash30"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762717,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+88,vol_expansion_ratio_em1p5_q0p8_3of5_equity80_cash20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_3of5_equity80_cash20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity80_cash20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.8,3of5,equity80_cash20,warning_only,0,17.18642520904541,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_3of5_equity80_cash20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_3of5_equity80_cash20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_cash20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762719,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+89,vol_expansion_ratio_em1p5_q0p8_3of5_equity80_bond20_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_3of5_equity80_bond20_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity80_bond20 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.8,3of5,equity80_bond20,warning_only,0,17.217852354049683,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_3of5_equity80_bond20_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_3of5_equity80_bond20_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity80_bond20"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762717,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",
+90,vol_expansion_ratio_em1p5_q0p8_3of5_equity70_bond20_cash10_warning_only,C:\Program Files\Python313\python.exe rolling_multihead_regime_experiment.py --equity-input QQQ_ohlcv.csv --ticker QQQ --output-dir multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_3of5_equity70_bond20_cash10_warning_only --feature-set down_core --highvol-label-mode vol_expansion_ratio --direction-horizon 20 --highvol-horizon 20 --riskoff-horizon 40 --vol-window 60 --direction-k 0.25 --high-vol-quantile 0.75 --high-vol-lookback 252 --riskoff-k-mdd 2.0 --train-window 1260 --calibration-window 252 --test-window 63 --highvol-threshold-quantile 0.8 --riskoff-threshold-quantile 0.8 --highvol-persistence 3of5 --riskoff-persistence none --allocation-mode equity70_bond20_cash10 --riskoff-mode warning_only --calibration-method sigmoid --transaction-cost-bps 10.0 --n-estimators 150 --random-state 42 --bond-input IEF_ohlcv.csv --bond-ticker IEF --highvol-expansion-mult 1.5,vol_expansion_ratio,1.5,0.8,3of5,equity70_bond20_cash10,warning_only,0,17.142664432525635,multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_3of5_equity70_bond20_cash10_warning_only\multihead_regime_summary.json,"[OK] Rolling multi-head regime experiment completed.
+[OK] Output dir: C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\test\ohlcv_source\multihead_ablation_results\runs\vol_expansion_ratio_em1p5_q0p8_3of5_equity70_bond20_cash10_warning_only
+{
+  ""ticker"": ""QQQ"",
+  ""oos_start"": ""2019-08-29"",
+  ""oos_end"": ""2026-03-06"",
+  ""rows"": 1638,
+  ""highvol_label_mode"": ""vol_expansion_ratio"",
+  ""allocation_mode"": ""equity70_bond20_cash10"",
+  ""riskoff_mode"": ""warning_only"",
+  ""direction_macro_f1"": 0.3505176001641474,
+  ""highvol_pr_auc"": 0.15072083123624452,
+  ""highvol_brier_skill"": -0.5187602276289021,
+  ""riskoff_pr_auc"": 0.1901009240522973,
+  ""riskoff_brier_skill"": -0.9501135776762717,
+  ""best_strategy"": ""buy_hold"",
+  ""best_cagr"": 0.19546823132601632,
+  ""best_mdd"": -0.35617215180846795,
+  ""best_calmar"": 0.5488026796410788,
+  ""best_calmar_diff_vs_buy_hold"": 0.0
+}
+",

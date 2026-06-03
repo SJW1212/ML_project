@@ -1,0 +1,230 @@
+{
+  "experiment": "touch_label_candidate_selector",
+  "objective": "label_candidate_selection_without_model_training",
+  "asset_periods": [
+    {
+      "asset_name": "QQQ",
+      "input": "QQQ_ohlcv.csv",
+      "start": "2013-01-02",
+      "end": "2026-06-01",
+      "rows": 3373
+    },
+    {
+      "asset_name": "SPY",
+      "input": "SPY_ohlcv.csv",
+      "start": "2013-01-02",
+      "end": "2026-06-01",
+      "rows": 3373
+    },
+    {
+      "asset_name": "SOXX",
+      "input": "SOXX_ohlcv.csv",
+      "start": "2013-01-02",
+      "end": "2026-06-01",
+      "rows": 3373
+    },
+    {
+      "asset_name": "XLK",
+      "input": "XLK_ohlcv.csv",
+      "start": "2013-01-02",
+      "end": "2026-06-01",
+      "rows": 3373
+    }
+  ],
+  "config": {
+    "horizons": [
+      10,
+      20,
+      40
+    ],
+    "fixed_k_values": [
+      1.0
+    ],
+    "target_rates": [
+      0.3
+    ],
+    "vol_window": 60,
+    "k_search": {
+      "k_min": 0.25,
+      "k_max": 2.0,
+      "k_grid_size": 100
+    },
+    "note": "Target-rate k values are diagnostic over supplied data. In model training, recompute k only inside train/calibration windows to avoid leakage."
+  },
+  "recommendations": [
+    {
+      "objective": "return_seeking",
+      "recommended_label_or_pair": "up_touch_target_h10_rate0p30_k1p010",
+      "candidate_id": NaN,
+      "method": "target",
+      "horizon": 10,
+      "target_rate": 0.3,
+      "score": 0.8722395629282723,
+      "reason": "Up-touch side label with best balance/stability; H20 receives a small preference."
+    },
+    {
+      "objective": "defensive",
+      "recommended_label_or_pair": "down_touch_target_h10_rate0p30_k0p922",
+      "candidate_id": NaN,
+      "method": "target",
+      "horizon": 10,
+      "target_rate": 0.3,
+      "score": 0.8779563867983802,
+      "reason": "Down-touch side label with best balance/stability; H20/H40 receive a small preference."
+    },
+    {
+      "objective": "balanced",
+      "recommended_label_or_pair": "target_h10_rate0p30",
+      "candidate_id": "target_h10_rate0p30",
+      "method": "target",
+      "horizon": 10,
+      "target_rate": 0.3,
+      "score": 0.889271148086634,
+      "reason": "Up/Down pair with good rate balance and annual stability; H20 receives a small preference."
+    }
+  ],
+  "recommendation_details_by_asset": {
+    "return_seeking": [
+      {
+        "asset_name": "XLK",
+        "candidate_id": "target_h10_rate0p30",
+        "label_id": "up_touch_target_h10_rate0p30_k1p010",
+        "side": "up",
+        "method": "target",
+        "horizon": 10,
+        "target_rate": 0.3,
+        "k": 1.01010101010101,
+        "positive_rate": 0.304921968787515,
+        "annual_cv": 0.24567693656842518,
+        "annual_cv_gt_0p30": false,
+        "side_quality_score": 0.8722395629282723
+      }
+    ],
+    "defensive": [
+      {
+        "asset_name": "XLK",
+        "candidate_id": "target_h10_rate0p30",
+        "label_id": "down_touch_target_h10_rate0p30_k0p922",
+        "side": "down",
+        "method": "target",
+        "horizon": 10,
+        "target_rate": 0.3,
+        "k": 0.9217171717171717,
+        "positive_rate": 0.2992196878751501,
+        "annual_cv": 0.24252660215353977,
+        "annual_cv_gt_0p30": false,
+        "side_quality_score": 0.8779563867983802
+      }
+    ],
+    "balanced": [
+      {
+        "asset_name": "QQQ",
+        "candidate_id": "target_h10_rate0p30",
+        "method": "target",
+        "horizon": 10,
+        "target_rate": 0.3,
+        "k_up": 1.0277777777777777,
+        "k_down": 0.9570707070707071,
+        "valid_rows": 3332,
+        "up_touch_rate": 0.3007202881152461,
+        "down_touch_rate": 0.2974189675870348,
+        "rate_gap_abs": 0.0033013205282113045,
+        "both_touch_rate": 0.019807923169267706,
+        "no_touch_rate": 0.4216686674669868,
+        "up_only_rate": 0.2809123649459784,
+        "down_only_rate": 0.2776110444177671,
+        "avg_current_horizon_vol": 0.037653676378008136,
+        "median_current_horizon_vol": 0.03244962486792935,
+        "pair_quality_score": 0.9953781512605041,
+        "up_touch_annual_cv": 0.26128974481996214,
+        "down_touch_annual_cv": 0.2717731498653813,
+        "both_touch_annual_cv": 0.5800723629686277,
+        "no_touch_annual_cv": 0.16069477815250394,
+        "up_rate_cv_gt_0p30": false,
+        "down_rate_cv_gt_0p30": false,
+        "pair_quality_score_with_stability": 0.8887655723234354
+      },
+      {
+        "asset_name": "SOXX",
+        "candidate_id": "target_h10_rate0p30",
+        "method": "target",
+        "horizon": 10,
+        "target_rate": 0.3,
+        "k_up": 1.0631313131313131,
+        "k_down": 0.8863636363636364,
+        "valid_rows": 3332,
+        "up_touch_rate": 0.3025210084033613,
+        "down_touch_rate": 0.2968187274909964,
+        "rate_gap_abs": 0.00570228091236491,
+        "both_touch_rate": 0.02040816326530612,
+        "no_touch_rate": 0.4210684273709484,
+        "up_only_rate": 0.28211284513805523,
+        "down_only_rate": 0.27641056422569027,
+        "avg_current_horizon_vol": 0.05608099989616632,
+        "median_current_horizon_vol": 0.05236174041192389,
+        "pair_quality_score": 0.9920168067226891,
+        "up_touch_annual_cv": 0.26831586651240164,
+        "down_touch_annual_cv": 0.26188373741013077,
+        "both_touch_annual_cv": 0.873202874990158,
+        "no_touch_annual_cv": 0.22390758538749064,
+        "up_rate_cv_gt_0p30": false,
+        "down_rate_cv_gt_0p30": false,
+        "pair_quality_score_with_stability": 0.8859768859381826
+      },
+      {
+        "asset_name": "SPY",
+        "candidate_id": "target_h10_rate0p30",
+        "method": "target",
+        "horizon": 10,
+        "target_rate": 0.3,
+        "k_up": 0.9570707070707071,
+        "k_down": 0.904040404040404,
+        "valid_rows": 3332,
+        "up_touch_rate": 0.29891956782713086,
+        "down_touch_rate": 0.3013205282112845,
+        "rate_gap_abs": 0.002400960384153661,
+        "both_touch_rate": 0.027611044417767107,
+        "no_touch_rate": 0.42737094837935174,
+        "up_only_rate": 0.27130852340936373,
+        "down_only_rate": 0.2737094837935174,
+        "avg_current_horizon_vol": 0.029668225186126777,
+        "median_current_horizon_vol": 0.024796769107146267,
+        "pair_quality_score": 0.9966386554621849,
+        "up_touch_annual_cv": 0.25837714004708867,
+        "down_touch_annual_cv": 0.26360240830935777,
+        "both_touch_annual_cv": 0.7343688329762261,
+        "no_touch_annual_cv": 0.20728891584242956,
+        "up_rate_cv_gt_0p30": false,
+        "down_rate_cv_gt_0p30": false,
+        "pair_quality_score_with_stability": 0.8922427457908956
+      },
+      {
+        "asset_name": "XLK",
+        "candidate_id": "target_h10_rate0p30",
+        "method": "target",
+        "horizon": 10,
+        "target_rate": 0.3,
+        "k_up": 1.01010101010101,
+        "k_down": 0.9217171717171717,
+        "valid_rows": 3332,
+        "up_touch_rate": 0.304921968787515,
+        "down_touch_rate": 0.2992196878751501,
+        "rate_gap_abs": 0.00570228091236491,
+        "both_touch_rate": 0.02220888355342137,
+        "no_touch_rate": 0.4180672268907563,
+        "up_only_rate": 0.28271308523409366,
+        "down_only_rate": 0.2770108043217287,
+        "avg_current_horizon_vol": 0.039976243422678054,
+        "median_current_horizon_vol": 0.03563180428583627,
+        "pair_quality_score": 0.9920168067226891,
+        "up_touch_annual_cv": 0.24567693656842518,
+        "down_touch_annual_cv": 0.24252660215353977,
+        "both_touch_annual_cv": 0.7435962853249198,
+        "no_touch_annual_cv": 0.1725044277920477,
+        "up_rate_cv_gt_0p30": false,
+        "down_rate_cv_gt_0p30": false,
+        "pair_quality_score_with_stability": 0.8943760989782961
+      }
+    ]
+  }
+}

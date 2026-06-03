@@ -1,0 +1,52 @@
+{
+  "experiment": "touch_signal_policy_builder",
+  "asset_periods": [
+    {
+      "asset_name": "QQQ",
+      "input": "QQQ_ohlcv.csv",
+      "start": "2013-01-02",
+      "end": "2026-06-01",
+      "rows": 3373
+    },
+    {
+      "asset_name": "SPY",
+      "input": "SPY_ohlcv.csv",
+      "start": "2013-01-02",
+      "end": "2026-06-01",
+      "rows": 3373
+    },
+    {
+      "asset_name": "SOXX",
+      "input": "SOXX_ohlcv.csv",
+      "start": "2013-01-02",
+      "end": "2026-06-01",
+      "rows": 3373
+    },
+    {
+      "asset_name": "XLK",
+      "input": "XLK_ohlcv.csv",
+      "start": "2013-01-02",
+      "end": "2026-06-01",
+      "rows": 3373
+    }
+  ],
+  "policy_thresholds": {
+    "return_strong_threshold": 0.9,
+    "return_standard_threshold": 0.8,
+    "return_weak_threshold": 0.7,
+    "balanced_edge_threshold": 0.8,
+    "balanced_watch_threshold": 0.6,
+    "defensive_high_threshold": 0.9,
+    "defensive_watch_threshold": 0.8
+  },
+  "heads": {
+    "return_seeking": "fixed_h10_k1.0 + ExtraTrees + Up-touch",
+    "balanced": "target_h10_rate30 + HGB + Up/Down-touch",
+    "defensive": "fixed_h10_k1.0 + HGB + Down-touch"
+  },
+  "usage_note": {
+    "portfolio_allocation": false,
+    "literal_probability": false,
+    "recommended_interpretation": "Use final_policy_signal as signal taxonomy only. Portfolio validation must be separate."
+  }
+}

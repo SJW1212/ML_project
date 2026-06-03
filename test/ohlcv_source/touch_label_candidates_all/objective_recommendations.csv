@@ -1,0 +1,4 @@
+﻿objective,recommended_label_or_pair,candidate_id,method,horizon,target_rate,score,reason
+return_seeking,up_touch_target_h10_rate0p30_k1p010,,target,10,0.3,0.8722395629282723,Up-touch side label with best balance/stability; H20 receives a small preference.
+defensive,down_touch_target_h10_rate0p30_k0p922,,target,10,0.3,0.8779563867983802,Down-touch side label with best balance/stability; H20/H40 receive a small preference.
+balanced,target_h10_rate0p30,target_h10_rate0p30,target,10,0.3,0.889271148086634,Up/Down pair with good rate balance and annual stability; H20 receives a small preference.

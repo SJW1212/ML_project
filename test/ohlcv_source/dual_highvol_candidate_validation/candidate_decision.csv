@@ -1,0 +1,7 @@
+﻿gate,pass,value,required
+best_candidate_economic_gate,True,True,True
+cost_sensitivity_gate,True,1.0,all tested costs pass
+yearly_gate,False,"{'calmar_rate': 0.5, 'mdd_rate': 0.625, 'cagr_gate_rate': 0.75}",>=0.60 each
+neighborhood_gate,True,20,>=5 top20 variants pass economic gate
+head_gate,True,"{'direction': False, 'highvol_expansion': True, 'highvol_h20': False, 'riskoff': False}",expansion confirmation pass; riskoff remains warning
+final_decision,False,provisional_stable_candidate,Economic/cost/neighborhood gates passed and expansion confirmation head is usable. Still not final Stable because validation is limited to QQQ/IEF and 2019-2026.

@@ -1,0 +1,123 @@
+{
+  "diagnostic_type": "rolling_highvol_diagnostics",
+  "fold_summary": {
+    "fold_count": 27,
+    "success_fold_count": 3,
+    "failure_or_unstable_fold_count": 24,
+    "extreme_class_imbalance_rate": 0.5925925925925926,
+    "inverse_polarity_rate": 0.7037037037037037,
+    "negative_brier_skill_rate": 0.3333333333333333,
+    "median_pr_auc": 0.0326953748006379,
+    "mean_pr_auc": 0.3367628277541264,
+    "median_brier_skill": -0.25575865006688614,
+    "mean_brier_skill": -0.6501385372283366
+  },
+  "best_strategy_by_calmar": {
+    "strategy": "highvol_only",
+    "threshold_quantile": 0.75,
+    "rows": 1701,
+    "avg_equity_weight": 0.8739564961787184,
+    "avg_bond_weight": 0.0,
+    "avg_cash_weight": 0.1260435038212816,
+    "turnover_total": 33.6,
+    "transaction_cost_total": 0.0336,
+    "total_return": 2.2943890130148974,
+    "cagr": 0.1931839140122131,
+    "volatility": 0.1949556578668633,
+    "sharpe": 1.0038346416256132,
+    "mdd": -0.2992490539382504,
+    "calmar": 0.6455623216509027,
+    "rank_calmar": 1.0,
+    "rank_cagr": 3.0,
+    "rank_mdd": 2.0,
+    "cagr_diff_vs_buy_hold": -0.018488813066872806,
+    "mdd_diff_vs_buy_hold": 0.05692309787021599,
+    "calmar_diff_vs_buy_hold": 0.05126339624554388,
+    "sharpe_diff_vs_buy_hold": 0.09719037960423804,
+    "volatility_diff_vs_buy_hold": -0.05004276561936419,
+    "total_return_diff_vs_buy_hold": -0.3603047800321111,
+    "cagr_diff_vs_constant_normal": 0.023881818853448616,
+    "mdd_diff_vs_constant_normal": 0.005644200190000892,
+    "calmar_diff_vs_constant_normal": 0.09027914346832244,
+    "sharpe_diff_vs_constant_normal": 0.1068521457349968,
+    "volatility_diff_vs_constant_normal": -0.000853375745832996,
+    "total_return_diff_vs_constant_normal": 0.4202655968366733
+  },
+  "threshold_signal_summary": [
+    {
+      "threshold_quantile": 0.75,
+      "rows": 1701,
+      "event_rate": 0.25573192239858905,
+      "signal_rate": 0.315108759553204,
+      "tp": 284,
+      "fp": 252,
+      "fn": 151,
+      "tn": 1014,
+      "signal_precision": 0.5298507462686567,
+      "signal_recall": 0.6528735632183909,
+      "false_alarm_rate": 0.4701492537313433,
+      "miss_rate": 0.3471264367816092,
+      "avg_threshold": 0.41414385473631804,
+      "median_threshold": 0.4743851886628745,
+      "avg_prob_signal_days": 0.47805368624592953,
+      "avg_prob_non_signal_days": 0.2256595510081438,
+      "threshold_mean": 0.41414385473631804,
+      "threshold_std": 0.2308544354269622,
+      "cal_signal_rate_mean": 0.25,
+      "test_signal_rate_mean": 0.315108759553204,
+      "test_positive_rate_mean": 0.25573192239858905
+    },
+    {
+      "threshold_quantile": 0.8,
+      "rows": 1701,
+      "event_rate": 0.25573192239858905,
+      "signal_rate": 0.2839506172839506,
+      "tp": 270,
+      "fp": 213,
+      "fn": 165,
+      "tn": 1053,
+      "signal_precision": 0.5590062111801242,
+      "signal_recall": 0.6206896551724138,
+      "false_alarm_rate": 0.4409937888198758,
+      "miss_rate": 0.3793103448275862,
+      "avg_threshold": 0.45566760794012745,
+      "median_threshold": 0.5247462028387576,
+      "avg_prob_signal_days": 0.49197353808436733,
+      "avg_prob_non_signal_days": 0.23112227738715635,
+      "threshold_mean": 0.4556676079401275,
+      "threshold_std": 0.23451724410177005,
+      "cal_signal_rate_mean": 0.2023809523809523,
+      "test_signal_rate_mean": 0.2839506172839506,
+      "test_positive_rate_mean": 0.25573192239858905
+    }
+  ],
+  "recommendations": {
+    "decisions": [
+      "HighVol only는 후보로 유지합니다.",
+      "Stable 채택은 아직 보류합니다."
+    ],
+    "warnings": [
+      "Brier skill 양수 fold 비율이 낮습니다. 확률값을 직접 allocation 강도로 사용하지 마세요.",
+      "normal polarity fold 비율이 낮습니다. 일부 fold에서 신호 방향이 불안정합니다.",
+      "median PR-AUC가 낮습니다. 평균 성능은 일부 fold에 의해 왜곡되었을 가능성이 큽니다."
+    ],
+    "recommendations": [
+      "확률값은 calibrated probability 자체보다 rolling quantile signal로만 사용하세요.",
+      "fold별 성공/실패 regime을 분리하고, volatility expansion label을 추가 실험하세요.",
+      "H20 단일 head 대신 H10/H20 ensemble 또는 persistence 조건을 테스트하세요.",
+      "q=0.75와 q=0.80 중 fold 안정성이 더 좋은 쪽을 별도 검증하세요.",
+      "다음 개선 실험은 label 개선과 signal persistence 조건을 우선하세요."
+    ]
+  },
+  "output_files": {
+    "fold_quality": "rolling_highvol_diagnostics_output\\fold_quality_diagnostics.csv",
+    "fold_groups": "rolling_highvol_diagnostics_output\\fold_success_failure_groups.csv",
+    "threshold_signal": "rolling_highvol_diagnostics_output\\threshold_signal_diagnostics.csv",
+    "strategy_comparison": "rolling_highvol_diagnostics_output\\strategy_comparison_diagnostics.csv",
+    "strategy_relative": "rolling_highvol_diagnostics_output\\strategy_relative_performance.csv",
+    "drawdown_events": "rolling_highvol_diagnostics_output\\strategy_drawdown_diagnostics.csv",
+    "highvol_signal_attribution": "rolling_highvol_diagnostics_output\\highvol_signal_attribution.csv",
+    "drawdown_event_attribution": "rolling_highvol_diagnostics_output\\drawdown_event_attribution.csv",
+    "recommendations": "rolling_highvol_diagnostics_output\\recommendations.json"
+  }
+}

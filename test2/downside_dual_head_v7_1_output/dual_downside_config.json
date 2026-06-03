@@ -1,0 +1,45 @@
+{
+  "experiment": "downside_dual_head_experiment_v7_1",
+  "config": {
+    "horizon": 10,
+    "vol_window": 60,
+    "k_down_touch": 1.0,
+    "k_close_mdd": 0.75,
+    "k_close_loss": 0.75,
+    "min_train_days": 756,
+    "test_days": 126,
+    "step_days": 126,
+    "embargo_days": 10,
+    "calibration_days": 252,
+    "candidate_model": "extratrees",
+    "confirm_model": "extratrees",
+    "n_estimators": 500,
+    "max_features": "sqrt",
+    "min_samples_leaf": 20,
+    "random_state": 42,
+    "candidate_thresholds": [
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "confirm_thresholds": [
+      0.7,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "primary_candidate_threshold": 0.8,
+    "primary_confirm_threshold": 0.8
+  },
+  "feature_count": 160,
+  "features_exclude_future_and_labels": true,
+  "label_definitions": {
+    "y_down_touch": "future_min_low[t+1:t+H] <= close_t * (1 - k_down_touch * current_horizon_vol_t)",
+    "y_close_mdd_confirm": "min(future_close[t+1:t+H]) / close_t - 1 <= -k_close_mdd * current_horizon_vol_t",
+    "y_close_loss_h": "future_close[t+H] / close_t - 1 <= -k_close_loss * current_horizon_vol_t"
+  },
+  "score_interpretation": "score_percentile is calibration-window rank, not literal probability"
+}

@@ -1,0 +1,6 @@
+﻿sample,cagr_diff_vs_buy_hold,mdd_diff_vs_buy_hold,calmar_diff_vs_buy_hold,rule_cagr,rule_mdd,rule_calmar,cagr_gate,mdd_gate,calmar_gate,economic_gate
+full_sample,0.0012417014579775287,0.05341486804113449,0.10062028487778629,cagr_diff > -0.02,mdd_diff > 0.03,calmar_diff > 0.03,True,True,True,True
+only_COVID,0.06043759520431047,0.07804307588357118,0.28716200060981206,cagr_diff > -0.02,mdd_diff > 0.03,calmar_diff > 0.03,True,True,True,True
+exclude_COVID,-0.0013279808532353776,0.053414868041135266,0.09219902731828133,cagr_diff > -0.02,mdd_diff > 0.03,calmar_diff > 0.03,True,True,True,True
+pre_COVID,0.0,0.0,0.0,cagr_diff > -0.02,mdd_diff > 0.03,calmar_diff > 0.03,True,False,False,False
+post_COVID,-0.0014724616998620377,0.053414868041135155,0.08834923619452906,cagr_diff > -0.02,mdd_diff > 0.03,calmar_diff > 0.03,True,True,True,True
