@@ -1,0 +1,409 @@
+﻿rule,level,message,stock,ph,mid_trend_state,Date,allocation_regime,hold_reason
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.602,NEUTRAL,2014-10-09,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6415,NEUTRAL,2014-10-10,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.6864,BEAR,2014-10-13,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6864,BEAR,2014-10-13,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7223,BEAR,2014-10-14,WATCH,no_trade_override_prob_high_vol_cross_0.70
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7223,BEAR,2014-10-14,WATCH,no_trade_override_prob_high_vol_cross_0.70
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.754,BEAR,2014-10-15,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.754,BEAR,2014-10-15,CUSTOM,no_trade_band
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.776,BEAR,2014-10-16,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.776,BEAR,2014-10-16,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.798,BEAR,2014-10-17,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.798,BEAR,2014-10-17,CUSTOM,no_trade_band
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.8141,BEAR,2014-10-20,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8141,BEAR,2014-10-20,CUSTOM,not_rebalance_day
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8141,BEAR,2014-10-20,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.8017,BEAR,2014-10-21,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8017,BEAR,2014-10-21,CUSTOM,not_rebalance_day
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8017,BEAR,2014-10-21,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.8158,BEAR,2014-10-22,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8158,BEAR,2014-10-22,CUSTOM,no_trade_band
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8158,BEAR,2014-10-22,CUSTOM,no_trade_band
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7833,BEAR,2014-10-23,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7833,BEAR,2014-10-23,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7256,BULL,2014-10-24,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6686,BULL,2014-10-27,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.88,0.6202,BULL,2015-01-12,WATCH,scheduled
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6671,BULL,2015-01-13,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.88,0.7098,BULL,2015-01-14,WATCH,no_trade_override_prob_high_vol_cross_0.70
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.88,0.7422,BULL,2015-01-15,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.88,0.7573,BULL,2015-01-16,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.761,BULL,2015-01-20,RISK_OFF,scheduled
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.756,BULL,2015-01-21,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7044,BULL,2015-01-22,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.6831,BULL,2015-01-23,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6619,BULL,2015-01-26,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6771,BULL,2015-01-27,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.88,0.716,BULL,2015-01-28,WATCH,no_trade_override_prob_high_vol_cross_0.70
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.88,0.7357,NEUTRAL,2015-01-29,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.88,0.765,BEAR,2015-01-30,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.88,0.765,BEAR,2015-01-30,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.88,0.777,NEUTRAL,2015-02-02,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7642,BULL,2015-02-03,RISK_OFF,scheduled
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7628,BULL,2015-02-04,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7372,BULL,2015-02-05,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.726,BULL,2015-02-06,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7144,BULL,2015-02-09,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6517,BULL,2015-02-10,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.82,0.3288,BEAR,2015-06-30,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.4082,BEAR,2015-07-06,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.4388,BEAR,2015-07-07,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.5078,BEAR,2015-07-08,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.5579,BEAR,2015-07-09,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.579,BEAR,2015-07-10,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.235,BEAR,2015-07-24,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.2305,BEAR,2015-07-27,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.2188,BEAR,2015-07-28,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.1757,BEAR,2015-08-04,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.1878,BEAR,2015-08-06,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.1906,BEAR,2015-08-07,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.86,0.2258,BEAR,2015-08-11,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.86,0.2637,BEAR,2015-08-12,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.86,0.2768,BEAR,2015-08-13,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.86,0.2624,BEAR,2015-08-14,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.86,0.2317,BEAR,2015-08-19,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.86,0.3241,BEAR,2015-08-20,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.4542,BEAR,2015-08-21,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.5601,BEAR,2015-08-24,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.6453,BEAR,2015-08-25,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6453,BEAR,2015-08-25,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7089,BEAR,2015-08-26,WATCH,no_trade_override_prob_high_vol_cross_0.70
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7089,BEAR,2015-08-26,WATCH,no_trade_override_prob_high_vol_cross_0.70
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7563,BEAR,2015-08-27,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7563,BEAR,2015-08-27,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.791,BEAR,2015-08-28,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.791,BEAR,2015-08-28,CUSTOM,no_trade_band
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.8178,BEAR,2015-08-31,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8178,BEAR,2015-08-31,CUSTOM,no_trade_band
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8178,BEAR,2015-08-31,CUSTOM,no_trade_band
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.8024,BEAR,2015-10-12,RISK_OFF,emergency
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8024,BEAR,2015-10-12,RISK_OFF,emergency
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8024,BEAR,2015-10-12,RISK_OFF,emergency
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7559,BEAR,2015-10-13,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7559,BEAR,2015-10-13,CUSTOM,no_trade_band
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7244,BEAR,2015-10-14,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7244,BEAR,2015-10-14,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.701,BEAR,2015-10-15,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.701,BEAR,2015-10-15,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.6681,BEAR,2015-10-16,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6681,BEAR,2015-10-16,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.629,BEAR,2015-10-19,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.629,BEAR,2015-10-19,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.5913,BEAR,2015-10-20,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.5801,BEAR,2015-10-21,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.5404,BEAR,2015-10-22,NORMAL,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7391,NEUTRAL,2015-12-14,WATCH,no_trade_override_prob_high_vol_cross_0.70
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7615,BULL,2015-12-15,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7389,BULL,2015-12-16,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7547,BULL,2015-12-17,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7924,NEUTRAL,2015-12-18,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8122,BULL,2015-12-23,RISK_OFF,scheduled
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8122,BULL,2015-12-23,RISK_OFF,scheduled
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7704,BULL,2015-12-24,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7209,BULL,2015-12-28,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6495,BULL,2015-12-29,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6226,BULL,2015-12-30,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6371,NEUTRAL,2015-12-31,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.6937,BEAR,2016-01-04,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6937,BEAR,2016-01-04,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7318,BEAR,2016-01-05,WATCH,no_trade_override_prob_high_vol_cross_0.70
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7318,BEAR,2016-01-05,WATCH,no_trade_override_prob_high_vol_cross_0.70
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7658,BEAR,2016-01-06,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7658,BEAR,2016-01-06,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7954,BEAR,2016-01-07,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7954,BEAR,2016-01-07,CUSTOM,no_trade_band
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.8173,BEAR,2016-03-01,RISK_OFF,scheduled
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8173,BEAR,2016-03-01,RISK_OFF,scheduled
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8173,BEAR,2016-03-01,RISK_OFF,scheduled
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7948,NEUTRAL,2016-03-02,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7691,NEUTRAL,2016-03-03,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.747,NEUTRAL,2016-03-04,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7165,NEUTRAL,2016-03-07,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7109,BEAR,2016-03-08,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7109,BEAR,2016-03-08,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.6825,NEUTRAL,2016-03-09,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.6808,NEUTRAL,2016-03-10,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6485,BULL,2016-03-11,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.4986,BEAR,2016-10-17,NORMAL,scheduled
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.4946,BEAR,2016-10-18,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.477,BEAR,2016-10-19,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.4782,BEAR,2016-10-20,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.4842,BEAR,2016-10-21,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.4987,BEAR,2016-10-31,NORMAL,scheduled
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.5139,BEAR,2016-11-01,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.5331,BEAR,2016-11-02,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.5696,BEAR,2016-11-03,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.5717,BEAR,2016-11-04,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.5532,BEAR,2016-11-07,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.5238,BEAR,2016-11-08,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7992,BULL,2018-02-12,RISK_OFF,emergency
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8117,BULL,2018-02-13,CUSTOM,not_rebalance_day
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8117,BULL,2018-02-13,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8155,BULL,2018-02-14,CUSTOM,not_rebalance_day
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8155,BULL,2018-02-14,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8181,BULL,2018-02-20,RISK_OFF,emergency
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8181,BULL,2018-02-20,RISK_OFF,emergency
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.818,BULL,2018-02-23,RISK_OFF,scheduled
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.818,BULL,2018-02-23,RISK_OFF,scheduled
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8059,BULL,2018-02-26,CUSTOM,not_rebalance_day
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8059,BULL,2018-02-26,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.809,BULL,2018-02-27,CUSTOM,no_trade_band
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.809,BULL,2018-02-27,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8122,BULL,2018-02-28,CUSTOM,not_rebalance_day
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8122,BULL,2018-02-28,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8187,BULL,2018-03-06,RISK_OFF,emergency
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8187,BULL,2018-03-06,RISK_OFF,emergency
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8142,BULL,2018-03-07,CUSTOM,not_rebalance_day
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8142,BULL,2018-03-07,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8103,BULL,2018-03-08,CUSTOM,not_rebalance_day
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8103,BULL,2018-03-08,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7689,BULL,2018-03-09,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7479,BULL,2018-03-12,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7571,BULL,2018-03-13,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7636,BULL,2018-03-14,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7596,BULL,2018-03-15,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7524,BULL,2018-03-16,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7664,BULL,2018-03-19,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7594,BULL,2018-03-20,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7558,NEUTRAL,2018-03-21,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7829,BEAR,2018-03-22,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7829,BEAR,2018-03-22,CUSTOM,no_trade_band
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.8045,BEAR,2018-03-23,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8045,BEAR,2018-03-23,CUSTOM,no_trade_band
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8045,BEAR,2018-03-23,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6658,BULL,2018-05-11,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6407,NEUTRAL,2018-10-12,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6956,NEUTRAL,2018-10-15,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7315,BULL,2018-10-16,WATCH,no_trade_override_prob_high_vol_cross_0.70
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7574,BULL,2018-10-17,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7845,NEUTRAL,2018-10-18,CUSTOM,no_trade_band
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.8089,BEAR,2018-10-19,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8089,BEAR,2018-10-19,CUSTOM,not_rebalance_day
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8089,BEAR,2018-10-19,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.8093,BEAR,2019-01-02,RISK_OFF,emergency
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8093,BEAR,2019-01-02,RISK_OFF,emergency
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8093,BEAR,2019-01-02,RISK_OFF,emergency
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.8069,BEAR,2019-01-03,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8069,BEAR,2019-01-03,CUSTOM,not_rebalance_day
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8069,BEAR,2019-01-03,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7953,BEAR,2019-01-04,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7953,BEAR,2019-01-04,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7853,BEAR,2019-01-07,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7853,BEAR,2019-01-07,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7834,BEAR,2019-01-08,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7834,BEAR,2019-01-08,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7853,BEAR,2019-01-09,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7853,BEAR,2019-01-09,CUSTOM,no_trade_band
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7867,BEAR,2019-01-10,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7867,BEAR,2019-01-10,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7869,BEAR,2019-01-11,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7869,BEAR,2019-01-11,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7848,BEAR,2019-01-14,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7848,BEAR,2019-01-14,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7782,BEAR,2019-01-15,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7782,BEAR,2019-01-15,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7693,BEAR,2019-01-16,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7693,BEAR,2019-01-16,CUSTOM,no_trade_band
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7477,BEAR,2019-01-17,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7477,BEAR,2019-01-17,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7055,BEAR,2019-01-18,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7055,BEAR,2019-01-18,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.6862,BEAR,2019-01-22,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.6862,BEAR,2019-01-22,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.6782,BEAR,2019-01-23,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6782,BEAR,2019-01-23,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.6687,BEAR,2019-01-24,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6687,BEAR,2019-01-24,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.6511,BEAR,2019-01-25,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6511,BEAR,2019-01-25,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.6664,BEAR,2019-01-28,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6664,BEAR,2019-01-28,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.6742,BEAR,2019-01-29,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6742,BEAR,2019-01-29,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.6648,BEAR,2019-01-30,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6648,BEAR,2019-01-30,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.6557,BEAR,2019-01-31,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6557,BEAR,2019-01-31,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.6441,BEAR,2019-02-01,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6441,BEAR,2019-02-01,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6125,BULL,2019-02-04,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.5523,BEAR,2019-02-07,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.5571,BEAR,2019-02-08,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.5629,BEAR,2019-02-11,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.88,0.6827,BULL,2019-09-05,WATCH,scheduled
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.5243,BEAR,2019-10-02,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.88,0.6005,NEUTRAL,2019-10-03,WATCH,scheduled
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.88,0.617,BULL,2019-10-04,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.88,0.6377,BULL,2019-10-07,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.88,0.696,NEUTRAL,2019-10-08,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6336,BULL,2020-06-01,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6457,BULL,2020-06-11,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.88,0.7106,BULL,2020-06-12,WATCH,no_trade_override_prob_high_vol_cross_0.70
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7561,BULL,2020-06-15,RISK_OFF,scheduled
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7788,BULL,2020-06-16,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7951,BULL,2020-06-17,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.806,BULL,2020-06-18,CUSTOM,not_rebalance_day
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.806,BULL,2020-06-18,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7691,BULL,2020-07-07,RISK_OFF,scheduled
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7009,BULL,2020-07-08,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7052,BULL,2020-07-09,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6577,BULL,2020-07-10,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6675,BULL,2020-07-13,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6275,BULL,2020-07-14,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.82,0.6422,BULL,2020-07-28,WATCH,scheduled
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.82,0.6279,BULL,2020-07-29,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.82,0.6262,BULL,2020-07-30,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.82,0.6259,BULL,2020-07-31,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.82,0.6205,BULL,2020-08-03,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.8138,BEAR,2022-02-01,RISK_OFF,emergency
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8138,BEAR,2022-02-01,RISK_OFF,emergency
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8138,BEAR,2022-02-01,RISK_OFF,emergency
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7954,BEAR,2022-02-02,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7954,BEAR,2022-02-02,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.8056,BEAR,2022-02-03,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8056,BEAR,2022-02-03,CUSTOM,not_rebalance_day
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8056,BEAR,2022-02-03,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.8132,BEAR,2022-02-04,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8132,BEAR,2022-02-04,CUSTOM,no_trade_band
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8132,BEAR,2022-02-04,CUSTOM,no_trade_band
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.8126,BEAR,2022-02-07,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8126,BEAR,2022-02-07,CUSTOM,not_rebalance_day
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8126,BEAR,2022-02-07,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.8037,BEAR,2022-02-08,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8037,BEAR,2022-02-08,CUSTOM,no_trade_band
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8037,BEAR,2022-02-08,CUSTOM,no_trade_band
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7731,BEAR,2022-02-09,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7731,BEAR,2022-02-09,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7889,BEAR,2022-02-10,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7889,BEAR,2022-02-10,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.8096,BEAR,2022-02-11,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8096,BEAR,2022-02-11,CUSTOM,no_trade_band
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8096,BEAR,2022-02-11,CUSTOM,no_trade_band
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.8013,BEAR,2022-03-23,RISK_OFF,emergency
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8013,BEAR,2022-03-23,RISK_OFF,emergency
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8013,BEAR,2022-03-23,RISK_OFF,emergency
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7818,NEUTRAL,2022-03-24,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7608,NEUTRAL,2022-03-25,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7374,NEUTRAL,2022-03-28,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7171,NEUTRAL,2022-03-29,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7189,NEUTRAL,2022-03-30,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7458,NEUTRAL,2022-03-31,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7607,NEUTRAL,2022-04-01,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7484,NEUTRAL,2022-04-04,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7635,NEUTRAL,2022-04-05,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7861,NEUTRAL,2022-04-06,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8012,NEUTRAL,2022-04-07,CUSTOM,not_rebalance_day
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8012,NEUTRAL,2022-04-07,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8097,NEUTRAL,2022-04-08,CUSTOM,not_rebalance_day
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8097,NEUTRAL,2022-04-08,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7862,BEAR,2022-07-29,RISK_OFF,scheduled
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7862,BEAR,2022-07-29,RISK_OFF,scheduled
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.734,BEAR,2022-08-01,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.734,BEAR,2022-08-01,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.6992,BEAR,2022-08-02,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.6992,BEAR,2022-08-02,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6671,BULL,2022-08-03,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6322,BULL,2022-08-04,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.62,BULL,2022-08-05,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6062,BULL,2022-08-08,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7007,BULL,2022-09-12,WATCH,scheduled
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7377,NEUTRAL,2022-09-13,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8127,NEUTRAL,2022-11-14,RISK_OFF,scheduled
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8127,NEUTRAL,2022-11-14,RISK_OFF,scheduled
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7872,NEUTRAL,2022-11-15,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7874,NEUTRAL,2022-11-16,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7935,NEUTRAL,2022-11-17,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7826,NEUTRAL,2022-11-18,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7863,NEUTRAL,2022-11-21,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7482,NEUTRAL,2022-11-22,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.708,BULL,2022-11-23,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.683,BULL,2022-11-25,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.2422,BEAR,2023-09-21,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.2681,BEAR,2023-09-22,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.82,0.2729,BEAR,2023-09-25,NORMAL,scheduled
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.82,0.2995,BEAR,2023-09-26,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.82,0.3174,BEAR,2023-09-27,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.3251,BEAR,2023-09-28,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.3442,BEAR,2023-09-29,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.3569,BEAR,2023-10-02,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.4216,BEAR,2023-10-03,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.4598,BEAR,2023-10-04,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.4918,BEAR,2023-10-05,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.5232,BEAR,2023-10-06,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.5455,BEAR,2023-10-09,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.5359,BEAR,2023-10-10,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.4891,BEAR,2023-10-11,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.4971,BEAR,2023-10-12,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.5207,BEAR,2023-10-13,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.4953,BEAR,2023-10-16,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.4803,BEAR,2023-10-17,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.53,BEAR,2023-10-18,NORMAL,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.5594,BEAR,2023-10-19,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.5959,BEAR,2023-10-20,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.6134,BEAR,2023-10-23,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6134,BEAR,2023-10-23,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.6108,BEAR,2023-10-24,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6108,BEAR,2023-10-24,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.6411,BEAR,2023-10-25,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6411,BEAR,2023-10-25,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.671,BEAR,2023-10-26,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.671,BEAR,2023-10-26,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.6997,BEAR,2023-10-27,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6997,BEAR,2023-10-27,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.717,BEAR,2023-10-30,WATCH,scheduled
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.717,BEAR,2023-10-30,WATCH,scheduled
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7142,BEAR,2023-10-31,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7142,BEAR,2023-10-31,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.6891,BEAR,2023-11-01,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.6891,BEAR,2023-11-01,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.6625,BEAR,2023-11-02,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6625,BEAR,2023-11-02,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.96,0.6125,BEAR,2023-11-03,WATCH,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6125,BEAR,2023-11-03,WATCH,strong_offensive_override
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,1.0,0.4759,BEAR,2023-11-09,NORMAL,strong_offensive_override
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.82,0.6128,BULL,2024-09-10,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.82,0.6138,BULL,2024-09-11,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.67,BULL,2025-01-17,WATCH,scheduled
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.82,0.6434,NEUTRAL,2025-03-05,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.82,0.6882,BEAR,2025-03-06,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.82,0.6882,BEAR,2025-03-06,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7217,BEAR,2025-03-07,WATCH,no_trade_override_prob_high_vol_cross_0.70
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7217,BEAR,2025-03-07,WATCH,no_trade_override_prob_high_vol_cross_0.70
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7649,BEAR,2025-03-10,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7649,BEAR,2025-03-10,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7992,BEAR,2025-03-11,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7992,BEAR,2025-03-11,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7751,NEUTRAL,2025-05-14,RISK_OFF,scheduled
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7504,NEUTRAL,2025-05-15,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7312,BULL,2025-05-16,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7189,BULL,2025-05-19,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7145,BULL,2025-05-20,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.6618,BEAR,2026-03-10,WATCH,scheduled
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.6618,BEAR,2026-03-10,WATCH,scheduled
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.6829,BEAR,2026-03-11,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.6829,BEAR,2026-03-11,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.713,BEAR,2026-03-12,WATCH,no_trade_override_prob_high_vol_cross_0.70
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.713,BEAR,2026-03-12,WATCH,no_trade_override_prob_high_vol_cross_0.70
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7452,BEAR,2026-03-13,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7452,BEAR,2026-03-13,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7426,BEAR,2026-03-16,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7426,BEAR,2026-03-16,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7112,BEAR,2026-03-17,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7112,BEAR,2026-03-17,CUSTOM,no_trade_band
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7365,BEAR,2026-03-18,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7365,BEAR,2026-03-18,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7524,BEAR,2026-03-19,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7524,BEAR,2026-03-19,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7728,BEAR,2026-03-20,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7728,BEAR,2026-03-20,CUSTOM,not_rebalance_day
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.7881,BEAR,2026-03-23,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.7881,BEAR,2026-03-23,CUSTOM,no_trade_band
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.8014,BEAR,2026-03-24,CUSTOM,no_trade_band
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.8014,BEAR,2026-03-24,CUSTOM,no_trade_band
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.8014,BEAR,2026-03-24,CUSTOM,no_trade_band
+midtrend_bear_high_stock,WARNING,mid_trend=BEAR but stock>=80%. Check trend context or policy override.,0.8,0.809,BEAR,2026-03-25,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.809,BEAR,2026-03-25,CUSTOM,not_rebalance_day
+extreme_highvol_full_stock,HARD_CAP,prob_high_vol>0.80 but stock>=70%.,0.8,0.809,BEAR,2026-03-25,CUSTOM,not_rebalance_day
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.8,0.75,NEUTRAL,2026-04-08,RISK_OFF,scheduled
+highvol_high_stock,WARNING,prob_high_vol>0.60 but stock>=80%.,0.96,0.6567,NEUTRAL,2026-04-09,WATCH,strong_offensive_override

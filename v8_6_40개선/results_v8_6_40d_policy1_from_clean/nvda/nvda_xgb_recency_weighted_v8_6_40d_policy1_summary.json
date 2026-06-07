@@ -1,0 +1,110 @@
+{
+  "model_type": "v8_6_40d_policy1_resim",
+  "config": {
+    "initial_capital": 100000000.0,
+    "transaction_cost_rate": 0.001,
+    "rebalance_every_n_days": 5,
+    "no_trade_band": 0.12,
+    "emergency_cooldown_days": 5,
+    "ph_rank_window": 756,
+    "ph_rank_min_periods": 504,
+    "ph_rank_fallback": "old_base",
+    "bond_ratio_of_defensive": 0.65,
+    "gate_normal_high_vol_threshold": 0.55,
+    "gate_high_vol_threshold": 0.74,
+    "extreme_high_vol_threshold": 0.86,
+    "raw_extreme_high_vol_threshold": 0.88,
+    "emergency_high_vol_threshold": 0.88,
+    "emergency_combined_high_vol_threshold": 0.78,
+    "use_context_gate": true,
+    "use_trend_context_overlay": true,
+    "preserve_old_offensive_overlay": true,
+    "allow_tier3_full_bypass_context_cap": true,
+    "disable_tier2_bonus": true,
+    "min_stock": 0.2,
+    "max_stock": 1.0
+  },
+  "rows": 3357,
+  "start_date": "2013-01-02",
+  "end_date": "2026-05-07",
+  "performance": {
+    "strategy_after_cost": {
+      "final_capital": 26785570715.761032,
+      "total_return": 266.8557071576103,
+      "cagr": 0.5204791350425748,
+      "mdd": -0.6148389519922672,
+      "sharpe": 1.2680346738959445,
+      "sortino": 1.8277960074101167,
+      "calmar": 0.8465292144488608
+    },
+    "strategy_gross": {
+      "final_capital": 29382043581.322823,
+      "total_return": 292.82043581322824,
+      "cagr": 0.5310599339605611,
+      "mdd": -0.6110800714216764,
+      "sharpe": 1.2857820145086738,
+      "sortino": 1.8529106234912258,
+      "calmar": 0.8690513057070431
+    },
+    "stock_buy_hold": {
+      "final_capital": 74728640845.60982,
+      "total_return": 746.2864084560982,
+      "cagr": 0.6420215568627161,
+      "mdd": -0.6633508667198105,
+      "sharpe": 1.3179611193927818,
+      "sortino": 1.9234778482760435,
+      "calmar": 0.9678461114212977
+    },
+    "benchmark_60_40": {
+      "final_capital": 7995567104.373492,
+      "total_return": 78.95567104373492,
+      "cagr": 0.3887556396079759,
+      "mdd": -0.4955153372002382,
+      "sharpe": 1.3456222139614105,
+      "sortino": 1.9711260764453915,
+      "calmar": 0.7845481469948514
+    }
+  },
+  "average_weights": {
+    "avg_stock_weight": 0.8505212987786713,
+    "avg_bond_weight": 0.09716115579386356,
+    "avg_cash_weight": 0.052317545427464994,
+    "min_stock_weight": 0.35,
+    "max_stock_weight": 1.0
+  },
+  "turnover": {
+    "avg_daily_trade_ratio": 0.027631814119749774,
+    "annual_turnover_estimate": 6.963217158176943,
+    "total_transaction_cost_rate_sum": 0.09276000000000001,
+    "trade_executed_ratio": 0.20613643133750373,
+    "emergency_rebalance_ratio": 0.02263926124515937
+  },
+  "policy1_diagnostics": {
+    "asset_class": "high_vol_growth",
+    "ph_context_available_rate": 0.8498659517426274,
+    "context_action_counts": {
+      "none": 2505,
+      "regime_trend_floor_cap": 852
+    },
+    "signal_regime_counts": {
+      "NORMAL": 1829,
+      "WATCH": 449,
+      "HIGH_VOL": 356,
+      "EXTREME_RISK": 295,
+      "WATCH_BULL_VOL": 256,
+      "RISK_OFF": 172
+    },
+    "hold_reason_counts": {
+      "not_rebalance_day": 2199,
+      "strong_offensive_override": 511,
+      "no_trade_band": 466,
+      "scheduled": 123,
+      "emergency": 31,
+      "no_trade_override_high_vol_cross_up": 17,
+      "no_trade_override_major_trend_flip": 9,
+      "initial": 1
+    }
+  },
+  "source_predictions": "results_v8_6_40b_clean_compare\\nvda\\nvda_xgb_recency_weighted_v8_6_40b_predictions.csv",
+  "ticker": "NVDA"
+}

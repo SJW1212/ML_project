@@ -1,0 +1,26 @@
+{
+  "date": "2026-06-03 00:00:00",
+  "pred_risk": "정상",
+  "pred_up_strength": "UP_STRENGTHENING",
+  "prob_normal": 90.97,
+  "prob_high_vol": 9.03,
+  "prob_up_strengthening_20d": 52.15,
+  "risk_score": 8.93,
+  "drawdown_guard_score": 13.06,
+  "trend_break_score": 0.0,
+  "mid_trend_score": 6,
+  "mid_trend_state": "BULL",
+  "allocation_regime": "CUSTOM_UP",
+  "hold_reason": "held_by_schedule",
+  "executed_allocation": {
+    "stock": 94.96,
+    "bond": 3.28,
+    "cash": 1.76
+  },
+  "removed_outputs": [
+    "prob_down_strengthening_score",
+    "prob_down",
+    "prob_up",
+    "prob_overall_risk_by_downrisk"
+  ]
+}

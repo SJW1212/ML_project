@@ -1,0 +1,109 @@
+{
+  "model_type": "v8_6_40d_policy1_resim",
+  "config": {
+    "initial_capital": 100000000.0,
+    "transaction_cost_rate": 0.001,
+    "rebalance_every_n_days": 5,
+    "no_trade_band": 0.12,
+    "emergency_cooldown_days": 5,
+    "ph_rank_window": 756,
+    "ph_rank_min_periods": 504,
+    "ph_rank_fallback": "old_base",
+    "bond_ratio_of_defensive": 0.65,
+    "gate_normal_high_vol_threshold": 0.55,
+    "gate_high_vol_threshold": 0.74,
+    "extreme_high_vol_threshold": 0.86,
+    "raw_extreme_high_vol_threshold": 0.88,
+    "emergency_high_vol_threshold": 0.88,
+    "emergency_combined_high_vol_threshold": 0.78,
+    "use_context_gate": true,
+    "use_trend_context_overlay": true,
+    "preserve_old_offensive_overlay": true,
+    "allow_tier3_full_bypass_context_cap": true,
+    "disable_tier2_bonus": true,
+    "min_stock": 0.2,
+    "max_stock": 1.0
+  },
+  "rows": 3357,
+  "start_date": "2013-01-02",
+  "end_date": "2026-05-07",
+  "performance": {
+    "strategy_after_cost": {
+      "final_capital": 351823405.406658,
+      "total_return": 2.5182340540665797,
+      "cagr": 0.09887711579539271,
+      "mdd": -0.2280025838947306,
+      "sharpe": 0.9649214106563772,
+      "sortino": 1.2307801014726676,
+      "calmar": 0.4336666458176831
+    },
+    "strategy_gross": {
+      "final_capital": 393355170.19576895,
+      "total_return": 2.9335517019576893,
+      "cagr": 0.10810624342360131,
+      "mdd": -0.21536091295215032,
+      "sharpe": 1.0460916032656449,
+      "sortino": 1.333497081988091,
+      "calmar": 0.5019770855430055
+    },
+    "stock_buy_hold": {
+      "final_capital": 637168496.7821641,
+      "total_return": 5.371684967821641,
+      "cagr": 0.14889922760136187,
+      "mdd": -0.33717271363429935,
+      "sharpe": 0.9095657121564403,
+      "sortino": 1.1092160653969183,
+      "calmar": 0.4416111434297716
+    },
+    "benchmark_60_40": {
+      "final_capital": 344769373.68713766,
+      "total_return": 2.4476937368713765,
+      "cagr": 0.09721018865864517,
+      "mdd": -0.2101748281467848,
+      "sharpe": 0.9771466957569562,
+      "sortino": 1.222982735167683,
+      "calmar": 0.4625206049449184
+    }
+  },
+  "average_weights": {
+    "avg_stock_weight": 0.7414298480786418,
+    "avg_bond_weight": 0.16807059874888292,
+    "avg_cash_weight": 0.09049955317247542,
+    "min_stock_weight": 0.35,
+    "max_stock_weight": 1.0
+  },
+  "turnover": {
+    "avg_daily_trade_ratio": 0.03324396782841823,
+    "annual_turnover_estimate": 8.377479892761393,
+    "total_transaction_cost_rate_sum": 0.11160000000000002,
+    "trade_executed_ratio": 0.15490020851951147,
+    "emergency_rebalance_ratio": 0.023532916294310396
+  },
+  "policy1_diagnostics": {
+    "asset_class": "broad_index",
+    "ph_context_available_rate": 0.8498659517426274,
+    "context_action_counts": {
+      "none": 2485,
+      "regime_trend_floor_cap": 872
+    },
+    "signal_regime_counts": {
+      "NORMAL": 1780,
+      "WATCH": 598,
+      "HIGH_VOL": 449,
+      "RISK_OFF": 265,
+      "EXTREME_RISK": 265
+    },
+    "hold_reason_counts": {
+      "not_rebalance_day": 2408,
+      "no_trade_band": 429,
+      "strong_offensive_override": 233,
+      "scheduled": 217,
+      "emergency": 37,
+      "no_trade_override_high_vol_cross_up": 23,
+      "no_trade_override_major_trend_flip": 9,
+      "initial": 1
+    }
+  },
+  "source_predictions": "results_v8_6_40b_riskoff30_compare\\spy\\spy_xgb_recency_weighted_v8_6_40b_predictions.csv",
+  "ticker": "SPY"
+}

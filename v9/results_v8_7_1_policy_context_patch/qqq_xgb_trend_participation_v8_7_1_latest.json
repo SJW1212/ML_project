@@ -1,0 +1,31 @@
+{
+  "date": "2026-05-07 00:00:00",
+  "pred_risk": "정상",
+  "pred_overall_risk": "정상",
+  "prob_normal": 82.88,
+  "prob_high_vol": 17.12,
+  "prob_up_strengthening_score": 10.92,
+  "prob_up_strengthening_5d": 11.12,
+  "prob_up_strengthening_10d": 10.2,
+  "prob_up_strengthening_20d": 11.1,
+  "prob_down_strengthening_score": 15.62,
+  "mid_trend_score": 6,
+  "mid_trend_state": "BULL",
+  "trend_bull_regime": true,
+  "trend_participation_action": "trend_floor_upgrade",
+  "recovery_risk_on": false,
+  "recovery_rerisk_action": "off",
+  "signal_regime": "CUSTOM",
+  "allocation_regime": "CUSTOM",
+  "hold_reason": "not_rebalance_day",
+  "signal_allocation": {
+    "stock": 98.0,
+    "bond": 1.3,
+    "cash": 0.7
+  },
+  "executed_allocation": {
+    "stock": 100.0,
+    "bond": 0.0,
+    "cash": 0.0
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "model_type": "v8_6_40d_policy1_resim",
+  "config": {
+    "initial_capital": 100000000.0,
+    "transaction_cost_rate": 0.001,
+    "rebalance_every_n_days": 5,
+    "no_trade_band": 0.12,
+    "emergency_cooldown_days": 5,
+    "ph_rank_window": 756,
+    "ph_rank_min_periods": 504,
+    "ph_rank_fallback": "old_base",
+    "bond_ratio_of_defensive": 0.65,
+    "gate_normal_high_vol_threshold": 0.55,
+    "gate_high_vol_threshold": 0.74,
+    "extreme_high_vol_threshold": 0.86,
+    "raw_extreme_high_vol_threshold": 0.88,
+    "emergency_high_vol_threshold": 0.88,
+    "emergency_combined_high_vol_threshold": 0.78,
+    "use_context_gate": true,
+    "use_trend_context_overlay": true,
+    "preserve_old_offensive_overlay": true,
+    "allow_tier3_full_bypass_context_cap": true,
+    "disable_tier2_bonus": true,
+    "min_stock": 0.2,
+    "max_stock": 1.0
+  },
+  "rows": 3357,
+  "start_date": "2013-01-02",
+  "end_date": "2026-05-07",
+  "performance": {
+    "strategy_after_cost": {
+      "final_capital": 724731818.183984,
+      "total_return": 6.24731818183984,
+      "cagr": 0.16004165134591952,
+      "mdd": -0.2946453849359284,
+      "sharpe": 1.1721659458396305,
+      "sortino": 1.5816902789776155,
+      "calmar": 0.5431670052484314
+    },
+    "strategy_gross": {
+      "final_capital": 816483369.9125686,
+      "total_return": 7.164833699125685,
+      "cagr": 0.17045290430196602,
+      "mdd": -0.2829934870019494,
+      "sharpe": 1.23862938396674,
+      "sortino": 1.6722529581986256,
+      "calmar": 0.6023209442300411
+    },
+    "stock_buy_hold": {
+      "final_capital": 1191840210.4746296,
+      "total_return": 10.918402104746296,
+      "cagr": 0.20411137895632514,
+      "mdd": -0.35118735249010047,
+      "sharpe": 0.99961281853065,
+      "sortino": 1.2711836531620249,
+      "calmar": 0.5812036723676681
+    },
+    "benchmark_60_40": {
+      "final_capital": 513796763.2877748,
+      "total_return": 4.137967632877748,
+      "cagr": 0.13051553108721303,
+      "mdd": -0.27841337677826716,
+      "sharpe": 1.0509740473005642,
+      "sortino": 1.3690005893298682,
+      "calmar": 0.46878326249085966
+    }
+  },
+  "average_weights": {
+    "avg_stock_weight": 0.7528716115579387,
+    "avg_bond_weight": 0.16063345248733987,
+    "avg_cash_weight": 0.08649493595472148,
+    "min_stock_weight": 0.35,
+    "max_stock_weight": 1.0
+  },
+  "turnover": {
+    "avg_daily_trade_ratio": 0.03553172475424487,
+    "annual_turnover_estimate": 8.953994638069707,
+    "total_transaction_cost_rate_sum": 0.11928000000000001,
+    "trade_executed_ratio": 0.20017873100983022,
+    "emergency_rebalance_ratio": 0.02680965147453083
+  },
+  "policy1_diagnostics": {
+    "asset_class": "broad_index",
+    "ph_context_available_rate": 0.8498659517426274,
+    "context_action_counts": {
+      "none": 2569,
+      "regime_trend_floor_cap": 788
+    },
+    "signal_regime_counts": {
+      "NORMAL": 1838,
+      "WATCH": 586,
+      "HIGH_VOL": 374,
+      "EXTREME_RISK": 331,
+      "RISK_OFF": 228
+    },
+    "hold_reason_counts": {
+      "not_rebalance_day": 2279,
+      "no_trade_band": 406,
+      "strong_offensive_override": 374,
+      "scheduled": 217,
+      "emergency": 48,
+      "no_trade_override_high_vol_cross_up": 24,
+      "no_trade_override_major_trend_flip": 8,
+      "initial": 1
+    }
+  },
+  "source_predictions": "results_v8_6_40b_riskoff30_compare\\qqq\\qqq_xgb_recency_weighted_v8_6_40b_predictions.csv",
+  "ticker": "QQQ"
+}
