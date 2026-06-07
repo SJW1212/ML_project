@@ -1,0 +1,340 @@
+--- /mnt/data/xgb_recency_weighted_v8_6_41_model_label_fixed.py	2026-06-07 12:22:22.213592825 +0000
++++ /mnt/data/xgb_recency_weighted_v8_6_41_adaptive_trend.py	2026-06-07 12:24:49.961534846 +0000
+@@ -23,9 +23,9 @@
+ - 고변동 라벨 quantile 정책은 고정 또는 adaptive nested validation으로 선택 가능
+ 
+ 실행 예시
+-    py xgb_recency_weighted_v8_6_41_model_label_fixed.py --speed-profile balanced --h10-down-only
+-    py xgb_recency_weighted_v8_6_41_model_label_fixed.py --speed-profile fast --h10-down-only
+-    py xgb_recency_weighted_v8_6_41_model_label_fixed.py --speed-profile full --adaptive-label --h10-down-only
++    py xgb_recency_weighted_v8_6_41_adaptive_trend.py --speed-profile balanced --h10-down-only
++    py xgb_recency_weighted_v8_6_41_adaptive_trend.py --speed-profile fast --h10-down-only
++    py xgb_recency_weighted_v8_6_41_adaptive_trend.py --speed-profile full --adaptive-label --h10-down-only
+ 
+ 필요 패키지
+     pip install pandas numpy yfinance scikit-learn xgboost
+@@ -284,7 +284,7 @@
+     gate_score_mdd_weight: float = 0.85
+     gate_score_turnover_weight: float = 0.45
+ 
+-    result_dir: str = "results_xgb_recency_weighted_v8_6_41_model_label_fixed"
++    result_dir: str = "results_xgb_recency_weighted_v8_6_41_adaptive_trend"
+ 
+     # v8.6.6 Policy Lab
+     # base       : v8.6.5 pruned fixed-bucket baseline
+@@ -759,6 +759,21 @@
+     df["atr_accel_5"] = df["atr_14"] / df["atr_14"].shift(5) - 1.0
+     df["atr_rank_252"] = rolling_rank_last(df["atr_pct_20"], 252)
+ 
++    # v8.6.41 adaptive-trend patch
++    # 기존 mid_trend_state는 return_60d > 0 같은 고정 양수/음수 조건만 사용했다.
++    # 다종목 환경에서는 같은 +1%라도 SPY와 NVDA의 추세 강도가 다르므로,
++    # 변동성 스케일과 종목 내 rolling rank를 함께 보존한다.
++    df["trend_horizon_vol_60d"] = df["daily_return"].rolling(60).std().shift(1) * math.sqrt(60)
++    df["trend_horizon_vol_120d"] = df["daily_return"].rolling(120).std().shift(1) * math.sqrt(120)
++    df["return_60d_vol_scaled"] = df["return_60d"] / df["trend_horizon_vol_60d"].replace(0, np.nan)
++    df["return_120d_vol_scaled"] = df["return_120d"] / df["trend_horizon_vol_120d"].replace(0, np.nan)
++    for _col in [
++        "return_60d", "return_120d", "price_ma_60_gap", "price_ma_120_gap",
++        "ma_gap_20_60", "trend_slope_60",
++    ]:
++        if _col in df.columns:
++            df[f"{_col}_rank_756"] = rolling_rank_last(df[_col], 756)
++
+     log_hl = np.log(high / low).replace([np.inf, -np.inf], np.nan)
+     log_co = np.log(close / open_).replace([np.inf, -np.inf], np.nan)
+     log_oc = np.log(open_ / close.shift(1)).replace([np.inf, -np.inf], np.nan)
+@@ -2494,14 +2509,72 @@
+     }
+ 
+ 
++def _rank_series(df: pd.DataFrame, col: str, default: float = np.nan) -> pd.Series:
++    name = f"{col}_rank_756"
++    if name in df.columns:
++        return pd.to_numeric(df[name], errors="coerce")
++    if col in df.columns:
++        return rolling_rank_last_local(pd.to_numeric(df[col], errors="coerce"), 756)
++    return pd.Series(default, index=df.index, dtype=float)
++
++
++def _numeric_series(df: pd.DataFrame, col: str, default: float = np.nan) -> pd.Series:
++    if col in df.columns:
++        return pd.to_numeric(df[col], errors="coerce")
++    return pd.Series(default, index=df.index, dtype=float)
++
++
+ def strength_trend_score_components(df: pd.DataFrame) -> pd.DataFrame:
+-    comps = pd.DataFrame(index=df.index)
+-    comps["ret60_pos"] = (df.get("return_60d", pd.Series(np.nan, index=df.index)) > 0).astype(float)
+-    comps["ret120_pos"] = (df.get("return_120d", pd.Series(np.nan, index=df.index)) > 0).astype(float)
+-    comps["ma60_gap_pos"] = (df.get("price_ma_60_gap", pd.Series(np.nan, index=df.index)) > 0).astype(float)
+-    comps["ma120_gap_pos"] = (df.get("price_ma_120_gap", pd.Series(np.nan, index=df.index)) > 0).astype(float)
+-    comps["ma20_60_pos"] = (df.get("ma_gap_20_60", pd.Series(np.nan, index=df.index)) > 0).astype(float)
+-    comps["slope60_pos"] = (df.get("trend_slope_60", pd.Series(np.nan, index=df.index)) > 0).astype(float)
++    """Adaptive trend components used by Direction Strength labels.
++
++    v8.6.41_adaptive_trend:
++    - 기존: return_60d > 0, ma gap > 0 등 고정 0 기준.
++    - 개선: 방향은 양수여야 하되, 변동성 스케일 또는 종목 내 756일 rank로
++      최소 추세 강도를 확인한다.
++    - rank/vol-scaled 피처가 없으면 기존 0 기준으로 안전하게 fallback한다.
++    """
++    idx = df.index
++    comps = pd.DataFrame(index=idx)
++
++    ret60 = _numeric_series(df, "return_60d")
++    ret120 = _numeric_series(df, "return_120d")
++    gap60 = _numeric_series(df, "price_ma_60_gap")
++    gap120 = _numeric_series(df, "price_ma_120_gap")
++    ma20_60 = _numeric_series(df, "ma_gap_20_60")
++    slope60 = _numeric_series(df, "trend_slope_60")
++
++    ret60_vs = _numeric_series(df, "return_60d_vol_scaled")
++    ret120_vs = _numeric_series(df, "return_120d_vol_scaled")
++
++    r_ret60 = _rank_series(df, "return_60d")
++    r_ret120 = _rank_series(df, "return_120d")
++    r_gap60 = _rank_series(df, "price_ma_60_gap")
++    r_gap120 = _rank_series(df, "price_ma_120_gap")
++    r_ma20_60 = _rank_series(df, "ma_gap_20_60")
++    r_slope60 = _rank_series(df, "trend_slope_60")
++
++    # 방향성 수익률은 단순 양수만으로는 약하므로 vol-scaled 또는 rank 확인을 요구한다.
++    comps["ret60_adaptive_pos"] = ((ret60 > 0) & ((ret60_vs >= 0.20) | (r_ret60 >= 0.55))).astype(float)
++    comps["ret120_adaptive_pos"] = ((ret120 > 0) & ((ret120_vs >= 0.20) | (r_ret120 >= 0.55))).astype(float)
++
++    # MA gap / slope는 부호 + 종목 내 상대 강도를 같이 확인한다.
++    comps["ma60_gap_adaptive_pos"] = ((gap60 > 0) & (r_gap60 >= 0.50)).astype(float)
++    comps["ma120_gap_adaptive_pos"] = ((gap120 > 0) & (r_gap120 >= 0.50)).astype(float)
++    comps["ma20_60_adaptive_pos"] = ((ma20_60 > 0) & (r_ma20_60 >= 0.50)).astype(float)
++    comps["slope60_adaptive_pos"] = ((slope60 > 0) & (r_slope60 >= 0.50)).astype(float)
++
++    # 초기 구간 등 rank/vol-scaled가 부족하면 기존 방식으로 fallback한다.
++    fallback = pd.DataFrame(index=idx)
++    fallback["ret60_pos"] = (ret60 > 0).astype(float)
++    fallback["ret120_pos"] = (ret120 > 0).astype(float)
++    fallback["ma60_gap_pos"] = (gap60 > 0).astype(float)
++    fallback["ma120_gap_pos"] = (gap120 > 0).astype(float)
++    fallback["ma20_60_pos"] = (ma20_60 > 0).astype(float)
++    fallback["slope60_pos"] = (slope60 > 0).astype(float)
++
++    ready = pd.concat([r_ret60, r_ret120, r_gap60, r_gap120, r_ma20_60, r_slope60], axis=1).notna().sum(axis=1) >= 4
++    for c_ad, c_fb in zip(comps.columns, fallback.columns):
++        comps[c_ad] = np.where(ready, comps[c_ad], fallback[c_fb]).astype(float)
+     return comps
+ 
+ 
+@@ -2747,54 +2820,112 @@
+     "realized_vol_60",
+     "trend_slope_20",
+     "ma_gap_60_120",
++    # v8.6.41 adaptive-trend context
++    "trend_horizon_vol_60d",
++    "trend_horizon_vol_120d",
++    "return_60d_vol_scaled",
++    "return_120d_vol_scaled",
++    "return_60d_rank_756",
++    "return_120d_rank_756",
++    "price_ma_60_gap_rank_756",
++    "price_ma_120_gap_rank_756",
++    "ma_gap_20_60_rank_756",
++    "trend_slope_60_rank_756",
+ ]
+ 
+ 
++def _row_rank(row: pd.Series, col: str, default: float = np.nan) -> float:
++    return _row_float(row, f"{col}_rank_756", default)
++
++
+ def compute_mid_trend_score(row: pd.Series) -> Tuple[int, str]:
+-    """
+-    v8.6.40 safe mid-trend score.
++    """Adaptive safe mid-trend score.
+ 
+-    v8.6.39 bug:
+-        raw feature context was not preserved in predictions.csv.
+-        _row_float(..., default=0.0) made all six checks False,
+-        so mid_trend_score=0 and mid_trend_state=BEAR for all rows.
+-
+-    v8.6.40 behavior:
+-        - If enough trend context exists, score it normally.
+-        - If context is missing, return UNKNOWN instead of fake BEAR.
++    v8.6.40 fixed the missing-feature bug.
++    v8.6.41_adaptive_trend additionally reduces cross-asset distortion:
++    - 기존: return_60d > 0 같은 0 기준만 사용.
++    - 개선: 양수/음수 방향 + 변동성 스케일 + 종목 내 756일 rank를 함께 확인.
++    - rank/vol-scaled context가 부족하면 기존 방식으로 fallback.
+     """
+     available = [c for c in V8640_MID_TREND_FEATURE_COLS if c in row.index and not pd.isna(row[c])]
+     if len(available) < 3:
+         return 0, "UNKNOWN"
+ 
+-    checks = []
+-    for col in V8640_MID_TREND_FEATURE_COLS:
++    def old_check(col: str) -> Optional[bool]:
+         if col in row.index and not pd.isna(row[col]):
+             try:
+-                checks.append(float(row[col]) > 0.0)
++                return float(row[col]) > 0.0
+             except Exception:
+-                pass
++                return None
++        return None
+ 
+-    if not checks:
++    old_checks = [old_check(c) for c in V8640_MID_TREND_FEATURE_COLS]
++    old_checks = [x for x in old_checks if x is not None]
++    if not old_checks:
+         return 0, "UNKNOWN"
+ 
+-    score = int(sum(bool(x) for x in checks))
+-    total = len(checks)
+-    if total >= 4:
+-        if score >= max(4, int(round(total * 0.67))):
+-            state = "BULL"
+-        elif score <= int(round(total * 0.33)):
+-            state = "BEAR"
+-        else:
+-            state = "NEUTRAL"
+-    else:
++    # Adaptive context readiness. At least 4 rank values means we can avoid purely fixed-zero scoring.
++    rank_values = [
++        _row_rank(row, "return_60d"),
++        _row_rank(row, "return_120d"),
++        _row_rank(row, "price_ma_60_gap"),
++        _row_rank(row, "price_ma_120_gap"),
++        _row_rank(row, "ma_gap_20_60"),
++        _row_rank(row, "trend_slope_60"),
++    ]
++    adaptive_ready = sum(np.isfinite(v) for v in rank_values) >= 4
++
++    if not adaptive_ready:
++        score = int(sum(bool(x) for x in old_checks))
++        total = len(old_checks)
++        if total >= 4:
++            if score >= max(4, int(round(total * 0.67))):
++                return score, "BULL"
++            if score <= int(round(total * 0.33)):
++                return score, "BEAR"
++            return score, "NEUTRAL"
+         if score >= 3:
+-            state = "BULL"
+-        elif score == 0:
+-            state = "BEAR"
+-        else:
+-            state = "NEUTRAL"
+-    return score, state
++            return score, "BULL"
++        if score == 0:
++            return score, "BEAR"
++        return score, "NEUTRAL"
++
++    ret60 = _row_float(row, "return_60d", np.nan)
++    ret120 = _row_float(row, "return_120d", np.nan)
++    gap60 = _row_float(row, "price_ma_60_gap", np.nan)
++    gap120 = _row_float(row, "price_ma_120_gap", np.nan)
++    ma20_60 = _row_float(row, "ma_gap_20_60", np.nan)
++    slope60 = _row_float(row, "trend_slope_60", np.nan)
++    ret60_vs = _row_float(row, "return_60d_vol_scaled", np.nan)
++    ret120_vs = _row_float(row, "return_120d_vol_scaled", np.nan)
++
++    r_ret60, r_ret120, r_gap60, r_gap120, r_ma20_60, r_slope60 = rank_values
++
++    bull_checks = [
++        np.isfinite(ret60) and ret60 > 0 and ((np.isfinite(ret60_vs) and ret60_vs >= 0.20) or (np.isfinite(r_ret60) and r_ret60 >= 0.55)),
++        np.isfinite(ret120) and ret120 > 0 and ((np.isfinite(ret120_vs) and ret120_vs >= 0.20) or (np.isfinite(r_ret120) and r_ret120 >= 0.55)),
++        np.isfinite(gap60) and gap60 > 0 and (np.isfinite(r_gap60) and r_gap60 >= 0.50),
++        np.isfinite(gap120) and gap120 > 0 and (np.isfinite(r_gap120) and r_gap120 >= 0.50),
++        np.isfinite(ma20_60) and ma20_60 > 0 and (np.isfinite(r_ma20_60) and r_ma20_60 >= 0.50),
++        np.isfinite(slope60) and slope60 > 0 and (np.isfinite(r_slope60) and r_slope60 >= 0.50),
++    ]
++    bear_checks = [
++        np.isfinite(ret60) and ret60 < 0 and ((np.isfinite(ret60_vs) and ret60_vs <= -0.20) or (np.isfinite(r_ret60) and r_ret60 <= 0.45)),
++        np.isfinite(ret120) and ret120 < 0 and ((np.isfinite(ret120_vs) and ret120_vs <= -0.20) or (np.isfinite(r_ret120) and r_ret120 <= 0.45)),
++        np.isfinite(gap60) and gap60 < 0 and (np.isfinite(r_gap60) and r_gap60 <= 0.45),
++        np.isfinite(gap120) and gap120 < 0 and (np.isfinite(r_gap120) and r_gap120 <= 0.45),
++        np.isfinite(ma20_60) and ma20_60 < 0 and (np.isfinite(r_ma20_60) and r_ma20_60 <= 0.45),
++        np.isfinite(slope60) and slope60 < 0 and (np.isfinite(r_slope60) and r_slope60 <= 0.45),
++    ]
++    bull_score = int(sum(bool(x) for x in bull_checks))
++    bear_score = int(sum(bool(x) for x in bear_checks))
++
++    if bull_score >= 4 and bull_score >= bear_score + 2:
++        return bull_score, "BULL"
++    if bear_score >= 4 and bear_score >= bull_score + 2:
++        # 기존 policy의 score>=5 조건과 충돌하지 않도록 BEAR는 낮은 bull_score를 반환한다.
++        return max(0, 2 - min(bear_score - 4, 2)), "BEAR"
++    return bull_score, "NEUTRAL"
+ 
+ 
+ def v8640_patch_prediction_row_with_features(out: dict, feature_row: pd.Series, feature_cols: List[str]) -> dict:
+@@ -4636,7 +4767,7 @@
+         "cash": round(float(latest["cash_weight"]) * 100, 2),
+     }
+     return {
+-        "model_type": "xgb_recency_weighted_v8_6_41_model_label_fixed_diagnostics",
++        "model_type": "xgb_recency_weighted_v8_6_41_adaptive_trend_diagnostics",
+         "label_mode": "no_sideway_3class_strength",
+         "label_classes": list(DIRECTION_STRENGTH_LABELS),
+         "policy_mode": str(getattr(cfg, "policy_mode", "base")),
+@@ -5590,21 +5721,21 @@
+         cfg.down_n_estimators = 70
+         cfg.use_adaptive_label_policy = False
+         cfg.use_rolling_gate_optimization = False
+-        cfg.result_dir = "results_xgb_recency_weighted_v8_6_41_model_label_fixed_fast"
++        cfg.result_dir = "results_xgb_recency_weighted_v8_6_41_adaptive_trend_fast"
+     elif profile == "balanced":
+         cfg.retrain_every_n_days = 10
+         cfg.stage1_n_estimators = 150
+         cfg.down_n_estimators = 100
+         cfg.use_adaptive_label_policy = False
+         cfg.use_rolling_gate_optimization = False
+-        cfg.result_dir = "results_xgb_recency_weighted_v8_6_41_model_label_fixed_balanced"
++        cfg.result_dir = "results_xgb_recency_weighted_v8_6_41_adaptive_trend_balanced"
+     elif profile == "full":
+         cfg.retrain_every_n_days = 10
+         cfg.stage1_n_estimators = 200
+         cfg.down_n_estimators = 140
+         cfg.use_adaptive_label_policy = True
+         cfg.use_rolling_gate_optimization = False
+-        cfg.result_dir = "results_xgb_recency_weighted_v8_6_41_model_label_fixed_full_adaptive_label"
++        cfg.result_dir = "results_xgb_recency_weighted_v8_6_41_adaptive_trend_full_adaptive_label"
+     else:
+         raise ValueError(f"알 수 없는 speed profile: {profile}")
+     return cfg
+@@ -5806,7 +5937,7 @@
+         if getattr(args, "asset_list", None):
+             tickers.extend([x.strip().upper() for x in str(args.asset_list).split(",") if x.strip()])
+         tickers = list(dict.fromkeys(tickers))
+-        batch_root = Path(args.result_dir or "results_xgb_recency_weighted_v8_6_41_model_label_fixed_multi_asset")
++        batch_root = Path(args.result_dir or "results_xgb_recency_weighted_v8_6_41_adaptive_trend_multi_asset")
+         batch_root.mkdir(parents=True, exist_ok=True)
+ 
+         # 현재 CLI에서 batch 관련 인자와 result-dir/target-ticker를 제거한 뒤 ticker별로 재호출한다.
+@@ -5832,7 +5963,7 @@
+             print(f"\n[BATCH] {ticker} 실행")
+             proc = subprocess.run(cmd)
+             row: Dict[str, object] = {"ticker": ticker, "returncode": int(proc.returncode), "result_dir": str(out_dir)}
+-            summary_path = out_dir / f"{safe}_xgb_recency_weighted_v8_6_41_model_label_fixed_summary.json"
++            summary_path = out_dir / f"{safe}_xgb_recency_weighted_v8_6_41_adaptive_trend_summary.json"
+             if summary_path.exists():
+                 with open(summary_path, "r", encoding="utf-8") as f:
+                     sm = json.load(f)
+@@ -5952,7 +6083,7 @@
+         cfg.watch_bond_weight = remain * 0.75
+         cfg.watch_cash_weight = remain * 0.25
+     # policy별 기본 result_dir. 사용자가 --result-dir를 주면 아래에서 덮어쓴다.
+-    cfg.result_dir = f"results_xgb_recency_weighted_v8_6_41_model_label_fixed_{cfg.policy_mode}"
++    cfg.result_dir = f"results_xgb_recency_weighted_v8_6_41_adaptive_trend_{cfg.policy_mode}"
+     if cfg.policy_mode == "defensive_risk":
+         cfg.gate_normal_high_vol_threshold = 0.32
+         cfg.gate_high_vol_threshold = 0.58
+@@ -6394,7 +6525,7 @@
+         )
+ 
+     safe_ticker = "".join(ch.lower() if ch.isalnum() else "_" for ch in str(cfg.target_ticker)).strip("_") or "asset"
+-    file_prefix = f"{safe_ticker}_xgb_recency_weighted_v8_6_41_model_label_fixed"
++    file_prefix = f"{safe_ticker}_xgb_recency_weighted_v8_6_41_adaptive_trend"
+     pred_path = result_dir / f"{file_prefix}_predictions.csv"
+     summary_path = result_dir / f"{file_prefix}_summary.json"
+     latest_path = result_dir / f"{file_prefix}_latest.json"
