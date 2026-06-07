@@ -1,0 +1,552 @@
+--- xgb_recency_weighted_v8_6_40b_cli_fixed.py
++++ xgb_recency_weighted_v8_6_41_model_label_fixed.py
+@@ -1,10 +1,10 @@
+ """
+-XGBoost v8.6.40b - Recency-Weighted Normal-Unrestricted
++XGBoost v8.6.41 - Recency-Weighted Normal-Unrestricted
+ ====================================================================
+ 
+ 목적
+ - QQQ/IEF/BIL 동적 자산배분 전략
+-- v8.6.40b: 5D+10D+high-vol ShortMidConfirm 보조 신호 추가
++- v8.6.41: 5D+10D+high-vol ShortMidConfirm 보조 신호 추가
+ - H10/H20 정상/고변동 Stage1 모델을 앙상블
+ - H10/H20 하락고변동 Down-risk OVR 모델을 앙상블
+ - 고변동 내부 상승/하락 Stage2 방향 분류는 제거
+@@ -23,9 +23,9 @@
+ - 고변동 라벨 quantile 정책은 고정 또는 adaptive nested validation으로 선택 가능
+ 
+ 실행 예시
+-    py xgb_recency_weighted_v8_6_40b.py --speed-profile balanced --h10-down-only
+-    py xgb_recency_weighted_v8_6_40b.py --speed-profile fast --h10-down-only
+-    py xgb_recency_weighted_v8_6_40b.py --speed-profile full --adaptive-label --h10-down-only
++    py xgb_recency_weighted_v8_6_41_model_label_fixed.py --speed-profile balanced --h10-down-only
++    py xgb_recency_weighted_v8_6_41_model_label_fixed.py --speed-profile fast --h10-down-only
++    py xgb_recency_weighted_v8_6_41_model_label_fixed.py --speed-profile full --adaptive-label --h10-down-only
+ 
+ 필요 패키지
+     pip install pandas numpy yfinance scikit-learn xgboost
+@@ -167,11 +167,33 @@
+     overall_risk_down_minus_up_weight: float = 0.15
+     pred_overall_risk_threshold: float = 0.50
+ 
+-    # v8.6.5 Direction model labels
+-    # future_return_h가 +threshold보다 크면 상승, -threshold보다 작으면 하락, 그 사이를 중립으로 둔다.
+-    direction_return_threshold: float = 0.005
+-    direction_decision_margin: float = 0.05
++    # v8.6.41 Direction label policy
++    # 기존 fixed ±0.5% 방향 라벨은 종목별 변동성 차이를 무시하므로 기본값을 volatility-scaled로 전환한다.
++    # fixed 모드가 필요하면 --direction-label-mode fixed 를 사용한다.
++    direction_label_mode: str = "vol_scaled"  # fixed | vol_scaled
++    direction_return_threshold: float = 0.005  # fixed fallback
++    direction_vol_window: int = 60
++    direction_vol_k: float = 0.30
++    direction_min_abs_threshold: float = 0.003
++    direction_max_abs_threshold: float = 0.040
++    direction_decision_margin: float = 0.05  # fixed fallback / minimum confidence gap
+     direction_min_positive: int = 20
++
++    # v8.6.41 Prediction decision policy
++    # prob_up - prob_down의 고정 margin만으로 방향을 판정하면 calibration/종목별 분포 차이가 반영되지 않는다.
++    # 기본값은 rolling rank 기반 margin 확인을 추가한다.
++    use_dynamic_direction_margin: bool = True
++    direction_margin_window: int = 756
++    direction_margin_min_periods: int = 252
++    direction_margin_rank_threshold: float = 0.65
++    direction_margin_abs_floor: float = 0.03
++
++    # v8.6.41 Reporting-only probability rank diagnostics
++    # pred_risk 자체는 호환성을 위해 유지하되, prob_high_vol_rank/pred_risk_ranked를 별도 출력한다.
++    use_probability_rank_diagnostics: bool = True
++    probability_rank_window: int = 756
++    probability_rank_min_periods: int = 252
++    high_vol_rank_threshold: float = 0.70
+ 
+     # Adaptive label policy search
+     use_adaptive_label_policy: bool = False
+@@ -262,7 +284,7 @@
+     gate_score_mdd_weight: float = 0.85
+     gate_score_turnover_weight: float = 0.45
+ 
+-    result_dir: str = "results_xgb_recency_weighted_v8_6_40b"
++    result_dir: str = "results_xgb_recency_weighted_v8_6_41_model_label_fixed"
+ 
+     # v8.6.6 Policy Lab
+     # base       : v8.6.5 pruned fixed-bucket baseline
+@@ -282,7 +304,7 @@
+     aggressive_low_risk_stock_weight: float = 1.00
+     aggressive_watch_stock_weight: float = 0.92
+ 
+-    # v8.6.40b base allocation: 기본 상태는 high-vol 확률 기반 연속/계단형 비중으로 산출한다.
++    # v8.6.41 base allocation: 기본 상태는 high-vol 확률 기반 연속/계단형 비중으로 산출한다.
+     use_vol_probability_base_allocation: bool = True
+     vol_base_stock_lt_25: float = 0.78
+     vol_base_stock_lt_35: float = 0.74
+@@ -293,7 +315,7 @@
+     vol_base_stock_ge_86: float = 0.30
+     vol_base_bond_ratio_of_defensive: float = 0.65
+ 
+-    # v8.6.40b Normal-Unrestricted Base
++    # v8.6.41 Normal-Unrestricted Base
+     # - 정상/저변동 상태에서는 기본 주식 비중 cap을 완화한다.
+     # - 단순히 NORMAL이면 100%가 아니라, high-vol/down-strength/up-strength 조건을 통과할 때만 100%를 허용한다.
+     normal_unrestricted_enabled: bool = True
+@@ -310,13 +332,13 @@
+     normal_full_allow_short_mid: bool = True
+     normal_full_force_rebalance: bool = False
+ 
+-    # v8.6.40b execution: Tier3/Full은 schedule/no-trade-band에 묶이지 않고 즉시 목표 비중으로 점프한다.
++    # v8.6.41 execution: Tier3/Full은 schedule/no-trade-band에 묶이지 않고 즉시 목표 비중으로 점프한다.
+     force_strong_offensive_rebalance: bool = True
+     force_tier3_rebalance: bool = True
+     force_full_stock_rebalance: bool = True
+     disable_tier2_signal: bool = False
+ 
+-    # v8.6.40b Separate PortfolioPolicyModel
++    # v8.6.41 Separate PortfolioPolicyModel
+     # - 1단계 확률 모델 결과를 입력으로 받아 후보 포트폴리오 클래스를 별도 예측한다.
+     # - 기본 실행에서는 진단용으로만 생성하고, --policy-mode portfolio_model이면 실제 allocation에 사용한다.
+     enable_portfolio_policy_model: bool = False
+@@ -338,7 +360,7 @@
+     portfolio_model_min_confidence: float = 0.0
+     portfolio_model_force_rebalance: bool = False
+ 
+-    # v8.6.40b Volatility-Base Strong-Override Multi-Horizon Upside Strength Trigger
++    # v8.6.41 Volatility-Base Strong-Override Multi-Horizon Upside Strength Trigger
+     # - 기존 binary up_h10/up_h20은 allocation에 직접 쓰지 않는다.
+     # - 5D/10D/20D UP_STRENGTHENING specialist를 별도로 학습한다.
+     # - 5D는 단기 반등, 10D는 추세 확인, 20D는 중기 지속성으로 해석한다.
+@@ -349,12 +371,12 @@
+     up_strength_weight_5d: float = 0.00
+     up_strength_weight_10d: float = 0.20
+     up_strength_weight_20d: float = 0.80
+-    # v8.6.40b: prob_bear_down_strengthening 제거. 하락 강화도 상승 강화와 동일하게 5D/10D/20D term structure로 계산한다.
++    # v8.6.41: prob_bear_down_strengthening 제거. 하락 강화도 상승 강화와 동일하게 5D/10D/20D term structure로 계산한다.
+     down_strength_weight_5d: float = 0.00
+     down_strength_weight_10d: float = 0.20
+     down_strength_weight_20d: float = 0.80
+     direction_strength_ret_eps_k: float = 0.20
+-    direction_strength_eps: float = 0.0
++    direction_strength_eps: float = 0.25  # v8.6.41: trend_delta > 0 노이즈 완화. score_delta 기준 최소 +1 조건에 가깝게 사용
+     direction_strength_method: str = "score_delta"
+     upside_strength_train_filter: str = "major_only"
+     bear_strength_train_filter: str = "bear_stress"
+@@ -362,7 +384,7 @@
+     direction_strength_min_train_rows: int = 300
+     direction_strength_max_train_rows: Optional[int] = 1260
+ 
+-    # v8.6.40b Horizon별 학습 기간 비율 실험
++    # v8.6.41 Horizon별 학습 기간 비율 실험
+     # - train_rows = horizon * multiplier 방식으로 5D/10D/20D마다 학습창을 다르게 둔다.
+     # - 너무 작은 학습창은 불안정하므로 horizon_train_min_rows를 하한으로 둔다.
+     # - 기본값은 5D≈3년, 10D≈4년, 20D≈5년 수준의 1차 가설이다.
+@@ -374,7 +396,7 @@
+     horizon_train_multiplier_20d: float = 63.0
+     direction_strength_use_horizon_train_window: bool = True
+ 
+-    # v8.6.40b Recency Sample Weight
++    # v8.6.41 Recency Sample Weight
+     # - 학습창 길이는 유지하되, train window 내부에서 현재 시점에 가까운 샘플에 더 큰 가중치를 준다.
+     # - sample_weight 평균은 1로 정규화하여 기존 scale_pos_weight/class_weight와 결합해도 전체 loss scale이 크게 변하지 않게 한다.
+     use_recency_sample_weight: bool = True
+@@ -404,13 +426,13 @@
+     # 핵심: 5D는 trigger에서 제외, 10D는 confirmation, 20D는 primary signal로 쓴다.
+     # Tier 2는 약화하고, 100%는 score/p20/p10/high-vol 조건이 모두 강할 때만 허용한다.
+     up_strength_bonus_threshold_1: float = 0.30
+-    up_strength_bonus_threshold_2: float = 0.38  # v8.6.40b: Tier2 활성화 기본값
++    up_strength_bonus_threshold_2: float = 0.38  # v8.6.41: Tier2 활성화 기본값
+     up_strength_bonus_threshold_3: float = 0.45
+     up_strength_confirm_10d_threshold_2: float = 0.32
+     up_strength_confirm_20d_threshold_2: float = 0.34
+     up_strength_confirm_10d_threshold_3: float = 0.38
+     up_strength_confirm_20d_threshold_3: float = 0.38
+-    up_strength_pred_threshold_5d: float = 0.99  # v8.6.40b: 5D 단독 trigger 비활성화
++    up_strength_pred_threshold_5d: float = 0.99  # v8.6.41: 5D 단독 trigger 비활성화
+     up_strength_pred_threshold_10d: float = 0.27
+     up_strength_pred_threshold_20d: float = 0.25
+     up_strength_single_5d_stock_weight: float = 0.82
+@@ -438,7 +460,7 @@
+     use_bear_specialist_cut: bool = False
+ 
+     # Multi-horizon upside trigger target weights
+-    # v8.6.40b: 5D는 allocation trigger에서 제외하고, 10D는 보조 확인, 20D는 핵심 조건으로 사용한다.
++    # v8.6.41: 5D는 allocation trigger에서 제외하고, 10D는 보조 확인, 20D는 핵심 조건으로 사용한다.
+     up_strength_offensive_stock_weight_1: float = 0.82
+     up_strength_offensive_stock_weight_2: float = 0.88
+     up_strength_offensive_stock_weight_3: float = 0.96
+@@ -470,7 +492,7 @@
+     no_trade_override_drawdown_surge: float = 0.15
+     conflict_hard_cap_extreme_highvol: bool = False
+ 
+-    # v8.6.40b ShortMidConfirm
++    # v8.6.41 ShortMidConfirm
+     # - 사후 진단에서 우수했던 5D+10D+high-vol 조합을 별도 보조 신호로 출력한다.
+     # - 기본값은 diagnostic: allocation에는 영향을 주지 않고 predictions/summary/latest에만 기록한다.
+     # - tier1_upgrade/tier2_add/tier2_replace/base_upgrade는 실험용이다.
+@@ -487,7 +509,7 @@
+     short_mid_tier2_stock_weight: float = 0.88
+     short_mid_base_upgrade_stock_weight: float = 0.82
+ 
+-    # v8.6.40b TierWeightOptimizer
++    # v8.6.41 TierWeightOptimizer
+     # - Tier 2를 포함한 Tier별 목표 주식 비중을 Walk-forward 방식으로 탐색한다.
+     # - 기본 실행에서는 시간이 늘어나는 것을 막기 위해 OFF, --optimize-tier-weights로 활성화한다.
+     enable_tier_weight_optimizer: bool = False
+@@ -1188,15 +1210,76 @@
+     return labels
+ 
+ 
++def current_horizon_vol_series(df: pd.DataFrame, horizon: int, cfg: Config) -> pd.Series:
++    """Causal current-horizon volatility for label scaling.
++
++    핵심 원칙:
++    - future return 라벨의 threshold를 종목별/시점별 변동성에 맞춘다.
++    - rolling std에는 현재 시점 이전 수익률만 사용하기 위해 shift(1)을 적용한다.
++    - volatility-scaled threshold가 지나치게 작거나 커지는 것을 min/max absolute threshold로 제한한다.
++    """
++    if "daily_return" in df.columns:
++        r = df["daily_return"].astype(float)
++    elif "Close" in df.columns:
++        r = df["Close"].astype(float).pct_change()
++    else:
++        raise KeyError("current_horizon_vol_series requires daily_return or Close")
++
++    vol_window = int(getattr(cfg, "direction_vol_window", 60))
++    vol = r.rolling(vol_window, min_periods=max(20, vol_window // 2)).std().shift(1)
++    hv = vol * math.sqrt(max(int(horizon), 1))
++    return hv.replace([np.inf, -np.inf], np.nan)
++
++
++def direction_threshold_series(df: pd.DataFrame, horizon: int, cfg: Config) -> pd.Series:
++    """Return per-row absolute direction threshold.
++
++    Modes:
++    - fixed: legacy fixed ±direction_return_threshold
++    - vol_scaled: k × current_horizon_vol with absolute floor/cap
++    """
++    mode = str(getattr(cfg, "direction_label_mode", "vol_scaled")).lower()
++    idx = df.index
++    fixed_thr = float(getattr(cfg, "direction_return_threshold", 0.005))
++    if mode == "fixed":
++        return pd.Series(fixed_thr, index=idx, dtype=float)
++    if mode != "vol_scaled":
++        raise ValueError(f"unknown direction_label_mode: {mode}")
++
++    k = float(getattr(cfg, "direction_vol_k", 0.30))
++    min_abs = float(getattr(cfg, "direction_min_abs_threshold", 0.003))
++    max_abs = float(getattr(cfg, "direction_max_abs_threshold", 0.040))
++    hv = current_horizon_vol_series(df, horizon, cfg)
++    thr = (k * hv).clip(lower=min_abs, upper=max_abs)
++    return thr.fillna(fixed_thr).astype(float)
++
++
++def add_direction_threshold_columns(df: pd.DataFrame, cfg: Config) -> pd.DataFrame:
++    """Attach diagnostic threshold columns for each horizon.
++
++    These columns are not model features. They are label/diagnostic columns only.
++    """
++    out = df.copy()
++    for h in getattr(cfg, "horizons", (5, 10, 20)):
++        h = int(h)
++        out[f"direction_threshold_{h}d"] = direction_threshold_series(out, h, cfg)
++        out[f"direction_current_horizon_vol_{h}d"] = current_horizon_vol_series(out, h, cfg)
++    return out
++
++
+ def make_direction_labels(df: pd.DataFrame, horizon: int, cfg: Config, direction: str) -> pd.Series:
+     """방향성 이진 라벨 생성.
+ 
+-    - up: future_return_h > +direction_return_threshold
+-    - down: future_return_h < -direction_return_threshold
++    v8.6.41 default:
++    - up:   future_return_h > +k × current_horizon_vol
++    - down: future_return_h < -k × current_horizon_vol
+     - 중립 구간은 두 모델 모두 0으로 처리된다.
++
++    Legacy fixed mode:
++    - --direction-label-mode fixed
+     """
+     ret = df[f"future_return_{horizon}d"].astype(float)
+-    thr = float(getattr(cfg, "direction_return_threshold", 0.005))
++    thr = direction_threshold_series(df, horizon, cfg)
+     if direction == "up":
+         return (ret > thr).astype(int)
+     if direction == "down":
+@@ -1206,7 +1289,11 @@
+ 
+ def assign_direction_label(row: pd.Series, horizon: int, cfg: Config) -> str:
+     ret = float(row[f"future_return_{horizon}d"])
+-    thr = float(getattr(cfg, "direction_return_threshold", 0.005))
++    thr_col = f"direction_threshold_{horizon}d"
++    if thr_col in row.index and pd.notna(row[thr_col]):
++        thr = float(row[thr_col])
++    else:
++        thr = float(getattr(cfg, "direction_return_threshold", 0.005))
+     if ret > thr:
+         return "상승"
+     if ret < -thr:
+@@ -1673,6 +1760,7 @@
+         raise ValueError("백테스트 가능한 데이터가 부족합니다.")
+ 
+     all_df = ensure_direction_strength_helper_columns(df.copy())
++    all_df = add_direction_threshold_columns(all_df, cfg)
+     multi_strength_horizons = get_multi_strength_horizons(cfg)
+     strength_full_by_h: Dict[int, Tuple[pd.Series, pd.Series, pd.DataFrame]] = {}
+     for sh in multi_strength_horizons:
+@@ -1803,7 +1891,7 @@
+                             cfg,
+                             horizon=int(sh),
+                         )
+-                    # v8.6.40b: 별도 bear-filter specialist 제거.
++                    # v8.6.41: 별도 bear-filter specialist 제거.
+                     # DOWN_STRENGTHENING도 5D/10D/20D 공통 direction-strength 모델에서 직접 추출한다.
+                     bear_strength_models = {}
+                 except Exception as exc:
+@@ -1826,7 +1914,7 @@
+         if bool(getattr(cfg, "use_direction_strength_specialist", True)):
+             for sh in multi_strength_horizons:
+                 up_strength_probs_by_h[int(sh)] = predict_direction_strength_one(strength_models_by_h.get(int(sh), {}), row_df)
+-            bear_strength_probs = {name: 0.0 for name in DIRECTION_STRENGTH_LABELS}  # removed in v8.6.40b
++            bear_strength_probs = {name: 0.0 for name in DIRECTION_STRENGTH_LABELS}  # removed in v8.6.41
+         else:
+             up_strength_probs_by_h = {int(sh): {name: 0.0 for name in DIRECTION_STRENGTH_LABELS} for sh in multi_strength_horizons}
+             bear_strength_probs = {name: 0.0 for name in DIRECTION_STRENGTH_LABELS}
+@@ -1892,6 +1980,8 @@
+             actual_label_h = assign_label(all_df.iloc[pos], h, th)
+             actual_risk_h = "고변동" if actual_label_h != "정상" else "정상"
+             actual_direction_h = assign_direction_label(all_df.iloc[pos], h, cfg)
++            out[f"direction_threshold_h{h}"] = float(all_df.iloc[pos].get(f"direction_threshold_{h}d", np.nan))
++            out[f"direction_current_horizon_vol_h{h}"] = float(all_df.iloc[pos].get(f"direction_current_horizon_vol_{h}d", np.nan))
+ 
+             out[f"prob_high_vol_h{h}"] = p_high
+             out[f"prob_up_h{h}"] = p_up
+@@ -1949,7 +2039,7 @@
+             "prob_up_strengthening_spread_5d_20d": float(up_strength_values.get(5, 0.0) - up_strength_values.get(20, 0.0)),
+             **{f"prob_up_strengthening_{int(sh)}d": up_strength_probs_by_h.get(int(sh), {}).get("UP_STRENGTHENING", 0.0) for sh in multi_strength_horizons},
+             **{f"prob_up_weakening_{int(sh)}d": 0.0 for sh in multi_strength_horizons},
+-            # v8.6.40b: 하락 강화도 상승 강화와 동일한 horizon별 term structure로 산출한다.
++            # v8.6.41: 하락 강화도 상승 강화와 동일한 horizon별 term structure로 산출한다.
+             "prob_down_strengthening": down_strength_values.get(legacy_h, 0.0),
+             "prob_down_strengthening_score": down_strength_score,
+             "prob_down_strengthening_min_multi": min(down_strength_values.values()) if down_strength_values else 0.0,
+@@ -2051,8 +2141,81 @@
+     pred_df.attrs["downrisk_branch_weights"] = branch_weights
+     pred_df.attrs["downrisk_feature_sets"] = down_feature_sets
+     pred_df.attrs["direction_feature_set"] = direction_cols
++    pred_df = apply_v8641_dynamic_prediction_diagnostics(pred_df, cfg)
+     pred_df.attrs["policy_usage"] = policy_usage
+     return pred_df
++
++
++def causal_rolling_percentile_current_vs_past(s: pd.Series, window: int = 756, min_periods: int = 252) -> pd.Series:
++    """Causal rolling percentile of current value versus prior window.
++
++    The current observation is compared only against observations before it.
++    This avoids look-ahead leakage in threshold/rank diagnostics.
++    """
++    values = pd.to_numeric(s, errors="coerce").to_numpy(dtype=float)
++    out = np.full(len(values), np.nan, dtype=float)
++    for i, v in enumerate(values):
++        if not np.isfinite(v):
++            continue
++        start = max(0, i - int(window))
++        hist = values[start:i]
++        hist = hist[np.isfinite(hist)]
++        if len(hist) < int(min_periods):
++            continue
++        out[i] = (np.sum(hist < v) + 0.5 * np.sum(hist == v)) / float(len(hist))
++    return pd.Series(out, index=s.index)
++
++
++def apply_v8641_dynamic_prediction_diagnostics(pred_df: pd.DataFrame, cfg: Config) -> pd.DataFrame:
++    """v8.6.41 post-prediction diagnostics and dynamic decision labels.
++
++    Scope:
++    - Does not change probability values.
++    - Adds causal rolling-rank diagnostics.
++    - Optionally replaces pred_direction with a rank-confirmed version.
++    - Adds pred_risk_ranked separately without replacing legacy pred_risk.
++    """
++    out = pred_df.copy()
++
++    if "direction_score" in out.columns:
++        abs_score = out["direction_score"].astype(float).abs()
++        w = int(getattr(cfg, "direction_margin_window", 756))
++        mp = int(getattr(cfg, "direction_margin_min_periods", 252))
++        out[f"direction_score_abs_rank_{w}"] = causal_rolling_percentile_current_vs_past(abs_score, w, mp)
++        out["direction_margin_dynamic_ready"] = out[f"direction_score_abs_rank_{w}"].notna()
++        if bool(getattr(cfg, "use_dynamic_direction_margin", True)):
++            rank_thr = float(getattr(cfg, "direction_margin_rank_threshold", 0.65))
++            abs_floor = float(getattr(cfg, "direction_margin_abs_floor", 0.03))
++            fixed_margin = float(getattr(cfg, "direction_decision_margin", 0.05))
++            score = out["direction_score"].astype(float)
++            rank_ok = out[f"direction_score_abs_rank_{w}"].fillna(0.0) >= rank_thr
++            abs_ok = score.abs() >= max(abs_floor, min(fixed_margin, abs_floor))
++            up = (score > 0) & abs_ok & rank_ok
++            down = (score < 0) & abs_ok & rank_ok
++            out["pred_direction_legacy_fixed_margin"] = out.get("pred_direction", pd.Series(index=out.index, dtype=object))
++            out["pred_direction"] = np.where(up, "상승", np.where(down, "하락", "중립"))
++            out["pred_direction_decision_policy"] = "rolling_abs_rank"
++        else:
++            out["pred_direction_decision_policy"] = "fixed_margin"
++
++    if bool(getattr(cfg, "use_probability_rank_diagnostics", True)) and "prob_high_vol" in out.columns:
++        w = int(getattr(cfg, "probability_rank_window", 756))
++        mp = int(getattr(cfg, "probability_rank_min_periods", 252))
++        rank_col = f"prob_high_vol_rank_{w}"
++        raw_source = "prob_high_vol_raw" if "prob_high_vol_raw" in out.columns else "prob_high_vol"
++        out[rank_col] = causal_rolling_percentile_current_vs_past(out[raw_source].astype(float), w, mp)
++        hv_rank_thr = float(getattr(cfg, "high_vol_rank_threshold", 0.70))
++        legacy_thr = float(getattr(cfg, "pred_high_vol_threshold", 0.50))
++        raw = out[raw_source].astype(float)
++        rank = out[rank_col]
++        out["pred_risk_ranked"] = np.where(
++            rank.notna(),
++            np.where(rank >= hv_rank_thr, "고변동", "정상"),
++            np.where(raw >= legacy_thr, "고변동", "정상"),
++        )
++        out["pred_risk_rank_source"] = raw_source
++
++    return out
+ 
+ 
+ # ============================================================
+@@ -2169,7 +2332,7 @@
+ 
+ def base_weight_from_vol_probability(prob_high_vol: float, cfg: Config) -> Tuple[float, float, float]:
+     """
+-    v8.6.40b 기본 포트폴리오.
++    v8.6.41 기본 포트폴리오.
+ 
+     이전 NORMAL/WATCH/RISK_OFF 고정 버킷 대신, 기본 상태에서는 Stage1 high-vol 확률만으로
+     주식 비중을 계단형으로 산출한다. Tier3/Full override가 없으면 이 비중이 target이 된다.
+@@ -3007,7 +3170,7 @@
+     cfg: Config,
+ ) -> Tuple[Tuple[float, float, float], Dict[str, object]]:
+     """
+-    v8.6.40b Volatility-Base Strong-Override Upside Strength Trigger.
++    v8.6.41 Volatility-Base Strong-Override Upside Strength Trigger.
+ 
+     핵심 해석:
+     - 기본 상태는 apply_allocation에서 prob_high_vol 기반 base_w로 이미 산출된다.
+@@ -4473,7 +4636,7 @@
+         "cash": round(float(latest["cash_weight"]) * 100, 2),
+     }
+     return {
+-        "model_type": "xgb_recency_weighted_v8_6_40b_diagnostics",
++        "model_type": "xgb_recency_weighted_v8_6_41_model_label_fixed_diagnostics",
+         "label_mode": "no_sideway_3class_strength",
+         "label_classes": list(DIRECTION_STRENGTH_LABELS),
+         "policy_mode": str(getattr(cfg, "policy_mode", "base")),
+@@ -5427,21 +5590,21 @@
+         cfg.down_n_estimators = 70
+         cfg.use_adaptive_label_policy = False
+         cfg.use_rolling_gate_optimization = False
+-        cfg.result_dir = "results_xgb_recency_weighted_v8_6_40b_fast"
++        cfg.result_dir = "results_xgb_recency_weighted_v8_6_41_model_label_fixed_fast"
+     elif profile == "balanced":
+         cfg.retrain_every_n_days = 10
+         cfg.stage1_n_estimators = 150
+         cfg.down_n_estimators = 100
+         cfg.use_adaptive_label_policy = False
+         cfg.use_rolling_gate_optimization = False
+-        cfg.result_dir = "results_xgb_recency_weighted_v8_6_40b_balanced"
++        cfg.result_dir = "results_xgb_recency_weighted_v8_6_41_model_label_fixed_balanced"
+     elif profile == "full":
+         cfg.retrain_every_n_days = 10
+         cfg.stage1_n_estimators = 200
+         cfg.down_n_estimators = 140
+         cfg.use_adaptive_label_policy = True
+         cfg.use_rolling_gate_optimization = False
+-        cfg.result_dir = "results_xgb_recency_weighted_v8_6_40b_full_adaptive_label"
++        cfg.result_dir = "results_xgb_recency_weighted_v8_6_41_model_label_fixed_full_adaptive_label"
+     else:
+         raise ValueError(f"알 수 없는 speed profile: {profile}")
+     return cfg
+@@ -5579,6 +5742,18 @@
+     parser.add_argument("--tier-opt-tier2-grid", type=str, default=None, help="Tier2 목표 주식 비중 후보. 예: 0.82,0.84,0.86,0.88")
+     parser.add_argument("--tier-opt-tier3-grid", type=str, default=None, help="Tier3 목표 주식 비중 후보. 예: 0.92,0.94,0.96")
+     parser.add_argument("--tier-opt-full-grid", type=str, default=None, help="Full 목표 주식 비중 후보. 예: 0.98,1.00")
++    # v8.6.41 model-label fixes
++    parser.add_argument("--direction-label-mode", choices=["fixed", "vol_scaled"], default=None, help="방향 라벨 방식. 기본 vol_scaled, legacy는 fixed")
++    parser.add_argument("--direction-vol-window", type=int, default=None, help="vol-scaled 방향 라벨용 rolling volatility window. 기본 60")
++    parser.add_argument("--direction-vol-k", type=float, default=None, help="방향 라벨 threshold = k * current_horizon_vol. 기본 0.30")
++    parser.add_argument("--direction-min-abs-threshold", type=float, default=None, help="방향 라벨 최소 절대 threshold. 기본 0.003")
++    parser.add_argument("--direction-max-abs-threshold", type=float, default=None, help="방향 라벨 최대 절대 threshold. 기본 0.040")
++    parser.add_argument("--direction-strength-eps", type=float, default=None, help="UP/DOWN_STRENGTHENING trend_delta 최소 변화량. 기본 0.25")
++    parser.add_argument("--disable-dynamic-direction-margin", action="store_true", help="rolling abs-rank 기반 pred_direction 판정을 끄고 fixed margin만 사용")
++    parser.add_argument("--direction-margin-rank-threshold", type=float, default=None, help="dynamic direction 판정용 abs(direction_score) rolling rank threshold. 기본 0.65")
++    parser.add_argument("--direction-margin-abs-floor", type=float, default=None, help="dynamic direction 판정용 최소 abs(direction_score). 기본 0.03")
++    parser.add_argument("--direction-margin-window", type=int, default=None, help="dynamic direction rolling rank window. 기본 756")
++    parser.add_argument("--direction-margin-min-periods", type=int, default=None, help="dynamic direction rolling rank min_periods. 기본 252")
+     return parser.parse_args()
+ 
+ 
+@@ -5631,7 +5806,7 @@
+         if getattr(args, "asset_list", None):
+             tickers.extend([x.strip().upper() for x in str(args.asset_list).split(",") if x.strip()])
+         tickers = list(dict.fromkeys(tickers))
+-        batch_root = Path(args.result_dir or "results_xgb_recency_weighted_v8_6_40b_multi_asset")
++        batch_root = Path(args.result_dir or "results_xgb_recency_weighted_v8_6_41_model_label_fixed_multi_asset")
+         batch_root.mkdir(parents=True, exist_ok=True)
+ 
+         # 현재 CLI에서 batch 관련 인자와 result-dir/target-ticker를 제거한 뒤 ticker별로 재호출한다.
+@@ -5657,7 +5832,7 @@
+             print(f"\n[BATCH] {ticker} 실행")
+             proc = subprocess.run(cmd)
+             row: Dict[str, object] = {"ticker": ticker, "returncode": int(proc.returncode), "result_dir": str(out_dir)}
+-            summary_path = out_dir / f"{safe}_xgb_recency_weighted_v8_6_40b_summary.json"
++            summary_path = out_dir / f"{safe}_xgb_recency_weighted_v8_6_41_model_label_fixed_summary.json"
+             if summary_path.exists():
+                 with open(summary_path, "r", encoding="utf-8") as f:
+                     sm = json.load(f)
+@@ -5686,6 +5861,31 @@
+     cfg = apply_speed_profile(Config(), args.speed_profile)
+     if getattr(args, "target_ticker", None):
+         cfg.target_ticker = str(args.target_ticker).upper()
++
++    # v8.6.41 model-label fix CLI overrides
++    if getattr(args, "direction_label_mode", None) is not None:
++        cfg.direction_label_mode = str(args.direction_label_mode)
++    if getattr(args, "direction_vol_window", None) is not None:
++        cfg.direction_vol_window = int(args.direction_vol_window)
++    if getattr(args, "direction_vol_k", None) is not None:
++        cfg.direction_vol_k = float(args.direction_vol_k)
++    if getattr(args, "direction_min_abs_threshold", None) is not None:
++        cfg.direction_min_abs_threshold = float(args.direction_min_abs_threshold)
++    if getattr(args, "direction_max_abs_threshold", None) is not None:
++        cfg.direction_max_abs_threshold = float(args.direction_max_abs_threshold)
++    if getattr(args, "direction_strength_eps", None) is not None:
++        cfg.direction_strength_eps = float(args.direction_strength_eps)
++    if getattr(args, "disable_dynamic_direction_margin", False):
++        cfg.use_dynamic_direction_margin = False
++    if getattr(args, "direction_margin_rank_threshold", None) is not None:
++        cfg.direction_margin_rank_threshold = float(args.direction_margin_rank_threshold)
++    if getattr(args, "direction_margin_abs_floor", None) is not None:
++        cfg.direction_margin_abs_floor = float(args.direction_margin_abs_floor)
++    if getattr(args, "direction_margin_window", None) is not None:
++        cfg.direction_margin_window = int(args.direction_margin_window)
++    if getattr(args, "direction_margin_min_periods", None) is not None:
++        cfg.direction_margin_min_periods = int(args.direction_margin_min_periods)
++
+     if args.adaptive_label:
+         cfg.use_adaptive_label_policy = True
+     if args.rolling_gate_opt:
+@@ -5752,7 +5952,7 @@
+         cfg.watch_bond_weight = remain * 0.75
+         cfg.watch_cash_weight = remain * 0.25
+     # policy별 기본 result_dir. 사용자가 --result-dir를 주면 아래에서 덮어쓴다.
+-    cfg.result_dir = f"results_xgb_recency_weighted_v8_6_40b_{cfg.policy_mode}"
++    cfg.result_dir = f"results_xgb_recency_weighted_v8_6_41_model_label_fixed_{cfg.policy_mode}"
+     if cfg.policy_mode == "defensive_risk":
+         cfg.gate_normal_high_vol_threshold = 0.32
+         cfg.gate_high_vol_threshold = 0.58
+@@ -6194,7 +6394,7 @@
+         )
+ 
+     safe_ticker = "".join(ch.lower() if ch.isalnum() else "_" for ch in str(cfg.target_ticker)).strip("_") or "asset"
+-    file_prefix = f"{safe_ticker}_xgb_recency_weighted_v8_6_40b"
++    file_prefix = f"{safe_ticker}_xgb_recency_weighted_v8_6_41_model_label_fixed"
+     pred_path = result_dir / f"{file_prefix}_predictions.csv"
+     summary_path = result_dir / f"{file_prefix}_summary.json"
+     latest_path = result_dir / f"{file_prefix}_latest.json"
