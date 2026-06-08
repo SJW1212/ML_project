@@ -1,0 +1,548 @@
+{
+  "model_version": "v8.6.41_model_label_fixed",
+  "as_of_date": "2026-05-07",
+  "latest_signals": [
+    {
+      "ticker": "QQQ",
+      "date": "2026-05-07",
+      "model_version": "v8.6.41_model_label_fixed",
+      "pred_risk": "정상",
+      "pred_direction": "중립",
+      "pred_overall_risk": "정상",
+      "signal_regime": "NORMAL",
+      "allocation_regime": "CUSTOM",
+      "executed_regime": "CUSTOM",
+      "prob_normal": 0.8208065679163188,
+      "prob_high_vol": 0.1791934320836812,
+      "prob_overall_risk": 0.1791934320836812,
+      "prob_up_strengthening_5d": 0.1091241736570286,
+      "prob_up_strengthening_10d": 0.073149210859352,
+      "prob_up_strengthening_20d": 0.1057787985942975,
+      "prob_up_strengthening_score": 0.0992528810473084,
+      "prob_down_strengthening_5d": 0.0413628622352162,
+      "prob_down_strengthening_10d": 0.0667987218860198,
+      "prob_down_strengthening_20d": 0.1778275819213052,
+      "prob_down_strengthening_score": 0.1556218099142481,
+      "signal_stock_weight": 0.86,
+      "signal_bond_weight": 0.091,
+      "signal_cash_weight": 0.049,
+      "executed_stock_weight": 0.86,
+      "executed_bond_weight": 0.091,
+      "executed_cash_weight": 0.049,
+      "offensive_active": false,
+      "offensive_tier": 0.0,
+      "full_stock_signal": false,
+      "risk_class": "NORMAL",
+      "direction_class": "NEUTRAL",
+      "allocation_class": "PARTICIPATION",
+      "monitoring_note": "NORMAL_MONITORING"
+    },
+    {
+      "ticker": "SPY",
+      "date": "2026-05-07",
+      "model_version": "v8.6.41_model_label_fixed",
+      "pred_risk": "정상",
+      "pred_direction": "중립",
+      "pred_overall_risk": "정상",
+      "signal_regime": "NORMAL",
+      "allocation_regime": "CUSTOM",
+      "executed_regime": "CUSTOM",
+      "prob_normal": 0.8103089690983586,
+      "prob_high_vol": 0.1896910309016413,
+      "prob_overall_risk": 0.1896910309016413,
+      "prob_up_strengthening_5d": 0.1066731167976623,
+      "prob_up_strengthening_10d": 0.1022091815447253,
+      "prob_up_strengthening_20d": 0.1140462080748221,
+      "prob_up_strengthening_score": 0.1116788027688028,
+      "prob_down_strengthening_5d": 0.0870411366415042,
+      "prob_down_strengthening_10d": 0.1472097031053608,
+      "prob_down_strengthening_20d": 0.2066424593638781,
+      "prob_down_strengthening_score": 0.1947559081121747,
+      "signal_stock_weight": 0.86,
+      "signal_bond_weight": 0.091,
+      "signal_cash_weight": 0.049,
+      "executed_stock_weight": 0.82,
+      "executed_bond_weight": 0.117,
+      "executed_cash_weight": 0.063,
+      "offensive_active": false,
+      "offensive_tier": 0.0,
+      "full_stock_signal": false,
+      "risk_class": "NORMAL",
+      "direction_class": "NEUTRAL",
+      "allocation_class": "PARTICIPATION",
+      "monitoring_note": "NORMAL_MONITORING"
+    },
+    {
+      "ticker": "AAPL",
+      "date": "2026-05-07",
+      "model_version": "v8.6.41_model_label_fixed",
+      "pred_risk": "정상",
+      "pred_direction": "하락",
+      "pred_overall_risk": "정상",
+      "signal_regime": "NORMAL",
+      "allocation_regime": "NORMAL",
+      "executed_regime": "NORMAL",
+      "prob_normal": 0.6253541087239314,
+      "prob_high_vol": 0.3746458912760686,
+      "prob_overall_risk": 0.3746458912760686,
+      "prob_up_strengthening_5d": 0.1687494638724307,
+      "prob_up_strengthening_10d": 0.1547105901018553,
+      "prob_up_strengthening_20d": 0.2354805370341929,
+      "prob_up_strengthening_score": 0.2193265476477254,
+      "prob_down_strengthening_5d": 0.5755640236349112,
+      "prob_down_strengthening_10d": 0.4932820685181181,
+      "prob_down_strengthening_20d": 0.5091907329360209,
+      "prob_down_strengthening_score": 0.5060090000524404,
+      "signal_stock_weight": 0.74,
+      "signal_bond_weight": 0.169,
+      "signal_cash_weight": 0.091,
+      "executed_stock_weight": 0.74,
+      "executed_bond_weight": 0.169,
+      "executed_cash_weight": 0.091,
+      "offensive_active": false,
+      "offensive_tier": 0.0,
+      "full_stock_signal": false,
+      "risk_class": "WATCH",
+      "direction_class": "DOWN_STRENGTH",
+      "allocation_class": "BALANCED",
+      "monitoring_note": "DOWN_STRENGTH_WATCH"
+    },
+    {
+      "ticker": "SOXX",
+      "date": "2026-05-07",
+      "model_version": "v8.6.41_model_label_fixed",
+      "pred_risk": "정상",
+      "pred_direction": "하락",
+      "pred_overall_risk": "정상",
+      "signal_regime": "NORMAL",
+      "allocation_regime": "CUSTOM",
+      "executed_regime": "CUSTOM",
+      "prob_normal": 0.6710701657123792,
+      "prob_high_vol": 0.3289298342876208,
+      "prob_overall_risk": 0.3289298342876208,
+      "prob_up_strengthening_5d": 0.0677442372436055,
+      "prob_up_strengthening_10d": 0.0538255446504246,
+      "prob_up_strengthening_20d": 0.054269665136387,
+      "prob_up_strengthening_score": 0.0541808410391945,
+      "prob_down_strengthening_5d": 0.128737196116572,
+      "prob_down_strengthening_10d": 0.0817478095657719,
+      "prob_down_strengthening_20d": 0.1413046233330014,
+      "prob_down_strengthening_score": 0.1293932605795555,
+      "signal_stock_weight": 0.82,
+      "signal_bond_weight": 0.117,
+      "signal_cash_weight": 0.063,
+      "executed_stock_weight": 0.82,
+      "executed_bond_weight": 0.117,
+      "executed_cash_weight": 0.063,
+      "offensive_active": false,
+      "offensive_tier": 0.0,
+      "full_stock_signal": false,
+      "risk_class": "NORMAL",
+      "direction_class": "DOWN_STRENGTH",
+      "allocation_class": "PARTICIPATION",
+      "monitoring_note": "NORMAL_MONITORING"
+    },
+    {
+      "ticker": "NVDA",
+      "date": "2026-05-07",
+      "model_version": "v8.6.41_model_label_fixed",
+      "pred_risk": "정상",
+      "pred_direction": "중립",
+      "pred_overall_risk": "정상",
+      "signal_regime": "NORMAL",
+      "allocation_regime": "CUSTOM",
+      "executed_regime": "CUSTOM",
+      "prob_normal": 0.8266947676520785,
+      "prob_high_vol": 0.1733052323479215,
+      "prob_overall_risk": 0.1733052323479215,
+      "prob_up_strengthening_5d": 0.1687438905910315,
+      "prob_up_strengthening_10d": 0.1789630517344037,
+      "prob_up_strengthening_20d": 0.1363337866128708,
+      "prob_up_strengthening_score": 0.1448596396371774,
+      "prob_down_strengthening_5d": 0.1966541658173498,
+      "prob_down_strengthening_10d": 0.17881752762597,
+      "prob_down_strengthening_20d": 0.1462024985307591,
+      "prob_down_strengthening_score": 0.1527255043498013,
+      "signal_stock_weight": 0.86,
+      "signal_bond_weight": 0.091,
+      "signal_cash_weight": 0.049,
+      "executed_stock_weight": 0.86,
+      "executed_bond_weight": 0.091,
+      "executed_cash_weight": 0.049,
+      "offensive_active": false,
+      "offensive_tier": 0.0,
+      "full_stock_signal": false,
+      "risk_class": "NORMAL",
+      "direction_class": "NEUTRAL",
+      "allocation_class": "PARTICIPATION",
+      "monitoring_note": "NORMAL_MONITORING"
+    }
+  ],
+  "portfolio_totals": {
+    "date": "2026-05-07",
+    "portfolio_stock_weight": 0.8200000000000001,
+    "portfolio_bond_weight": 0.11700000000000002,
+    "portfolio_cash_weight": 0.063,
+    "portfolio_total_weight": 1.0,
+    "allocation_source": "executed",
+    "capital_mode": "equal"
+  },
+  "portfolio_allocation": [
+    {
+      "ticker": "QQQ",
+      "date": "2026-05-07",
+      "asset_capital_weight": 0.2,
+      "asset_stock_weight": 0.86,
+      "asset_bond_weight": 0.091,
+      "asset_cash_weight": 0.049,
+      "portfolio_stock_weight": 0.17200000000000001,
+      "portfolio_bond_weight": 0.0182,
+      "portfolio_cash_weight": 0.009800000000000001,
+      "portfolio_total_weight": 0.2,
+      "allocation_source": "executed",
+      "capital_mode": "equal",
+      "risk_class": "NORMAL",
+      "direction_class": "NEUTRAL",
+      "allocation_class": "PARTICIPATION",
+      "monitoring_note": "NORMAL_MONITORING"
+    },
+    {
+      "ticker": "SPY",
+      "date": "2026-05-07",
+      "asset_capital_weight": 0.2,
+      "asset_stock_weight": 0.82,
+      "asset_bond_weight": 0.117,
+      "asset_cash_weight": 0.063,
+      "portfolio_stock_weight": 0.164,
+      "portfolio_bond_weight": 0.023400000000000004,
+      "portfolio_cash_weight": 0.0126,
+      "portfolio_total_weight": 0.2,
+      "allocation_source": "executed",
+      "capital_mode": "equal",
+      "risk_class": "NORMAL",
+      "direction_class": "NEUTRAL",
+      "allocation_class": "PARTICIPATION",
+      "monitoring_note": "NORMAL_MONITORING"
+    },
+    {
+      "ticker": "AAPL",
+      "date": "2026-05-07",
+      "asset_capital_weight": 0.2,
+      "asset_stock_weight": 0.74,
+      "asset_bond_weight": 0.169,
+      "asset_cash_weight": 0.091,
+      "portfolio_stock_weight": 0.148,
+      "portfolio_bond_weight": 0.033800000000000004,
+      "portfolio_cash_weight": 0.0182,
+      "portfolio_total_weight": 0.2,
+      "allocation_source": "executed",
+      "capital_mode": "equal",
+      "risk_class": "WATCH",
+      "direction_class": "DOWN_STRENGTH",
+      "allocation_class": "BALANCED",
+      "monitoring_note": "DOWN_STRENGTH_WATCH"
+    },
+    {
+      "ticker": "SOXX",
+      "date": "2026-05-07",
+      "asset_capital_weight": 0.2,
+      "asset_stock_weight": 0.82,
+      "asset_bond_weight": 0.117,
+      "asset_cash_weight": 0.063,
+      "portfolio_stock_weight": 0.164,
+      "portfolio_bond_weight": 0.023400000000000004,
+      "portfolio_cash_weight": 0.0126,
+      "portfolio_total_weight": 0.2,
+      "allocation_source": "executed",
+      "capital_mode": "equal",
+      "risk_class": "NORMAL",
+      "direction_class": "DOWN_STRENGTH",
+      "allocation_class": "PARTICIPATION",
+      "monitoring_note": "NORMAL_MONITORING"
+    },
+    {
+      "ticker": "NVDA",
+      "date": "2026-05-07",
+      "asset_capital_weight": 0.2,
+      "asset_stock_weight": 0.86,
+      "asset_bond_weight": 0.091,
+      "asset_cash_weight": 0.049,
+      "portfolio_stock_weight": 0.17200000000000001,
+      "portfolio_bond_weight": 0.0182,
+      "portfolio_cash_weight": 0.009800000000000001,
+      "portfolio_total_weight": 0.2,
+      "allocation_source": "executed",
+      "capital_mode": "equal",
+      "risk_class": "NORMAL",
+      "direction_class": "NEUTRAL",
+      "allocation_class": "PARTICIPATION",
+      "monitoring_note": "NORMAL_MONITORING"
+    }
+  ],
+  "validation": {
+    "fail_count": 0,
+    "pass_count": 52,
+    "checks": [
+      {
+        "check_name": "QQQ_rows",
+        "status": "PASS",
+        "detail": "rows=3357"
+      },
+      {
+        "check_name": "QQQ_date_monotonic",
+        "status": "PASS",
+        "detail": "Date is sorted ascending"
+      },
+      {
+        "check_name": "QQQ_no_duplicate_dates",
+        "status": "PASS",
+        "detail": "No duplicate dates"
+      },
+      {
+        "check_name": "QQQ_required_columns",
+        "status": "PASS",
+        "detail": "missing=[]"
+      },
+      {
+        "check_name": "QQQ_prob_high_vol_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "QQQ_prob_normal_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "QQQ_prob_overall_risk_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "QQQ_prob_up_strengthening_score_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "QQQ_prob_down_strengthening_score_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "QQQ_latest_weight_sum",
+        "status": "PASS",
+        "detail": "sum=1.00000000"
+      },
+      {
+        "check_name": "SPY_rows",
+        "status": "PASS",
+        "detail": "rows=3357"
+      },
+      {
+        "check_name": "SPY_date_monotonic",
+        "status": "PASS",
+        "detail": "Date is sorted ascending"
+      },
+      {
+        "check_name": "SPY_no_duplicate_dates",
+        "status": "PASS",
+        "detail": "No duplicate dates"
+      },
+      {
+        "check_name": "SPY_required_columns",
+        "status": "PASS",
+        "detail": "missing=[]"
+      },
+      {
+        "check_name": "SPY_prob_high_vol_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "SPY_prob_normal_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "SPY_prob_overall_risk_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "SPY_prob_up_strengthening_score_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "SPY_prob_down_strengthening_score_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "SPY_latest_weight_sum",
+        "status": "PASS",
+        "detail": "sum=1.00000000"
+      },
+      {
+        "check_name": "AAPL_rows",
+        "status": "PASS",
+        "detail": "rows=3357"
+      },
+      {
+        "check_name": "AAPL_date_monotonic",
+        "status": "PASS",
+        "detail": "Date is sorted ascending"
+      },
+      {
+        "check_name": "AAPL_no_duplicate_dates",
+        "status": "PASS",
+        "detail": "No duplicate dates"
+      },
+      {
+        "check_name": "AAPL_required_columns",
+        "status": "PASS",
+        "detail": "missing=[]"
+      },
+      {
+        "check_name": "AAPL_prob_high_vol_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "AAPL_prob_normal_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "AAPL_prob_overall_risk_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "AAPL_prob_up_strengthening_score_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "AAPL_prob_down_strengthening_score_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "AAPL_latest_weight_sum",
+        "status": "PASS",
+        "detail": "sum=1.00000000"
+      },
+      {
+        "check_name": "SOXX_rows",
+        "status": "PASS",
+        "detail": "rows=3357"
+      },
+      {
+        "check_name": "SOXX_date_monotonic",
+        "status": "PASS",
+        "detail": "Date is sorted ascending"
+      },
+      {
+        "check_name": "SOXX_no_duplicate_dates",
+        "status": "PASS",
+        "detail": "No duplicate dates"
+      },
+      {
+        "check_name": "SOXX_required_columns",
+        "status": "PASS",
+        "detail": "missing=[]"
+      },
+      {
+        "check_name": "SOXX_prob_high_vol_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "SOXX_prob_normal_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "SOXX_prob_overall_risk_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "SOXX_prob_up_strengthening_score_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "SOXX_prob_down_strengthening_score_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "SOXX_latest_weight_sum",
+        "status": "PASS",
+        "detail": "sum=1.00000000"
+      },
+      {
+        "check_name": "NVDA_rows",
+        "status": "PASS",
+        "detail": "rows=3357"
+      },
+      {
+        "check_name": "NVDA_date_monotonic",
+        "status": "PASS",
+        "detail": "Date is sorted ascending"
+      },
+      {
+        "check_name": "NVDA_no_duplicate_dates",
+        "status": "PASS",
+        "detail": "No duplicate dates"
+      },
+      {
+        "check_name": "NVDA_required_columns",
+        "status": "PASS",
+        "detail": "missing=[]"
+      },
+      {
+        "check_name": "NVDA_prob_high_vol_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "NVDA_prob_normal_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "NVDA_prob_overall_risk_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "NVDA_prob_up_strengthening_score_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "NVDA_prob_down_strengthening_score_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "NVDA_latest_weight_sum",
+        "status": "PASS",
+        "detail": "sum=1.00000000"
+      },
+      {
+        "check_name": "portfolio_total_weight_sum",
+        "status": "PASS",
+        "detail": "stock+bond+cash=1.00000000"
+      },
+      {
+        "check_name": "asset_capital_weight_sum",
+        "status": "PASS",
+        "detail": "sum=1.00000000"
+      }
+    ]
+  }
+}
