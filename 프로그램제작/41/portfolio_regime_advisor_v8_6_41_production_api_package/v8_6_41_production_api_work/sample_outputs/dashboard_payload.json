@@ -1,0 +1,5518 @@
+{
+  "model_version": "v8.6.41_model_label_fixed",
+  "as_of_date": "2026-05-07",
+  "allocation_source": "executed",
+  "capital_mode": "equal",
+  "cancelled_layers": [
+    "drawdown_loss_guard",
+    "confidence_weighted_v1",
+    "sensitive_v2",
+    "accuracy_benchmark_v3",
+    "logit_calibrated_v4",
+    "v8.6.42_adaptive_controls"
+  ],
+  "latest_signals": [
+    {
+      "ticker": "QQQ",
+      "date": "2026-05-07",
+      "model_version": "v8.6.41_model_label_fixed",
+      "pred_risk": "정상",
+      "pred_direction": "중립",
+      "pred_overall_risk": "정상",
+      "signal_regime": "NORMAL",
+      "allocation_regime": "CUSTOM",
+      "executed_regime": "CUSTOM",
+      "prob_normal": 0.8208065679163188,
+      "prob_high_vol": 0.1791934320836812,
+      "prob_overall_risk": 0.1791934320836812,
+      "prob_up_strengthening_5d": 0.1091241736570286,
+      "prob_up_strengthening_10d": 0.073149210859352,
+      "prob_up_strengthening_20d": 0.1057787985942975,
+      "prob_up_strengthening_score": 0.0992528810473084,
+      "prob_down_strengthening_5d": 0.0413628622352162,
+      "prob_down_strengthening_10d": 0.0667987218860198,
+      "prob_down_strengthening_20d": 0.1778275819213052,
+      "prob_down_strengthening_score": 0.1556218099142481,
+      "signal_stock_weight": 0.86,
+      "signal_bond_weight": 0.091,
+      "signal_cash_weight": 0.049,
+      "executed_stock_weight": 0.86,
+      "executed_bond_weight": 0.091,
+      "executed_cash_weight": 0.049,
+      "offensive_active": false,
+      "offensive_tier": 0.0,
+      "full_stock_signal": false,
+      "risk_class": "NORMAL",
+      "direction_class": "NEUTRAL",
+      "allocation_class": "PARTICIPATION",
+      "monitoring_note": "NORMAL_MONITORING"
+    },
+    {
+      "ticker": "SPY",
+      "date": "2026-05-07",
+      "model_version": "v8.6.41_model_label_fixed",
+      "pred_risk": "정상",
+      "pred_direction": "중립",
+      "pred_overall_risk": "정상",
+      "signal_regime": "NORMAL",
+      "allocation_regime": "CUSTOM",
+      "executed_regime": "CUSTOM",
+      "prob_normal": 0.8103089690983586,
+      "prob_high_vol": 0.1896910309016413,
+      "prob_overall_risk": 0.1896910309016413,
+      "prob_up_strengthening_5d": 0.1066731167976623,
+      "prob_up_strengthening_10d": 0.1022091815447253,
+      "prob_up_strengthening_20d": 0.1140462080748221,
+      "prob_up_strengthening_score": 0.1116788027688028,
+      "prob_down_strengthening_5d": 0.0870411366415042,
+      "prob_down_strengthening_10d": 0.1472097031053608,
+      "prob_down_strengthening_20d": 0.2066424593638781,
+      "prob_down_strengthening_score": 0.1947559081121747,
+      "signal_stock_weight": 0.86,
+      "signal_bond_weight": 0.091,
+      "signal_cash_weight": 0.049,
+      "executed_stock_weight": 0.82,
+      "executed_bond_weight": 0.117,
+      "executed_cash_weight": 0.063,
+      "offensive_active": false,
+      "offensive_tier": 0.0,
+      "full_stock_signal": false,
+      "risk_class": "NORMAL",
+      "direction_class": "NEUTRAL",
+      "allocation_class": "PARTICIPATION",
+      "monitoring_note": "NORMAL_MONITORING"
+    },
+    {
+      "ticker": "AAPL",
+      "date": "2026-05-07",
+      "model_version": "v8.6.41_model_label_fixed",
+      "pred_risk": "정상",
+      "pred_direction": "하락",
+      "pred_overall_risk": "정상",
+      "signal_regime": "NORMAL",
+      "allocation_regime": "NORMAL",
+      "executed_regime": "NORMAL",
+      "prob_normal": 0.6253541087239314,
+      "prob_high_vol": 0.3746458912760686,
+      "prob_overall_risk": 0.3746458912760686,
+      "prob_up_strengthening_5d": 0.1687494638724307,
+      "prob_up_strengthening_10d": 0.1547105901018553,
+      "prob_up_strengthening_20d": 0.2354805370341929,
+      "prob_up_strengthening_score": 0.2193265476477254,
+      "prob_down_strengthening_5d": 0.5755640236349112,
+      "prob_down_strengthening_10d": 0.4932820685181181,
+      "prob_down_strengthening_20d": 0.5091907329360209,
+      "prob_down_strengthening_score": 0.5060090000524404,
+      "signal_stock_weight": 0.74,
+      "signal_bond_weight": 0.169,
+      "signal_cash_weight": 0.091,
+      "executed_stock_weight": 0.74,
+      "executed_bond_weight": 0.169,
+      "executed_cash_weight": 0.091,
+      "offensive_active": false,
+      "offensive_tier": 0.0,
+      "full_stock_signal": false,
+      "risk_class": "WATCH",
+      "direction_class": "DOWN_STRENGTH",
+      "allocation_class": "BALANCED",
+      "monitoring_note": "DOWN_STRENGTH_WATCH"
+    },
+    {
+      "ticker": "SOXX",
+      "date": "2026-05-07",
+      "model_version": "v8.6.41_model_label_fixed",
+      "pred_risk": "정상",
+      "pred_direction": "하락",
+      "pred_overall_risk": "정상",
+      "signal_regime": "NORMAL",
+      "allocation_regime": "CUSTOM",
+      "executed_regime": "CUSTOM",
+      "prob_normal": 0.6710701657123792,
+      "prob_high_vol": 0.3289298342876208,
+      "prob_overall_risk": 0.3289298342876208,
+      "prob_up_strengthening_5d": 0.0677442372436055,
+      "prob_up_strengthening_10d": 0.0538255446504246,
+      "prob_up_strengthening_20d": 0.054269665136387,
+      "prob_up_strengthening_score": 0.0541808410391945,
+      "prob_down_strengthening_5d": 0.128737196116572,
+      "prob_down_strengthening_10d": 0.0817478095657719,
+      "prob_down_strengthening_20d": 0.1413046233330014,
+      "prob_down_strengthening_score": 0.1293932605795555,
+      "signal_stock_weight": 0.82,
+      "signal_bond_weight": 0.117,
+      "signal_cash_weight": 0.063,
+      "executed_stock_weight": 0.82,
+      "executed_bond_weight": 0.117,
+      "executed_cash_weight": 0.063,
+      "offensive_active": false,
+      "offensive_tier": 0.0,
+      "full_stock_signal": false,
+      "risk_class": "NORMAL",
+      "direction_class": "DOWN_STRENGTH",
+      "allocation_class": "PARTICIPATION",
+      "monitoring_note": "NORMAL_MONITORING"
+    },
+    {
+      "ticker": "NVDA",
+      "date": "2026-05-07",
+      "model_version": "v8.6.41_model_label_fixed",
+      "pred_risk": "정상",
+      "pred_direction": "중립",
+      "pred_overall_risk": "정상",
+      "signal_regime": "NORMAL",
+      "allocation_regime": "CUSTOM",
+      "executed_regime": "CUSTOM",
+      "prob_normal": 0.8266947676520785,
+      "prob_high_vol": 0.1733052323479215,
+      "prob_overall_risk": 0.1733052323479215,
+      "prob_up_strengthening_5d": 0.1687438905910315,
+      "prob_up_strengthening_10d": 0.1789630517344037,
+      "prob_up_strengthening_20d": 0.1363337866128708,
+      "prob_up_strengthening_score": 0.1448596396371774,
+      "prob_down_strengthening_5d": 0.1966541658173498,
+      "prob_down_strengthening_10d": 0.17881752762597,
+      "prob_down_strengthening_20d": 0.1462024985307591,
+      "prob_down_strengthening_score": 0.1527255043498013,
+      "signal_stock_weight": 0.86,
+      "signal_bond_weight": 0.091,
+      "signal_cash_weight": 0.049,
+      "executed_stock_weight": 0.86,
+      "executed_bond_weight": 0.091,
+      "executed_cash_weight": 0.049,
+      "offensive_active": false,
+      "offensive_tier": 0.0,
+      "full_stock_signal": false,
+      "risk_class": "NORMAL",
+      "direction_class": "NEUTRAL",
+      "allocation_class": "PARTICIPATION",
+      "monitoring_note": "NORMAL_MONITORING"
+    }
+  ],
+  "portfolio_allocation": [
+    {
+      "ticker": "QQQ",
+      "date": "2026-05-07",
+      "asset_capital_weight": 0.2,
+      "asset_stock_weight": 0.86,
+      "asset_bond_weight": 0.091,
+      "asset_cash_weight": 0.049,
+      "portfolio_stock_weight": 0.17200000000000001,
+      "portfolio_bond_weight": 0.0182,
+      "portfolio_cash_weight": 0.009800000000000001,
+      "portfolio_total_weight": 0.2,
+      "allocation_source": "executed",
+      "capital_mode": "equal",
+      "risk_class": "NORMAL",
+      "direction_class": "NEUTRAL",
+      "allocation_class": "PARTICIPATION",
+      "monitoring_note": "NORMAL_MONITORING"
+    },
+    {
+      "ticker": "SPY",
+      "date": "2026-05-07",
+      "asset_capital_weight": 0.2,
+      "asset_stock_weight": 0.82,
+      "asset_bond_weight": 0.117,
+      "asset_cash_weight": 0.063,
+      "portfolio_stock_weight": 0.164,
+      "portfolio_bond_weight": 0.023400000000000004,
+      "portfolio_cash_weight": 0.0126,
+      "portfolio_total_weight": 0.2,
+      "allocation_source": "executed",
+      "capital_mode": "equal",
+      "risk_class": "NORMAL",
+      "direction_class": "NEUTRAL",
+      "allocation_class": "PARTICIPATION",
+      "monitoring_note": "NORMAL_MONITORING"
+    },
+    {
+      "ticker": "AAPL",
+      "date": "2026-05-07",
+      "asset_capital_weight": 0.2,
+      "asset_stock_weight": 0.74,
+      "asset_bond_weight": 0.169,
+      "asset_cash_weight": 0.091,
+      "portfolio_stock_weight": 0.148,
+      "portfolio_bond_weight": 0.033800000000000004,
+      "portfolio_cash_weight": 0.0182,
+      "portfolio_total_weight": 0.2,
+      "allocation_source": "executed",
+      "capital_mode": "equal",
+      "risk_class": "WATCH",
+      "direction_class": "DOWN_STRENGTH",
+      "allocation_class": "BALANCED",
+      "monitoring_note": "DOWN_STRENGTH_WATCH"
+    },
+    {
+      "ticker": "SOXX",
+      "date": "2026-05-07",
+      "asset_capital_weight": 0.2,
+      "asset_stock_weight": 0.82,
+      "asset_bond_weight": 0.117,
+      "asset_cash_weight": 0.063,
+      "portfolio_stock_weight": 0.164,
+      "portfolio_bond_weight": 0.023400000000000004,
+      "portfolio_cash_weight": 0.0126,
+      "portfolio_total_weight": 0.2,
+      "allocation_source": "executed",
+      "capital_mode": "equal",
+      "risk_class": "NORMAL",
+      "direction_class": "DOWN_STRENGTH",
+      "allocation_class": "PARTICIPATION",
+      "monitoring_note": "NORMAL_MONITORING"
+    },
+    {
+      "ticker": "NVDA",
+      "date": "2026-05-07",
+      "asset_capital_weight": 0.2,
+      "asset_stock_weight": 0.86,
+      "asset_bond_weight": 0.091,
+      "asset_cash_weight": 0.049,
+      "portfolio_stock_weight": 0.17200000000000001,
+      "portfolio_bond_weight": 0.0182,
+      "portfolio_cash_weight": 0.009800000000000001,
+      "portfolio_total_weight": 0.2,
+      "allocation_source": "executed",
+      "capital_mode": "equal",
+      "risk_class": "NORMAL",
+      "direction_class": "NEUTRAL",
+      "allocation_class": "PARTICIPATION",
+      "monitoring_note": "NORMAL_MONITORING"
+    }
+  ],
+  "portfolio_totals": {
+    "date": "2026-05-07",
+    "portfolio_stock_weight": 0.8200000000000001,
+    "portfolio_bond_weight": 0.11700000000000002,
+    "portfolio_cash_weight": 0.063,
+    "portfolio_total_weight": 1.0,
+    "allocation_source": "executed",
+    "capital_mode": "equal"
+  },
+  "performance_summary": [
+    {
+      "ticker": "QQQ",
+      "scope": "full_period",
+      "n_days": 3357,
+      "final_capital": 795583061.7036449,
+      "cagr": 0.16845443756028988,
+      "mdd": -0.2531319682000136,
+      "sharpe": 1.28218073553297,
+      "sortino": 1.7575874231818707,
+      "calmar": 0.6654806927712295,
+      "annual_vol": 0.12783581237828906,
+      "win_rate": 0.5647899910634495,
+      "avg_stock_weight": 0.7250342567768842,
+      "avg_bond_weight": 0.1787277330950253,
+      "avg_cash_weight": 0.09623801012809054
+    },
+    {
+      "ticker": "QQQ",
+      "scope": "holdout_2024-01-01",
+      "n_days": 589,
+      "final_capital": 156845689.7874234,
+      "cagr": 0.21236038141703872,
+      "mdd": -0.13140015875641708,
+      "sharpe": 1.4063348458411713,
+      "sortino": 1.931072607949533,
+      "calmar": 1.6161348922774255,
+      "annual_vol": 0.14440876605229322,
+      "win_rate": 0.5806451612903226,
+      "avg_stock_weight": 0.7938200339558575,
+      "avg_bond_weight": 0.13401697792869272,
+      "avg_cash_weight": 0.0721629881154499
+    },
+    {
+      "ticker": "SPY",
+      "scope": "full_period",
+      "n_days": 3357,
+      "final_capital": 355530369.31003016,
+      "cagr": 0.09989866476114173,
+      "mdd": -0.18207847537426503,
+      "sharpe": 1.0081426320970375,
+      "sortino": 1.2819794911663611,
+      "calmar": 0.5486571905646647,
+      "annual_vol": 0.09937641796035607,
+      "win_rate": 0.558832290735776,
+      "avg_stock_weight": 0.7134107834375931,
+      "avg_bond_weight": 0.18628299076556448,
+      "avg_cash_weight": 0.10030622579684241
+    },
+    {
+      "ticker": "SPY",
+      "scope": "holdout_2024-01-01",
+      "n_days": 589,
+      "final_capital": 136786655.19241208,
+      "cagr": 0.14341916398874366,
+      "mdd": -0.10335542082310922,
+      "sharpe": 1.3744464511750376,
+      "sortino": 1.842249157953487,
+      "calmar": 1.387630787495924,
+      "annual_vol": 0.1012724568661898,
+      "win_rate": 0.568760611205433,
+      "avg_stock_weight": 0.752665534804754,
+      "avg_bond_weight": 0.16076740237691,
+      "avg_cash_weight": 0.08656706281833615
+    },
+    {
+      "ticker": "AAPL",
+      "scope": "full_period",
+      "n_days": 3357,
+      "final_capital": 1155930446.393989,
+      "cagr": 0.20168632718652924,
+      "mdd": -0.31500446402953475,
+      "sharpe": 0.983821464953331,
+      "sortino": 1.3712885450289733,
+      "calmar": 0.6402649810309329,
+      "annual_vol": 0.20899860460362055,
+      "win_rate": 0.5269585939827227,
+      "avg_stock_weight": 0.7724873398868037,
+      "avg_bond_weight": 0.1478832290735776,
+      "avg_cash_weight": 0.07962943103961868
+    },
+    {
+      "ticker": "AAPL",
+      "scope": "holdout_2024-01-01",
+      "n_days": 589,
+      "final_capital": 142027476.0997767,
+      "cagr": 0.16196105987622889,
+      "mdd": -0.3150044640295343,
+      "sharpe": 0.7652179637417209,
+      "sortino": 1.044748647973111,
+      "calmar": 0.5141548084888209,
+      "annual_vol": 0.23090086455670558,
+      "win_rate": 0.5415959252971138,
+      "avg_stock_weight": 0.8208828522920204,
+      "avg_bond_weight": 0.11642614601018679,
+      "avg_cash_weight": 0.06269100169779283
+    },
+    {
+      "ticker": "SOXX",
+      "scope": "full_period",
+      "n_days": 3357,
+      "final_capital": 1317244896.6038737,
+      "cagr": 0.2135286501295477,
+      "mdd": -0.3528097044950579,
+      "sharpe": 1.004868083149376,
+      "sortino": 1.3317588038610384,
+      "calmar": 0.605223290088209,
+      "annual_vol": 0.21592179317895321,
+      "win_rate": 0.5540661304736372,
+      "avg_stock_weight": 0.7309800417039023,
+      "avg_bond_weight": 0.17486297289246347,
+      "avg_cash_weight": 0.09415698540363418
+    },
+    {
+      "ticker": "SOXX",
+      "scope": "holdout_2024-01-01",
+      "n_days": 589,
+      "final_capital": 242056948.7448702,
+      "cagr": 0.45967693825746614,
+      "mdd": -0.2794698335892959,
+      "sharpe": 1.5766355402651113,
+      "sortino": 2.1995340810461705,
+      "calmar": 1.6448177334695793,
+      "annual_vol": 0.26185201325084073,
+      "win_rate": 0.5568760611205433,
+      "avg_stock_weight": 0.7437351443123938,
+      "avg_bond_weight": 0.16657215619694402,
+      "avg_cash_weight": 0.08969269949066211
+    },
+    {
+      "ticker": "NVDA",
+      "scope": "full_period",
+      "n_days": 3357,
+      "final_capital": 12220479242.888525,
+      "cagr": 0.43440405106852475,
+      "mdd": -0.5709713548505886,
+      "sharpe": 1.2181960157907232,
+      "sortino": 1.7160979430597434,
+      "calmar": 0.7608158401960451,
+      "annual_vol": 0.34485572069984194,
+      "win_rate": 0.5415549597855228,
+      "avg_stock_weight": 0.7470777479892761,
+      "avg_bond_weight": 0.16439946380697049,
+      "avg_cash_weight": 0.08852278820375331
+    },
+    {
+      "ticker": "NVDA",
+      "scope": "holdout_2024-01-01",
+      "n_days": 589,
+      "final_capital": 367703905.65406793,
+      "cagr": 0.7456007460006844,
+      "mdd": -0.33882786913351215,
+      "sharpe": 1.575257010308656,
+      "sortino": 2.1968990802657675,
+      "calmar": 2.200529572456411,
+      "annual_vol": 0.40647496784931403,
+      "win_rate": 0.5517826825127334,
+      "avg_stock_weight": 0.8002037351443123,
+      "avg_bond_weight": 0.12986757215619693,
+      "avg_cash_weight": 0.06992869269949063
+    }
+  ],
+  "charts": {
+    "portfolio_equity_curve": [
+      {
+        "Date": "2023-05-03",
+        "portfolio_return": 0.024196495094102002,
+        "portfolio_equity": 642807005.2356703,
+        "portfolio_drawdown": -0.10896389963444031
+      },
+      {
+        "Date": "2023-05-04",
+        "portfolio_return": 0.00333056789444118,
+        "portfolio_equity": 644947917.6096301,
+        "portfolio_drawdown": -0.10599624340577474
+      },
+      {
+        "Date": "2023-05-05",
+        "portfolio_return": -0.0100488436934872,
+        "portfolio_equity": 638466936.7951308,
+        "portfolio_drawdown": -0.11497994741718054
+      },
+      {
+        "Date": "2023-05-08",
+        "portfolio_return": 0.008713859018886461,
+        "portfolio_equity": 644030447.6705838,
+        "portfolio_drawdown": -0.10726800745008647
+      },
+      {
+        "Date": "2023-05-09",
+        "portfolio_return": -0.00213121457247664,
+        "portfolio_equity": 642657880.5953896,
+        "portfolio_drawdown": -0.10917061088192503
+      },
+      {
+        "Date": "2023-05-10",
+        "portfolio_return": -0.0037004071035037804,
+        "portfolio_equity": 640279784.8089118,
+        "portfolio_drawdown": -0.11246704228142734
+      },
+      {
+        "Date": "2023-05-11",
+        "portfolio_return": 0.009425468763545561,
+        "portfolio_equity": 646314721.9205579,
+        "portfolio_drawdown": -0.10410162811183377
+      },
+      {
+        "Date": "2023-05-12",
+        "portfolio_return": -0.00033361064789662006,
+        "portfolio_equity": 646099104.4474328,
+        "portfolio_drawdown": -0.10440050934812906
+      },
+      {
+        "Date": "2023-05-15",
+        "portfolio_return": 0.014185453674466641,
+        "portfolio_equity": 655264313.3626863,
+        "portfolio_drawdown": -0.09169602426261081
+      },
+      {
+        "Date": "2023-05-16",
+        "portfolio_return": 0.02086184851940316,
+        "portfolio_equity": 668934338.2082293,
+        "portfolio_drawdown": -0.07274712431120589
+      },
+      {
+        "Date": "2023-05-17",
+        "portfolio_return": -0.0040229339865053134,
+        "portfolio_equity": 666243259.524311,
+        "portfolio_drawdown": -0.07647740141889914
+      },
+      {
+        "Date": "2023-05-18",
+        "portfolio_return": -0.00020652701960363986,
+        "portfolio_equity": 666105662.2895904,
+        "portfolio_drawdown": -0.07666813378872073
+      },
+      {
+        "Date": "2023-05-19",
+        "portfolio_return": -0.01138809392508544,
+        "portfolio_equity": 658519988.4434054,
+        "portfolio_drawdown": -0.08718312380515902
+      },
+      {
+        "Date": "2023-05-22",
+        "portfolio_return": -0.00631202440945734,
+        "portfolio_equity": 654363394.202235,
+        "portfolio_drawdown": -0.09294484620906562
+      },
+      {
+        "Date": "2023-05-23",
+        "portfolio_return": 0.054785009219020145,
+        "portfolio_equity": 690212698.7861937,
+        "portfolio_drawdown": -0.043251821246469535
+      },
+      {
+        "Date": "2023-05-24",
+        "portfolio_return": 0.02524947071629402,
+        "portfolio_equity": 707640204.1122099,
+        "portfolio_drawdown": -0.019094436124164726
+      },
+      {
+        "Date": "2023-05-25",
+        "portfolio_return": 0.007645426230354981,
+        "portfolio_equity": 713050415.090383,
+        "portfolio_drawdown": -0.011594994996607433
+      },
+      {
+        "Date": "2023-05-26",
+        "portfolio_return": -0.01485695436957278,
+        "portfolio_equity": 702456657.6101804,
+        "portfolio_drawdown": -0.026279683054600045
+      },
+      {
+        "Date": "2023-05-30",
+        "portfolio_return": 0.0173528320453811,
+        "portfolio_equity": 714646270.0088496,
+        "portfolio_drawdown": -0.009382877935471323
+      },
+      {
+        "Date": "2023-05-31",
+        "portfolio_return": 0.0014840841612824194,
+        "portfolio_equity": 715706865.2190893,
+        "portfolio_drawdown": -0.007912718754720216
+      },
+      {
+        "Date": "2023-06-01",
+        "portfolio_return": -0.0047419199267201605,
+        "portfolio_equity": 712313040.5732164,
+        "portfolio_drawdown": -0.012617117202702866
+      },
+      {
+        "Date": "2023-06-02",
+        "portfolio_return": 0.00021806391364515031,
+        "portfolio_equity": 712468370.3425843,
+        "portfolio_drawdown": -0.012401804627013902
+      },
+      {
+        "Date": "2023-06-05",
+        "portfolio_return": -0.010248242710495542,
+        "portfolio_equity": 705166821.5597622,
+        "portfolio_drawdown": -0.022522950633643624
+      },
+      {
+        "Date": "2023-06-06",
+        "portfolio_return": 0.01228194639974672,
+        "portfolio_equity": 713827642.6650391,
+        "portfolio_drawdown": -0.010517629906343418
+      },
+      {
+        "Date": "2023-06-07",
+        "portfolio_return": 0.00219836797601236,
+        "portfolio_equity": 715396898.4950662,
+        "portfolio_drawdown": -0.00834238355110084
+      },
+      {
+        "Date": "2023-06-08",
+        "portfolio_return": 0.01510108726856376,
+        "portfolio_equity": 726200169.4909,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-06-09",
+        "portfolio_return": 0.00902881382473308,
+        "portfolio_equity": 732756895.6207229,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-06-12",
+        "portfolio_return": 0.011607057023069302,
+        "portfolio_equity": 741262046.6922399,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-06-13",
+        "portfolio_return": 0.004146184707238661,
+        "portfolio_equity": 744335456.0542916,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-06-14",
+        "portfolio_return": -0.004431029653945127,
+        "portfolio_equity": 741037283.5760323,
+        "portfolio_drawdown": -0.004431029653945151
+      },
+      {
+        "Date": "2023-06-15",
+        "portfolio_return": 0.0019445789339466255,
+        "portfolio_equity": 742478289.0669434,
+        "portfolio_drawdown": -0.002495067206919055
+      },
+      {
+        "Date": "2023-06-16",
+        "portfolio_return": -0.01008269176401188,
+        "portfolio_equity": 734992109.3368105,
+        "portfolio_drawdown": -0.012552601977353084
+      },
+      {
+        "Date": "2023-06-20",
+        "portfolio_return": 0.004690869381898481,
+        "portfolio_equity": 738439861.3184354,
+        "portfolio_drawdown": -0.007920615211733484
+      },
+      {
+        "Date": "2023-06-21",
+        "portfolio_return": -0.007995943283149641,
+        "portfolio_equity": 732535338.0693164,
+        "portfolio_drawdown": -0.015853225704882346
+      },
+      {
+        "Date": "2023-06-22",
+        "portfolio_return": -0.00815411923616542,
+        "portfolio_equity": 726562157.5779945,
+        "portfolio_drawdown": -0.023878075848372315
+      },
+      {
+        "Date": "2023-06-23",
+        "portfolio_return": 0.01646785085217066,
+        "portfolio_equity": 738527074.8238204,
+        "portfolio_drawdown": -0.007803445587909241
+      },
+      {
+        "Date": "2023-06-26",
+        "portfolio_return": -0.00205588744486334,
+        "portfolio_equity": 737008746.2829984,
+        "portfolio_drawdown": -0.009843290026961604
+      },
+      {
+        "Date": "2023-06-27",
+        "portfolio_return": -0.00175086625225988,
+        "portfolio_equity": 735718342.541511,
+        "portfolio_drawdown": -0.011576921994902234
+      },
+      {
+        "Date": "2023-06-28",
+        "portfolio_return": 0.015007410201881583,
+        "portfolio_equity": 746759569.50108,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-06-29",
+        "portfolio_return": 0.00035961831142540003,
+        "portfolio_equity": 747028117.9165047,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-06-30",
+        "portfolio_return": -0.0060703562865431,
+        "portfolio_equity": 742493391.0846858,
+        "portfolio_drawdown": -0.006070356286543177
+      },
+      {
+        "Date": "2023-07-03",
+        "portfolio_return": -0.00593396242354676,
+        "portfolio_equity": 738087463.2022576,
+        "portfolio_drawdown": -0.011968297443987752
+      },
+      {
+        "Date": "2023-07-05",
+        "portfolio_return": -0.0007835487009487799,
+        "portfolio_equity": 737509135.7292789,
+        "portfolio_drawdown": -0.012742468401021778
+      },
+      {
+        "Date": "2023-07-06",
+        "portfolio_return": 0.00223030256036612,
+        "portfolio_equity": 739154004.2429893,
+        "portfolio_drawdown": -0.010540585400555913
+      },
+      {
+        "Date": "2023-07-07",
+        "portfolio_return": 0.0022825344580604204,
+        "portfolio_equity": 740841148.7274873,
+        "portfolio_drawdown": -0.008282110191880299
+      },
+      {
+        "Date": "2023-07-10",
+        "portfolio_return": 0.01423991630546452,
+        "portfolio_equity": 751390664.6810108,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-07-11",
+        "portfolio_return": 0.01586139238589862,
+        "portfolio_equity": 763308766.8486176,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-07-12",
+        "portfolio_return": -0.004500892538594073,
+        "portfolio_equity": 759873196.1152651,
+        "portfolio_drawdown": -0.004500892538594092
+      },
+      {
+        "Date": "2023-07-13",
+        "portfolio_return": 0.01215109074117496,
+        "portfolio_equity": 769106484.2730484,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-07-14",
+        "portfolio_return": 0.0057392696021429795,
+        "portfolio_equity": 773520593.7390478,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-07-17",
+        "portfolio_return": -0.0009736826947111001,
+        "portfolio_equity": 772767430.1229215,
+        "portfolio_drawdown": -0.0009736826947109867
+      },
+      {
+        "Date": "2023-07-18",
+        "portfolio_return": -0.01707115423847404,
+        "portfolio_equity": 759575398.1328238,
+        "portfolio_drawdown": -0.018028215045724383
+      },
+      {
+        "Date": "2023-07-19",
+        "portfolio_return": -0.0038374932198126897,
+        "portfolio_equity": 756660532.6925527,
+        "portfolio_drawdown": -0.021796525112533605
+      },
+      {
+        "Date": "2023-07-20",
+        "portfolio_return": 0.0022833985660047403,
+        "portfolio_equity": 758388290.2678552,
+        "portfolio_drawdown": -0.01956289670071487
+      },
+      {
+        "Date": "2023-07-21",
+        "portfolio_return": 0.0080163333134359,
+        "portfolio_equity": 764467783.5836492,
+        "portfolio_drawdown": -0.011703386087808076
+      },
+      {
+        "Date": "2023-07-24",
+        "portfolio_return": -0.00210031507032856,
+        "portfolio_equity": 762862160.3770077,
+        "portfolio_drawdown": -0.013779120359962538
+      },
+      {
+        "Date": "2023-07-25",
+        "portfolio_return": 0.0004382665339840797,
+        "portfolio_equity": 763196497.3319439,
+        "portfolio_drawdown": -0.01334689275329981
+      },
+      {
+        "Date": "2023-07-26",
+        "portfolio_return": 0.012905594774801441,
+        "portfolio_equity": 773046002.0600576,
+        "portfolio_drawdown": -0.0006135475678753499
+      },
+      {
+        "Date": "2023-07-27",
+        "portfolio_return": 0.00172075878128642,
+        "portfolio_equity": 774376227.7564408,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-07-28",
+        "portfolio_return": -0.00294771068560636,
+        "portfolio_equity": 772093590.6752036,
+        "portfolio_drawdown": -0.0029477106856063973
+      },
+      {
+        "Date": "2023-07-31",
+        "portfolio_return": -0.021836891138943822,
+        "portfolio_equity": 755233466.986553,
+        "portfolio_drawdown": -0.024720232987199386
+      },
+      {
+        "Date": "2023-08-01",
+        "portfolio_return": -0.00247711774824902,
+        "portfolio_equity": 753362664.7614089,
+        "portfolio_drawdown": -0.027136115807575023
+      },
+      {
+        "Date": "2023-08-02",
+        "portfolio_return": -0.007630539544670055,
+        "portfolio_equity": 747614101.156469,
+        "portfolio_drawdown": -0.034559592147486606
+      },
+      {
+        "Date": "2023-08-03",
+        "portfolio_return": 0.0037714728475807206,
+        "portfolio_equity": 750433707.4394491,
+        "portfolio_drawdown": -0.03091845986331354
+      },
+      {
+        "Date": "2023-08-04",
+        "portfolio_return": -0.00586320723489304,
+        "portfolio_equity": 746033759.0966824,
+        "portfolio_drawdown": -0.036600385760644394
+      },
+      {
+        "Date": "2023-08-07",
+        "portfolio_return": -0.014918032392045,
+        "portfolio_equity": 734904403.3129189,
+        "portfolio_drawdown": -0.05097241241235084
+      },
+      {
+        "Date": "2023-08-08",
+        "portfolio_return": -0.00206794847173832,
+        "portfolio_equity": 733384658.8752142,
+        "portfolio_drawdown": -0.05293495256174019
+      },
+      {
+        "Date": "2023-08-09",
+        "portfolio_return": -0.01153347603799122,
+        "portfolio_equity": 724926184.4854466,
+        "portfolio_drawdown": -0.0638579045927884
+      },
+      {
+        "Date": "2023-08-10",
+        "portfolio_return": 0.020327527281568024,
+        "portfolio_equity": 739662141.2776974,
+        "portfolio_drawdown": -0.04482845060897411
+      },
+      {
+        "Date": "2023-08-11",
+        "portfolio_return": -0.007578838453863341,
+        "portfolio_equity": 734056361.3985151,
+        "portfolio_drawdown": -0.05206754147753512
+      },
+      {
+        "Date": "2023-08-14",
+        "portfolio_return": -0.0085684169690977,
+        "portfolio_equity": 727766660.415234,
+        "portfolio_drawdown": -0.06018982204069745
+      },
+      {
+        "Date": "2023-08-15",
+        "portfolio_return": -0.0073943842755271405,
+        "portfolio_equity": 722385274.0652065,
+        "portfolio_drawdown": -0.06713913964258034
+      },
+      {
+        "Date": "2023-08-16",
+        "portfolio_return": 0.00143821147051964,
+        "portfolio_equity": 723424216.8525016,
+        "portfolio_drawdown": -0.06579748845281541
+      },
+      {
+        "Date": "2023-08-17",
+        "portfolio_return": 0.020684336466761922,
+        "portfolio_equity": 738387766.7620826,
+        "portfolio_drawdown": -0.04647412937587925
+      },
+      {
+        "Date": "2023-08-18",
+        "portfolio_return": -0.004509607226953561,
+        "portfolio_equity": 735057927.9527981,
+        "portfolio_drawdown": -0.05077415653313311
+      },
+      {
+        "Date": "2023-08-21",
+        "portfolio_return": 0.016763344243632763,
+        "portfolio_equity": 747379957.0380824,
+        "portfolio_drawdown": -0.03486195695414518
+      },
+      {
+        "Date": "2023-08-22",
+        "portfolio_return": -0.01422902917440638,
+        "portfolio_equity": 736745465.8250209,
+        "portfolio_drawdown": -0.04859493432597417
+      },
+      {
+        "Date": "2023-08-23",
+        "portfolio_return": 0.0016253763049680005,
+        "portfolio_equity": 737942954.4479655,
+        "portfolio_drawdown": -0.047048543075801086
+      },
+      {
+        "Date": "2023-08-24",
+        "portfolio_return": 0.00830868523705106,
+        "portfolio_equity": 744074290.1793731,
+        "portfolio_drawdown": -0.03913076937402871
+      },
+      {
+        "Date": "2023-08-25",
+        "portfolio_return": 0.020900436492865222,
+        "portfolio_equity": 759625767.627241,
+        "portfolio_drawdown": -0.019048183041382227
+      },
+      {
+        "Date": "2023-08-28",
+        "portfolio_return": 0.007481473458725841,
+        "portfolio_equity": 765308887.6463084,
+        "portfolio_drawdown": -0.011709218058517434
+      },
+      {
+        "Date": "2023-08-29",
+        "portfolio_return": 0.00225141585233396,
+        "portfolio_equity": 767031916.2078874,
+        "portfolio_drawdown": -0.009484164525338845
+      },
+      {
+        "Date": "2023-08-30",
+        "portfolio_return": -0.0008307307300114207,
+        "portfolio_equity": 766394719.224194,
+        "portfolio_drawdown": -0.010307016468430463
+      },
+      {
+        "Date": "2023-08-31",
+        "portfolio_return": -0.0007486199833611706,
+        "portfolio_equity": 765820980.8222404,
+        "portfolio_drawdown": -0.011047920413294499
+      },
+      {
+        "Date": "2023-09-01",
+        "portfolio_return": -0.015943867990972443,
+        "portfolio_equity": 753610832.1992934,
+        "portfolio_drawdown": -0.026815641819622815
+      },
+      {
+        "Date": "2023-09-05",
+        "portfolio_return": -0.014382110329270142,
+        "portfolio_equity": 742772318.0652701,
+        "portfolio_drawdown": -0.040812086629692934
+      },
+      {
+        "Date": "2023-09-06",
+        "portfolio_return": -0.0020016972109549603,
+        "portfolio_equity": 741285512.7878243,
+        "portfolio_drawdown": -0.042732090400667944
+      },
+      {
+        "Date": "2023-09-07",
+        "portfolio_return": 0.00316566332847834,
+        "portfolio_equity": 743632173.1515888,
+        "portfolio_drawdown": -0.0397017024837204
+      },
+      {
+        "Date": "2023-09-08",
+        "portfolio_return": -0.00904931561029766,
+        "portfolio_equity": 736902810.9187685,
+        "portfolio_drawdown": -0.048391744857976815
+      },
+      {
+        "Date": "2023-09-11",
+        "portfolio_return": 0.00168280238385042,
+        "portfolio_equity": 738142872.7256488,
+        "portfolio_drawdown": -0.046790376217731966
+      },
+      {
+        "Date": "2023-09-12",
+        "portfolio_return": 0.00635491222056618,
+        "portfolio_equity": 742833705.8880568,
+        "portfolio_drawdown": -0.040732812730796875
+      },
+      {
+        "Date": "2023-09-13",
+        "portfolio_return": -0.01751102226393586,
+        "portfolio_equity": 729825928.325849,
+        "portfolio_drawdown": -0.057530561804130964
+      },
+      {
+        "Date": "2023-09-14",
+        "portfolio_return": 0.00464714989065794,
+        "portfolio_equity": 733217538.8088678,
+        "portfolio_drawdown": -0.05315076505747063
+      },
+      {
+        "Date": "2023-09-15",
+        "portfolio_return": -0.0029387580971114804,
+        "portfolio_equity": 731062789.8297491,
+        "portfolio_drawdown": -0.05593332591340183
+      },
+      {
+        "Date": "2023-09-18",
+        "portfolio_return": -0.0164544865535868,
+        "portfolio_equity": 719033526.9846678,
+        "portfolio_drawdown": -0.07146745830784917
+      },
+      {
+        "Date": "2023-09-19",
+        "portfolio_return": -0.01696251719007848,
+        "portfolio_equity": 706836908.4229475,
+        "portfolio_drawdown": -0.08721770750784963
+      },
+      {
+        "Date": "2023-09-20",
+        "portfolio_return": 0.004444925796384121,
+        "portfolio_equity": 709978746.0310332,
+        "portfolio_drawdown": -0.08316045794946858
+      },
+      {
+        "Date": "2023-09-21",
+        "portfolio_return": 0.006564070404067581,
+        "portfolio_equity": 714639096.5053723,
+        "portfolio_drawdown": -0.07714225864621604
+      },
+      {
+        "Date": "2023-09-22",
+        "portfolio_return": -0.01510525092481296,
+        "portfolio_equity": 703844293.6319771,
+        "portfolio_drawdown": -0.09108225639727097
+      },
+      {
+        "Date": "2023-09-25",
+        "portfolio_return": 0.00203349144500838,
+        "portfolio_equity": 705275554.9816957,
+        "portfolio_drawdown": -0.08923397994143856
+      },
+      {
+        "Date": "2023-09-26",
+        "portfolio_return": 0.008778414395546962,
+        "portfolio_equity": 711466756.0663744,
+        "portfolio_drawdown": -0.08123889839998144
+      },
+      {
+        "Date": "2023-09-27",
+        "portfolio_return": 0.0024733727451723003,
+        "portfolio_equity": 713226478.5499251,
+        "portfolio_drawdown": -0.07896645973195948
+      },
+      {
+        "Date": "2023-09-28",
+        "portfolio_return": 0.00946710914324836,
+        "portfolio_equity": 719978671.4662118,
+        "portfolio_drawdown": -0.07024693468164966
+      },
+      {
+        "Date": "2023-09-29",
+        "portfolio_return": -0.01614818954530912,
+        "portfolio_equity": 708352319.4107956,
+        "portfolio_drawdown": -0.08526076341074251
+      },
+      {
+        "Date": "2023-10-02",
+        "portfolio_return": 0.00993439195537942,
+        "portfolio_equity": 715389368.9943244,
+        "portfolio_drawdown": -0.0761733852975004
+      },
+      {
+        "Date": "2023-10-03",
+        "portfolio_return": 0.0025335673984274,
+        "portfolio_equity": 717201856.1767901,
+        "portfolio_drawdown": -0.07383280830469052
+      },
+      {
+        "Date": "2023-10-04",
+        "portfolio_return": 0.015640410499833522,
+        "portfolio_equity": 728419187.6186377,
+        "portfolio_drawdown": -0.05934717323509786
+      },
+      {
+        "Date": "2023-10-05",
+        "portfolio_return": 0.0024875082928619606,
+        "portfolio_equity": 730231136.3885187,
+        "portfolio_drawdown": -0.05700729152781625
+      },
+      {
+        "Date": "2023-10-06",
+        "portfolio_return": 0.0059733564919083396,
+        "portfolio_equity": 734593067.2876587,
+        "portfolio_drawdown": -0.05137445991084166
+      },
+      {
+        "Date": "2023-10-09",
+        "portfolio_return": 0.009552300178778481,
+        "portfolio_equity": 741610120.7756401,
+        "portfolio_drawdown": -0.04231290399465404
+      },
+      {
+        "Date": "2023-10-10",
+        "portfolio_return": 4.565677894242015e-05,
+        "portfolio_equity": 741643980.3049858,
+        "portfolio_drawdown": -0.04226917908661587
+      },
+      {
+        "Date": "2023-10-11",
+        "portfolio_return": -0.01706482683721992,
+        "portfolio_equity": 728987954.2062147,
+        "portfolio_drawdown": -0.05861268970217115
+      },
+      {
+        "Date": "2023-10-12",
+        "portfolio_return": 0.009699385502975761,
+        "portfolio_equity": 736058689.4010864,
+        "portfolio_drawdown": -0.049481811271983034
+      },
+      {
+        "Date": "2023-10-13",
+        "portfolio_return": -0.012916866920988737,
+        "portfolio_equity": 726551117.2640553,
+        "portfolio_drawdown": -0.061759528221762006
+      },
+      {
+        "Date": "2023-10-16",
+        "portfolio_return": -0.0180086494124667,
+        "portfolio_equity": 713466912.913011,
+        "portfolio_drawdown": -0.07865597194260354
+      },
+      {
+        "Date": "2023-10-17",
+        "portfolio_return": -0.0075985987319796,
+        "portfolio_equity": 708045564.1332407,
+        "portfolio_drawdown": -0.0856568955059176
+      },
+      {
+        "Date": "2023-10-18",
+        "portfolio_return": -0.01449942333779608,
+        "portfolio_equity": 697779311.7564242,
+        "portfolio_drawdown": -0.09891434325397197
+      },
+      {
+        "Date": "2023-10-19",
+        "portfolio_return": 0.006650228367085321,
+        "portfolio_equity": 702419703.529432,
+        "portfolio_drawdown": -0.09292191785830584
+      },
+      {
+        "Date": "2023-10-20",
+        "portfolio_return": 0.009577755295509121,
+        "portfolio_equity": 709147307.564581,
+        "portfolio_drawdown": -0.08423414595363288
+      },
+      {
+        "Date": "2023-10-23",
+        "portfolio_return": -0.02682515753302344,
+        "portfolio_equity": 690124319.3250418,
+        "portfolio_drawdown": -0.10879970925179039
+      },
+      {
+        "Date": "2023-10-24",
+        "portfolio_return": -0.018818921654926442,
+        "portfolio_equity": 677136923.8275043,
+        "portfolio_drawdown": -0.12557113770222872
+      },
+      {
+        "Date": "2023-10-25",
+        "portfolio_return": 0.00468225920368942,
+        "portfolio_equity": 680307454.4212536,
+        "portfolio_drawdown": -0.12147683511376328
+      },
+      {
+        "Date": "2023-10-26",
+        "portfolio_return": 0.0074310876107048,
+        "portfolio_equity": 685362878.7172736,
+        "portfolio_drawdown": -0.11494845250745989
+      },
+      {
+        "Date": "2023-10-27",
+        "portfolio_return": 0.0027561700126567,
+        "portfolio_equity": 687251855.331382,
+        "portfolio_drawdown": -0.11250909997260572
+      },
+      {
+        "Date": "2023-10-30",
+        "portfolio_return": 0.021206512806934842,
+        "portfolio_equity": 701826070.6030567,
+        "portfolio_drawdown": -0.0936885128351368
+      },
+      {
+        "Date": "2023-10-31",
+        "portfolio_return": 0.020946207964909903,
+        "portfolio_equity": 716526665.4331038,
+        "portfolio_drawdown": -0.07470472394399486
+      },
+      {
+        "Date": "2023-11-01",
+        "portfolio_return": 0.014952048994225422,
+        "portfolio_equity": 727240207.2403286,
+        "portfolio_drawdown": -0.06086966364228008
+      },
+      {
+        "Date": "2023-11-02",
+        "portfolio_return": 0.00701475693381704,
+        "portfolio_equity": 732341620.5266181,
+        "portfolio_drawdown": -0.05428189260355687
+      },
+      {
+        "Date": "2023-11-03",
+        "portfolio_return": 0.0075018638212995,
+        "portfolio_equity": 737835547.6344788,
+        "portfolio_drawdown": -0.04718724414853148
+      },
+      {
+        "Date": "2023-11-06",
+        "portfolio_return": 0.004344466146249681,
+        "portfolio_equity": 741041049.1926764,
+        "portfolio_drawdown": -0.04304778138701981
+      },
+      {
+        "Date": "2023-11-07",
+        "portfolio_return": -0.0029790594536311605,
+        "portfolio_equity": 738833443.8495501,
+        "portfolio_drawdown": -0.04589859894055226
+      },
+      {
+        "Date": "2023-11-08",
+        "portfolio_return": 0.025910421270521,
+        "portfolio_equity": 757976929.6284418,
+        "portfolio_drawdown": -0.021177429704307693
+      },
+      {
+        "Date": "2023-11-09",
+        "portfolio_return": -0.0032904682228381,
+        "portfolio_equity": 755482830.6278551,
+        "portfolio_drawdown": -0.02439821426766231
+      },
+      {
+        "Date": "2023-11-10",
+        "portfolio_return": 0.02239150575210682,
+        "portfolio_equity": 772399228.7754767,
+        "portfolio_drawdown": -0.0025530212706709188
+      },
+      {
+        "Date": "2023-11-13",
+        "portfolio_return": -0.00020123753580237984,
+        "portfolio_equity": 772243793.0580221,
+        "portfolio_drawdown": -0.002753745042764044
+      },
+      {
+        "Date": "2023-11-14",
+        "portfolio_return": 0.00444502525031822,
+        "portfolio_equity": 775676436.2175667,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-11-15",
+        "portfolio_return": 0.00111186342808602,
+        "portfolio_equity": 776538882.4790251,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-11-16",
+        "portfolio_return": 0.012420449388448822,
+        "portfolio_equity": 786183844.3670183,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-11-17",
+        "portfolio_return": -0.007611049220293621,
+        "portfolio_equity": 780200160.4313413,
+        "portfolio_drawdown": -0.007611049220293653
+      },
+      {
+        "Date": "2023-11-20",
+        "portfolio_return": -0.00080935738240216,
+        "portfolio_equity": 779568699.671745,
+        "portfolio_drawdown": -0.008414246543821391
+      },
+      {
+        "Date": "2023-11-21",
+        "portfolio_return": -0.00444679570410932,
+        "portfolio_equity": 776102116.9269866,
+        "portfolio_drawdown": -0.012823625812546258
+      },
+      {
+        "Date": "2023-11-22",
+        "portfolio_return": 0.0007997982781336799,
+        "portfolio_equity": 776722842.0637606,
+        "portfolio_drawdown": -0.012034083848256993
+      },
+      {
+        "Date": "2023-11-24",
+        "portfolio_return": -0.00092969851818052,
+        "portfolio_equity": 776000723.988457,
+        "portfolio_drawdown": -0.012952594296516184
+      },
+      {
+        "Date": "2023-11-27",
+        "portfolio_return": 0.00202256045161056,
+        "portfolio_equity": 777570232.3632172,
+        "portfolio_drawdown": -0.010956231249875437
+      },
+      {
+        "Date": "2023-11-28",
+        "portfolio_return": -0.00543379844844878,
+        "portfolio_equity": 773345072.441042,
+        "portfolio_drawdown": -0.016330495745957907
+      },
+      {
+        "Date": "2023-11-29",
+        "portfolio_return": 0.004450596708203041,
+        "portfolio_equity": 776786919.4747533,
+        "portfolio_drawdown": -0.011952579488364923
+      },
+      {
+        "Date": "2023-11-30",
+        "portfolio_return": -0.01058374301616132,
+        "portfolio_equity": 768565606.3407168,
+        "portfolio_drawdown": -0.02240981947484122
+      },
+      {
+        "Date": "2023-12-01",
+        "portfolio_return": 0.006916541451482161,
+        "portfolio_equity": 773881422.215156,
+        "portfolio_drawdown": -0.015648276468676947
+      },
+      {
+        "Date": "2023-12-04",
+        "portfolio_return": -0.0067692111834846,
+        "portfolio_equity": 768642855.4372061,
+        "portfolio_drawdown": -0.0223115611640875
+      },
+      {
+        "Date": "2023-12-05",
+        "portfolio_return": 0.01349454870993356,
+        "portfolio_equity": 779015343.890446,
+        "portfolio_drawdown": -0.00911809690307741
+      },
+      {
+        "Date": "2023-12-06",
+        "portfolio_return": 0.0065448575197538,
+        "portfolio_equity": 784113888.321911,
+        "portfolio_drawdown": -0.00263291602840543
+      },
+      {
+        "Date": "2023-12-07",
+        "portfolio_return": 0.0026014398457528203,
+        "portfolio_equity": 786153713.4345996,
+        "portfolio_drawdown": -3.8325555319684845e-05
+      },
+      {
+        "Date": "2023-12-08",
+        "portfolio_return": 0.008486126625240481,
+        "portfolio_equity": 792825113.3937087,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-12-11",
+        "portfolio_return": 0.01289649273966938,
+        "portfolio_equity": 803049776.7124182,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-12-12",
+        "portfolio_return": 0.00684792538379061,
+        "portfolio_equity": 808549001.6628144,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-12-13",
+        "portfolio_return": 0.00228745107019624,
+        "portfolio_equity": 810398517.9419742,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-12-14",
+        "portfolio_return": 0.0035461305803400796,
+        "portfolio_equity": 813272296.9087105,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-12-15",
+        "portfolio_return": 0.0025010033231404,
+        "portfolio_equity": 815306293.625897,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-12-18",
+        "portfolio_return": -0.015425712960803722,
+        "portfolio_equity": 802729612.7652873,
+        "portfolio_drawdown": -0.01542571296080364
+      },
+      {
+        "Date": "2023-12-19",
+        "portfolio_return": 0.0106086602206143,
+        "portfolio_equity": 811245498.4761395,
+        "portfolio_drawdown": -0.00498069888765118
+      },
+      {
+        "Date": "2023-12-20",
+        "portfolio_return": -0.0003672091588373199,
+        "portfolio_equity": 810947601.6990335,
+        "portfolio_drawdown": -0.005346079088239586
+      },
+      {
+        "Date": "2023-12-21",
+        "portfolio_return": 0.00565882985196748,
+        "portfolio_equity": 815536616.1959094,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-12-22",
+        "portfolio_return": 0.00249351389078388,
+        "portfolio_equity": 817570168.0768366,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2023-12-26",
+        "portfolio_return": -5.1360889827862215e-05,
+        "portfolio_equity": 817528176.9455075,
+        "portfolio_drawdown": -5.136088982771181e-05
+      },
+      {
+        "Date": "2023-12-27",
+        "portfolio_return": -0.00362624338454766,
+        "portfolio_equity": 814563620.8021775,
+        "portfolio_drawdown": -0.0036774180272884927
+      },
+      {
+        "Date": "2023-12-28",
+        "portfolio_return": -0.020125737090486043,
+        "portfolio_equity": 798169927.5264386,
+        "portfolio_drawdown": -0.023729144369385446
+      },
+      {
+        "Date": "2023-12-29",
+        "portfolio_return": -0.009515295676157082,
+        "portfolio_equity": 790575104.6662077,
+        "portfolio_drawdown": -0.03301865022072559
+      },
+      {
+        "Date": "2024-01-02",
+        "portfolio_return": -0.00425074243193264,
+        "portfolio_equity": 787214573.5231733,
+        "portfolio_drawdown": -0.03712903887511998
+      },
+      {
+        "Date": "2024-01-03",
+        "portfolio_return": 0.00365900912800904,
+        "portfolio_equity": 790094998.8333964,
+        "portfolio_drawdown": -0.03360588523926911
+      },
+      {
+        "Date": "2024-01-04",
+        "portfolio_return": 0.0252304062240016,
+        "portfolio_equity": 810029416.6095152,
+        "portfolio_drawdown": -0.009223369151371341
+      },
+      {
+        "Date": "2024-01-05",
+        "portfolio_return": 0.0022336833643873803,
+        "portfolio_equity": 811838765.8420603,
+        "portfolio_drawdown": -0.0070102878732209994
+      },
+      {
+        "Date": "2024-01-08",
+        "portfolio_return": 0.005717814160558041,
+        "portfolio_equity": 816480709.0334821,
+        "portfolio_drawdown": -0.001332557235933951
+      },
+      {
+        "Date": "2024-01-09",
+        "portfolio_return": 0.0023041107820636203,
+        "portfolio_equity": 818361971.0385131,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-01-10",
+        "portfolio_return": -0.00019618956938164005,
+        "portfolio_equity": 818201416.9558167,
+        "portfolio_drawdown": -0.0001961895693816107
+      },
+      {
+        "Date": "2024-01-11",
+        "portfolio_return": 0.00323766706687054,
+        "portfolio_equity": 820850480.7375615,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-01-12",
+        "portfolio_return": -0.00550739710113332,
+        "portfolio_equity": 816329731.1794835,
+        "portfolio_drawdown": -0.005507397101133349
+      },
+      {
+        "Date": "2024-01-16",
+        "portfolio_return": 0.01727866928250776,
+        "portfolio_equity": 830434822.6300123,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-01-17",
+        "portfolio_return": 0.0207144969045524,
+        "portfolio_equity": 847636862.1928142,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-01-18",
+        "portfolio_return": 0.00389015933333172,
+        "portfolio_equity": 850934304.6435497,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-01-19",
+        "portfolio_return": 0.0036493756726968802,
+        "portfolio_equity": 854039683.5939791,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-01-22",
+        "portfolio_return": 0.006313656322109021,
+        "portfolio_equity": 859431796.6416342,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-01-23",
+        "portfolio_return": 0.00156794444579454,
+        "portfolio_equity": 860779337.9537178,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-01-24",
+        "portfolio_return": -0.00875188396753826,
+        "portfolio_equity": 853245897.0662924,
+        "portfolio_drawdown": -0.008751883967538343
+      },
+      {
+        "Date": "2024-01-25",
+        "portfolio_return": 0.00842848804531428,
+        "portfolio_equity": 860437469.9094292,
+        "portfolio_drawdown": -0.0003971610716183571
+      },
+      {
+        "Date": "2024-01-26",
+        "portfolio_return": -0.006069440444937921,
+        "portfolio_equity": 855215095.9292208,
+        "portfolio_drawdown": -0.006464190971085082
+      },
+      {
+        "Date": "2024-01-29",
+        "portfolio_return": -0.013679264910513361,
+        "portfolio_equity": 843516382.0765349,
+        "portfolio_drawdown": -0.020055030500872872
+      },
+      {
+        "Date": "2024-01-30",
+        "portfolio_return": 0.01164057501549206,
+        "portfolio_equity": 853335397.7988931,
+        "portfolio_drawdown": -0.008647907572364333
+      },
+      {
+        "Date": "2024-01-31",
+        "portfolio_return": 0.01177328771442992,
+        "portfolio_equity": 863381960.9540868,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-02-01",
+        "portfolio_return": 0.008961958067196261,
+        "portfolio_equity": 871119553.884131,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-02-02",
+        "portfolio_return": -0.00206555044651168,
+        "portfolio_equity": 869320212.5006405,
+        "portfolio_drawdown": -0.002065550446511688
+      },
+      {
+        "Date": "2024-02-05",
+        "portfolio_return": 0.009667409961654879,
+        "portfolio_equity": 877724287.382837,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-02-06",
+        "portfolio_return": 0.0007964310750738402,
+        "portfolio_equity": 878423334.2806559,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-02-07",
+        "portfolio_return": 0.0119052480305005,
+        "portfolio_equity": 888881181.9510462,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-02-08",
+        "portfolio_return": -0.0025097951438406,
+        "portfolio_equity": 886650272.2771341,
+        "portfolio_drawdown": -0.002509795143840754
+      },
+      {
+        "Date": "2024-02-09",
+        "portfolio_return": -0.011951361219215601,
+        "portfolio_equity": 876053594.5980341,
+        "portfolio_drawdown": -0.014431160894706085
+      },
+      {
+        "Date": "2024-02-12",
+        "portfolio_return": 0.01017704607280436,
+        "portfolio_equity": 884969232.3925042,
+        "portfolio_drawdown": -0.004400981411211258
+      },
+      {
+        "Date": "2024-02-13",
+        "portfolio_return": -0.0009730917484938599,
+        "portfolio_equity": 884108076.1347921,
+        "portfolio_drawdown": -0.005369790601008617
+      },
+      {
+        "Date": "2024-02-14",
+        "portfolio_return": -0.00551918254181334,
+        "portfolio_equity": 879228522.2759128,
+        "portfolio_drawdown": -0.010859336288283616
+      },
+      {
+        "Date": "2024-02-15",
+        "portfolio_return": -0.012105397531346882,
+        "portfolio_equity": 868585111.4928643,
+        "portfolio_drawdown": -0.02283327723693418
+      },
+      {
+        "Date": "2024-02-16",
+        "portfolio_return": -0.00458434447436936,
+        "portfolio_equity": 864603218.1364725,
+        "portfolio_drawdown": -0.027312946102970637
+      },
+      {
+        "Date": "2024-02-20",
+        "portfolio_return": 0.04323705069866898,
+        "portfolio_equity": 901986111.3132714,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-02-21",
+        "portfolio_return": -0.0032024649089864004,
+        "portfolio_equity": 899097532.4433978,
+        "portfolio_drawdown": -0.0032024649089861246
+      },
+      {
+        "Date": "2024-02-22",
+        "portfolio_return": -0.00021553745184676039,
+        "portfolio_equity": 898903743.2522931,
+        "portfolio_drawdown": -0.0034173121097069714
+      },
+      {
+        "Date": "2024-02-23",
+        "portfolio_return": 0.0012627682673305198,
+        "portfolio_equity": 900038850.3746567,
+        "portfolio_drawdown": -0.0021588591156681547
+      },
+      {
+        "Date": "2024-02-26",
+        "portfolio_return": -0.0059190638695752204,
+        "portfolio_equity": 894711462.93419,
+        "portfolio_drawdown": -0.008065144560252313
+      },
+      {
+        "Date": "2024-02-27",
+        "portfolio_return": 0.00876905367281296,
+        "portfolio_equity": 902557235.7743409,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-02-28",
+        "portfolio_return": 0.016343381994179042,
+        "portfolio_equity": 917308073.4502112,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-02-29",
+        "portfolio_return": 0.0008549701520373203,
+        "portfolio_equity": 918092344.4732338,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-03-01",
+        "portfolio_return": -0.0118642174792893,
+        "portfolio_equity": 907199897.2323327,
+        "portfolio_drawdown": -0.01186421747928934
+      },
+      {
+        "Date": "2024-03-04",
+        "portfolio_return": 0.009755566572937559,
+        "portfolio_equity": 916050146.2247449,
+        "portfolio_drawdown": -0.002224393069806707
+      },
+      {
+        "Date": "2024-03-05",
+        "portfolio_return": 0.016602609503304683,
+        "portfolio_equity": 931258969.0879596,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-03-06",
+        "portfolio_return": -0.0162399382099772,
+        "portfolio_equity": 916135380.9724842,
+        "portfolio_drawdown": -0.016239938209977045
+      },
+      {
+        "Date": "2024-03-07",
+        "portfolio_return": -0.0036766753458136003,
+        "portfolio_equity": 912767048.6038351,
+        "portfolio_drawdown": -0.019856904575356604
+      },
+      {
+        "Date": "2024-03-08",
+        "portfolio_return": 0.01849930323606518,
+        "portfolio_equity": 929652603.0198457,
+        "portfolio_drawdown": -0.0017249402383604506
+      },
+      {
+        "Date": "2024-03-11",
+        "portfolio_return": -0.009871142794562842,
+        "portfolio_equity": 920475869.4260999,
+        "portfolio_drawdown": -0.01157905590151831
+      },
+      {
+        "Date": "2024-03-12",
+        "portfolio_return": -0.00623430268093908,
+        "portfolio_equity": 914737344.245597,
+        "portfolio_drawdown": -0.017741171243207843
+      },
+      {
+        "Date": "2024-03-13",
+        "portfolio_return": -0.00490395528057634,
+        "portfolio_equity": 910251513.2159436,
+        "portfolio_drawdown": -0.022558124613382247
+      },
+      {
+        "Date": "2024-03-14",
+        "portfolio_return": 0.00428292107850776,
+        "portfolio_equity": 914150048.6086398,
+        "portfolio_drawdown": -0.018371818202272627
+      },
+      {
+        "Date": "2024-03-15",
+        "portfolio_return": 0.0043306730806592,
+        "portfolio_equity": 918108933.6158326,
+        "portfolio_drawdown": -0.014120707460144821
+      },
+      {
+        "Date": "2024-03-18",
+        "portfolio_return": 0.010413630565814042,
+        "portfolio_equity": 927669780.8696814,
+        "portfolio_drawdown": -0.0038541247251485666
+      },
+      {
+        "Date": "2024-03-19",
+        "portfolio_return": -0.0021223600747055198,
+        "portfolio_equity": 925700931.5642525,
+        "portfolio_drawdown": -0.005968304959414805
+      },
+      {
+        "Date": "2024-03-20",
+        "portfolio_return": 0.00551051764643472,
+        "portfolio_equity": 930802022.8829584,
+        "portfolio_drawdown": -0.0004906757627781699
+      },
+      {
+        "Date": "2024-03-21",
+        "portfolio_return": -0.00269101513115724,
+        "portfolio_equity": 928297220.5552685,
+        "portfolio_drawdown": -0.003180370478033323
+      },
+      {
+        "Date": "2024-03-22",
+        "portfolio_return": -0.006115778591567721,
+        "portfolio_equity": 922619960.2871848,
+        "portfolio_drawdown": -0.009276698627918245
+      },
+      {
+        "Date": "2024-03-25",
+        "portfolio_return": 0.0055981484603619,
+        "portfolio_equity": 927784923.7973657,
+        "portfolio_drawdown": -0.003730482503697452
+      },
+      {
+        "Date": "2024-03-26",
+        "portfolio_return": -0.00227944120851946,
+        "portfolio_equity": 925670092.6094189,
+        "portfolio_drawdown": -0.00600142029667039
+      },
+      {
+        "Date": "2024-03-27",
+        "portfolio_return": -0.0011454930569631202,
+        "portfolio_equity": 924609743.9452964,
+        "portfolio_drawdown": -0.007140038768351675
+      },
+      {
+        "Date": "2024-03-28",
+        "portfolio_return": -0.0077163845267505604,
+        "portfolio_equity": 917475099.6238341,
+        "portfolio_drawdown": -0.01480132801042966
+      },
+      {
+        "Date": "2024-04-01",
+        "portfolio_return": 0.0014386509733485204,
+        "portfolio_equity": 918795026.0689311,
+        "portfolio_drawdown": -0.013383970982030147
+      },
+      {
+        "Date": "2024-04-02",
+        "portfolio_return": -0.0135758038509482,
+        "portfolio_equity": 906321645.0157924,
+        "portfolio_drawdown": -0.02677807666817955
+      },
+      {
+        "Date": "2024-04-03",
+        "portfolio_return": 0.00862488002813578,
+        "portfolio_equity": 914138560.4709563,
+        "portfolio_drawdown": -0.018384154338691006
+      },
+      {
+        "Date": "2024-04-04",
+        "portfolio_return": -0.0022664897857593404,
+        "portfolio_equity": 912066674.7608801,
+        "portfolio_drawdown": -0.020608976626421915
+      },
+      {
+        "Date": "2024-04-05",
+        "portfolio_return": 0.00191933763908324,
+        "portfolio_equity": 913817238.6591021,
+        "portfolio_drawdown": -0.018729194571880825
+      },
+      {
+        "Date": "2024-04-08",
+        "portfolio_return": -0.00739394419570752,
+        "portfolio_equity": 907060524.9913813,
+        "portfolio_drawdown": -0.0259846561480932
+      },
+      {
+        "Date": "2024-04-09",
+        "portfolio_return": 0.02193926231026198,
+        "portfolio_equity": 926960763.780451,
+        "portfolio_drawdown": -0.004615478025106312
+      },
+      {
+        "Date": "2024-04-10",
+        "portfolio_return": -0.011781015241407122,
+        "portfolio_equity": 916040224.8941672,
+        "portfolio_drawdown": -0.016342118249553228
+      },
+      {
+        "Date": "2024-04-11",
+        "portfolio_return": -0.015549812759490661,
+        "portfolio_equity": 901795970.9169012,
+        "portfolio_drawdown": -0.03163781413016986
+      },
+      {
+        "Date": "2024-04-12",
+        "portfolio_return": -0.0009794196312248801,
+        "portfolio_equity": 900912734.2396258,
+        "portfolio_drawdown": -0.032586247065146456
+      },
+      {
+        "Date": "2024-04-15",
+        "portfolio_return": -0.01429127152054364,
+        "portfolio_equity": 888037545.738292,
+        "portfolio_drawdown": -0.04641181968104657
+      },
+      {
+        "Date": "2024-04-16",
+        "portfolio_return": -0.0041916867251693,
+        "portfolio_equity": 884315170.5463688,
+        "portfolio_drawdown": -0.05040896259776784
+      },
+      {
+        "Date": "2024-04-17",
+        "portfolio_return": -0.029500852519462162,
+        "portfolio_equity": 858227119.1193573,
+        "portfolio_drawdown": -0.07842270774597426
+      },
+      {
+        "Date": "2024-04-18",
+        "portfolio_return": 0.01371613726830822,
+        "portfolio_equity": 869998680.0925832,
+        "portfolio_drawdown": -0.06578222710206216
+      },
+      {
+        "Date": "2024-04-19",
+        "portfolio_return": 0.014831659268590161,
+        "portfolio_equity": 882902204.0798396,
+        "portfolio_drawdown": -0.05192622741177877
+      },
+      {
+        "Date": "2024-04-22",
+        "portfolio_return": -0.0008242274480664202,
+        "portfolio_equity": 882174491.8492787,
+        "portfolio_drawdown": -0.052707655837937795
+      },
+      {
+        "Date": "2024-04-23",
+        "portfolio_return": 0.007418000772588361,
+        "portfolio_equity": 888718462.9113743,
+        "portfolio_drawdown": -0.04568064049707665
+      },
+      {
+        "Date": "2024-04-24",
+        "portfolio_return": 0.0159577676661579,
+        "portfolio_equity": 902900425.663139,
+        "portfolio_drawdown": -0.03045183387881245
+      },
+      {
+        "Date": "2024-04-25",
+        "portfolio_return": 0.00784484797380206,
+        "portfolio_equity": 909983542.2379475,
+        "portfolio_drawdown": -0.02284587591231313
+      },
+      {
+        "Date": "2024-04-26",
+        "portfolio_return": -0.01486451039196256,
+        "portfolio_equity": 896457082.4178364,
+        "portfolio_drawdown": -0.03737079354436379
+      },
+      {
+        "Date": "2024-04-29",
+        "portfolio_return": -0.013039995052837,
+        "portfolio_equity": 884767286.4980272,
+        "portfolio_drawdown": -0.04992347363426164
+      },
+      {
+        "Date": "2024-04-30",
+        "portfolio_return": 0.016688160422140698,
+        "portfolio_equity": 899532424.9113685,
+        "portfolio_drawdown": -0.03406844414895993
+      },
+      {
+        "Date": "2024-05-01",
+        "portfolio_return": 0.02613782587062086,
+        "portfolio_equity": 923044246.7986791,
+        "portfolio_drawdown": -0.008821093339187569
+      },
+      {
+        "Date": "2024-05-02",
+        "portfolio_return": 0.0100808957618917,
+        "portfolio_equity": 932349359.6342704,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-05-03",
+        "portfolio_return": -0.00267056731964754,
+        "portfolio_equity": 929859457.9039369,
+        "portfolio_drawdown": -0.0026705673196475432
+      },
+      {
+        "Date": "2024-05-06",
+        "portfolio_return": -0.0001447216857266,
+        "portfolio_equity": 929724887.0757003,
+        "portfolio_drawdown": -0.0028149025163696217
+      },
+      {
+        "Date": "2024-05-07",
+        "portfolio_return": 0.0002478069929440197,
+        "portfolio_equity": 929955279.4042314,
+        "portfolio_drawdown": -0.0025677930759540057
+      },
+      {
+        "Date": "2024-05-08",
+        "portfolio_return": 0.0021998177145310625,
+        "portfolio_equity": 932001011.5015866,
+        "portfolio_drawdown": -0.0003736240381185807
+      },
+      {
+        "Date": "2024-05-09",
+        "portfolio_return": 0.00533007219283014,
+        "portfolio_equity": 936968644.1766808,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-05-10",
+        "portfolio_return": 0.007455260607925361,
+        "portfolio_equity": 943953989.6004725,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-05-13",
+        "portfolio_return": 0.01742367743937974,
+        "portfolio_equity": 960401139.4328866,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-05-14",
+        "portfolio_return": -0.0020077106979509603,
+        "portfolio_equity": 958472931.7909229,
+        "portfolio_drawdown": -0.002007710697951026
+      },
+      {
+        "Date": "2024-05-15",
+        "portfolio_return": -0.0038941440460789002,
+        "portfolio_equity": 954740500.1302614,
+        "portfolio_drawdown": -0.005894036429369254
+      },
+      {
+        "Date": "2024-05-16",
+        "portfolio_return": 0.0095548499040661,
+        "portfolio_equity": 963862902.3063391,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-05-17",
+        "portfolio_return": 0.0028345257985236396,
+        "portfolio_equity": 966594996.5691663,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-05-20",
+        "portfolio_return": -0.0010103799968939602,
+        "portfolio_equity": 965618368.3195351,
+        "portfolio_drawdown": -0.0010103799968939065
+      },
+      {
+        "Date": "2024-05-21",
+        "portfolio_return": 0.008394019630823521,
+        "portfolio_equity": 973723787.8590931,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-05-22",
+        "portfolio_return": 0.01329500836657892,
+        "portfolio_equity": 986669453.7654165,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-05-23",
+        "portfolio_return": 0.014567627703000931,
+        "portfolio_equity": 1001042887.0337943,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-05-24",
+        "portfolio_return": -0.0048007375222658,
+        "portfolio_equity": 996237142.8846139,
+        "portfolio_drawdown": -0.004800737522265841
+      },
+      {
+        "Date": "2024-05-28",
+        "portfolio_return": -0.0092054958421367,
+        "portfolio_equity": 987066286.0080074,
+        "portfolio_drawdown": -0.013962040195102055
+      },
+      {
+        "Date": "2024-05-29",
+        "portfolio_return": -0.0001469969552540004,
+        "portfolio_equity": 986921190.2693303,
+        "portfolio_drawdown": -0.014106984772958353
+      },
+      {
+        "Date": "2024-05-30",
+        "portfolio_return": 0.01161261382844304,
+        "portfolio_equity": 998381924.9310356,
+        "portfolio_drawdown": -0.0026581899109671125
+      },
+      {
+        "Date": "2024-05-31",
+        "portfolio_return": 0.0023187698428916203,
+        "portfolio_equity": 1000696942.8302538,
+        "portfolio_drawdown": -0.0003455837986776622
+      },
+      {
+        "Date": "2024-06-03",
+        "portfolio_return": 0.02273873402437106,
+        "portfolio_equity": 1023451524.4522722,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-06-04",
+        "portfolio_return": -0.004543281438490179,
+        "portfolio_equity": 1018801696.1380339,
+        "portfolio_drawdown": -0.004543281438490032
+      },
+      {
+        "Date": "2024-06-05",
+        "portfolio_return": -0.00011074136261270031,
+        "portfolio_equity": 1018688872.6499714,
+        "portfolio_drawdown": -0.00465351967192551
+      },
+      {
+        "Date": "2024-06-06",
+        "portfolio_return": 0.0014216018640300998,
+        "portfolio_equity": 1020137042.6501973,
+        "portfolio_drawdown": -0.0032385332601353456
+      },
+      {
+        "Date": "2024-06-07",
+        "portfolio_return": 0.01305033378430652,
+        "portfolio_equity": 1033450171.5625174,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-06-10",
+        "portfolio_return": 0.019364881991214743,
+        "portfolio_equity": 1053462812.1786263,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-06-11",
+        "portfolio_return": 0.01046822483896844,
+        "portfolio_equity": 1064490697.7560041,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-06-12",
+        "portfolio_return": 0.0022272100830449,
+        "portfolio_equity": 1066861542.1713538,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-06-13",
+        "portfolio_return": 0.0075954394255503795,
+        "portfolio_equity": 1074964824.3903656,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-06-14",
+        "portfolio_return": 0.00701623567830316,
+        "portfolio_equity": 1082507030.9441743,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-06-17",
+        "portfolio_return": -0.01582899521843022,
+        "portfolio_equity": 1065372032.3274418,
+        "portfolio_drawdown": -0.015828995218430286
+      },
+      {
+        "Date": "2024-06-18",
+        "portfolio_return": -0.009229048275288362,
+        "portfolio_equity": 1055539662.4099498,
+        "portfolio_drawdown": -0.02491195693269843
+      },
+      {
+        "Date": "2024-06-20",
+        "portfolio_return": -0.016537474174726483,
+        "portfolio_equity": 1038083702.5024457,
+        "portfolio_drawdown": -0.041037450263008535
+      },
+      {
+        "Date": "2024-06-21",
+        "portfolio_return": 0.015892618333748464,
+        "portfolio_equity": 1054581570.5848016,
+        "portfolio_drawdown": -0.025797024463680263
+      },
+      {
+        "Date": "2024-06-24",
+        "portfolio_return": 0.0024518030128391007,
+        "portfolio_equity": 1057167196.856846,
+        "portfolio_drawdown": -0.023408470673143444
+      },
+      {
+        "Date": "2024-06-25",
+        "portfolio_return": -0.00205935393761682,
+        "portfolio_equity": 1054990115.4272796,
+        "portfolio_drawdown": -0.025419618284505896
+      },
+      {
+        "Date": "2024-06-26",
+        "portfolio_return": -0.0035027225561361994,
+        "portfolio_equity": 1051294777.7534719,
+        "portfolio_drawdown": -0.028833302970308394
+      },
+      {
+        "Date": "2024-06-27",
+        "portfolio_return": 0.0051284397127997,
+        "portfolio_equity": 1056686279.6415616,
+        "portfolio_drawdown": -0.02385273311351288
+      },
+      {
+        "Date": "2024-06-28",
+        "portfolio_return": 0.00644025165690874,
+        "portfolio_equity": 1063491605.2048558,
+        "portfolio_drawdown": -0.01756609906056039
+      },
+      {
+        "Date": "2024-07-01",
+        "portfolio_return": 0.01208443982207508,
+        "portfolio_equity": 1076343305.509236,
+        "portfolio_drawdown": -0.005693935705491149
+      },
+      {
+        "Date": "2024-07-02",
+        "portfolio_return": 0.004861773660798581,
+        "portfolio_equity": 1081576243.0419376,
+        "portfolio_drawdown": -0.000859844671331933
+      },
+      {
+        "Date": "2024-07-03",
+        "portfolio_return": 0.006702476127009341,
+        "portfolio_equity": 1088825481.9904666,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-07-05",
+        "portfolio_return": 0.00355259954827394,
+        "portfolio_equity": 1092693642.905935,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-07-08",
+        "portfolio_return": 0.01303029422613714,
+        "portfolio_equity": 1106931762.5720289,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-07-09",
+        "portfolio_return": -0.01913258650042384,
+        "portfolio_equity": 1085753294.8745532,
+        "portfolio_drawdown": -0.0191325865004236
+      },
+      {
+        "Date": "2024-07-10",
+        "portfolio_return": 0.00789191286945194,
+        "portfolio_equity": 1094321965.2754233,
+        "portfolio_drawdown": -0.011391666336600492
+      },
+      {
+        "Date": "2024-07-11",
+        "portfolio_return": 0.0023232452408302206,
+        "portfolio_equity": 1096864343.5731854,
+        "portfolio_drawdown": -0.009094886730371843
+      },
+      {
+        "Date": "2024-07-12",
+        "portfolio_return": 0.0009914991531967197,
+        "portfolio_equity": 1097951883.6410098,
+        "portfolio_drawdown": -0.008112405149666824
+      },
+      {
+        "Date": "2024-07-15",
+        "portfolio_return": -0.029403609639968985,
+        "portfolio_equity": 1065668135.050961,
+        "portfolio_drawdown": -0.03727748079537363
+      },
+      {
+        "Date": "2024-07-16",
+        "portfolio_return": -0.0019643209709233798,
+        "portfolio_equity": 1063574820.7852355,
+        "portfolio_drawdown": -0.039168576829027524
+      },
+      {
+        "Date": "2024-07-17",
+        "portfolio_return": -0.010667347114519027,
+        "portfolio_equity": 1052229298.989657,
+        "portfolio_drawdown": -0.04941809913852957
+      },
+      {
+        "Date": "2024-07-18",
+        "portfolio_return": 0.01573067781105474,
+        "portfolio_equity": 1068781579.0754153,
+        "portfolio_drawdown": -0.034464801523057864
+      },
+      {
+        "Date": "2024-07-19",
+        "portfolio_return": -0.0031787881144782204,
+        "portfolio_equity": 1065384148.894877,
+        "portfolio_drawdown": -0.03753403333608685
+      },
+      {
+        "Date": "2024-07-22",
+        "portfolio_return": -0.030506098901018863,
+        "portfolio_equity": 1032883434.681112,
+        "portfolio_drawdown": -0.06689511530400094
+      },
+      {
+        "Date": "2024-07-23",
+        "portfolio_return": -0.00847205047555484,
+        "portfolio_equity": 1024132794.0871292,
+        "portfolio_drawdown": -0.0748004269861322
+      },
+      {
+        "Date": "2024-07-24",
+        "portfolio_return": 0.00818046724252828,
+        "portfolio_equity": 1032510678.8611579,
+        "portfolio_drawdown": -0.06723186218629118
+      },
+      {
+        "Date": "2024-07-25",
+        "portfolio_return": -0.0009472079558728201,
+        "portfolio_equity": 1031532676.531617,
+        "portfolio_drawdown": -0.06811538758741287
+      },
+      {
+        "Date": "2024-07-26",
+        "portfolio_return": -0.014871115379618279,
+        "portfolio_equity": 1016192635.0810689,
+        "portfolio_drawdown": -0.08197355117909133
+      },
+      {
+        "Date": "2024-07-29",
+        "portfolio_return": 0.0338044145062649,
+        "portfolio_equity": 1050544432.1355628,
+        "portfolio_drawdown": -0.05094020457543513
+      },
+      {
+        "Date": "2024-07-30",
+        "portfolio_return": -0.023634558000931862,
+        "portfolio_equity": 1025715278.8216988,
+        "portfolio_drawdown": -0.07337081335674955
+      },
+      {
+        "Date": "2024-07-31",
+        "portfolio_return": -0.01088682051549134,
+        "portfolio_equity": 1014548500.6811699,
+        "portfolio_drawdown": -0.08345885899615024
+      },
+      {
+        "Date": "2024-08-01",
+        "portfolio_return": -0.023439561663751402,
+        "portfolio_equity": 990767928.5385871,
+        "portfolio_drawdown": -0.104942181588075
+      },
+      {
+        "Date": "2024-08-02",
+        "portfolio_return": 0.0038479747367779404,
+        "portfolio_equity": 994580378.4976133,
+        "portfolio_drawdown": -0.10149802171487043
+      },
+      {
+        "Date": "2024-08-05",
+        "portfolio_return": -0.009825535255819442,
+        "portfolio_equity": 984808093.9239388,
+        "portfolio_drawdown": -0.11032628457993443
+      },
+      {
+        "Date": "2024-08-06",
+        "portfolio_return": 0.02134222484514616,
+        "portfolio_equity": 1005826089.6937835,
+        "portfolio_drawdown": -0.09133866810662261
+      },
+      {
+        "Date": "2024-08-07",
+        "portfolio_return": 0.0031914095119689595,
+        "portfolio_equity": 1009036092.6438187,
+        "portfolio_drawdown": -0.08843875768885978
+      },
+      {
+        "Date": "2024-08-08",
+        "portfolio_return": 0.00669931369901894,
+        "portfolio_equity": 1015795941.962072,
+        "portfolio_drawdown": -0.0823319229707501
+      },
+      {
+        "Date": "2024-08-09",
+        "portfolio_return": 0.0208966020140993,
+        "portfolio_equity": 1037022625.4887905,
+        "portfolio_drawdown": -0.06315577838402597
+      },
+      {
+        "Date": "2024-08-12",
+        "portfolio_return": 0.0035109045535636403,
+        "portfolio_equity": 1040663512.9467677,
+        "portfolio_drawdown": -0.05986660774037467
+      },
+      {
+        "Date": "2024-08-13",
+        "portfolio_return": 0.01413618304263332,
+        "portfolio_equity": 1055374522.8515732,
+        "portfolio_drawdown": -0.04657671002290065
+      },
+      {
+        "Date": "2024-08-14",
+        "portfolio_return": 0.0037493502373811428,
+        "portfolio_equity": 1059331491.5693527,
+        "portfolio_drawdown": -0.04300199218430034
+      },
+      {
+        "Date": "2024-08-15",
+        "portfolio_return": 0.01212507177366438,
+        "portfolio_equity": 1072175961.936734,
+        "portfolio_drawdown": -0.03139832265228126
+      },
+      {
+        "Date": "2024-08-16",
+        "portfolio_return": -0.00574980549493894,
+        "portfolio_equity": 1066011158.6992487,
+        "portfolio_drawdown": -0.0369675938991022
+      },
+      {
+        "Date": "2024-08-19",
+        "portfolio_return": 0.005139271331062381,
+        "portfolio_equity": 1071489679.2857443,
+        "portfolio_drawdown": -0.03201830906354386
+      },
+      {
+        "Date": "2024-08-20",
+        "portfolio_return": -0.01697935835721814,
+        "portfolio_equity": 1053296472.0450909,
+        "portfolio_drawdown": -0.04845401707717989
+      },
+      {
+        "Date": "2024-08-21",
+        "portfolio_return": 0.01763193228189658,
+        "portfolio_equity": 1071868124.1129506,
+        "portfolio_drawdown": -0.03167642274317406
+      },
+      {
+        "Date": "2024-08-22",
+        "portfolio_return": -0.00930838858377786,
+        "portfolio_equity": 1061890759.1031421,
+        "portfolio_drawdown": -0.0406899548751144
+      },
+      {
+        "Date": "2024-08-23",
+        "portfolio_return": 0.00521487719003972,
+        "portfolio_equity": 1067428389.0011032,
+        "portfolio_drawdown": -0.03568727080261658
+      },
+      {
+        "Date": "2024-08-26",
+        "portfolio_return": -0.0105010412851105,
+        "portfolio_equity": 1056219279.4193034,
+        "portfolio_drawdown": -0.045813558583676084
+      },
+      {
+        "Date": "2024-08-27",
+        "portfolio_return": -0.009393554025277157,
+        "portfolio_equity": 1046297626.5555389,
+        "portfolio_drawdown": -0.054776760471307306
+      },
+      {
+        "Date": "2024-08-28",
+        "portfolio_return": 0.00993284255036124,
+        "portfolio_equity": 1056690336.1409318,
+        "portfolio_drawdown": -0.04538800685812627
+      },
+      {
+        "Date": "2024-08-29",
+        "portfolio_return": -0.03971746108741533,
+        "portfolio_equity": 1014721278.8338065,
+        "portfolio_drawdown": -0.08330277154931864
+      },
+      {
+        "Date": "2024-08-30",
+        "portfolio_return": -0.0037822083965154607,
+        "portfolio_equity": 1010883391.4928784,
+        "portfolio_drawdown": -0.08676991150382718
+      },
+      {
+        "Date": "2024-09-03",
+        "portfolio_return": 0.0016164686383491399,
+        "portfolio_equity": 1012517452.7922546,
+        "portfolio_drawdown": -0.0852937037061765
+      },
+      {
+        "Date": "2024-09-04",
+        "portfolio_return": -0.0218041966873053,
+        "portfolio_equity": 990440323.102243,
+        "portfolio_drawdown": -0.1052381397016835
+      },
+      {
+        "Date": "2024-09-05",
+        "portfolio_return": 0.0132596483156671,
+        "portfolio_equity": 1003573213.4642345,
+        "portfolio_drawdown": -0.09337391210785573
+      },
+      {
+        "Date": "2024-09-06",
+        "portfolio_return": 0.0064329620826214405,
+        "portfolio_equity": 1010029161.8935844,
+        "portfolio_drawdown": -0.08754162086133022
+      },
+      {
+        "Date": "2024-09-09",
+        "portfolio_return": 0.027190545966227005,
+        "portfolio_equity": 1037492406.2472814,
+        "portfolio_drawdown": -0.0627313793610913
+      },
+      {
+        "Date": "2024-09-10",
+        "portfolio_return": 0.00528058870555664,
+        "portfolio_equity": 1042970976.9298117,
+        "portfolio_drawdown": -0.05778204926887276
+      },
+      {
+        "Date": "2024-09-11",
+        "portfolio_return": 0.003249963928520569,
+        "portfolio_equity": 1046360594.9833276,
+        "portfolio_drawdown": -0.0547198749161919
+      },
+      {
+        "Date": "2024-09-12",
+        "portfolio_return": -0.00830447679795148,
+        "portfolio_equity": 1037671117.6999979,
+        "portfolio_drawdown": -0.06256993178251502
+      },
+      {
+        "Date": "2024-09-13",
+        "portfolio_return": -0.00138904814505808,
+        "portfolio_equity": 1036229742.5587764,
+        "portfolio_drawdown": -0.06387206727989425
+      },
+      {
+        "Date": "2024-09-16",
+        "portfolio_return": -0.0032253268870795,
+        "portfolio_equity": 1032887562.90891,
+        "portfolio_drawdown": -0.0668913858710426
+      },
+      {
+        "Date": "2024-09-17",
+        "portfolio_return": 0.02163953291341562,
+        "portfolio_equity": 1055238767.322335,
+        "portfolio_drawdown": -0.046699351303807424
+      },
+      {
+        "Date": "2024-09-18",
+        "portfolio_return": -0.0044837980739965404,
+        "portfolio_equity": 1050507289.7698087,
+        "portfolio_drawdown": -0.050973758916371015
+      },
+      {
+        "Date": "2024-09-19",
+        "portfolio_return": 0.00025230428566431996,
+        "portfolio_equity": 1050772337.2611393,
+        "portfolio_drawdown": -0.05073431552853758
+      },
+      {
+        "Date": "2024-09-20",
+        "portfolio_return": 0.00948923116991636,
+        "portfolio_equity": 1060743358.8763635,
+        "portfolio_drawdown": -0.04172651400691907
+      },
+      {
+        "Date": "2024-09-23",
+        "portfolio_return": 0.00258856676827014,
+        "portfolio_equity": 1063489163.8848143,
+        "portfolio_drawdown": -0.0392459591061628
+      },
+      {
+        "Date": "2024-09-24",
+        "portfolio_return": 0.00648082185360946,
+        "portfolio_equity": 1070381447.6991956,
+        "portfolio_drawdown": -0.03301948332199467
+      },
+      {
+        "Date": "2024-09-25",
+        "portfolio_return": -0.00525223977851406,
+        "portfolio_equity": 1064759547.6814065,
+        "portfolio_drawdown": -0.038098296856738934
+      },
+      {
+        "Date": "2024-09-26",
+        "portfolio_return": 0.0034569055477002464,
+        "portfolio_equity": 1068440320.8687531,
+        "portfolio_drawdown": -0.03477309352280067
+      },
+      {
+        "Date": "2024-09-27",
+        "portfolio_return": -0.0161749792811138,
+        "portfolio_equity": 1051158320.8155944,
+        "portfolio_drawdown": -0.050385618736642934
+      },
+      {
+        "Date": "2024-09-30",
+        "portfolio_return": 0.004953612331495065,
+        "portfolio_equity": 1056365351.6359402,
+        "portfolio_drawdown": -0.0456815972274518
+      },
+      {
+        "Date": "2024-10-01",
+        "portfolio_return": 0.00423704394224836,
+        "portfolio_equity": 1060841218.0498903,
+        "portfolio_drawdown": -0.04163810822000824
+      },
+      {
+        "Date": "2024-10-02",
+        "portfolio_return": 0.00912939783558156,
+        "portfolio_equity": 1070526059.5698507,
+        "portfolio_drawdown": -0.0328888412394881
+      },
+      {
+        "Date": "2024-10-03",
+        "portfolio_return": -0.003351074370782901,
+        "portfolio_equity": 1066938647.128371,
+        "portfolio_drawdown": -0.03612970265730853
+      },
+      {
+        "Date": "2024-10-04",
+        "portfolio_return": 0.016802142881626982,
+        "portfolio_equity": 1084865502.7233515,
+        "portfolio_drawdown": -0.019934616202000544
+      },
+      {
+        "Date": "2024-10-07",
+        "portfolio_return": 0.0060921201902155,
+        "portfolio_equity": 1091474633.7561607,
+        "portfolio_drawdown": -0.01396394008963342
+      },
+      {
+        "Date": "2024-10-08",
+        "portfolio_return": 0.0005226659775236604,
+        "portfolio_equity": 1092045110.4125552,
+        "portfolio_drawdown": -0.013448572588506735
+      },
+      {
+        "Date": "2024-10-09",
+        "portfolio_return": 0.0019414301034747497,
+        "portfolio_equity": 1094165239.6642625,
+        "portfolio_drawdown": -0.011533251948704137
+      },
+      {
+        "Date": "2024-10-10",
+        "portfolio_return": 0.012473670464524,
+        "portfolio_equity": 1107813496.2975717,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-10-11",
+        "portfolio_return": -0.0189016645503304,
+        "portfolio_equity": 1086873977.2062263,
+        "portfolio_drawdown": -0.018901664550330377
+      },
+      {
+        "Date": "2024-10-14",
+        "portfolio_return": 0.004020872023803589,
+        "portfolio_equity": 1091244158.374575,
+        "portfolio_drawdown": -0.014956793700720561
+      },
+      {
+        "Date": "2024-10-15",
+        "portfolio_return": 0.0026665835767710824,
+        "portfolio_equity": 1094154052.1255438,
+        "portfolio_drawdown": -0.012330093664393083
+      },
+      {
+        "Date": "2024-10-16",
+        "portfolio_return": 0.00519621106850074,
+        "portfolio_equity": 1099839507.5218434,
+        "portfolio_drawdown": -0.007197952365066929
+      },
+      {
+        "Date": "2024-10-17",
+        "portfolio_return": 0.00601296232333878,
+        "portfolio_equity": 1106452801.0422916,
+        "portfolio_drawdown": -0.0012282710581046352
+      },
+      {
+        "Date": "2024-10-18",
+        "portfolio_return": -0.0012715764132543799,
+        "portfolio_equity": 1105045861.7581072,
+        "portfolio_drawdown": -0.002498285630852304
+      },
+      {
+        "Date": "2024-10-21",
+        "portfolio_return": -0.01320275488595598,
+        "portfolio_equity": 1090456212.107575,
+        "portfolio_drawdown": -0.01566805626398904
+      },
+      {
+        "Date": "2024-10-22",
+        "portfolio_return": 0.0034086942539508004,
+        "portfolio_equity": 1094173243.9319708,
+        "portfolio_drawdown": -0.012312769623396003
+      },
+      {
+        "Date": "2024-10-23",
+        "portfolio_return": 0.00344612310776214,
+        "portfolio_equity": 1097943899.63178,
+        "portfolio_drawdown": -0.008909077835553503
+      },
+      {
+        "Date": "2024-10-24",
+        "portfolio_return": 0.00055482659244722,
+        "portfolio_equity": 1098553068.104311,
+        "portfolio_drawdown": -0.008359194236403522
+      },
+      {
+        "Date": "2024-10-25",
+        "portfolio_return": 0.005447505619064881,
+        "portfolio_equity": 1104537442.1156502,
+        "portfolio_drawdown": -0.0029572253749122757
+      },
+      {
+        "Date": "2024-10-28",
+        "portfolio_return": -0.010146037172777782,
+        "portfolio_equity": 1093330764.16922,
+        "portfolio_drawdown": -0.013073258429107892
+      },
+      {
+        "Date": "2024-10-29",
+        "portfolio_return": -0.021433544171940044,
+        "portfolio_equity": 1069896810.9408581,
+        "portfolio_drawdown": -0.03422659633903635
+      },
+      {
+        "Date": "2024-10-30",
+        "portfolio_return": 0.0028291298401881804,
+        "portfolio_equity": 1072923687.934613,
+        "portfolio_drawdown": -0.03149429798387915
+      },
+      {
+        "Date": "2024-10-31",
+        "portfolio_return": -0.0004736685411568999,
+        "portfolio_equity": 1072415477.7365763,
+        "portfolio_drawdown": -0.03195304866685522
+      },
+      {
+        "Date": "2024-11-01",
+        "portfolio_return": 0.0106402723353468,
+        "portfolio_equity": 1083826270.4763346,
+        "portfolio_drawdown": -0.021652765471268265
+      },
+      {
+        "Date": "2024-11-04",
+        "portfolio_return": 0.01725730492110248,
+        "portfolio_equity": 1102530190.907446,
+        "portfolio_drawdown": -0.004769128926288668
+      },
+      {
+        "Date": "2024-11-05",
+        "portfolio_return": 0.015067387730166021,
+        "portfolio_equity": 1119142440.7780623,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-11-06",
+        "portfolio_return": -0.0014149791810908,
+        "portfolio_equity": 1117558877.5236862,
+        "portfolio_drawdown": -0.001414979181090903
+      },
+      {
+        "Date": "2024-11-07",
+        "portfolio_return": -0.009464817875124681,
+        "portfolio_equity": 1106981386.283196,
+        "portfolio_drawdown": -0.01086640453596921
+      },
+      {
+        "Date": "2024-11-08",
+        "portfolio_return": -0.0004924827622746,
+        "portfolio_equity": 1106436217.0322924,
+        "portfolio_drawdown": -0.011353535781322144
+      },
+      {
+        "Date": "2024-11-11",
+        "portfolio_return": -0.005632820116792041,
+        "portfolio_equity": 1100203860.8510456,
+        "portfolio_drawdown": -0.016922403473368486
+      },
+      {
+        "Date": "2024-11-12",
+        "portfolio_return": 0.0004338184881695197,
+        "portfolio_equity": 1100681149.6266384,
+        "portfolio_drawdown": -0.01649592623668983
+      },
+      {
+        "Date": "2024-11-13",
+        "portfolio_return": -0.019261055264153122,
+        "portfolio_equity": 1079480869.1754682,
+        "portfolio_drawdown": -0.03543925255396463
+      },
+      {
+        "Date": "2024-11-14",
+        "portfolio_return": 0.00483893012700974,
+        "portfolio_equity": 1084704401.674852,
+        "portfolio_drawdown": -0.030771810493817053
+      },
+      {
+        "Date": "2024-11-15",
+        "portfolio_return": 0.00977973186904738,
+        "portfolio_equity": 1095312519.8804073,
+        "portfolio_drawdown": -0.021293018680524467
+      },
+      {
+        "Date": "2024-11-18",
+        "portfolio_return": -0.00212387758678534,
+        "portfolio_equity": 1092986210.168908,
+        "portfolio_drawdown": -0.023371672502179086
+      },
+      {
+        "Date": "2024-11-19",
+        "portfolio_return": 0.00439095817333236,
+        "portfolio_equity": 1097785466.9017887,
+        "portfolio_drawdown": -0.019083338365244784
+      },
+      {
+        "Date": "2024-11-20",
+        "portfolio_return": -0.0028496643561782206,
+        "portfolio_equity": 1094657146.7860281,
+        "portfolio_drawdown": -0.02187862161228671
+      },
+      {
+        "Date": "2024-11-21",
+        "portfolio_return": -0.00025456153012365975,
+        "portfolio_equity": 1094378489.1877816,
+        "portfolio_drawdown": -0.022127613687015657
+      },
+      {
+        "Date": "2024-11-22",
+        "portfolio_return": 0.0019092856058636602,
+        "portfolio_equity": 1096467970.2845545,
+        "portfolio_drawdown": -0.020260576015456833
+      },
+      {
+        "Date": "2024-11-25",
+        "portfolio_return": -0.005186836932969333,
+        "portfolio_equity": 1090780769.7204647,
+        "portfolio_drawdown": -0.025342324644465952
+      },
+      {
+        "Date": "2024-11-26",
+        "portfolio_return": 0.01001903870700168,
+        "portfolio_equity": 1101709344.473147,
+        "portfolio_drawdown": -0.015577191669002732
+      },
+      {
+        "Date": "2024-11-27",
+        "portfolio_return": 0.008260480245107941,
+        "portfolio_equity": 1110809992.749018,
+        "portfolio_drawdown": -0.007445386507951013
+      },
+      {
+        "Date": "2024-11-29",
+        "portfolio_return": 0.003154444665237623,
+        "portfolio_equity": 1114313981.404738,
+        "portfolio_drawdown": -0.0043144279024638355
+      },
+      {
+        "Date": "2024-12-02",
+        "portfolio_return": 0.01105885289484318,
+        "portfolio_equity": 1126637015.8037598,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-12-03",
+        "portfolio_return": -0.004473822907787783,
+        "portfolio_equity": 1121596641.3136954,
+        "portfolio_drawdown": -0.004473822907787639
+      },
+      {
+        "Date": "2024-12-04",
+        "portfolio_return": 0.0005010651281636201,
+        "portfolio_equity": 1122158634.2785232,
+        "portfolio_drawdown": -0.003974999456272665
+      },
+      {
+        "Date": "2024-12-05",
+        "portfolio_return": -0.0045504740470094,
+        "portfolio_equity": 1117052280.5366113,
+        "portfolio_drawdown": -0.008507385371419374
+      },
+      {
+        "Date": "2024-12-06",
+        "portfolio_return": -0.00912477566515952,
+        "portfolio_equity": 1106859429.0704598,
+        "portfolio_drawdown": -0.01755453305356769
+      },
+      {
+        "Date": "2024-12-09",
+        "portfolio_return": 0.01251392727742946,
+        "portfolio_equity": 1120710587.4721847,
+        "portfolio_drawdown": -0.005260281926159793
+      },
+      {
+        "Date": "2024-12-10",
+        "portfolio_return": -0.00513212854525612,
+        "portfolio_equity": 1114958956.675248,
+        "portfolio_drawdown": -0.010365414028386644
+      },
+      {
+        "Date": "2024-12-11",
+        "portfolio_return": 0.0025568167811741314,
+        "portfolio_equity": 1117809702.4459956,
+        "portfolio_drawdown": -0.00783509971174412
+      },
+      {
+        "Date": "2024-12-12",
+        "portfolio_return": 0.00583389884483276,
+        "portfolio_equity": 1124330891.177838,
+        "portfolio_drawdown": -0.0020469100460688283
+      },
+      {
+        "Date": "2024-12-13",
+        "portfolio_return": -0.00451422042888934,
+        "portfolio_equity": 1119255413.7000515,
+        "portfolio_drawdown": -0.006551890271812244
+      },
+      {
+        "Date": "2024-12-16",
+        "portfolio_return": -0.024315640931563423,
+        "portfolio_equity": 1092040000.9498127,
+        "portfolio_drawdown": -0.03070821779210331
+      },
+      {
+        "Date": "2024-12-17",
+        "portfolio_return": -0.0013442824147867996,
+        "portfolio_equity": 1090571990.780292,
+        "portfolio_drawdown": -0.03201121968972276
+      },
+      {
+        "Date": "2024-12-18",
+        "portfolio_return": 0.014328558490352823,
+        "portfolio_equity": 1106198315.3381279,
+        "portfolio_drawdown": -0.018141335833041783
+      },
+      {
+        "Date": "2024-12-19",
+        "portfolio_return": 0.01573342075252126,
+        "portfolio_equity": 1123602598.869073,
+        "portfolio_drawdown": -0.0026933403501944175
+      },
+      {
+        "Date": "2024-12-20",
+        "portfolio_return": 0.008630599997587321,
+        "portfolio_equity": 1133299963.4561615,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2024-12-23",
+        "portfolio_return": -3.6088783668220036e-05,
+        "portfolio_equity": 1133259064.038949,
+        "portfolio_drawdown": -3.608878366834212e-05
+      },
+      {
+        "Date": "2024-12-24",
+        "portfolio_return": -0.01198454740216488,
+        "portfolio_equity": 1119677467.0670412,
+        "portfolio_drawdown": -0.012020203678094754
+      },
+      {
+        "Date": "2024-12-26",
+        "portfolio_return": -0.00877607822985854,
+        "portfolio_equity": 1109851090.0238512,
+        "portfolio_drawdown": -0.02069079166013521
+      },
+      {
+        "Date": "2024-12-27",
+        "portfolio_return": -0.00945230287164644,
+        "portfolio_equity": 1099360441.3785186,
+        "portfolio_drawdown": -0.02994751890235614
+      },
+      {
+        "Date": "2024-12-30",
+        "portfolio_return": 0.0022793299920290796,
+        "portfolio_equity": 1101866246.604603,
+        "portfolio_drawdown": -0.027736449188347945
+      },
+      {
+        "Date": "2024-12-31",
+        "portfolio_return": 0.01813637231808192,
+        "portfolio_equity": 1121850103.0977516,
+        "portfolio_drawdown": -0.010103115439527466
+      },
+      {
+        "Date": "2025-01-02",
+        "portfolio_return": 0.01596543972964198,
+        "portfolio_equity": 1139760933.3044515,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-01-03",
+        "portfolio_return": -0.02114626243184054,
+        "portfolio_equity": 1115659249.4992359,
+        "portfolio_drawdown": -0.0211462624318407
+      },
+      {
+        "Date": "2025-01-06",
+        "portfolio_return": -0.0012707750023741597,
+        "portfolio_equity": 1114241497.6138048,
+        "portfolio_drawdown": -0.02239016529252269
+      },
+      {
+        "Date": "2025-01-07",
+        "portfolio_return": -0.0193451032578464,
+        "portfolio_equity": 1092686380.7882884,
+        "portfolio_drawdown": -0.04130212849082504
+      },
+      {
+        "Date": "2025-01-08",
+        "portfolio_return": -0.00666962703668246,
+        "portfolio_equity": 1085398570.160368,
+        "portfolio_drawdown": -0.04769628573465268
+      },
+      {
+        "Date": "2025-01-10",
+        "portfolio_return": -0.0016168719718729,
+        "portfolio_equity": 1083643619.6339648,
+        "portfolio_drawdown": -0.04923603891895867
+      },
+      {
+        "Date": "2025-01-13",
+        "portfolio_return": 0.019904030267970562,
+        "portfolio_equity": 1105212495.0388522,
+        "portfolio_drawdown": -0.03031200425990621
+      },
+      {
+        "Date": "2025-01-14",
+        "portfolio_return": -0.01093124470554752,
+        "portfolio_equity": 1093131146.803954,
+        "portfolio_drawdown": -0.04091190102937303
+      },
+      {
+        "Date": "2025-01-15",
+        "portfolio_return": 0.01579285156055406,
+        "portfolio_equity": 1110394804.741647,
+        "portfolio_drawdown": -0.02576516504883597
+      },
+      {
+        "Date": "2025-01-16",
+        "portfolio_return": 0.0035576357372637205,
+        "portfolio_equity": 1114345184.9814677,
+        "portfolio_drawdown": -0.02229919238352651
+      },
+      {
+        "Date": "2025-01-17",
+        "portfolio_return": 0.01453211122398918,
+        "portfolio_equity": 1130538973.151535,
+        "portfolio_drawdown": -0.008091135503460078
+      },
+      {
+        "Date": "2025-01-21",
+        "portfolio_return": 0.00057309777959506,
+        "portfolio_equity": 1131186882.526794,
+        "portfolio_drawdown": -0.007522674735656376
+      },
+      {
+        "Date": "2025-01-22",
+        "portfolio_return": -0.011653534821549181,
+        "portfolio_equity": 1118004556.8015883,
+        "portfolio_drawdown": -0.019088543805222402
+      },
+      {
+        "Date": "2025-01-23",
+        "portfolio_return": -0.048842786369950805,
+        "portfolio_equity": 1063398099.0730969,
+        "portfolio_drawdown": -0.06699899250798114
+      },
+      {
+        "Date": "2025-01-24",
+        "portfolio_return": 0.027882104621791443,
+        "portfolio_equity": 1093047876.1260672,
+        "portfolio_drawdown": -0.04098496080485181
+      },
+      {
+        "Date": "2025-01-27",
+        "portfolio_return": -0.007882857150989221,
+        "portfolio_equity": 1084431535.8593733,
+        "portfolio_drawdown": -0.04854473936447745
+      },
+      {
+        "Date": "2025-01-28",
+        "portfolio_return": 0.00626731634328316,
+        "portfolio_equity": 1091228011.3472364,
+        "portfolio_drawdown": -0.04258166825959375
+      },
+      {
+        "Date": "2025-01-29",
+        "portfolio_return": -0.010239183738126562,
+        "portfolio_equity": 1080054727.2388616,
+        "portfolio_drawdown": -0.05238485047253438
+      },
+      {
+        "Date": "2025-01-30",
+        "portfolio_return": -0.016559031195338844,
+        "portfolio_equity": 1062170067.3178399,
+        "portfolio_drawdown": -0.0680764392947355
+      },
+      {
+        "Date": "2025-01-31",
+        "portfolio_return": 0.01165128519790454,
+        "portfolio_equity": 1074545713.7008374,
+        "portfolio_drawdown": -0.05721833210631189
+      },
+      {
+        "Date": "2025-02-03",
+        "portfolio_return": 0.015446268049948475,
+        "portfolio_equity": 1091143434.8265839,
+        "portfolio_drawdown": -0.0426558737514483
+      },
+      {
+        "Date": "2025-02-04",
+        "portfolio_return": 0.0074985541043290395,
+        "portfolio_equity": 1099325432.9082146,
+        "portfolio_drawdown": -0.03547717702431186
+      },
+      {
+        "Date": "2025-02-05",
+        "portfolio_return": -0.008696445719625322,
+        "portfolio_equity": 1089765208.9527245,
+        "portfolio_drawdown": -0.043865097399659825
+      },
+      {
+        "Date": "2025-02-06",
+        "portfolio_return": 0.011279399443725021,
+        "portfolio_equity": 1102057106.0443769,
+        "portfolio_drawdown": -0.03308046991114344
+      },
+      {
+        "Date": "2025-02-07",
+        "portfolio_return": 0.0018832509242839202,
+        "portfolio_equity": 1104132556.1079483,
+        "portfolio_drawdown": -0.031259517812395665
+      },
+      {
+        "Date": "2025-02-10",
+        "portfolio_return": -0.00086921412020856,
+        "portfolio_equity": 1103172828.4995975,
+        "portfolio_drawdown": -0.03210156071833048
+      },
+      {
+        "Date": "2025-02-11",
+        "portfolio_return": 0.015890105517776983,
+        "portfolio_equity": 1120702361.1488004,
+        "portfolio_drawdown": -0.016721552387653382
+      },
+      {
+        "Date": "2025-02-12",
+        "portfolio_return": 0.008267988105459121,
+        "portfolio_equity": 1129968314.9405386,
+        "portfolio_drawdown": -0.0085918178784401
+      },
+      {
+        "Date": "2025-02-13",
+        "portfolio_return": 0.0035959735790022603,
+        "portfolio_equity": 1134031651.1461744,
+        "portfolio_drawdown": -0.005026740249524431
+      },
+      {
+        "Date": "2025-02-14",
+        "portfolio_return": 0.00325270978567826,
+        "portfolio_equity": 1137720326.9951267,
+        "portfolio_drawdown": -0.0017903809910456703
+      },
+      {
+        "Date": "2025-02-18",
+        "portfolio_return": 0.0010420198919052,
+        "portfolio_equity": 1138905854.2072804,
+        "portfolio_drawdown": -0.0007502267117472927
+      },
+      {
+        "Date": "2025-02-19",
+        "portfolio_return": -0.018391939816818963,
+        "portfolio_equity": 1117959166.2796774,
+        "portfolio_drawdown": -0.019128368404034757
+      },
+      {
+        "Date": "2025-02-20",
+        "portfolio_return": -0.0109959371797174,
+        "portfolio_equity": 1105666157.517777,
+        "portfolio_drawdown": -0.029913971246430804
+      },
+      {
+        "Date": "2025-02-21",
+        "portfolio_return": -0.010907520219277558,
+        "portfolio_equity": 1093606081.5488808,
+        "portfolio_drawdown": -0.04049520421949915
+      },
+      {
+        "Date": "2025-02-24",
+        "portfolio_return": 0.005159494076569601,
+        "portfolio_equity": 1099248535.6487327,
+        "portfolio_drawdown": -0.035544644909229595
+      },
+      {
+        "Date": "2025-02-25",
+        "portfolio_return": -0.03451233005155918,
+        "portfolio_equity": 1061310907.3777306,
+        "portfolio_drawdown": -0.06883024644411584
+      },
+      {
+        "Date": "2025-02-26",
+        "portfolio_return": 0.01951759593076042,
+        "portfolio_equity": 1082025144.824838,
+        "portfolio_drawdown": -0.05065605145126628
+      },
+      {
+        "Date": "2025-02-27",
+        "portfolio_return": -0.030911187910319403,
+        "portfolio_equity": 1048578462.2494668,
+        "portfolio_drawdown": -0.08000140063638073
+      },
+      {
+        "Date": "2025-02-28",
+        "portfolio_return": 6.051453165979541e-06,
+        "portfolio_equity": 1048584807.6729219,
+        "portfolio_drawdown": -0.07999583330794402
+      },
+      {
+        "Date": "2025-03-03",
+        "portfolio_return": 0.009463575744216902,
+        "portfolio_equity": 1058508169.4245698,
+        "portfolio_drawdown": -0.0712893041914584
+      },
+      {
+        "Date": "2025-03-04",
+        "portfolio_return": -0.0268431338618791,
+        "portfolio_equity": 1030094492.9388136,
+        "portfolio_drawdown": -0.096218809718006
+      },
+      {
+        "Date": "2025-03-05",
+        "portfolio_return": 0.014775620214951761,
+        "portfolio_equity": 1045314777.9519907,
+        "portfolio_drawdown": -0.08286488209298226
+      },
+      {
+        "Date": "2025-03-06",
+        "portfolio_return": -0.039856857840485004,
+        "portfolio_equity": 1003651815.4486002,
+        "portfolio_drawdown": -0.11941900610791856
+      },
+      {
+        "Date": "2025-03-07",
+        "portfolio_return": -0.006858015382558641,
+        "portfolio_equity": 996768755.8595209,
+        "portfolio_drawdown": -0.12545804410961914
+      },
+      {
+        "Date": "2025-03-10",
+        "portfolio_return": 0.01442810411866862,
+        "portfolio_equity": 1011150239.2512978,
+        "portfolio_drawdown": -0.1128400617138886
+      },
+      {
+        "Date": "2025-03-11",
+        "portfolio_return": -0.01239426192258344,
+        "portfolio_equity": 998617778.3429344,
+        "portfolio_drawdown": -0.12383575435622962
+      },
+      {
+        "Date": "2025-03-12",
+        "portfolio_return": 0.021936101459307522,
+        "portfolio_equity": 1020523559.2477334,
+        "portfolio_drawdown": -0.10461612656877017
+      },
+      {
+        "Date": "2025-03-13",
+        "portfolio_return": 0.00151068457466824,
+        "portfolio_equity": 1022065248.4467744,
+        "portfolio_drawdown": -0.10326348396277096
+      },
+      {
+        "Date": "2025-03-14",
+        "portfolio_return": -0.0099704216893748,
+        "portfolio_equity": 1011874826.9257044,
+        "portfolio_drawdown": -0.11220432517192303
+      },
+      {
+        "Date": "2025-03-17",
+        "portfolio_return": 0.008725218419962641,
+        "portfolio_equity": 1020703655.8042929,
+        "portfolio_drawdown": -0.10445811399674998
+      },
+      {
+        "Date": "2025-03-18",
+        "portfolio_return": -0.0003252996305949203,
+        "portfolio_equity": 1020371621.282113,
+        "portfolio_drawdown": -0.10474943344144905
+      },
+      {
+        "Date": "2025-03-19",
+        "portfolio_return": 0.00176520007254302,
+        "portfolio_equity": 1022172781.3420209,
+        "portfolio_drawdown": -0.10316913707641584
+      },
+      {
+        "Date": "2025-03-20",
+        "portfolio_return": 0.010422070467405441,
+        "portfolio_equity": 1032825938.0990312,
+        "portfolio_drawdown": -0.09382230262568225
+      },
+      {
+        "Date": "2025-03-21",
+        "portfolio_return": 0.0022162653444615203,
+        "portfolio_equity": 1035114954.4325011,
+        "portfolio_drawdown": -0.09181397239906752
+      },
+      {
+        "Date": "2025-03-24",
+        "portfolio_return": -0.015919570213488343,
+        "portfolio_equity": 1018636369.236381,
+        "portfolio_drawdown": -0.10627190363236971
+      },
+      {
+        "Date": "2025-03-25",
+        "portfolio_return": -0.003906765766155461,
+        "portfolio_equity": 1014656795.5408875,
+        "portfolio_drawdown": -0.10976348996351004
+      },
+      {
+        "Date": "2025-03-26",
+        "portfolio_return": -0.01195321793174726,
+        "portfolio_equity": 1002528381.737859,
+        "portfolio_drawdown": -0.12040468097877421
+      },
+      {
+        "Date": "2025-03-27",
+        "portfolio_return": 0.0029363977488594834,
+        "portfolio_equity": 1005472203.8211617,
+        "portfolio_drawdown": -0.11782183926409306
+      },
+      {
+        "Date": "2025-03-28",
+        "portfolio_return": 0.00580741214136974,
+        "portfolio_equity": 1011311395.3054425,
+        "portfolio_drawdown": -0.11269866710258414
+      },
+      {
+        "Date": "2025-03-31",
+        "portfolio_return": 0.00254799928096512,
+        "portfolio_equity": 1013888216.0135127,
+        "portfolio_drawdown": -0.11043782394436197
+      },
+      {
+        "Date": "2025-04-01",
+        "portfolio_return": -0.04206269931059442,
+        "portfolio_equity": 971241340.8487813,
+        "portfolio_drawdown": -0.1478552102738684
+      },
+      {
+        "Date": "2025-04-02",
+        "portfolio_return": -0.038422222985522045,
+        "portfolio_equity": 933924089.4779321,
+        "portfolio_drawdown": -0.18059650740067656
+      },
+      {
+        "Date": "2025-04-03",
+        "portfolio_return": -0.0015336062801786197,
+        "portfolio_equity": 932491817.6290985,
+        "portfolio_drawdown": -0.1818531497429272
+      },
+      {
+        "Date": "2025-04-04",
+        "portfolio_return": -0.01744687992654926,
+        "portfolio_equity": 916222744.8544341,
+        "portfolio_drawdown": -0.1961272596016468
+      },
+      {
+        "Date": "2025-04-07",
+        "portfolio_return": 0.088664936710898,
+        "portfolio_equity": 997459576.5400379,
+        "portfolio_drawdown": -0.12485193395061056
+      },
+      {
+        "Date": "2025-04-08",
+        "portfolio_return": -0.03196541274875524,
+        "portfolio_equity": 965575369.4757371,
+        "portfolio_drawdown": -0.1528264030981541
+      },
+      {
+        "Date": "2025-04-09",
+        "portfolio_return": 0.016688034299604183,
+        "portfolio_equity": 981688924.3604009,
+        "portfolio_drawdown": -0.13868874105533724
+      },
+      {
+        "Date": "2025-04-10",
+        "portfolio_return": 0.007114033381027021,
+        "portfolio_equity": 988672692.1380854,
+        "portfolio_drawdown": -0.13256134400775044
+      },
+      {
+        "Date": "2025-04-11",
+        "portfolio_return": 0.00357645301776456,
+        "portfolio_equity": 992208633.5714642,
+        "portfolio_drawdown": -0.12945899040880116
+      },
+      {
+        "Date": "2025-04-14",
+        "portfolio_return": -0.02768977832305572,
+        "portfolio_equity": 964734596.4576483,
+        "portfolio_drawdown": -0.15356407798551064
+      },
+      {
+        "Date": "2025-04-15",
+        "portfolio_return": -0.00384367821702092,
+        "portfolio_equity": 961026467.1040374,
+        "portfolio_drawdown": -0.15681750530106187
+      },
+      {
+        "Date": "2025-04-16",
+        "portfolio_return": -0.017927853836738162,
+        "portfolio_equity": 943797325.0685594,
+        "portfolio_drawdown": -0.17193395782372067
+      },
+      {
+        "Date": "2025-04-17",
+        "portfolio_return": 0.01577657393396672,
+        "portfolio_equity": 958687213.3461837,
+        "portfolio_drawdown": -0.15886991268711925
+      },
+      {
+        "Date": "2025-04-21",
+        "portfolio_return": 0.019190920139975143,
+        "portfolio_equity": 977085303.0967256,
+        "portfolio_drawdown": -0.14272785235416752
+      },
+      {
+        "Date": "2025-04-22",
+        "portfolio_return": 0.022898658453922822,
+        "portfolio_equity": 999459245.7326851,
+        "portfolio_drawdown": -0.12309747024316475
+      },
+      {
+        "Date": "2025-04-23",
+        "portfolio_return": 0.01124238874714024,
+        "portfolio_equity": 1010695555.1101356,
+        "portfolio_drawdown": -0.11323899111028768
+      },
+      {
+        "Date": "2025-04-24",
+        "portfolio_return": -0.0019763927585557603,
+        "portfolio_equity": 1008698023.7339114,
+        "portfolio_drawdown": -0.1149915791468269
+      },
+      {
+        "Date": "2025-04-25",
+        "portfolio_return": 0.0013093065131874397,
+        "portfolio_equity": 1010018718.6262256,
+        "portfolio_drawdown": -0.11383283185717796
+      },
+      {
+        "Date": "2025-04-28",
+        "portfolio_return": 0.0024061537682995397,
+        "portfolio_equity": 1012448978.9721011,
+        "portfolio_drawdown": -0.11170057738620787
+      },
+      {
+        "Date": "2025-04-29",
+        "portfolio_return": 0.00484108478636152,
+        "portfolio_equity": 1017350330.3211703,
+        "portfolio_drawdown": -0.10740024456565833
+      },
+      {
+        "Date": "2025-04-30",
+        "portfolio_return": 0.0056167449167745,
+        "portfolio_equity": 1023064527.6175807,
+        "portfolio_drawdown": -0.10238673942660836
+      },
+      {
+        "Date": "2025-05-01",
+        "portfolio_return": -0.00864595618193162,
+        "portfolio_equity": 1014219156.5405104,
+        "portfolio_drawdown": -0.11014746434584677
+      },
+      {
+        "Date": "2025-05-02",
+        "portfolio_return": -0.00273576731528724,
+        "portfolio_equity": 1011444488.9215088,
+        "portfolio_drawdown": -0.11258189382831474
+      },
+      {
+        "Date": "2025-05-05",
+        "portfolio_return": 0.00816252706323246,
+        "portfolio_equity": 1019700431.9352878,
+        "portfolio_drawdown": -0.10533831952028594
+      },
+      {
+        "Date": "2025-05-06",
+        "portfolio_return": 0.0014176505678049202,
+        "portfolio_equity": 1021146010.8316118,
+        "portfolio_drawdown": -0.1040700018809606
+      },
+      {
+        "Date": "2025-05-07",
+        "portfolio_return": 0.0013422403818149045,
+        "portfolio_equity": 1022516634.2430791,
+        "portfolio_drawdown": -0.10286744845820595
+      },
+      {
+        "Date": "2025-05-08",
+        "portfolio_return": 0.029935287115115082,
+        "portfolio_equity": 1053125963.2691267,
+        "portfolio_drawdown": -0.07601152794748667
+      },
+      {
+        "Date": "2025-05-09",
+        "portfolio_return": 0.01866879835244576,
+        "portfolio_equity": 1072786559.5171232,
+        "portfolio_drawdown": -0.0587617734827538
+      },
+      {
+        "Date": "2025-05-12",
+        "portfolio_return": 0.00840972628944304,
+        "portfolio_equity": 1081808400.8496556,
+        "portfolio_drawdown": -0.05084621762458286
+      },
+      {
+        "Date": "2025-05-13",
+        "portfolio_return": -0.0003227687929296001,
+        "portfolio_equity": 1081459226.8579323,
+        "portfolio_drawdown": -0.05115257484522473
+      },
+      {
+        "Date": "2025-05-14",
+        "portfolio_return": 0.00170291161475266,
+        "portfolio_equity": 1083300856.3362303,
+        "portfolio_drawdown": -0.04953677154430036
+      },
+      {
+        "Date": "2025-05-15",
+        "portfolio_return": -0.00253114660607754,
+        "portfolio_equity": 1080558863.050354,
+        "portfolio_drawdown": -0.05194253331920751
+      },
+      {
+        "Date": "2025-05-16",
+        "portfolio_return": -0.004730717785461,
+        "portfolio_equity": 1075447044.0186841,
+        "portfolio_drawdown": -0.05642752563847342
+      },
+      {
+        "Date": "2025-05-19",
+        "portfolio_return": -0.016792394084054082,
+        "portfolio_equity": 1057387713.4389914,
+        "portfolio_drawdown": -0.07227236647481816
+      },
+      {
+        "Date": "2025-05-20",
+        "portfolio_return": -0.0001734871228196999,
+        "portfolio_equity": 1057204270.2868819,
+        "portfolio_drawdown": -0.07243331527271879
+      },
+      {
+        "Date": "2025-05-21",
+        "portfolio_return": -0.01125043786076754,
+        "portfolio_equity": 1045310259.3378812,
+        "portfolio_drawdown": -0.08286884662096128
+      },
+      {
+        "Date": "2025-05-22",
+        "portfolio_return": 0.021313434856966202,
+        "portfolio_equity": 1067589411.4555975,
+        "portfolio_drawdown": -0.06332163152812287
+      },
+      {
+        "Date": "2025-05-23",
+        "portfolio_return": -0.0032342045604995,
+        "portfolio_equity": 1064136608.9123268,
+        "portfolio_drawdown": -0.0663510409791559
+      },
+      {
+        "Date": "2025-05-27",
+        "portfolio_return": 0.007018145055346901,
+        "portfolio_equity": 1071604873.9923784,
+        "portfolio_drawdown": -0.059798557153974086
+      },
+      {
+        "Date": "2025-05-28",
+        "portfolio_return": -0.00710701540185988,
+        "portfolio_equity": 1063988961.6482064,
+        "portfolio_drawdown": -0.06648058328913176
+      },
+      {
+        "Date": "2025-05-29",
+        "portfolio_return": 0.00697663807277042,
+        "portfolio_equity": 1071412027.5470488,
+        "portfolio_drawdown": -0.059967756184836185
+      },
+      {
+        "Date": "2025-05-30",
+        "portfolio_return": 0.0117346025655547,
+        "portfolio_equity": 1083984621.8742685,
+        "portfolio_drawdown": -0.048936851404858595
+      },
+      {
+        "Date": "2025-06-02",
+        "portfolio_return": 0.00448686333103294,
+        "portfolio_equity": 1088848312.7255597,
+        "portfolio_drawdown": -0.044669561037930405
+      },
+      {
+        "Date": "2025-06-03",
+        "portfolio_return": -0.0067442493268494805,
+        "portfolio_equity": 1081504848.225419,
+        "portfolio_drawdown": -0.051112547707819256
+      },
+      {
+        "Date": "2025-06-04",
+        "portfolio_return": 0.0069046963541311,
+        "portfolio_equity": 1088972310.8079362,
+        "portfolio_drawdown": -0.044560767975496685
+      },
+      {
+        "Date": "2025-06-05",
+        "portfolio_return": 0.00352805565721528,
+        "portfolio_equity": 1092814265.7296329,
+        "portfolio_drawdown": -0.04118992518782738
+      },
+      {
+        "Date": "2025-06-06",
+        "portfolio_return": 0.00786539471880082,
+        "portfolio_equity": 1101409681.283933,
+        "portfolio_drawdown": -0.033648505489066616
+      },
+      {
+        "Date": "2025-06-09",
+        "portfolio_return": -0.00496408366879266,
+        "portfolio_equity": 1095942191.4724212,
+        "portfolio_drawdown": -0.038445555161281786
+      },
+      {
+        "Date": "2025-06-10",
+        "portfolio_return": 0.00454607879014046,
+        "portfolio_equity": 1100924431.024294,
+        "portfolio_drawdown": -0.03407425289403532
+      },
+      {
+        "Date": "2025-06-11",
+        "portfolio_return": -0.012466997068105602,
+        "portfolio_equity": 1087199209.3705084,
+        "portfolio_drawdown": -0.046116446351212814
+      },
+      {
+        "Date": "2025-06-12",
+        "portfolio_return": 0.011389000914885282,
+        "portfolio_equity": 1099581322.1606917,
+        "portfolio_drawdown": -0.03525266568601282
+      },
+      {
+        "Date": "2025-06-13",
+        "portfolio_return": -0.005576294901669321,
+        "portfolio_equity": 1093449732.4399564,
+        "portfolio_drawdown": -0.040632381327746825
+      },
+      {
+        "Date": "2025-06-16",
+        "portfolio_return": 0.002892723899666819,
+        "portfolio_equity": 1096612780.6140695,
+        "portfolio_drawdown": -0.03785719568864743
+      },
+      {
+        "Date": "2025-06-17",
+        "portfolio_return": 0.00017354004774536042,
+        "portfolio_equity": 1096803086.8483756,
+        "portfolio_drawdown": -0.037690225380449194
+      },
+      {
+        "Date": "2025-06-18",
+        "portfolio_return": 0.005018259893825261,
+        "portfolio_equity": 1102307129.7905304,
+        "portfolio_drawdown": -0.032861104833039945
+      },
+      {
+        "Date": "2025-06-20",
+        "portfolio_return": 0.012991193706767202,
+        "portfolio_equity": 1116627415.2379901,
+        "portfolio_drawdown": -0.020296816104576898
+      },
+      {
+        "Date": "2025-06-23",
+        "portfolio_return": 0.00996908557249976,
+        "portfolio_equity": 1127759169.4930968,
+        "portfolio_drawdown": -0.010530071228673
+      },
+      {
+        "Date": "2025-06-24",
+        "portfolio_return": 0.004406092837288901,
+        "portfolio_equity": 1132728181.0919874,
+        "portfolio_drawdown": -0.006170374862800698
+      },
+      {
+        "Date": "2025-06-25",
+        "portfolio_return": 0.003522644326615713,
+        "portfolio_equity": 1136718379.5927086,
+        "portfolio_drawdown": -0.0026694665721886945
+      },
+      {
+        "Date": "2025-06-26",
+        "portfolio_return": 0.0056202907367773605,
+        "portfolio_equity": 1143107067.371858,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-06-27",
+        "portfolio_return": -0.004850936934185561,
+        "portfolio_equity": 1137561927.0790153,
+        "portfolio_drawdown": -0.004850936934185479
+      },
+      {
+        "Date": "2025-06-30",
+        "portfolio_return": 0.012878506623694502,
+        "portfolio_equity": 1152212025.8917649,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-07-01",
+        "portfolio_return": 0.006359121577448541,
+        "portfolio_equity": 1159539082.2474089,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-07-02",
+        "portfolio_return": -0.009970893915528179,
+        "portfolio_equity": 1147977441.067411,
+        "portfolio_drawdown": -0.0099708939155283
+      },
+      {
+        "Date": "2025-07-03",
+        "portfolio_return": 0.0045490662213395795,
+        "portfolio_equity": 1153199666.4674308,
+        "portfolio_drawdown": -0.005467185950896125
+      },
+      {
+        "Date": "2025-07-07",
+        "portfolio_return": 0.00712596071210134,
+        "portfolio_equity": 1161417321.983886,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-07-08",
+        "portfolio_return": 0.0042522054513693,
+        "portfolio_equity": 1166355907.0517406,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-07-09",
+        "portfolio_return": -0.0019794471524634803,
+        "portfolio_equity": 1164047167.172768,
+        "portfolio_drawdown": -0.001979447152463454
+      },
+      {
+        "Date": "2025-07-10",
+        "portfolio_return": -0.003936379320482101,
+        "portfolio_equity": 1159465035.9758434,
+        "portfolio_drawdown": -0.005908034618108626
+      },
+      {
+        "Date": "2025-07-11",
+        "portfolio_return": 0.00781907932046592,
+        "portfolio_equity": 1168530985.0614455,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-07-14",
+        "portfolio_return": 0.00212330090643524,
+        "portfolio_equity": 1171012127.961224,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-07-15",
+        "portfolio_return": 0.00419992440681238,
+        "portfolio_equity": 1175930290.3781216,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-07-16",
+        "portfolio_return": 0.0007668905257669999,
+        "portfolio_equity": 1176832100.176775,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-07-17",
+        "portfolio_return": 0.00220733794016446,
+        "portfolio_equity": 1179429766.3206987,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-07-18",
+        "portfolio_return": -0.0039730864275703,
+        "portfolio_equity": 1174743789.9238575,
+        "portfolio_drawdown": -0.003973086427570438
+      },
+      {
+        "Date": "2025-07-21",
+        "portfolio_return": 0.0031773874974987204,
+        "portfolio_equity": 1178476406.1547258,
+        "portfolio_drawdown": -0.0008083229652131596
+      },
+      {
+        "Date": "2025-07-22",
+        "portfolio_return": 0.0015994704086026272,
+        "portfolio_equity": 1180361344.2936068,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-07-23",
+        "portfolio_return": 0.00132645036687424,
+        "portfolio_equity": 1181927035.031789,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-07-24",
+        "portfolio_return": 0.0054729657052861,
+        "portfolio_equity": 1188395681.1606684,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-07-25",
+        "portfolio_return": -0.00302373191979688,
+        "portfolio_equity": 1184802291.2061942,
+        "portfolio_drawdown": -0.0030237319197968793
+      },
+      {
+        "Date": "2025-07-28",
+        "portfolio_return": 0.0010563505756298601,
+        "portfolio_equity": 1186053857.7885172,
+        "portfolio_drawdown": -0.0019705754651211382
+      },
+      {
+        "Date": "2025-07-29",
+        "portfolio_return": -0.008445031319981961,
+        "portfolio_equity": 1176037595.8123078,
+        "portfolio_drawdown": -0.010398965213581746
+      },
+      {
+        "Date": "2025-07-30",
+        "portfolio_return": -0.01388235746585556,
+        "portfolio_equity": 1159711421.5139558,
+        "portfolio_drawdown": -0.024136960527067486
+      },
+      {
+        "Date": "2025-07-31",
+        "portfolio_return": 0.01297470343625634,
+        "portfolio_equity": 1174758333.279739,
+        "portfolio_drawdown": -0.011475426995502302
+      },
+      {
+        "Date": "2025-08-01",
+        "portfolio_return": -0.004652911623109679,
+        "portfolio_equity": 1169292286.5764766,
+        "portfolio_drawdown": -0.01607494447096447
+      },
+      {
+        "Date": "2025-08-04",
+        "portfolio_return": 0.012945786645861622,
+        "portfolio_equity": 1184429695.0451472,
+        "portfolio_drawdown": -0.0033372606265682503
+      },
+      {
+        "Date": "2025-08-05",
+        "portfolio_return": 0.01029635092813134,
+        "portfolio_equity": 1196624998.8350317,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-08-06",
+        "portfolio_return": 0.01368409014633706,
+        "portfolio_equity": 1212999723.1904507,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-08-07",
+        "portfolio_return": -0.0031624074877086,
+        "portfolio_equity": 1209163723.7832448,
+        "portfolio_drawdown": -0.003162407487708463
+      },
+      {
+        "Date": "2025-08-08",
+        "portfolio_return": 0.01193150156785398,
+        "portfolio_equity": 1223590862.649357,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-08-11",
+        "portfolio_return": 0.005701201497952221,
+        "portfolio_equity": 1230566800.7083743,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-08-12",
+        "portfolio_return": -0.0005198092076519201,
+        "portfolio_equity": 1229927140.7547352,
+        "portfolio_drawdown": -0.0005198092076519334
+      },
+      {
+        "Date": "2025-08-13",
+        "portfolio_return": -0.0071328820281714,
+        "portfolio_equity": 1221154215.5564854,
+        "portfolio_drawdown": -0.007648983498068085
+      },
+      {
+        "Date": "2025-08-14",
+        "portfolio_return": 0.00070172168956834,
+        "portfolio_equity": 1222011125.9558494,
+        "portfolio_drawdown": -0.006952629266123389
+      },
+      {
+        "Date": "2025-08-15",
+        "portfolio_return": -0.00982078338817262,
+        "portfolio_equity": 1210010019.3899,
+        "portfolio_drawdown": -0.016705132388295185
+      },
+      {
+        "Date": "2025-08-18",
+        "portfolio_return": -0.00550328656892238,
+        "portfolio_equity": 1203350987.50193,
+        "portfolio_drawdown": -0.022116485826513044
+      },
+      {
+        "Date": "2025-08-19",
+        "portfolio_return": -0.00385333716349518,
+        "portfolio_equity": 1198714070.42106,
+        "portfolio_drawdown": -0.025884600713247052
+      },
+      {
+        "Date": "2025-08-20",
+        "portfolio_return": 0.014552425540398841,
+        "portfolio_equity": 1216158267.675091,
+        "portfolio_drawdown": -0.011708858897370722
+      },
+      {
+        "Date": "2025-08-21",
+        "portfolio_return": -0.0010564986094631801,
+        "portfolio_equity": 1214873398.1564052,
+        "portfolio_drawdown": -0.012752987113690328
+      },
+      {
+        "Date": "2025-08-22",
+        "portfolio_return": 0.00610813590260248,
+        "portfolio_equity": 1222294009.976801,
+        "portfolio_drawdown": -0.006722748189542549
+      },
+      {
+        "Date": "2025-08-25",
+        "portfolio_return": 0.0018305165748407762,
+        "portfolio_equity": 1224531439.421392,
+        "portfolio_drawdown": -0.004904537716691193
+      },
+      {
+        "Date": "2025-08-26",
+        "portfolio_return": 0.0030951991948902405,
+        "portfolio_equity": 1228321608.146807,
+        "portfolio_drawdown": -0.001824519042992967
+      },
+      {
+        "Date": "2025-08-27",
+        "portfolio_return": -0.011469497581190442,
+        "portfolio_equity": 1214233376.433243,
+        "portfolio_drawdown": -0.013273090307433066
+      },
+      {
+        "Date": "2025-08-28",
+        "portfolio_return": -0.00845208611021084,
+        "portfolio_equity": 1203970571.3777373,
+        "portfolio_drawdown": -0.021612991115416813
+      },
+      {
+        "Date": "2025-08-29",
+        "portfolio_return": 0.00758751959579902,
+        "portfolio_equity": 1213105721.6808312,
+        "portfolio_drawdown": -0.01418946051322989
+      },
+      {
+        "Date": "2025-09-02",
+        "portfolio_return": 0.00669020080318408,
+        "portfolio_equity": 1221221642.5543675,
+        "portfolio_drawdown": -0.007594190050168148
+      },
+      {
+        "Date": "2025-09-03",
+        "portfolio_return": -0.0009504283887516399,
+        "portfolio_equity": 1220060958.8363261,
+        "portfolio_drawdown": -0.008537400705106335
+      },
+      {
+        "Date": "2025-09-04",
+        "portfolio_return": 0.0026160116506590402,
+        "portfolio_equity": 1223252652.5191562,
+        "portfolio_drawdown": -0.00594372299415824
+      },
+      {
+        "Date": "2025-09-05",
+        "portfolio_return": 0.00013475914726098024,
+        "portfolio_equity": 1223417497.0034945,
+        "portfolio_drawdown": -0.005809764817939378
+      },
+      {
+        "Date": "2025-09-08",
+        "portfolio_return": 0.0034355964575191592,
+        "portfolio_equity": 1227620665.8222666,
+        "portfolio_drawdown": -0.002394128367847803
+      },
+      {
+        "Date": "2025-09-09",
+        "portfolio_return": 0.005504345246908061,
+        "portfolio_equity": 1234377913.7991917,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-09-10",
+        "portfolio_return": 0.00367230867050368,
+        "portfolio_equity": 1238910930.5147147,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-09-11",
+        "portfolio_return": 0.005384811568795618,
+        "portfolio_equity": 1245582232.4260576,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-09-12",
+        "portfolio_return": -0.0005787918762560199,
+        "portfolio_equity": 1244861299.5487204,
+        "portfolio_drawdown": -0.0005787918762562017
+      },
+      {
+        "Date": "2025-09-15",
+        "portfolio_return": -0.0035369940376785204,
+        "portfolio_equity": 1240458232.5544798,
+        "portfolio_drawdown": -0.004113738730519234
+      },
+      {
+        "Date": "2025-09-16",
+        "portfolio_return": 0.01031376705778312,
+        "portfolio_equity": 1253252029.8099563,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-09-17",
+        "portfolio_return": 0.00649488406270926,
+        "portfolio_equity": 1261391756.444927,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-09-18",
+        "portfolio_return": 0.0154892561322742,
+        "portfolio_equity": 1280929776.4436417,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-09-19",
+        "portfolio_return": -0.00616311283063778,
+        "portfolio_equity": 1273035261.703296,
+        "portfolio_drawdown": -0.006163112830637751
+      },
+      {
+        "Date": "2025-09-22",
+        "portfolio_return": -0.00407198702301604,
+        "portfolio_equity": 1267851478.6377983,
+        "portfolio_drawdown": -0.010210003738186035
+      },
+      {
+        "Date": "2025-09-23",
+        "portfolio_return": 0.0008692118716899201,
+        "portfolio_equity": 1268953510.1945698,
+        "portfolio_drawdown": -0.009349666522955435
+      },
+      {
+        "Date": "2025-09-24",
+        "portfolio_return": 0.00153123286954206,
+        "portfolio_equity": 1270896573.5193007,
+        "portfolio_drawdown": -0.007832750170112424
+      },
+      {
+        "Date": "2025-09-25",
+        "portfolio_return": 0.004133678869342,
+        "portfolio_equity": 1276150051.8303766,
+        "portfolio_drawdown": -0.00373144937463743
+      },
+      {
+        "Date": "2025-09-26",
+        "portfolio_return": 0.00631126954056308,
+        "portfolio_equity": 1284204178.7816818,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-09-29",
+        "portfolio_return": 0.00598457587817202,
+        "portfolio_equity": 1291889596.1326663,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-09-30",
+        "portfolio_return": 0.0065642423192228,
+        "portfolio_equity": 1300369872.491364,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-10-01",
+        "portfolio_return": -0.00252602465157892,
+        "portfolio_equity": 1297085106.1372802,
+        "portfolio_drawdown": -0.0025260246515789175
+      },
+      {
+        "Date": "2025-10-02",
+        "portfolio_return": 0.0038044550762944412,
+        "portfolio_equity": 1302019808.1537101,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-10-03",
+        "portfolio_return": -0.005384851920318019,
+        "portfolio_equity": 1295008624.2894816,
+        "portfolio_drawdown": -0.005384851920317901
+      },
+      {
+        "Date": "2025-10-06",
+        "portfolio_return": 0.01302060013652972,
+        "portfolio_equity": 1311870413.7597122,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-10-07",
+        "portfolio_return": -0.0008304595357596597,
+        "portfolio_equity": 1310780958.4649243,
+        "portfolio_drawdown": -0.0008304595357597755
+      },
+      {
+        "Date": "2025-10-08",
+        "portfolio_return": -0.03271092494466109,
+        "portfolio_equity": 1267904100.9136875,
+        "portfolio_drawdown": -0.03351421938087695
+      },
+      {
+        "Date": "2025-10-09",
+        "portfolio_return": 0.019898529547060822,
+        "portfolio_equity": 1293133528.1285582,
+        "portfolio_drawdown": -0.01428257351841311
+      },
+      {
+        "Date": "2025-10-10",
+        "portfolio_return": -0.01148005662095848,
+        "portfolio_equity": 1278288282.0071824,
+        "portfolio_drawdown": -0.025598665386687314
+      },
+      {
+        "Date": "2025-10-13",
+        "portfolio_return": 0.007564903230470361,
+        "portfolio_equity": 1287958409.1612108,
+        "portfolio_drawdown": -0.018227413582696528
+      },
+      {
+        "Date": "2025-10-14",
+        "portfolio_return": 0.00032164342543255955,
+        "portfolio_equity": 1288372672.515748,
+        "portfolio_drawdown": -0.017911632885005524
+      },
+      {
+        "Date": "2025-10-15",
+        "portfolio_return": 0.00552085284756098,
+        "portfolio_equity": 1295485588.4535263,
+        "portfolio_drawdown": -0.012489667526862203
+      },
+      {
+        "Date": "2025-10-16",
+        "portfolio_return": 0.010872873995563241,
+        "portfolio_equity": 1309571240.0198495,
+        "portfolio_drawdown": -0.0017525921125650656
+      },
+      {
+        "Date": "2025-10-17",
+        "portfolio_return": -0.001781106549288542,
+        "portfolio_equity": 1307238754.1074903,
+        "portfolio_drawdown": -0.0035305771085636373
+      },
+      {
+        "Date": "2025-10-20",
+        "portfolio_return": -0.0092082474680503,
+        "portfolio_equity": 1295201376.1598427,
+        "portfolio_drawdown": -0.012706314148893227
+      },
+      {
+        "Date": "2025-10-21",
+        "portfolio_return": 0.008242759091035,
+        "portfolio_equity": 1305877409.0779054,
+        "portfolio_drawdown": -0.004568290144322473
+      },
+      {
+        "Date": "2025-10-22",
+        "portfolio_return": 0.01147484461764862,
+        "portfolio_equity": 1320862149.4367719,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-10-23",
+        "portfolio_return": 0.01739010262200178,
+        "portfolio_equity": 1343832077.7649953,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-10-24",
+        "portfolio_return": 0.01029647141286712,
+        "portfolio_equity": 1357668806.3373964,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-10-27",
+        "portfolio_return": 0.00807941507412644,
+        "portfolio_equity": 1368637976.1569898,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2025-10-28",
+        "portfolio_return": -0.008899392233632659,
+        "portfolio_equity": 1356457929.9813235,
+        "portfolio_drawdown": -0.008899392233632675
+      },
+      {
+        "Date": "2025-10-29",
+        "portfolio_return": 0.00106965561344264,
+        "portfolio_equity": 1357908872.8205268,
+        "portfolio_drawdown": -0.00783925590504897
+      },
+      {
+        "Date": "2025-10-30",
+        "portfolio_return": 0.00475382491835006,
+        "portfolio_equity": 1364364133.8569899,
+        "portfolio_drawdown": -0.0031226974367615234
+      },
+      {
+        "Date": "2025-10-31",
+        "portfolio_return": -0.01685796590850544,
+        "portfolio_equity": 1341363729.8016412,
+        "portfolio_drawdown": -0.019928021018335462
+      },
+      {
+        "Date": "2025-11-03",
+        "portfolio_return": 0.0027710597011793995,
+        "portfolio_equity": 1345080728.777918,
+        "portfolio_drawdown": -0.01721218305312433
+      },
+      {
+        "Date": "2025-11-04",
+        "portfolio_return": -0.01426598765259078,
+        "portfolio_equity": 1325891823.7094345,
+        "portfolio_drawdown": -0.031232621914805136
+      },
+      {
+        "Date": "2025-11-05",
+        "portfolio_return": -0.0025621802615698,
+        "portfolio_equity": 1322494649.8497493,
+        "portfolio_drawdown": -0.03371477856898775
+      },
+      {
+        "Date": "2025-11-06",
+        "portfolio_return": 0.020109085199036203,
+        "portfolio_equity": 1349088807.4388473,
+        "portfolio_drawdown": -0.01428366672466208
+      },
+      {
+        "Date": "2025-11-07",
+        "portfolio_return": -0.00434029949336092,
+        "portfolio_equity": 1343233357.9714217,
+        "portfolio_drawdown": -0.018561970826574514
+      },
+      {
+        "Date": "2025-11-10",
+        "portfolio_return": 0.0017450928358939003,
+        "portfolio_equity": 1345577424.8813515,
+        "portfolio_drawdown": -0.01684927035299011
+      },
+      {
+        "Date": "2025-11-11",
+        "portfolio_return": -0.01769705238246986,
+        "portfolio_equity": 1321764670.7085574,
+        "portfolio_drawdown": -0.034248140315416675
+      },
+      {
+        "Date": "2025-11-12",
+        "portfolio_return": 0.0020568572261366602,
+        "portfolio_equity": 1324483351.9227562,
+        "portfolio_drawdown": -0.032261726624169595
+      },
+      {
+        "Date": "2025-11-13",
+        "portfolio_return": -0.011386309337477363,
+        "portfolio_equity": 1309402374.765425,
+        "portfolio_drawdown": -0.04328069396254297
+      },
+      {
+        "Date": "2025-11-14",
+        "portfolio_return": -0.011199853723550781,
+        "portfolio_equity": 1294737259.7027822,
+        "portfolio_drawdown": -0.05399581024465949
+      },
+      {
+        "Date": "2025-11-17",
+        "portfolio_return": 0.00881005342225296,
+        "portfolio_equity": 1306143964.128545,
+        "portfolio_drawdown": -0.04566146279523986
+      },
+      {
+        "Date": "2025-11-18",
+        "portfolio_return": -0.01711531724646792,
+        "portfolio_equity": 1283788895.8129258,
+        "portfolio_drawdown": -0.061995269620029436
+      },
+      {
+        "Date": "2025-11-19",
+        "portfolio_return": 0.0059192492472079005,
+        "portfolio_equity": 1291387962.2680402,
+        "portfolio_drawdown": -0.0564429858258505
+      },
+      {
+        "Date": "2025-11-20",
+        "portfolio_return": 0.01696292019049372,
+        "portfolio_equity": 1313293673.2069573,
+        "portfolio_drawdown": -0.040437503499233696
+      },
+      {
+        "Date": "2025-11-21",
+        "portfolio_return": -0.00027067330490046027,
+        "portfolio_equity": 1312938199.6681256,
+        "portfolio_drawdown": -0.040697231451420124
+      },
+      {
+        "Date": "2025-11-24",
+        "portfolio_return": 0.00790807556954508,
+        "portfolio_equity": 1323321014.1692436,
+        "portfolio_drawdown": -0.03311099266366413
+      },
+      {
+        "Date": "2025-11-25",
+        "portfolio_return": 0.0007948326089741997,
+        "portfolio_equity": 1324372832.863446,
+        "portfolio_drawdown": -0.032342477751374554
+      },
+      {
+        "Date": "2025-11-26",
+        "portfolio_return": 0.00288722583114436,
+        "portfolio_equity": 1328196596.3165553,
+        "portfolio_drawdown": -0.029548631957437177
+      },
+      {
+        "Date": "2025-11-28",
+        "portfolio_return": 0.006478536372177081,
+        "portfolio_equity": 1336801366.275194,
+        "portfolio_drawdown": -0.023261527472144383
+      },
+      {
+        "Date": "2025-12-01",
+        "portfolio_return": 0.0006781370663704199,
+        "portfolio_equity": 1337707900.8320396,
+        "portfolio_drawdown": -0.022599164909773317
+      },
+      {
+        "Date": "2025-12-02",
+        "portfolio_return": -6.453837651620086e-05,
+        "portfolio_equity": 1337621567.335867,
+        "portfolio_drawdown": -0.022662244772875706
+      },
+      {
+        "Date": "2025-12-03",
+        "portfolio_return": -0.0003642722470124602,
+        "portfolio_equity": 1337134308.9218814,
+        "portfolio_drawdown": -0.02301826179306221
+      },
+      {
+        "Date": "2025-12-04",
+        "portfolio_return": 0.0025118145187922,
+        "portfolio_equity": 1340492942.2926064,
+        "portfolio_drawdown": -0.02056426487843932
+      },
+      {
+        "Date": "2025-12-05",
+        "portfolio_return": -0.0013217211971210201,
+        "portfolio_equity": 1338721184.356187,
+        "portfolio_drawdown": -0.02185880585076727
+      },
+      {
+        "Date": "2025-12-08",
+        "portfolio_return": 0.00368375122279168,
+        "portfolio_equity": 1343652700.1560361,
+        "portfolio_drawdown": -0.01825557703075731
+      },
+      {
+        "Date": "2025-12-09",
+        "portfolio_return": -0.00374283423956648,
+        "portfolio_equity": 1338623630.8238063,
+        "portfolio_drawdown": -0.021930083671549916
+      },
+      {
+        "Date": "2025-12-10",
+        "portfolio_return": -0.01820039907187308,
+        "portfolio_equity": 1314260146.5357733,
+        "portfolio_drawdown": -0.03973134646892129
+      },
+      {
+        "Date": "2025-12-11",
+        "portfolio_return": -0.00268198720637796,
+        "portfolio_equity": 1310735317.636912,
+        "portfolio_drawdown": -0.042306774712377204
+      },
+      {
+        "Date": "2025-12-12",
+        "portfolio_return": 0.0013609363682546799,
+        "portfolio_equity": 1312519144.99984,
+        "portfolio_drawdown": -0.04100341517245221
+      },
+      {
+        "Date": "2025-12-15",
+        "portfolio_return": -0.0180478843237509,
+        "portfolio_equity": 1288830951.2981744,
+        "portfolio_drawdown": -0.05831127460229202
+      },
+      {
+        "Date": "2025-12-16",
+        "portfolio_return": 0.0104225186550968,
+        "portfolio_equity": 1302263815.9313457,
+        "portfolio_drawdown": -0.048496506294540165
+      },
+      {
+        "Date": "2025-12-17",
+        "portfolio_return": 0.013969173994476662,
+        "portfolio_equity": 1320455365.762802,
+        "portfolio_drawdown": -0.03520478843461605
+      },
+      {
+        "Date": "2025-12-18",
+        "portfolio_return": 0.00433064686934802,
+        "portfolio_equity": 1326173791.6586564,
+        "portfolio_drawdown": -0.031026601072088433
+      },
+      {
+        "Date": "2025-12-19",
+        "portfolio_return": 0.00813611224373038,
+        "portfolio_equity": 1336963690.4822848,
+        "portfolio_drawdown": -0.023142924737222015
+      },
+      {
+        "Date": "2025-12-22",
+        "portfolio_return": 0.0020063076308452603,
+        "portfolio_equity": 1339646050.9366622,
+        "portfolio_drawdown": -0.021183048932877258
+      },
+      {
+        "Date": "2025-12-23",
+        "portfolio_return": 0.0018674004263533953,
+        "portfolio_equity": 1342147706.543344,
+        "portfolio_drawdown": -0.019355205741132586
+      },
+      {
+        "Date": "2025-12-24",
+        "portfolio_return": -0.00336757080794426,
+        "portfolio_equity": 1337627929.1068394,
+        "portfolio_drawdown": -0.022657596523241175
+      },
+      {
+        "Date": "2025-12-26",
+        "portfolio_return": -0.0018471807187049201,
+        "portfolio_equity": 1335157088.587392,
+        "portfolio_drawdown": -0.02446292456651611
+      },
+      {
+        "Date": "2025-12-29",
+        "portfolio_return": -0.0060622314273119805,
+        "portfolio_equity": 1327063057.3245592,
+        "portfolio_drawdown": -0.030376856083716985
+      },
+      {
+        "Date": "2025-12-30",
+        "portfolio_return": 0.00661920469980916,
+        "portfolio_equity": 1335847159.3505452,
+        "portfolio_drawdown": -0.02395872201246252
+      },
+      {
+        "Date": "2025-12-31",
+        "portfolio_return": 0.0017133291192879003,
+        "portfolio_equity": 1338135905.1875784,
+        "portfolio_drawdown": -0.02228644206925956
+      },
+      {
+        "Date": "2026-01-02",
+        "portfolio_return": 0.0032602937261563807,
+        "portfolio_equity": 1342498621.2840059,
+        "portfolio_drawdown": -0.01909880869036007
+      },
+      {
+        "Date": "2026-01-05",
+        "portfolio_return": -0.0010167305303583002,
+        "portfolio_equity": 1341133661.9487824,
+        "portfolio_drawdown": -0.020096120878829504
+      },
+      {
+        "Date": "2026-01-06",
+        "portfolio_return": -0.008172120792573581,
+        "portfolio_equity": 1330173755.6643505,
+        "portfolio_drawdown": -0.028104013744119083
+      },
+      {
+        "Date": "2026-01-07",
+        "portfolio_return": 0.0069281973306899005,
+        "portfolio_equity": 1339389461.927698,
+        "portfolio_drawdown": -0.0213705265664329
+      },
+      {
+        "Date": "2026-01-08",
+        "portfolio_return": 0.0014564348718297,
+        "portfolio_equity": 1341340195.4470108,
+        "portfolio_drawdown": -0.019945216474723804
+      },
+      {
+        "Date": "2026-01-09",
+        "portfolio_return": 0.0021931320350924203,
+        "portfolio_equity": 1344281931.5996027,
+        "portfolio_drawdown": -0.017795826932828995
+      },
+      {
+        "Date": "2026-01-12",
+        "portfolio_return": -0.00579293910662752,
+        "portfolio_equity": 1336494588.2277067,
+        "portfolio_drawdown": -0.023485675897682468
+      },
+      {
+        "Date": "2026-01-13",
+        "portfolio_return": 0.0057311036682803195,
+        "portfolio_equity": 1344154177.2649353,
+        "portfolio_drawdown": -0.01788917107269139
+      },
+      {
+        "Date": "2026-01-14",
+        "portfolio_return": -0.00076295822301188,
+        "portfolio_equity": 1343128643.7823951,
+        "portfolio_drawdown": -0.01863848060553064
+      },
+      {
+        "Date": "2026-01-15",
+        "portfolio_return": -0.02191289643782316,
+        "portfolio_equity": 1313696804.9085176,
+        "portfolio_drawdown": -0.040142953948086424
+      },
+      {
+        "Date": "2026-01-16",
+        "portfolio_return": 0.015372905579955302,
+        "portfolio_equity": 1333892141.8510654,
+        "portfolio_drawdown": -0.02538716220887538
+      },
+      {
+        "Date": "2026-01-20",
+        "portfolio_return": 0.0042629840520139,
+        "portfolio_equity": 1339578502.778883,
+        "portfolio_drawdown": -0.021232403224483942
+      },
+      {
+        "Date": "2026-01-21",
+        "portfolio_return": 0.0019243359505115203,
+        "portfolio_equity": 1342156301.850313,
+        "portfolio_drawdown": -0.019348925550812912
+      },
+      {
+        "Date": "2026-01-22",
+        "portfolio_return": 0.00442585916520922,
+        "portfolio_equity": 1348096496.6200006,
+        "portfolio_drawdown": -0.015008702005089636
+      },
+      {
+        "Date": "2026-01-23",
+        "portfolio_return": 0.00931388254449908,
+        "portfolio_equity": 1360652509.04817,
+        "portfolio_drawdown": -0.00583460874821129
+      },
+      {
+        "Date": "2026-01-26",
+        "portfolio_return": 0.006073104408891581,
+        "portfolio_equity": 1368915893.7998397,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2026-01-27",
+        "portfolio_return": 0.00163072773124218,
+        "portfolio_equity": 1371148222.9095974,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2026-01-28",
+        "portfolio_return": -0.00889246024062012,
+        "portfolio_equity": 1358955341.853377,
+        "portfolio_drawdown": -0.00889246024061996
+      },
+      {
+        "Date": "2026-01-29",
+        "portfolio_return": 0.00629758426853558,
+        "portfolio_equity": 1367513477.6358752,
+        "portfolio_drawdown": -0.002650876989804374
+      },
+      {
+        "Date": "2026-01-30",
+        "portfolio_return": -0.012438629605805641,
+        "portfolio_equity": 1350503484.0066154,
+        "portfolio_drawdown": -0.015056533318603238
+      },
+      {
+        "Date": "2026-02-02",
+        "portfolio_return": -0.011871612226547042,
+        "portfolio_equity": 1334470830.333888,
+        "portfolio_drawdown": -0.026749400220115738
+      },
+      {
+        "Date": "2026-02-03",
+        "portfolio_return": -0.0058551552352637,
+        "portfolio_equity": 1326657296.4653518,
+        "portfolio_drawdown": -0.032447933564640596
+      },
+      {
+        "Date": "2026-02-04",
+        "portfolio_return": 0.029091776058461583,
+        "portfolio_equity": 1365252113.4404461,
+        "portfolio_drawdown": -0.004300125523001186
+      },
+      {
+        "Date": "2026-02-05",
+        "portfolio_return": 0.00664155809590068,
+        "portfolio_equity": 1374319514.667412,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2026-02-06",
+        "portfolio_return": -0.0030610866510526603,
+        "portfolio_equity": 1370112603.5467825,
+        "portfolio_drawdown": -0.003061086651052647
+      },
+      {
+        "Date": "2026-02-09",
+        "portfolio_return": 0.00527200046072444,
+        "portfolio_equity": 1377335837.8239255,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2026-02-10",
+        "portfolio_return": -0.01790062218550234,
+        "portfolio_equity": 1352680669.3684871,
+        "portfolio_drawdown": -0.017900622185502257
+      },
+      {
+        "Date": "2026-02-11",
+        "portfolio_return": -0.005114004317839101,
+        "portfolio_equity": 1345763054.584679,
+        "portfolio_drawdown": -0.02292308264419296
+      },
+      {
+        "Date": "2026-02-12",
+        "portfolio_return": 0.006958827847456141,
+        "portfolio_equity": 1355127988.0050006,
+        "portfolio_drawdown": -0.01612377258259068
+      },
+      {
+        "Date": "2026-02-13",
+        "portfolio_return": 0.005736367592855941,
+        "portfolio_equity": 1362901500.2795644,
+        "portfolio_drawdown": -0.01047989687625217
+      },
+      {
+        "Date": "2026-02-17",
+        "portfolio_return": -0.003322948608994,
+        "portfolio_equity": 1358372648.6350145,
+        "portfolio_drawdown": -0.013768021326498792
+      },
+      {
+        "Date": "2026-02-18",
+        "portfolio_return": 0.00708334415425284,
+        "portfolio_equity": 1367994469.5950203,
+        "portfolio_drawdown": -0.00678220080562475
+      },
+      {
+        "Date": "2026-02-19",
+        "portfolio_return": -0.0011387229995818999,
+        "portfolio_equity": 1366436702.8291914,
+        "portfolio_drawdown": -0.00791320075716162
+      },
+      {
+        "Date": "2026-02-20",
+        "portfolio_return": 0.008417865225514139,
+        "portfolio_equity": 1377939182.8328037,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2026-02-23",
+        "portfolio_return": 0.00885617435446734,
+        "portfolio_equity": 1390142452.4858232,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2026-02-24",
+        "portfolio_return": -0.0156393381903328,
+        "portfolio_equity": 1368401544.5386586,
+        "portfolio_drawdown": -0.01563933819033292
+      },
+      {
+        "Date": "2026-02-25",
+        "portfolio_return": -0.0126338973080641,
+        "portfolio_equity": 1351113299.948761,
+        "portfolio_drawdown": -0.028075649705734174
+      },
+      {
+        "Date": "2026-02-26",
+        "portfolio_return": 0.00428601936008854,
+        "portfolio_equity": 1356904197.7100143,
+        "portfolio_drawdown": -0.023909963123831535
+      },
+      {
+        "Date": "2026-02-27",
+        "portfolio_return": -0.011821673368617419,
+        "portfolio_equity": 1340863319.4921806,
+        "portfolio_drawdown": -0.0354489807181434
+      },
+      {
+        "Date": "2026-03-02",
+        "portfolio_return": 0.007990533945874682,
+        "portfolio_equity": 1351577533.3633614,
+        "portfolio_drawdown": -0.02774170305604351
+      },
+      {
+        "Date": "2026-03-03",
+        "portfolio_return": -0.0037739060829188407,
+        "portfolio_equity": 1346476806.688665,
+        "portfolio_drawdown": -0.031410914557048586
+      },
+      {
+        "Date": "2026-03-04",
+        "portfolio_return": -0.015189568885351862,
+        "portfolio_equity": 1326024404.480939,
+        "portfolio_drawdown": -0.046123365191984234
+      },
+      {
+        "Date": "2026-03-05",
+        "portfolio_return": 0.01395020419618412,
+        "portfolio_equity": 1344522715.6925714,
+        "portfolio_drawdown": -0.0328165913584435
+      },
+      {
+        "Date": "2026-03-06",
+        "portfolio_return": 0.0022936216351126196,
+        "portfolio_equity": 1347606542.0821843,
+        "portfolio_drawdown": -0.030598238567261293
+      },
+      {
+        "Date": "2026-03-09",
+        "portfolio_return": 0.0010593184612288002,
+        "portfolio_equity": 1349034086.570685,
+        "portfolio_drawdown": -0.02957133338502771
+      },
+      {
+        "Date": "2026-03-10",
+        "portfolio_return": -0.014819812831432522,
+        "portfolio_equity": 1329041653.9044847,
+        "portfolio_drawdown": -0.04395290459051826
+      },
+      {
+        "Date": "2026-03-11",
+        "portfolio_return": -0.007068695338185821,
+        "portfolio_equity": 1319647063.3612752,
+        "portfolio_drawdown": -0.05071091023692542
+      },
+      {
+        "Date": "2026-03-12",
+        "portfolio_return": 0.010583379147525001,
+        "portfolio_equity": 1333613388.5737455,
+        "portfolio_drawdown": -0.04066422387935398
+      },
+      {
+        "Date": "2026-03-13",
+        "portfolio_return": 0.0019911499662910006,
+        "portfolio_equity": 1336268812.8274493,
+        "portfolio_drawdown": -0.03875404248106962
+      },
+      {
+        "Date": "2026-03-16",
+        "portfolio_return": -0.009875773065987341,
+        "portfolio_equity": 1323072125.2768092,
+        "portfolio_drawdown": -0.04824708941812417
+      },
+      {
+        "Date": "2026-03-17",
+        "portfolio_return": -0.0031333213783804603,
+        "portfolio_equity": 1318926515.10154,
+        "portfolio_drawdown": -0.05122923715978622
+      },
+      {
+        "Date": "2026-03-18",
+        "portfolio_return": -0.016318618019003063,
+        "portfolio_equity": 1297403457.1064634,
+        "portfolio_drawdown": -0.06671186482617364
+      },
+      {
+        "Date": "2026-03-19",
+        "portfolio_return": 0.01148446094226724,
+        "portfolio_equity": 1312303436.435965,
+        "portfolio_drawdown": -0.05599355368988845
+      },
+      {
+        "Date": "2026-03-20",
+        "portfolio_return": -0.0012258478534647602,
+        "portfolio_equity": 1310694752.0853157,
+        "portfolio_drawdown": -0.057150761965754526
+      },
+      {
+        "Date": "2026-03-23",
+        "portfolio_return": 0.00867947396374784,
+        "portfolio_equity": 1322070893.060461,
+        "portfolio_drawdown": -0.048967326552496804
+      },
+      {
+        "Date": "2026-03-24",
+        "portfolio_return": -0.02128889339968784,
+        "portfolio_equity": 1293925466.7512667,
+        "portfolio_drawdown": -0.06921375975714095
+      },
+      {
+        "Date": "2026-03-25",
+        "portfolio_return": -0.01574663062267768,
+        "portfolio_equity": 1273550500.3730588,
+        "portfolio_drawdown": -0.08387050687091613
+      },
+      {
+        "Date": "2026-03-26",
+        "portfolio_return": -0.01028543952219958,
+        "portfolio_equity": 1260451473.7230046,
+        "portfolio_drawdown": -0.09329330136699865
+      },
+      {
+        "Date": "2026-03-27",
+        "portfolio_return": 0.03125211829282306,
+        "portfolio_equity": 1299843252.282159,
+        "portfolio_drawdown": -0.06495679636442508
+      },
+      {
+        "Date": "2026-03-30",
+        "portfolio_return": 0.00861423006649826,
+        "portfolio_equity": 1311040401.107703,
+        "portfolio_drawdown": -0.05690211908619258
+      },
+      {
+        "Date": "2026-03-31",
+        "portfolio_return": 0.00307943658589536,
+        "portfolio_equity": 1315077666.884461,
+        "portfolio_drawdown": -0.05399790896762624
+      },
+      {
+        "Date": "2026-04-01",
+        "portfolio_return": 0.00490367326227528,
+        "portfolio_equity": 1321526378.0773776,
+        "portfolio_drawdown": -0.04935902380777435
+      },
+      {
+        "Date": "2026-04-02",
+        "portfolio_return": -0.0020322628472662003,
+        "portfolio_equity": 1318840689.1175287,
+        "portfolio_drawdown": -0.05129097614477862
+      },
+      {
+        "Date": "2026-04-06",
+        "portfolio_return": 0.022758104154845443,
+        "portfolio_equity": 1348855002.8841136,
+        "portfolio_drawdown": -0.029700157367239743
+      },
+      {
+        "Date": "2026-04-07",
+        "portfolio_return": 0.00707427818926396,
+        "portfolio_equity": 1358397178.4114962,
+        "portfolio_drawdown": -0.022835986353456628
+      },
+      {
+        "Date": "2026-04-08",
+        "portfolio_return": 0.00744943749112887,
+        "portfolio_equity": 1368516473.2801986,
+        "portfolio_drawdown": -0.015556664115216057
+      },
+      {
+        "Date": "2026-04-09",
+        "portfolio_return": 0.00576588656697036,
+        "portfolio_equity": 1376407184.0301623,
+        "portfolio_drawdown": -0.009880475508894593
+      },
+      {
+        "Date": "2026-04-10",
+        "portfolio_return": 0.01588777298249876,
+        "portfolio_equity": 1398275228.9015138,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2026-04-13",
+        "portfolio_return": 0.01246508380836346,
+        "portfolio_equity": 1415704846.8169298,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2026-04-14",
+        "portfolio_return": -0.00022684527597713973,
+        "portfolio_equity": 1415383700.8602514,
+        "portfolio_drawdown": -0.0002268452759771611
+      },
+      {
+        "Date": "2026-04-15",
+        "portfolio_return": 0.01714063134343042,
+        "portfolio_equity": 1439644271.0861971,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2026-04-16",
+        "portfolio_return": 0.0019615209491171,
+        "portfolio_equity": 1442468163.4832091,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2026-04-17",
+        "portfolio_return": -0.007728605407039721,
+        "portfolio_equity": 1431319896.2354302,
+        "portfolio_drawdown": -0.007728605407039679
+      },
+      {
+        "Date": "2026-04-20",
+        "portfolio_return": 0.017039809711024503,
+        "portfolio_equity": 1455709314.9028854,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2026-04-21",
+        "portfolio_return": -0.0007113202746114001,
+        "portfolio_equity": 1454673839.3532543,
+        "portfolio_drawdown": -0.0007113202746114045
+      },
+      {
+        "Date": "2026-04-22",
+        "portfolio_return": 0.01925956051014662,
+        "portfolio_equity": 1482690218.1848056,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2026-04-23",
+        "portfolio_return": 0.0030854983507675802,
+        "portfolio_equity": 1487265056.4077141,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2026-04-24",
+        "portfolio_return": -0.01008230503663212,
+        "portfolio_equity": 1472269996.4386876,
+        "portfolio_drawdown": -0.010082305036632211
+      },
+      {
+        "Date": "2026-04-27",
+        "portfolio_return": 0.0015548608350759007,
+        "portfolio_equity": 1474559171.3948076,
+        "portfolio_drawdown": -0.008543120782784963
+      },
+      {
+        "Date": "2026-04-28",
+        "portfolio_return": 0.0007959544041297797,
+        "portfolio_equity": 1475732853.261429,
+        "portfolio_drawdown": -0.007753966313267302
+      },
+      {
+        "Date": "2026-04-29",
+        "portfolio_return": 0.00746372251457506,
+        "portfolio_equity": 1486747313.7838144,
+        "portfolio_drawdown": -0.00034811725164185514
+      },
+      {
+        "Date": "2026-04-30",
+        "portfolio_return": -0.004365323020207721,
+        "portfolio_equity": 1480257181.509722,
+        "portfolio_drawdown": -0.004711920627597288
+      },
+      {
+        "Date": "2026-05-01",
+        "portfolio_return": 0.0132777256777897,
+        "portfolio_equity": 1499911630.298386,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2026-05-04",
+        "portfolio_return": 0.02628032513678006,
+        "portfolio_equity": 1539329795.6190655,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2026-05-05",
+        "portfolio_return": -0.0027449243964593195,
+        "portfolio_equity": 1535104451.7088737,
+        "portfolio_drawdown": -0.0027449243964594583
+      },
+      {
+        "Date": "2026-05-06",
+        "portfolio_return": 0.021051507531717265,
+        "portfolio_equity": 1567420714.6359959,
+        "portfolio_drawdown": 0.0
+      },
+      {
+        "Date": "2026-05-07",
+        "portfolio_return": 0.0076206184754972605,
+        "portfolio_equity": 1579365429.892828,
+        "portfolio_drawdown": 0.0
+      }
+    ],
+    "annual_returns": [
+      {
+        "year": 2013,
+        "return": 0.19752601230128963,
+        "n_days": 252
+      },
+      {
+        "year": 2014,
+        "return": 0.22702975056793284,
+        "n_days": 252
+      },
+      {
+        "year": 2015,
+        "return": 0.11356135861571981,
+        "n_days": 252
+      },
+      {
+        "year": 2016,
+        "return": 0.2884993960349007,
+        "n_days": 252
+      },
+      {
+        "year": 2017,
+        "return": 0.36248536225964667,
+        "n_days": 251
+      },
+      {
+        "year": 2018,
+        "return": -0.09994593695789256,
+        "n_days": 251
+      },
+      {
+        "year": 2019,
+        "return": 0.4402421473946261,
+        "n_days": 252
+      },
+      {
+        "year": 2020,
+        "return": 0.4048498633360593,
+        "n_days": 253
+      },
+      {
+        "year": 2021,
+        "return": 0.36035819054147344,
+        "n_days": 252
+      },
+      {
+        "year": 2022,
+        "return": -0.26774423121525925,
+        "n_days": 251
+      },
+      {
+        "year": 2023,
+        "return": 0.5171298911189279,
+        "n_days": 250
+      },
+      {
+        "year": 2024,
+        "return": 0.41903039505830786,
+        "n_days": 252
+      },
+      {
+        "year": 2025,
+        "return": 0.1927938514179397,
+        "n_days": 250
+      },
+      {
+        "year": 2026,
+        "return": 0.18027281367316372,
+        "n_days": 87
+      }
+    ],
+    "monthly_returns": [
+      {
+        "month": "2023-06",
+        "return": 0.0374266716826821,
+        "n_days": 21
+      },
+      {
+        "month": "2023-07",
+        "return": 0.017158504109046957,
+        "n_days": 20
+      },
+      {
+        "month": "2023-08",
+        "return": 0.01401886211151715,
+        "n_days": 23
+      },
+      {
+        "month": "2023-09",
+        "return": -0.07504189993559851,
+        "n_days": 20
+      },
+      {
+        "month": "2023-10",
+        "return": 0.011539943892762139,
+        "n_days": 22
+      },
+      {
+        "month": "2023-11",
+        "return": 0.07262666334428469,
+        "n_days": 21
+      },
+      {
+        "month": "2023-12",
+        "return": 0.02863711066942276,
+        "n_days": 20
+      },
+      {
+        "month": "2024-01",
+        "return": 0.09209353527343755,
+        "n_days": 21
+      },
+      {
+        "month": "2024-02",
+        "return": 0.06336753139791029,
+        "n_days": 20
+      },
+      {
+        "month": "2024-03",
+        "return": -0.0006723123802477859,
+        "n_days": 20
+      },
+      {
+        "month": "2024-04",
+        "return": -0.019556579486268766,
+        "n_days": 22
+      },
+      {
+        "month": "2024-05",
+        "return": 0.1124634478060682,
+        "n_days": 22
+      },
+      {
+        "month": "2024-06",
+        "return": 0.06275092856484732,
+        "n_days": 19
+      },
+      {
+        "month": "2024-07",
+        "return": -0.04602114796595713,
+        "n_days": 22
+      },
+      {
+        "month": "2024-08",
+        "return": -0.0036125519734454548,
+        "n_days": 22
+      },
+      {
+        "month": "2024-09",
+        "return": 0.04499229142136163,
+        "n_days": 20
+      },
+      {
+        "month": "2024-10",
+        "return": 0.015193726371070193,
+        "n_days": 23
+      },
+      {
+        "month": "2024-11",
+        "return": 0.03906928288333944,
+        "n_days": 20
+      },
+      {
+        "month": "2024-12",
+        "return": 0.0067630145710935174,
+        "n_days": 21
+      },
+      {
+        "month": "2025-01",
+        "return": -0.04216640820934359,
+        "n_days": 20
+      },
+      {
+        "month": "2025-02",
+        "return": -0.024159889799852508,
+        "n_days": 19
+      },
+      {
+        "month": "2025-03",
+        "return": -0.03308897039659553,
+        "n_days": 21
+      },
+      {
+        "month": "2025-04",
+        "return": 0.009050614711894278,
+        "n_days": 21
+      },
+      {
+        "month": "2025-05",
+        "return": 0.0595466782516183,
+        "n_days": 21
+      },
+      {
+        "month": "2025-06",
+        "return": 0.06294130252468655,
+        "n_days": 20
+      },
+      {
+        "month": "2025-07",
+        "return": 0.019567845918396998,
+        "n_days": 22
+      },
+      {
+        "month": "2025-08",
+        "return": 0.03264278900157502,
+        "n_days": 21
+      },
+      {
+        "month": "2025-09",
+        "return": 0.07193449775310823,
+        "n_days": 21
+      },
+      {
+        "month": "2025-10",
+        "return": 0.03152476705088336,
+        "n_days": 23
+      },
+      {
+        "month": "2025-11",
+        "return": -0.003401287380210838,
+        "n_days": 19
+      },
+      {
+        "month": "2025-12",
+        "return": 0.0009983075616561976,
+        "n_days": 22
+      },
+      {
+        "month": "2026-01",
+        "return": 0.009242393669500304,
+        "n_days": 20
+      },
+      {
+        "month": "2026-02",
+        "return": -0.007138200403477679,
+        "n_days": 19
+      },
+      {
+        "month": "2026-03",
+        "return": -0.019230634646255962,
+        "n_days": 22
+      },
+      {
+        "month": "2026-04",
+        "return": 0.12560437971438287,
+        "n_days": 21
+      },
+      {
+        "month": "2026-05",
+        "return": 0.06695339811290468,
+        "n_days": 5
+      }
+    ]
+  },
+  "validation": {
+    "fail_count": 0,
+    "pass_count": 52,
+    "checks": [
+      {
+        "check_name": "QQQ_rows",
+        "status": "PASS",
+        "detail": "rows=3357"
+      },
+      {
+        "check_name": "QQQ_date_monotonic",
+        "status": "PASS",
+        "detail": "Date is sorted ascending"
+      },
+      {
+        "check_name": "QQQ_no_duplicate_dates",
+        "status": "PASS",
+        "detail": "No duplicate dates"
+      },
+      {
+        "check_name": "QQQ_required_columns",
+        "status": "PASS",
+        "detail": "missing=[]"
+      },
+      {
+        "check_name": "QQQ_prob_high_vol_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "QQQ_prob_normal_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "QQQ_prob_overall_risk_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "QQQ_prob_up_strengthening_score_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "QQQ_prob_down_strengthening_score_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "QQQ_latest_weight_sum",
+        "status": "PASS",
+        "detail": "sum=1.00000000"
+      },
+      {
+        "check_name": "SPY_rows",
+        "status": "PASS",
+        "detail": "rows=3357"
+      },
+      {
+        "check_name": "SPY_date_monotonic",
+        "status": "PASS",
+        "detail": "Date is sorted ascending"
+      },
+      {
+        "check_name": "SPY_no_duplicate_dates",
+        "status": "PASS",
+        "detail": "No duplicate dates"
+      },
+      {
+        "check_name": "SPY_required_columns",
+        "status": "PASS",
+        "detail": "missing=[]"
+      },
+      {
+        "check_name": "SPY_prob_high_vol_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "SPY_prob_normal_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "SPY_prob_overall_risk_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "SPY_prob_up_strengthening_score_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "SPY_prob_down_strengthening_score_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "SPY_latest_weight_sum",
+        "status": "PASS",
+        "detail": "sum=1.00000000"
+      },
+      {
+        "check_name": "AAPL_rows",
+        "status": "PASS",
+        "detail": "rows=3357"
+      },
+      {
+        "check_name": "AAPL_date_monotonic",
+        "status": "PASS",
+        "detail": "Date is sorted ascending"
+      },
+      {
+        "check_name": "AAPL_no_duplicate_dates",
+        "status": "PASS",
+        "detail": "No duplicate dates"
+      },
+      {
+        "check_name": "AAPL_required_columns",
+        "status": "PASS",
+        "detail": "missing=[]"
+      },
+      {
+        "check_name": "AAPL_prob_high_vol_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "AAPL_prob_normal_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "AAPL_prob_overall_risk_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "AAPL_prob_up_strengthening_score_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "AAPL_prob_down_strengthening_score_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "AAPL_latest_weight_sum",
+        "status": "PASS",
+        "detail": "sum=1.00000000"
+      },
+      {
+        "check_name": "SOXX_rows",
+        "status": "PASS",
+        "detail": "rows=3357"
+      },
+      {
+        "check_name": "SOXX_date_monotonic",
+        "status": "PASS",
+        "detail": "Date is sorted ascending"
+      },
+      {
+        "check_name": "SOXX_no_duplicate_dates",
+        "status": "PASS",
+        "detail": "No duplicate dates"
+      },
+      {
+        "check_name": "SOXX_required_columns",
+        "status": "PASS",
+        "detail": "missing=[]"
+      },
+      {
+        "check_name": "SOXX_prob_high_vol_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "SOXX_prob_normal_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "SOXX_prob_overall_risk_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "SOXX_prob_up_strengthening_score_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "SOXX_prob_down_strengthening_score_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "SOXX_latest_weight_sum",
+        "status": "PASS",
+        "detail": "sum=1.00000000"
+      },
+      {
+        "check_name": "NVDA_rows",
+        "status": "PASS",
+        "detail": "rows=3357"
+      },
+      {
+        "check_name": "NVDA_date_monotonic",
+        "status": "PASS",
+        "detail": "Date is sorted ascending"
+      },
+      {
+        "check_name": "NVDA_no_duplicate_dates",
+        "status": "PASS",
+        "detail": "No duplicate dates"
+      },
+      {
+        "check_name": "NVDA_required_columns",
+        "status": "PASS",
+        "detail": "missing=[]"
+      },
+      {
+        "check_name": "NVDA_prob_high_vol_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "NVDA_prob_normal_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "NVDA_prob_overall_risk_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "NVDA_prob_up_strengthening_score_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "NVDA_prob_down_strengthening_score_range",
+        "status": "PASS",
+        "detail": "0 <= probability <= 1"
+      },
+      {
+        "check_name": "NVDA_latest_weight_sum",
+        "status": "PASS",
+        "detail": "sum=1.00000000"
+      },
+      {
+        "check_name": "portfolio_total_weight_sum",
+        "status": "PASS",
+        "detail": "stock+bond+cash=1.00000000"
+      },
+      {
+        "check_name": "asset_capital_weight_sum",
+        "status": "PASS",
+        "detail": "sum=1.00000000"
+      }
+    ]
+  },
+  "ui_notes": {
+    "output_policy": "JSON payload first. CSV is optional debug/export only.",
+    "base_model_policy": "v8.6.41_label_fixed native allocations only. No loss guard or confidence/logit overlay."
+  }
+}
