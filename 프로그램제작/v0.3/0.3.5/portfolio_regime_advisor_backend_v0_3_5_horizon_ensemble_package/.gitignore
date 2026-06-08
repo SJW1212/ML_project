@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+storage/cache/
+storage/secrets/
+storage/**/*.lock
+storage/models/
+models/
+logs/
