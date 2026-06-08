@@ -1,0 +1,21 @@
+{
+  "portfolio": [
+    {"name": "애플", "ticker": "AAPL", "asset_type": "stock", "current_weight": 0.25},
+    {"name": "나스닥100 ETF", "ticker": "QQQ", "asset_type": "etf", "current_weight": 0.25},
+    {"name": "엔비디아", "ticker": "NVDA", "asset_type": "stock", "current_weight": 0.20},
+    {"name": "일라이릴리", "ticker": "LLY", "asset_type": "stock", "current_weight": 0.15},
+    {"name": "채권", "ticker": "BOND_BUCKET", "asset_type": "bond_bucket", "current_weight": 0.10},
+    {"name": "현금", "ticker": "CASH", "asset_type": "cash", "current_weight": 0.05}
+  ],
+  "risk_profile": "balanced",
+  "user_level": "general",
+  "settings": {
+    "start_date": "2013-01-01",
+    "update_data": true,
+    "generate_predictions": true,
+    "prediction_engine_mode": "reference_v8641_compatible",
+    "holdout_start": "2024-01-01",
+    "capital_mode": "current_weight",
+    "missing_asset_policy": "cash_fallback"
+  }
+}
