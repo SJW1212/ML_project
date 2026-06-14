@@ -1,0 +1,39 @@
+{
+  "model_version": "v8.6.41_model_label_fixed",
+  "model_mode": "prediction_file",
+  "input_dir": "C:/path/to/v8_6_41_prediction_files",
+  "out_dir": "v8_6_41_local_ops",
+  "assets": [
+    "QQQ",
+    "SPY",
+    "AAPL",
+    "SOXX",
+    "NVDA"
+  ],
+  "allocation_source": "executed",
+  "capital_mode": "equal",
+  "cache_dir": "storage/market_cache",
+  "data_update": {
+    "mode": "daily_cache_only",
+    "provider": "yahoo",
+    "recommended_hour_kst": 8,
+    "freshness_tolerance_days": 2,
+    "default_update_start": "2013-01-01"
+  },
+  "excluded_scope": [
+    "realtime_order_execution",
+    "automated_trading",
+    "database_storage",
+    "user_account_portfolio_storage",
+    "notifications",
+    "pixso_screen_design_mapping",
+    "realtime_market_streaming"
+  ],
+  "risk_free_rate": 0.0,
+  "logging": {
+    "log_dir": "storage/logs",
+    "api_log": "api_server.log",
+    "daily_update_log": "daily_update.log"
+  },
+  "performance_join_policy": "outer_join_fill_missing_asset_returns_0"
+}

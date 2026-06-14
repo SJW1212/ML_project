@@ -1,0 +1,169 @@
+2026-06-08 20:31:55,295 [v8641_production.api] ERROR: prediction file not found
+Traceback (most recent call last):
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\api_fastapi.py", line 151, in _build_payload
+    return ProductionService(config).build_dashboard_payload()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\service.py", line 33, in build_dashboard_payload
+    assets = self.repository.load_all()
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 80, in load_all
+    return {ticker: self.load_asset(ticker) for ticker in self.config.assets}
+                    ~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 85, in load_asset
+    raise FileNotFoundError(f"Prediction CSV not found for {ticker}")
+FileNotFoundError: Prediction CSV not found for QQQ
+2026-06-08 20:32:05,731 [v8641_production.api] ERROR: prediction file not found
+Traceback (most recent call last):
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\api_fastapi.py", line 151, in _build_payload
+    return ProductionService(config).build_dashboard_payload()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\service.py", line 33, in build_dashboard_payload
+    assets = self.repository.load_all()
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 80, in load_all
+    return {ticker: self.load_asset(ticker) for ticker in self.config.assets}
+                    ~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 85, in load_asset
+    raise FileNotFoundError(f"Prediction CSV not found for {ticker}")
+FileNotFoundError: Prediction CSV not found for QQQ
+2026-06-08 20:32:22,997 [v8641_production.api] ERROR: prediction file not found
+Traceback (most recent call last):
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\api_fastapi.py", line 151, in _build_payload
+    return ProductionService(config).build_dashboard_payload()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\service.py", line 33, in build_dashboard_payload
+    assets = self.repository.load_all()
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 80, in load_all
+    return {ticker: self.load_asset(ticker) for ticker in self.config.assets}
+                    ~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 85, in load_asset
+    raise FileNotFoundError(f"Prediction CSV not found for {ticker}")
+FileNotFoundError: Prediction CSV not found for PORTFOLIO_TOTALS
+2026-06-08 20:33:06,673 [v8641_production.api] ERROR: prediction file not found
+Traceback (most recent call last):
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\api_fastapi.py", line 151, in _build_payload
+    return ProductionService(config).build_dashboard_payload()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\service.py", line 33, in build_dashboard_payload
+    assets = self.repository.load_all()
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 80, in load_all
+    return {ticker: self.load_asset(ticker) for ticker in self.config.assets}
+                    ~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 85, in load_asset
+    raise FileNotFoundError(f"Prediction CSV not found for {ticker}")
+FileNotFoundError: Prediction CSV not found for QQQ
+2026-06-08 20:33:47,320 [v8641_production.api] ERROR: prediction file not found
+Traceback (most recent call last):
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\api_fastapi.py", line 151, in _build_payload
+    return ProductionService(config).build_dashboard_payload()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\service.py", line 33, in build_dashboard_payload
+    assets = self.repository.load_all()
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 80, in load_all
+    return {ticker: self.load_asset(ticker) for ticker in self.config.assets}
+                    ~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 85, in load_asset
+    raise FileNotFoundError(f"Prediction CSV not found for {ticker}")
+FileNotFoundError: Prediction CSV not found for QQQ
+2026-06-08 20:34:12,484 [v8641_production.api] ERROR: prediction file not found
+Traceback (most recent call last):
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\api_fastapi.py", line 151, in _build_payload
+    return ProductionService(config).build_dashboard_payload()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\service.py", line 33, in build_dashboard_payload
+    assets = self.repository.load_all()
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 80, in load_all
+    return {ticker: self.load_asset(ticker) for ticker in self.config.assets}
+                    ~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 85, in load_asset
+    raise FileNotFoundError(f"Prediction CSV not found for {ticker}")
+FileNotFoundError: Prediction CSV not found for QQQ
+2026-06-08 20:34:41,352 [v8641_production.api] ERROR: prediction file not found
+Traceback (most recent call last):
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\api_fastapi.py", line 151, in _build_payload
+    return ProductionService(config).build_dashboard_payload()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\service.py", line 33, in build_dashboard_payload
+    assets = self.repository.load_all()
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 80, in load_all
+    return {ticker: self.load_asset(ticker) for ticker in self.config.assets}
+                    ~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 85, in load_asset
+    raise FileNotFoundError(f"Prediction CSV not found for {ticker}")
+FileNotFoundError: Prediction CSV not found for QQQ
+2026-06-08 20:34:50,405 [v8641_production.api] ERROR: prediction file not found
+Traceback (most recent call last):
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\api_fastapi.py", line 151, in _build_payload
+    return ProductionService(config).build_dashboard_payload()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\service.py", line 33, in build_dashboard_payload
+    assets = self.repository.load_all()
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 80, in load_all
+    return {ticker: self.load_asset(ticker) for ticker in self.config.assets}
+                    ~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 85, in load_asset
+    raise FileNotFoundError(f"Prediction CSV not found for {ticker}")
+FileNotFoundError: Prediction CSV not found for QQQ
+2026-06-08 20:35:05,139 [v8641_production.api] ERROR: prediction file not found
+Traceback (most recent call last):
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\api_fastapi.py", line 151, in _build_payload
+    return ProductionService(config).build_dashboard_payload()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\service.py", line 33, in build_dashboard_payload
+    assets = self.repository.load_all()
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 80, in load_all
+    return {ticker: self.load_asset(ticker) for ticker in self.config.assets}
+                    ~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 85, in load_asset
+    raise FileNotFoundError(f"Prediction CSV not found for {ticker}")
+FileNotFoundError: Prediction CSV not found for QQQ
+2026-06-08 20:35:35,906 [v8641_production.api] ERROR: prediction file not found
+Traceback (most recent call last):
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\api_fastapi.py", line 151, in _build_payload
+    return ProductionService(config).build_dashboard_payload()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\service.py", line 33, in build_dashboard_payload
+    assets = self.repository.load_all()
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 80, in load_all
+    return {ticker: self.load_asset(ticker) for ticker in self.config.assets}
+                    ~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 85, in load_asset
+    raise FileNotFoundError(f"Prediction CSV not found for {ticker}")
+FileNotFoundError: Prediction CSV not found for QQQ
+2026-06-08 20:37:47,839 [v8641_production.api] ERROR: prediction file not found
+Traceback (most recent call last):
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\api_fastapi.py", line 151, in _build_payload
+    return ProductionService(config).build_dashboard_payload()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\service.py", line 33, in build_dashboard_payload
+    assets = self.repository.load_all()
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 80, in load_all
+    return {ticker: self.load_asset(ticker) for ticker in self.config.assets}
+                    ~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 85, in load_asset
+    raise FileNotFoundError(f"Prediction CSV not found for {ticker}")
+FileNotFoundError: Prediction CSV not found for QQQ
+2026-06-08 20:38:02,614 [v8641_production.api] ERROR: prediction file not found
+Traceback (most recent call last):
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\api_fastapi.py", line 151, in _build_payload
+    return ProductionService(config).build_dashboard_payload()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\service.py", line 33, in build_dashboard_payload
+    assets = self.repository.load_all()
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 80, in load_all
+    return {ticker: self.load_asset(ticker) for ticker in self.config.assets}
+                    ~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 85, in load_asset
+    raise FileNotFoundError(f"Prediction CSV not found for {ticker}")
+FileNotFoundError: Prediction CSV not found for QQQ
+2026-06-08 20:38:22,951 [v8641_production.api] ERROR: prediction file not found
+Traceback (most recent call last):
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\api_fastapi.py", line 151, in _build_payload
+    return ProductionService(config).build_dashboard_payload()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\service.py", line 33, in build_dashboard_payload
+    assets = self.repository.load_all()
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 80, in load_all
+    return {ticker: self.load_asset(ticker) for ticker in self.config.assets}
+                    ~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\손주원\Desktop\기계학습 프로젝트\ML_project\프로그램제작\41.2\portfolio_regime_advisor_v8_6_41_local_production_v2_package\v8_6_41_local_production_v2_work\src\v8641_production\repository.py", line 85, in load_asset
+    raise FileNotFoundError(f"Prediction CSV not found for {ticker}")
+FileNotFoundError: Prediction CSV not found for QQQ

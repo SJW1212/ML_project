@@ -1,0 +1,7 @@
+pandas>=2.0
+numpy>=1.24
+fastapi>=0.110
+uvicorn[standard]>=0.27
+pydantic>=2.0
+# Optional in the code path, but recommended if /data/update-daily or run_daily_update_once.bat is used.
+yfinance>=0.2.40

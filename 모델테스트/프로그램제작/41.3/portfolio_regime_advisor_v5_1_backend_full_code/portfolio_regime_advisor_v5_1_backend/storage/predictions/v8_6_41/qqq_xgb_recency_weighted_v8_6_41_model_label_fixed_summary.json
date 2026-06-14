@@ -1,0 +1,9 @@
+{
+  "ticker": "QQQ",
+  "model_version": "v8.6.41_model_label_fixed_compatible_reference",
+  "engine_mode": "reference_v8641_compatible",
+  "created_at": "2026-06-08T22:07:11.823792+00:00",
+  "rows": 3378,
+  "latest_date": "2026-06-08",
+  "source_cache_provider": "yahoo"
+}

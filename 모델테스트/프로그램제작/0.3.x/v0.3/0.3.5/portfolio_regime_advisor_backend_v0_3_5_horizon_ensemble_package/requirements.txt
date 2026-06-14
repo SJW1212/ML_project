@@ -1,0 +1,15 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=1.10
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3
+xgboost>=2.0
+joblib>=1.3
+cryptography>=41.0
+requests>=2.31
+python-multipart>=0.0.9
+pyarrow>=14.0
+
+yfinance>=0.2.54
+filelock>=3.13

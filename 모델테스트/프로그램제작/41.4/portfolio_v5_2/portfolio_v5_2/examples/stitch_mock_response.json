@@ -1,0 +1,746 @@
+{
+  "ok": true,
+  "request_id": "aad5b3c0e9938921",
+  "model_version": "v8.6.41_model_label_fixed_compatible_reference",
+  "engine_mode": "reference_v8641_compatible",
+  "as_of_date": "2023-01-24",
+  "portfolio_input": [
+    {
+      "name": "애플",
+      "ticker": "AAPL",
+      "asset_type": "stock",
+      "current_weight": 0.25,
+      "current_value": null,
+      "enabled": true
+    },
+    {
+      "name": "나스닥100 ETF",
+      "ticker": "QQQ",
+      "asset_type": "etf",
+      "current_weight": 0.25,
+      "current_value": null,
+      "enabled": true
+    },
+    {
+      "name": "엔비디아",
+      "ticker": "NVDA",
+      "asset_type": "stock",
+      "current_weight": 0.2,
+      "current_value": null,
+      "enabled": true
+    },
+    {
+      "name": "일라이릴리",
+      "ticker": "LLY",
+      "asset_type": "stock",
+      "current_weight": 0.15,
+      "current_value": null,
+      "enabled": true
+    },
+    {
+      "name": "채권",
+      "ticker": "BOND_BUCKET",
+      "asset_type": "bond_bucket",
+      "current_weight": 0.1,
+      "current_value": null,
+      "enabled": true
+    },
+    {
+      "name": "현금",
+      "ticker": "CASH",
+      "asset_type": "cash",
+      "current_weight": 0.05,
+      "current_value": null,
+      "enabled": true
+    }
+  ],
+  "latest_signals": [
+    {
+      "ticker": "AAPL",
+      "Date": "2023-01-24",
+      "prob_normal": 0.8167219165197231,
+      "prob_high_vol": 0.3250510608732306,
+      "prob_overall_risk": 0.1832780834802768,
+      "prob_up_strengthening_5d": 0.99,
+      "prob_up_strengthening_10d": 0.99,
+      "prob_up_strengthening_20d": 0.99,
+      "prob_up_strengthening_score": 0.99,
+      "prob_down_strengthening_5d": 0.01,
+      "prob_down_strengthening_10d": 0.01,
+      "prob_down_strengthening_20d": 0.01,
+      "prob_down_strengthening_score": 0.01,
+      "risk_class": "NORMAL",
+      "direction_class": "UP_STRENGTH",
+      "allocation_class": "PARTICIPATION",
+      "stock_weight": 0.918,
+      "bond_weight": 0.0533,
+      "cash_weight": 0.0287,
+      "risk_class_ko": "정상",
+      "direction_class_ko": "상방 강화",
+      "allocation_class_ko": "참여형 배분",
+      "probability_pct": {
+        "normal": 81.67,
+        "high_vol": 32.51,
+        "overall_risk": 18.33,
+        "up_strengthening_score": 99.0,
+        "down_strengthening_score": 1.0
+      },
+      "reason_codes": [
+        "UP_STRENGTH_ELEVATED",
+        "REFERENCE_ENGINE_ONLY"
+      ],
+      "reason_text": "상방 강화 확률은 높지만, 위험도 조건과 함께 최종 비중을 조정했습니다. 현재 결과는 실제 locked model이 아닌 reference-compatible engine 기반입니다."
+    },
+    {
+      "ticker": "QQQ",
+      "Date": "2023-01-24",
+      "prob_normal": 0.8167219165197231,
+      "prob_high_vol": 0.3250510608732306,
+      "prob_overall_risk": 0.1832780834802768,
+      "prob_up_strengthening_5d": 0.99,
+      "prob_up_strengthening_10d": 0.99,
+      "prob_up_strengthening_20d": 0.99,
+      "prob_up_strengthening_score": 0.99,
+      "prob_down_strengthening_5d": 0.01,
+      "prob_down_strengthening_10d": 0.01,
+      "prob_down_strengthening_20d": 0.01,
+      "prob_down_strengthening_score": 0.01,
+      "risk_class": "NORMAL",
+      "direction_class": "UP_STRENGTH",
+      "allocation_class": "PARTICIPATION",
+      "stock_weight": 0.918,
+      "bond_weight": 0.0533,
+      "cash_weight": 0.0287,
+      "risk_class_ko": "정상",
+      "direction_class_ko": "상방 강화",
+      "allocation_class_ko": "참여형 배분",
+      "probability_pct": {
+        "normal": 81.67,
+        "high_vol": 32.51,
+        "overall_risk": 18.33,
+        "up_strengthening_score": 99.0,
+        "down_strengthening_score": 1.0
+      },
+      "reason_codes": [
+        "UP_STRENGTH_ELEVATED",
+        "REFERENCE_ENGINE_ONLY"
+      ],
+      "reason_text": "상방 강화 확률은 높지만, 위험도 조건과 함께 최종 비중을 조정했습니다. 현재 결과는 실제 locked model이 아닌 reference-compatible engine 기반입니다."
+    },
+    {
+      "ticker": "NVDA",
+      "Date": "2023-01-24",
+      "prob_normal": 0.8167219165197231,
+      "prob_high_vol": 0.3250510608732306,
+      "prob_overall_risk": 0.1832780834802768,
+      "prob_up_strengthening_5d": 0.99,
+      "prob_up_strengthening_10d": 0.99,
+      "prob_up_strengthening_20d": 0.99,
+      "prob_up_strengthening_score": 0.99,
+      "prob_down_strengthening_5d": 0.01,
+      "prob_down_strengthening_10d": 0.01,
+      "prob_down_strengthening_20d": 0.01,
+      "prob_down_strengthening_score": 0.01,
+      "risk_class": "NORMAL",
+      "direction_class": "UP_STRENGTH",
+      "allocation_class": "PARTICIPATION",
+      "stock_weight": 0.918,
+      "bond_weight": 0.0533,
+      "cash_weight": 0.0287,
+      "risk_class_ko": "정상",
+      "direction_class_ko": "상방 강화",
+      "allocation_class_ko": "참여형 배분",
+      "probability_pct": {
+        "normal": 81.67,
+        "high_vol": 32.51,
+        "overall_risk": 18.33,
+        "up_strengthening_score": 99.0,
+        "down_strengthening_score": 1.0
+      },
+      "reason_codes": [
+        "UP_STRENGTH_ELEVATED",
+        "REFERENCE_ENGINE_ONLY"
+      ],
+      "reason_text": "상방 강화 확률은 높지만, 위험도 조건과 함께 최종 비중을 조정했습니다. 현재 결과는 실제 locked model이 아닌 reference-compatible engine 기반입니다."
+    },
+    {
+      "ticker": "LLY",
+      "Date": "2023-01-24",
+      "prob_normal": 0.8167219165197231,
+      "prob_high_vol": 0.3250510608732306,
+      "prob_overall_risk": 0.1832780834802768,
+      "prob_up_strengthening_5d": 0.99,
+      "prob_up_strengthening_10d": 0.99,
+      "prob_up_strengthening_20d": 0.99,
+      "prob_up_strengthening_score": 0.99,
+      "prob_down_strengthening_5d": 0.01,
+      "prob_down_strengthening_10d": 0.01,
+      "prob_down_strengthening_20d": 0.01,
+      "prob_down_strengthening_score": 0.01,
+      "risk_class": "NORMAL",
+      "direction_class": "UP_STRENGTH",
+      "allocation_class": "PARTICIPATION",
+      "stock_weight": 0.918,
+      "bond_weight": 0.0533,
+      "cash_weight": 0.0287,
+      "risk_class_ko": "정상",
+      "direction_class_ko": "상방 강화",
+      "allocation_class_ko": "참여형 배분",
+      "probability_pct": {
+        "normal": 81.67,
+        "high_vol": 32.51,
+        "overall_risk": 18.33,
+        "up_strengthening_score": 99.0,
+        "down_strengthening_score": 1.0
+      },
+      "reason_codes": [
+        "UP_STRENGTH_ELEVATED",
+        "REFERENCE_ENGINE_ONLY"
+      ],
+      "reason_text": "상방 강화 확률은 높지만, 위험도 조건과 함께 최종 비중을 조정했습니다. 현재 결과는 실제 locked model이 아닌 reference-compatible engine 기반입니다."
+    }
+  ],
+  "allocation": {
+    "allocation_rows": [
+      {
+        "ticker": "AAPL",
+        "name": "애플",
+        "asset_type": "stock",
+        "current_weight": 0.25,
+        "model_stock_weight": 0.918,
+        "model_bond_weight": 0.0533,
+        "model_cash_weight": 0.0287,
+        "recommended_weight": 0.2295,
+        "defensive_to_bond": 0.013325,
+        "defensive_to_cash": 0.007175,
+        "action": "SLIGHT_REDUCE",
+        "action_ko": "소폭 축소",
+        "asset_type_ko": "주식",
+        "risk_class": "NORMAL",
+        "risk_class_ko": "정상",
+        "direction_class": "UP_STRENGTH",
+        "direction_class_ko": "상방 강화",
+        "allocation_class": "PARTICIPATION",
+        "allocation_class_ko": "참여형 배분",
+        "current_weight_pct": 25.0,
+        "recommended_weight_pct": 22.95,
+        "reason_codes": [
+          "UP_STRENGTH_ELEVATED",
+          "REFERENCE_ENGINE_ONLY",
+          "ACTION_REDUCE"
+        ],
+        "reason_text": "상방 강화 확률은 높지만, 위험도 조건과 함께 최종 비중을 조정했습니다. 현재 결과는 실제 locked model이 아닌 reference-compatible engine 기반입니다. 현재 비중보다 추천 비중이 낮아 축소 액션이 표시되었습니다."
+      },
+      {
+        "ticker": "QQQ",
+        "name": "나스닥100 ETF",
+        "asset_type": "etf",
+        "current_weight": 0.25,
+        "model_stock_weight": 0.918,
+        "model_bond_weight": 0.0533,
+        "model_cash_weight": 0.0287,
+        "recommended_weight": 0.2295,
+        "defensive_to_bond": 0.013325,
+        "defensive_to_cash": 0.007175,
+        "action": "SLIGHT_REDUCE",
+        "action_ko": "소폭 축소",
+        "asset_type_ko": "ETF",
+        "risk_class": "NORMAL",
+        "risk_class_ko": "정상",
+        "direction_class": "UP_STRENGTH",
+        "direction_class_ko": "상방 강화",
+        "allocation_class": "PARTICIPATION",
+        "allocation_class_ko": "참여형 배분",
+        "current_weight_pct": 25.0,
+        "recommended_weight_pct": 22.95,
+        "reason_codes": [
+          "UP_STRENGTH_ELEVATED",
+          "REFERENCE_ENGINE_ONLY",
+          "ACTION_REDUCE"
+        ],
+        "reason_text": "상방 강화 확률은 높지만, 위험도 조건과 함께 최종 비중을 조정했습니다. 현재 결과는 실제 locked model이 아닌 reference-compatible engine 기반입니다. 현재 비중보다 추천 비중이 낮아 축소 액션이 표시되었습니다."
+      },
+      {
+        "ticker": "NVDA",
+        "name": "엔비디아",
+        "asset_type": "stock",
+        "current_weight": 0.2,
+        "model_stock_weight": 0.918,
+        "model_bond_weight": 0.0533,
+        "model_cash_weight": 0.0287,
+        "recommended_weight": 0.1836,
+        "defensive_to_bond": 0.01066,
+        "defensive_to_cash": 0.00574,
+        "action": "SLIGHT_REDUCE",
+        "action_ko": "소폭 축소",
+        "asset_type_ko": "주식",
+        "risk_class": "NORMAL",
+        "risk_class_ko": "정상",
+        "direction_class": "UP_STRENGTH",
+        "direction_class_ko": "상방 강화",
+        "allocation_class": "PARTICIPATION",
+        "allocation_class_ko": "참여형 배분",
+        "current_weight_pct": 20.0,
+        "recommended_weight_pct": 18.36,
+        "reason_codes": [
+          "UP_STRENGTH_ELEVATED",
+          "REFERENCE_ENGINE_ONLY",
+          "ACTION_REDUCE"
+        ],
+        "reason_text": "상방 강화 확률은 높지만, 위험도 조건과 함께 최종 비중을 조정했습니다. 현재 결과는 실제 locked model이 아닌 reference-compatible engine 기반입니다. 현재 비중보다 추천 비중이 낮아 축소 액션이 표시되었습니다."
+      },
+      {
+        "ticker": "LLY",
+        "name": "일라이릴리",
+        "asset_type": "stock",
+        "current_weight": 0.15,
+        "model_stock_weight": 0.918,
+        "model_bond_weight": 0.0533,
+        "model_cash_weight": 0.0287,
+        "recommended_weight": 0.1377,
+        "defensive_to_bond": 0.007995,
+        "defensive_to_cash": 0.004305,
+        "action": "SLIGHT_REDUCE",
+        "action_ko": "소폭 축소",
+        "asset_type_ko": "주식",
+        "risk_class": "NORMAL",
+        "risk_class_ko": "정상",
+        "direction_class": "UP_STRENGTH",
+        "direction_class_ko": "상방 강화",
+        "allocation_class": "PARTICIPATION",
+        "allocation_class_ko": "참여형 배분",
+        "current_weight_pct": 15.0,
+        "recommended_weight_pct": 13.77,
+        "reason_codes": [
+          "UP_STRENGTH_ELEVATED",
+          "REFERENCE_ENGINE_ONLY",
+          "ACTION_REDUCE"
+        ],
+        "reason_text": "상방 강화 확률은 높지만, 위험도 조건과 함께 최종 비중을 조정했습니다. 현재 결과는 실제 locked model이 아닌 reference-compatible engine 기반입니다. 현재 비중보다 추천 비중이 낮아 축소 액션이 표시되었습니다."
+      }
+    ],
+    "portfolio_totals": {
+      "stock_weight": 0.7803,
+      "bond_weight": 0.145305,
+      "cash_weight": 0.074395
+    },
+    "defensive_buckets_input": {
+      "bond_weight": 0.1,
+      "cash_weight": 0.05
+    },
+    "portfolio_totals_pct": {
+      "stock_weight": 78.03,
+      "bond_weight": 14.53,
+      "cash_weight": 7.44
+    }
+  },
+  "performance": {
+    "metrics": {
+      "n_days": 800,
+      "final_capital": 129989408.89464481,
+      "cagr": 0.08612800099099038,
+      "mdd": 0.0,
+      "sharpe": 153.34019739854736,
+      "sortino": null,
+      "calmar": null,
+      "annual_vol": 0.0005388852415194059,
+      "win_rate": 0.99875
+    },
+    "equity_curve_tail": [
+      {
+        "Date": "2022-12-28",
+        "portfolio_return": 0.00028068345323746676,
+        "equity": 1.293366335652254,
+        "drawdown": 0.0,
+        "return_status": "realized"
+      },
+      {
+        "Date": "2022-12-29",
+        "portfolio_return": 0.0002805825242716663,
+        "equity": 1.2937292316435194,
+        "drawdown": 0.0,
+        "return_status": "realized"
+      },
+      {
+        "Date": "2022-12-30",
+        "portfolio_return": 0.0002804816678649486,
+        "equity": 1.2940920989761764,
+        "drawdown": 0.0,
+        "return_status": "realized"
+      },
+      {
+        "Date": "2023-01-02",
+        "portfolio_return": 0.00028038088393803485,
+        "equity": 1.2944549376627845,
+        "drawdown": 0.0,
+        "return_status": "realized"
+      },
+      {
+        "Date": "2023-01-03",
+        "portfolio_return": 0.00028028017241390975,
+        "equity": 1.2948177477158949,
+        "drawdown": 0.0,
+        "return_status": "realized"
+      },
+      {
+        "Date": "2023-01-04",
+        "portfolio_return": 0.0002801795332137628,
+        "equity": 1.2951805291480467,
+        "drawdown": 0.0,
+        "return_status": "realized"
+      },
+      {
+        "Date": "2023-01-05",
+        "portfolio_return": 0.00028007896625979815,
+        "equity": 1.2955432819717703,
+        "drawdown": 0.0,
+        "return_status": "realized"
+      },
+      {
+        "Date": "2023-01-06",
+        "portfolio_return": 0.0002799784714747661,
+        "equity": 1.2959060061995862,
+        "drawdown": 0.0,
+        "return_status": "realized"
+      },
+      {
+        "Date": "2023-01-09",
+        "portfolio_return": 0.0002798780487805587,
+        "equity": 1.2962687018440042,
+        "drawdown": 0.0,
+        "return_status": "realized"
+      },
+      {
+        "Date": "2023-01-10",
+        "portfolio_return": 0.00027977769809945795,
+        "equity": 1.2966313689175244,
+        "drawdown": 0.0,
+        "return_status": "realized"
+      },
+      {
+        "Date": "2023-01-11",
+        "portfolio_return": 0.00027967741935476043,
+        "equity": 1.2969940074326376,
+        "drawdown": 0.0,
+        "return_status": "realized"
+      },
+      {
+        "Date": "2023-01-12",
+        "portfolio_return": 0.0002795772124686702,
+        "equity": 1.297356617401824,
+        "drawdown": 0.0,
+        "return_status": "realized"
+      },
+      {
+        "Date": "2023-01-13",
+        "portfolio_return": 0.0002794770773639375,
+        "equity": 1.2977191988375543,
+        "drawdown": 0.0,
+        "return_status": "realized"
+      },
+      {
+        "Date": "2023-01-16",
+        "portfolio_return": 0.0002793770139633128,
+        "equity": 1.2980817517522882,
+        "drawdown": 0.0,
+        "return_status": "realized"
+      },
+      {
+        "Date": "2023-01-17",
+        "portfolio_return": 0.00027927702219040465,
+        "equity": 1.2984442761584774,
+        "drawdown": 0.0,
+        "return_status": "realized"
+      },
+      {
+        "Date": "2023-01-18",
+        "portfolio_return": 0.00027917710196780716,
+        "equity": 1.298806772068562,
+        "drawdown": 0.0,
+        "return_status": "realized"
+      },
+      {
+        "Date": "2023-01-19",
+        "portfolio_return": 0.000279077253218739,
+        "equity": 1.2991692394949728,
+        "drawdown": 0.0,
+        "return_status": "realized"
+      },
+      {
+        "Date": "2023-01-20",
+        "portfolio_return": 0.00027897747586712085,
+        "equity": 1.2995316784501314,
+        "drawdown": 0.0,
+        "return_status": "realized"
+      },
+      {
+        "Date": "2023-01-23",
+        "portfolio_return": 0.0002788777698353908,
+        "equity": 1.299894088946448,
+        "drawdown": 0.0,
+        "return_status": "realized"
+      },
+      {
+        "Date": "2023-01-24",
+        "portfolio_return": null,
+        "equity": 1.299894088946448,
+        "drawdown": 0.0,
+        "portfolio_return_raw": 0.0,
+        "return_status": "pending"
+      }
+    ]
+  },
+  "benchmarks": {
+    "items": {
+      "model_recommended": {
+        "name": "모델 추천 포트폴리오",
+        "status": "ok",
+        "note": "recommended risk-asset weights; latest pending return is included as 0 only for metric continuity",
+        "metrics": {
+          "n_days": 800,
+          "final_capital": 129989408.89464481,
+          "cagr": 0.08612800099099038,
+          "mdd": 0.0,
+          "sharpe": 153.34019739854736,
+          "sortino": null,
+          "calmar": null,
+          "annual_vol": 0.0005388852415194059,
+          "win_rate": 0.99875
+        }
+      },
+      "current_portfolio": {
+        "name": "현재 포트폴리오 유지",
+        "status": "ok",
+        "note": "bond/cash bucket returns are treated as 0 in this lightweight comparison",
+        "metrics": {
+          "n_days": 800,
+          "final_capital": 133070233.40607642,
+          "cagr": 0.094171729004215,
+          "mdd": 0.0,
+          "sharpe": 153.34019739854736,
+          "sortino": null,
+          "calmar": null,
+          "annual_vol": 0.0005870209602607909,
+          "win_rate": 0.99875
+        }
+      },
+      "qqq_buy_hold": {
+        "name": "QQQ Buy&Hold",
+        "status": "ok",
+        "note": null,
+        "metrics": {
+          "n_days": 800,
+          "final_capital": 139950000.0000004,
+          "cagr": 0.11168427976620232,
+          "mdd": 0.0,
+          "sharpe": 153.34019739854736,
+          "sortino": null,
+          "calmar": null,
+          "annual_vol": 0.0006906128944244598,
+          "win_rate": 0.99875
+        }
+      },
+      "spy_buy_hold": {
+        "name": "SPY Buy&Hold",
+        "status": "unavailable",
+        "reason": "SPY cache data is unavailable",
+        "metrics": null
+      },
+      "static_60_40": {
+        "name": "60/40 Static",
+        "status": "unavailable",
+        "reason": "SPY/IEF cache data is unavailable",
+        "metrics": null
+      },
+      "static_85_10_5": {
+        "name": "85/10/5 Static",
+        "status": "ok",
+        "note": "10% bond and 5% cash buckets are treated as 0-return placeholders unless full defensive price data is connected",
+        "metrics": {
+          "n_days": 800,
+          "final_capital": 133070233.40607642,
+          "cagr": 0.094171729004215,
+          "mdd": 0.0,
+          "sharpe": 153.34019739854736,
+          "sortino": null,
+          "calmar": null,
+          "annual_vol": 0.0005870209602607909,
+          "win_rate": 0.99875
+        }
+      }
+    },
+    "notes": [
+      "This benchmark module is lightweight and does not download missing benchmark tickers.",
+      "Unavailable benchmark rows mean the required cache file was not present.",
+      "Bond/cash bucket returns are placeholders until dedicated defensive asset return series are connected."
+    ]
+  },
+  "data_update_status": {
+    "provider": "yahoo",
+    "updated": [],
+    "skipped": [],
+    "errors": {}
+  },
+  "prediction_generation_status": {
+    "ok": true,
+    "results": [
+      {
+        "ticker": "AAPL",
+        "path": "/tmp/tmpvcrsdpg8/storage/predictions/v8_6_41/aapl_xgb_recency_weighted_v8_6_41_model_label_fixed_predictions.csv",
+        "mode": "reference_v8641_compatible",
+        "latest_date": "2023-01-24",
+        "rows": 800,
+        "errors": []
+      },
+      {
+        "ticker": "QQQ",
+        "path": "/tmp/tmpvcrsdpg8/storage/predictions/v8_6_41/qqq_xgb_recency_weighted_v8_6_41_model_label_fixed_predictions.csv",
+        "mode": "reference_v8641_compatible",
+        "latest_date": "2023-01-24",
+        "rows": 800,
+        "errors": []
+      },
+      {
+        "ticker": "NVDA",
+        "path": "/tmp/tmpvcrsdpg8/storage/predictions/v8_6_41/nvda_xgb_recency_weighted_v8_6_41_model_label_fixed_predictions.csv",
+        "mode": "reference_v8641_compatible",
+        "latest_date": "2023-01-24",
+        "rows": 800,
+        "errors": []
+      },
+      {
+        "ticker": "LLY",
+        "path": "/tmp/tmpvcrsdpg8/storage/predictions/v8_6_41/lly_xgb_recency_weighted_v8_6_41_model_label_fixed_predictions.csv",
+        "mode": "reference_v8641_compatible",
+        "latest_date": "2023-01-24",
+        "rows": 800,
+        "errors": []
+      }
+    ]
+  },
+  "cache_freshness": [
+    {
+      "ticker": "AAPL",
+      "provider": "yahoo",
+      "latest_date": "2023-01-24",
+      "age_days": 1231,
+      "is_fresh_daily": false
+    },
+    {
+      "ticker": "QQQ",
+      "provider": "yahoo",
+      "latest_date": "2023-01-24",
+      "age_days": 1231,
+      "is_fresh_daily": false
+    },
+    {
+      "ticker": "NVDA",
+      "provider": "yahoo",
+      "latest_date": "2023-01-24",
+      "age_days": 1231,
+      "is_fresh_daily": false
+    },
+    {
+      "ticker": "LLY",
+      "provider": "yahoo",
+      "latest_date": "2023-01-24",
+      "age_days": 1231,
+      "is_fresh_daily": false
+    }
+  ],
+  "validation": {
+    "fail_count": 0,
+    "warn_count": 0,
+    "pass_count": 10,
+    "checks": [
+      {
+        "check_name": "required_prediction_columns",
+        "ticker": "AAPL",
+        "status": "PASS",
+        "detail": "missing=[]"
+      },
+      {
+        "check_name": "prediction_date_vs_cache_date",
+        "ticker": "AAPL",
+        "status": "PASS",
+        "detail": "cache_latest=2023-01-24, prediction_latest=2023-01-24"
+      },
+      {
+        "check_name": "required_prediction_columns",
+        "ticker": "QQQ",
+        "status": "PASS",
+        "detail": "missing=[]"
+      },
+      {
+        "check_name": "prediction_date_vs_cache_date",
+        "ticker": "QQQ",
+        "status": "PASS",
+        "detail": "cache_latest=2023-01-24, prediction_latest=2023-01-24"
+      },
+      {
+        "check_name": "required_prediction_columns",
+        "ticker": "NVDA",
+        "status": "PASS",
+        "detail": "missing=[]"
+      },
+      {
+        "check_name": "prediction_date_vs_cache_date",
+        "ticker": "NVDA",
+        "status": "PASS",
+        "detail": "cache_latest=2023-01-24, prediction_latest=2023-01-24"
+      },
+      {
+        "check_name": "required_prediction_columns",
+        "ticker": "LLY",
+        "status": "PASS",
+        "detail": "missing=[]"
+      },
+      {
+        "check_name": "prediction_date_vs_cache_date",
+        "ticker": "LLY",
+        "status": "PASS",
+        "detail": "cache_latest=2023-01-24, prediction_latest=2023-01-24"
+      },
+      {
+        "check_name": "asset_date_range_mismatch",
+        "status": "PASS",
+        "detail": "{'AAPL': ('2020-01-01', '2023-01-24'), 'QQQ': ('2020-01-01', '2023-01-24'), 'NVDA': ('2020-01-01', '2023-01-24'), 'LLY': ('2020-01-01', '2023-01-24')}"
+      },
+      {
+        "check_name": "portfolio_weight_sum",
+        "status": "PASS",
+        "detail": "sum=1.000000"
+      }
+    ],
+    "ui_warnings": [
+      "현재 결과는 reference-compatible engine 기반이며, 실제 locked v8.6.41 trained model 결과가 아닙니다. 백엔드/UI 흐름 검증용으로만 사용해야 합니다."
+    ]
+  },
+  "engine_status": {
+    "engine_mode": "reference_v8641_compatible",
+    "engine_mode_label_ko": "v8.6.41 호환 Reference 엔진",
+    "model_version": "v8.6.41_model_label_fixed_compatible_reference",
+    "production_ready_for_investment": false,
+    "is_reference_engine": true,
+    "is_locked_model": false,
+    "warning": "현재 결과는 reference-compatible engine 기반이며, 실제 locked v8.6.41 trained model 결과가 아닙니다. 백엔드/UI 흐름 검증용으로만 사용해야 합니다."
+  },
+  "ui": {
+    "current_weights_pct": {
+      "stock_weight": 85.0,
+      "bond_weight": 10.0,
+      "cash_weight": 5.0
+    },
+    "recommended_weights_pct": {
+      "stock_weight": 78.03,
+      "bond_weight": 14.53,
+      "cash_weight": 7.44
+    },
+    "delta_pct_points": {
+      "stock_weight": -6.97,
+      "bond_weight": 4.53,
+      "cash_weight": 2.439
+    },
+    "primary_warning": "현재 결과는 reference-compatible engine 기반이며, 실제 locked v8.6.41 trained model 결과가 아닙니다. 백엔드/UI 흐름 검증용으로만 사용해야 합니다."
+  }
+}

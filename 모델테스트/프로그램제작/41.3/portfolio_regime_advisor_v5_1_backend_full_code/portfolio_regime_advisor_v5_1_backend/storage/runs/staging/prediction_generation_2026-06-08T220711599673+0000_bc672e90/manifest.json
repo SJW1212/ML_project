@@ -1,0 +1,32 @@
+{
+  "run_id": "prediction_generation_2026-06-08T220711599673+0000_bc672e90",
+  "run_type": "prediction_generation",
+  "started_at": "2026-06-08T22:07:11.600977+00:00",
+  "items": [
+    {
+      "ticker": "AAPL",
+      "prediction_path": "storage\\predictions\\v8_6_41\\aapl_xgb_recency_weighted_v8_6_41_model_label_fixed_predictions.csv",
+      "rows": 3378,
+      "latest_date": "2026-06-08"
+    },
+    {
+      "ticker": "QQQ",
+      "prediction_path": "storage\\predictions\\v8_6_41\\qqq_xgb_recency_weighted_v8_6_41_model_label_fixed_predictions.csv",
+      "rows": 3378,
+      "latest_date": "2026-06-08"
+    },
+    {
+      "ticker": "NVDA",
+      "prediction_path": "storage\\predictions\\v8_6_41\\nvda_xgb_recency_weighted_v8_6_41_model_label_fixed_predictions.csv",
+      "rows": 3378,
+      "latest_date": "2026-06-08"
+    },
+    {
+      "ticker": "LLY",
+      "prediction_path": "storage\\predictions\\v8_6_41\\lly_xgb_recency_weighted_v8_6_41_model_label_fixed_predictions.csv",
+      "rows": 3378,
+      "latest_date": "2026-06-08"
+    }
+  ],
+  "committed_at": "2026-06-08T22:07:12.063703+00:00"
+}

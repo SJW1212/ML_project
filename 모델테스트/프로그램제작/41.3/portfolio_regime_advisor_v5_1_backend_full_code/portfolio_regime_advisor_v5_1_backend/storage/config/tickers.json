@@ -1,0 +1,42 @@
+{
+  "schema_version": "v1",
+  "updated_at": "2026-06-08T22:07:06.074298+00:00",
+  "tickers": {
+    "AAPL": {
+      "ticker": "AAPL",
+      "asset_type": "risk_asset",
+      "market": "US",
+      "enabled": true,
+      "note": "from_evaluate_request",
+      "created_at": "2026-06-08T22:07:06.074271+00:00",
+      "updated_at": "2026-06-08T22:07:06.074271+00:00"
+    },
+    "LLY": {
+      "ticker": "LLY",
+      "asset_type": "risk_asset",
+      "market": "US",
+      "enabled": true,
+      "note": "from_evaluate_request",
+      "created_at": "2026-06-08T22:07:06.074271+00:00",
+      "updated_at": "2026-06-08T22:07:06.074271+00:00"
+    },
+    "NVDA": {
+      "ticker": "NVDA",
+      "asset_type": "risk_asset",
+      "market": "US",
+      "enabled": true,
+      "note": "from_evaluate_request",
+      "created_at": "2026-06-08T22:07:06.074271+00:00",
+      "updated_at": "2026-06-08T22:07:06.074271+00:00"
+    },
+    "QQQ": {
+      "ticker": "QQQ",
+      "asset_type": "risk_asset",
+      "market": "US",
+      "enabled": true,
+      "note": "from_evaluate_request",
+      "created_at": "2026-06-08T22:07:06.074271+00:00",
+      "updated_at": "2026-06-08T22:07:06.074271+00:00"
+    }
+  }
+}
